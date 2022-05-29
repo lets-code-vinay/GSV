@@ -506,4 +506,5 @@ export const NAVBAR_MENUS = {
       },
     },
   },
+  SECURITY: { label: "Security", value: "Security" },
 };
