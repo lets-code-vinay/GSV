@@ -1,10 +1,9 @@
-import './App.css';
+import React from 'react';
+import Homepage from "./Views/Homepage";
 
 function App() {
   return (
-    <div className="App">
-      <h2>Hello GSV</h2>
-    </div>
+          <Homepage />
   );
 }
 
