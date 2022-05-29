@@ -95,6 +95,11 @@ const Navbar = ({ onLoginClick }) => {
     setMobileMoreAnchorEl(event.currentTarget);
   };
 
+  const handleMainNavbarClick = (menu) => (event) => {
+    console.log(menu);
+    console.log("event", event);
+  };
+
   const menuId = "primary-search-account-menu";
   const renderMenu = (
     <Menu
@@ -124,10 +129,14 @@ const Navbar = ({ onLoginClick }) => {
         onClose={handleMobileMenuClose}
         className={`${classes.menu} menu`}
       >
-        {Object.values(NAVBAR_MENUS).map((menu) => {
+        {Object.values(NAVBAR_MENUS).map((menu, index) => {
           return (
-            <MenuItem>
-              <Typography variant={"body1"} className={classes.navbar_text}>
+            <MenuItem key={`${menu.value}-${index}`}>
+              <Typography
+                variant={"body1"}
+                className={classes.navbar_text}
+                onClick={handleMainNavbarClick(menu)}
+              >
                 {menu.label}
               </Typography>
             </MenuItem>
@@ -154,7 +163,7 @@ const Navbar = ({ onLoginClick }) => {
             <div className={`${classes.sectionDesktop} sectionDesktop`}>
               {Object.values(NAVBAR_MENUS).map((menu) => {
                 return (
-                  <MenuItem>
+                  <MenuItem onClick={handleMainNavbarClick(menu)}>
                     <Typography
                       variant={"body1"}
                       className={classes.navbar_text}

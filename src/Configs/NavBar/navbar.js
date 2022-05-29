@@ -4,6 +4,7 @@ export const NAVBAR_MENUS = {
   IT_INFRASTRUCTURE: {
     label: "IT Infrastructure",
     value: "IT_INFRASTRUCTURE",
+    isMore: false,
     menus: {
       NETWORK_WIRED_AND_WIRELESS: {
         label: "NETWORK WIRED AND WIRELESS",
@@ -506,5 +507,7 @@ export const NAVBAR_MENUS = {
       },
     },
   },
-  SECURITY: { label: "Security", value: "Security" },
+  DND: { label: "DevOps & Deployment ", value: "DND", isMore: false },
+  SERVICES: { label: "Services", value: "SERVICES", isMore: false },
+  More: { label: "More ", value: "More", isMore: true },
 };
