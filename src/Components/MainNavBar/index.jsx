@@ -1,8 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-scroll";
-
 import { makeStyles } from "@material-ui/core/styles";
-
 import { MoreVert as MoreIcon } from "@material-ui/icons";
 import {
   AppBar,
@@ -12,8 +9,8 @@ import {
   Typography,
   Menu,
   Box,
-  Button,
 } from "@material-ui/core";
+
 import Logo from "../../Assets/Images/white-logo.png";
 import { NAVBAR_MENUS } from "../../Configs/NavBar/navbar";
 
@@ -98,15 +95,6 @@ const Navbar = ({ onLoginClick }) => {
     setMobileMoreAnchorEl(event.currentTarget);
   };
 
-  console.log(Object.values(NAVBAR_MENUS).map((menu) => menu.label));
-
-  // /**
-  //  * @description: To redirect to Login Screen
-  //  */
-  // const handleLogInClick = () => {
-  //   onLoginClick();
-  // };
-
   const menuId = "primary-search-account-menu";
   const renderMenu = (
     <Menu
@@ -136,51 +124,15 @@ const Navbar = ({ onLoginClick }) => {
         onClose={handleMobileMenuClose}
         className={`${classes.menu} menu`}
       >
-        <div>
-          <MenuItem className={`${classes.menuItem} menuItem menuItemMobile`}>
-            <Link to="whatWeDoId" spy={true} smooth={true} duration={250}>
-              <Typography
-                variant={"body1"}
-                className={`${classes.navbar_text} navbar_menu_mobile`}
-              >
-                Product
+        {Object.values(NAVBAR_MENUS).map((menu) => {
+          return (
+            <MenuItem>
+              <Typography variant={"body1"} className={classes.navbar_text}>
+                {menu.label}
               </Typography>
-            </Link>
-          </MenuItem>
-
-          <MenuItem className={`${classes.menuItem} menuItem menuItemMobile`}>
-            <Link to="queryPageId" spy={true} smooth={true} duration={250}>
-              <Typography
-                variant={"body1"}
-                className={`${classes.navbar_text} navbar_menu_mobile`}
-              >
-                Pricing
-              </Typography>
-            </Link>
-          </MenuItem>
-
-          <MenuItem className={`${classes.menuItem} menuItem menuItemMobile`}>
-            <Link to="whatWeDoId" spy={true} smooth={true} duration={250}>
-              <Typography
-                variant={"body1"}
-                className={`${classes.navbar_text} navbar_menu_mobile`}
-              >
-                About us
-              </Typography>
-            </Link>
-          </MenuItem>
-        </div>
-        <div>
-          <MenuItem className={`${classes.menuItem} menuItem menuItemMobile`}>
-            <Button
-              label="Login"
-              // onClick={handleLogInClick}
-              className={`${classes.login_button} login_button menuButtonMobile`}
-            >
-              Login
-            </Button>
-          </MenuItem>
-        </div>
+            </MenuItem>
+          );
+        })}
       </Menu>
     </Box>
   );
@@ -200,40 +152,18 @@ const Navbar = ({ onLoginClick }) => {
 
             <div className={classes.grow} />
             <div className={`${classes.sectionDesktop} sectionDesktop`}>
-              <MenuItem>
-                <Link to="whatWeDoId" spy={true} smooth={true} duration={250}>
-                  <Typography variant={"body1"} className={classes.navbar_text}>
-                    Product
-                  </Typography>
-                </Link>
-              </MenuItem>
-
-              <MenuItem>
-                <Link to="queryPageId" spy={true} smooth={true} duration={250}>
-                  <Typography variant={"body1"} className={classes.navbar_text}>
-                    Pricing
-                  </Typography>
-                </Link>
-              </MenuItem>
-
-              <MenuItem>
-                <Link to="whatWeDoId" spy={true} smooth={true} duration={250}>
-                  <Typography variant={"body1"} className={classes.navbar_text}>
-                    About us
-                  </Typography>
-                </Link>
-              </MenuItem>
-              {/* 
-              <MenuItem>
-                <Button
-                  label="Login"
-                  // onClick={handleLogInClick}
-                  variant={"outlined"}
-                  className={`${classes.login_button} login_button`}
-                >
-                  Login
-                </Button>
-              </MenuItem> */}
+              {Object.values(NAVBAR_MENUS).map((menu) => {
+                return (
+                  <MenuItem>
+                    <Typography
+                      variant={"body1"}
+                      className={classes.navbar_text}
+                    >
+                      {menu.label}
+                    </Typography>
+                  </MenuItem>
+                );
+              })}
             </div>
 
             {/* To open icons */}
