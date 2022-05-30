@@ -1,8 +1,12 @@
 import React from "react";
-import Navbar from "../../Components/MainNavbar";
+import StructuredNavbar from "../../Components/StructuredNavbar";
 
 const Homepage = () => {
-  return <Navbar />;
+  return (
+    <>
+      <StructuredNavbar />
+    </>
+  );
 };
 
 export default Homepage;
