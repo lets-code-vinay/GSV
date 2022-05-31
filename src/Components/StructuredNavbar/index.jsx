@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Navbar from "../MainNavbar";
+import Navbar from "../MainNavBar/index.jsx";
 import SubNavBar from "../SubNavBar";
 
 export default function StructuredNavbar() {
