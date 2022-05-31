@@ -13,8 +13,9 @@ import {
 
 import Logo from "../../Assets/Images/white-logo.png";
 import { NAVBAR_MENUS } from "../../Configs/NavBar/navbar";
+import { func } from "prop-types";
 
-const Navbar = ({ onLoginClick }) => {
+const Navbar = ({ onSubNavbarOpen }) => {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
@@ -37,9 +38,8 @@ const Navbar = ({ onLoginClick }) => {
   };
 
   const handleMainNavbarClick = (menu) => (event) => {
+    onSubNavbarOpen({ isOpen: true, menu, event });
     setActive(menu.value);
-    console.log(menu);
-    console.log("event", event);
   };
 
   const menuId = "primary-search-account-menu";
@@ -151,6 +151,20 @@ const Navbar = ({ onLoginClick }) => {
       </div>
     </div>
   );
+};
+
+/**
+ * Props validation
+ */
+Navbar.propsType = {
+  onSubNavbarOpen: func.isRequired,
+};
+
+/**
+ *  Default Props
+ */
+Navbar.defaultProps = {
+  onSubNavbarOpen: () => {},
 };
 
 export default Navbar;
