@@ -77,11 +77,11 @@ const Navbar = ({ onSubNavbarOpen }) => {
           return (
             <MenuItem
               key={`${menu.value}-${index}`}
-              style={{ borderBottom: "3px solid #ffffff" }}
+              style={{ borderBottom: "3px solid red" }}
             >
               <Typography
                 variant={"body1"}
-                className={classes.navbar_text}
+                className={classes.navbar_text_mobile}
                 style={{ color: "black !important" }}
                 onClick={handleMainNavbarClick(menu)}
               >
@@ -191,6 +191,13 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "-12%",
     paddingTop: "10%",
     color: "#ffffff",
+  },
+  navbar_text_mobile: {
+    fontSize: "1.3rem",
+    marginRight: "10%",
+    marginTop: "-12%",
+    paddingTop: "10%",
+    color: "black",
   },
 
   menuButton: {
