@@ -1,5 +1,6 @@
-* { 
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.logo-1 {
+  width: 20% !important;
+}
+#mobile-bg {
+  background-color: red !important;
 }
