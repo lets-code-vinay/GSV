@@ -1,10 +1,10 @@
 import React from "react";
 import { string } from "prop-types";
 
-const Image = ({ source = "", text = "" }) => {
+const Image = ({ source = "", text = "", imageClass = "" }) => {
   return (
     <>
-      <img src={source} alt={text} />
+      <img src={source} alt={text} className={imageClass} />
     </>
   );
 };
@@ -14,16 +14,17 @@ const Image = ({ source = "", text = "" }) => {
  */
 Image.propTypes = {
   alt: string,
+  imageClass: string,
   source: string,
 };
 
 /**
  * Default Props
  */
- Image.propTypes = {
-    alt: '',
-    source: '',
-  };
-  
+Image.propTypes = {
+  alt: "",
+  imageClass: "",
+  source: "",
+};
 
-  export default Image;
+export default Image;

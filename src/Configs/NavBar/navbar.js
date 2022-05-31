@@ -4,6 +4,7 @@ export const NAVBAR_MENUS = {
   IT_INFRASTRUCTURE: {
     label: "IT Infrastructure",
     value: "IT_INFRASTRUCTURE",
+    isMore: false,
     menus: {
       NETWORK_WIRED_AND_WIRELESS: {
         label: "NETWORK WIRED AND WIRELESS",
@@ -504,6 +505,46 @@ export const NAVBAR_MENUS = {
           },
         },
       },
+
+      /**
+       * DATA CENTER AND VIRTUALIZATION
+       */
+      DATA_CENTER_AND_VIRTUALIZATION: {
+        label: "DATA CENTER AND VIRTUALIZATION",
+        value: "DATA_CENTER_AND_VIRTUALIZATION",
+      },
+
+      /**
+       * COLLABORATION AND PRODUCTIVITY
+       */
+      CAB: {
+        label: "COLLABORATION AND PRODUCTIVITY ",
+        value: "CAB",
+      },
+      /**
+       * SERVICE PROVIDER
+       */
+      SP: {
+        label: "SERVICE PROVIDER ",
+        value: "SP",
+      },
+      /**
+       * CLOUD AND COMPUTING
+       */
+      CAC: {
+        label: "CLOUD AND COMPUTING ",
+        value: "CAC",
+      },
+      /**
+       * INTERNET OF THINGS
+       */
+      IOT: {
+        label: "INTERNET OF THINGS (IoT) ",
+        value: "IOT",
+      },
     },
   },
+  DND: { label: "DevOps & Deployment ", value: "DND", isMore: false },
+  SERVICES: { label: "Services", value: "SERVICES", isMore: false },
+  More: { label: "More ", value: "More", isMore: true },
 };
