@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 
-const MainNavBar = (props) => {
+const Index = (props) => {
   
   return (
    <>navbar main</>  
   )
 };
-
-export default MainNavBar;
+export default Index;
