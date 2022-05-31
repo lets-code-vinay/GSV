@@ -183,6 +183,7 @@ const useStyles = makeStyles((theme) => ({
       cursor: "pointer",
       backgroundColor: "red",
     },
+    width: "20%",
   },
 
   navbar_text: {

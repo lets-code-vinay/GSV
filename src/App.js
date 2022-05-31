@@ -1,9 +1,16 @@
 import React from "react";
+import OurClients from "./Components/OurClient/OurClients";
 import Homepage from "./Views/Homepage";
-import "./App.css";
+
+// import "/bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
-  return <Homepage />;
+  return (
+    <>
+      <Homepage />
+      <OurClients />
+    </>
+  );
 }
 
 export default App;
