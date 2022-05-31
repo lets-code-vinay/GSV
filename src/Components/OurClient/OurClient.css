@@ -1,9 +1,55 @@
-.ourClientHead {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 300;
-  font-size: 51px;
-  line-height: 62px;
-  color: rgba(0, 0, 0, 0.6);
+.backgroundColor {
+  background: #f8fbff;
+}
+
+.ourClientHading {
   text-align: center;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 51px;
+  line-height: 60px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 6.5%;
+}
+.imageArray2 {
+  margin-top: 5%;
+}
+.container .slick-next {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  position: absolute;
+  top: 40%;
+}
+.container .slick-prev {
+  cursor: pointer;
+  left: -5%;
+  position: absolute;
+  top: 40%;
+}
+.firstimage {
+  height: 90px;
+  margin-left: 15%;
+}
+.imageStyle {
+  margin-top: 25%;
+}
+.secondImage {
+  margin-top: 15%;
+}
+.eightImage {
+  margin-top: 23%;
+}
+.allCustomer {
+  cursor: pointer;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 29px;
+  text-align: center;
+  text-decoration-line: underline;
+  color: #0d274d;
+  margin-top: 6.5%;
 }
