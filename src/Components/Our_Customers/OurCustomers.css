@@ -1,0 +1,73 @@
+.firstDiv .container-fluid {
+  width: 88%;
+}
+.containerClass .slick-next {
+  cursor: pointer;
+  right: 42%;
+  position: absolute;
+  top: 0%;
+}
+.containerClass .slick-prev {
+  cursor: pointer;
+  left: 42%;
+  position: absolute;
+  top: 0%;
+  z-index: 99;
+}
+.styleSecondSlide .slick-arrow {
+  display: none !important;
+}
+.styleTopSlidHead {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #000000;
+}
+.hospitality {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+
+  color: #000000;
+
+  opacity: 0.8;
+}
+.government {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+
+  color: #000000;
+}
+.financial {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+
+  color: #000000;
+}
+.retail {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+
+  color: #000000;
+}
+.styleCardGovernment{
+  margin: 0 92px 0 92px;
+}

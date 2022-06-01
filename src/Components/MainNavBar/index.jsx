@@ -110,7 +110,7 @@ const Navbar = ({ onSubNavbarOpen }) => {
 
             <div className={classes.grow} />
             <div className={`${classes.sectionDesktop} sectionDesktop`}>
-              {Object.values(NAVBAR_MENUS).map((menu) => {
+              {Object.values(NAVBAR_MENUS).map((menu,i) => {
                 return (
                   <MenuItem
                     onClick={handleMainNavbarClick(menu)}
@@ -120,6 +120,7 @@ const Navbar = ({ onSubNavbarOpen }) => {
                           ? "3px solid #ffffff"
                           : "3px solid transparent",
                     }}
+                    key={i}
                   >
                     <Typography
                       variant={"body1"}

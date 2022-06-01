@@ -131,7 +131,7 @@ const OurClients = () => {
             </div>
           </Slider>
           <div>
-            <p className="allCustomer">ALL CUSTOMER</p>
+            <p className="allCustomer">ALL CUSTOMERS</p>
           </div>
         </div>
       </div>

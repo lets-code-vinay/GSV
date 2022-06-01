@@ -19,14 +19,14 @@
 .imageArray2 {
   margin-top: 5%;
 }
-.container-fluid .slick-next {
+.topContainer .slick-next {
   cursor: pointer;
   position: absolute;
   right: -3%;
   position: absolute;
   top: 40%;
 }
-.container-fluid .slick-prev {
+.topContainer .slick-prev {
   cursor: pointer;
   left: -5%;
   position: absolute;
