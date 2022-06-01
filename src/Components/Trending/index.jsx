@@ -25,14 +25,20 @@ const Trending = () => {
         {Object.values(TRENDING_CONFIGS).map(
           ({ label, value, title, subtitle, icon, link, button }, index) => {
             return (
-              <TabPanel key={`${label}-${index}`}>
-                <Grid container>
-                  <Grid item xs={12} sm={12} md={6} lg={6}>
-                    <figure>
-                      <img className="img-fluid" src={icon} alt={title} />
-                    </figure>
+              <TabPanel
+                key={`${label}-${index}`}
+                className={`${classes.tabContainer} tabContainer`}
+              >
+                <Grid container className={`${classes.tabMatter} tabMatter`}>
+                  <Grid item xs={12} sm={12} md={4} lg={4}>
+                    <img
+                      className="img-fluid"
+                      src={icon}
+                      alt={title}
+                      style={{ width: "250px", height: "250px" }}
+                    />
                   </Grid>
-                  <Grid item xs={12} sm={12} md={6} lg={6}>
+                  <Grid item xs={12} sm={12} md={8} lg={8}>
                     <Box className="content">
                       <Typography variant={"h2"}>{title}</Typography>
                       <Typography variant="body">{subtitle}</Typography>
@@ -70,5 +76,10 @@ const useStyles = makeStyles((theme) => ({
   containerTrending: {
     width: "60%",
     margin: "auto",
+    padding: "6% 4%",
   },
+  tabMatter: {
+    padding: "5%",
+  },
+  tabContainer: {},
 }));
