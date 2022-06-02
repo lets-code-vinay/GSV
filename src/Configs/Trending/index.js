@@ -42,7 +42,7 @@ export const TRENDING_CONFIGS = Object.freeze({
     subtitle:
       "Hyper Converged Solutions edge, or SASE (pronounced “sassy”), is an emerging cybersecurity concept that Gartner first described in the August 2019 report The Future of Network Security in the Cloud and e Secure access service edge, or SASE (pronounced “sassy”), is an emerging cybersecurity concept that Gartner first described in the August 2019 report The Future",
     icon: HYPER_CONVERGED,
-    link: "https://bit.ly/Jointravander",
+    link: "",
     button: "",
   },
   SDN: {
@@ -53,6 +53,6 @@ export const TRENDING_CONFIGS = Object.freeze({
       "SDN-as-a-Service edge, or SASE (pronounced “sassy”), is an emerging cybersecurity concept that Gartner first described in the August 2019 report The Future of Network Security in the Cloud and e Secure access service edge, or SASE (pronounced “sassy”), is an emerging cybersecurity concept that Gartner first described in the August 2019 report The Future",
     icon: SDN,
     link: "",
-    button: "Join",
+    button: "",
   },
 });

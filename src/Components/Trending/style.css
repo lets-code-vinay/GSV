@@ -1,0 +1,244 @@
+/* 320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets
+769px — 1024px: Small screens, laptops
+1025px — 1200px: Desktops, large screens
+1201px and more —  Extra large screens, TV */
+@media screen and (min-width: 279px) and (max-width: 480px) {
+  .tabsClass {
+    width: 100% !important;
+    margin: auto !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: start !important;
+    text-align: start;
+  }
+  .tabContainer {
+    width: 80% !important;
+    margin: auto !important;
+  }
+  .tabButton {
+    font-size: 0.6rem !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    height: 55px !important;
+    text-align: start !important;
+    font-weight: 700 !important;
+  }
+  .trendingImageGrid {
+    width: 170px !important;
+    height: 170px !important;
+    border-radius: 50px 0 50px 0;
+    border: 1px solid #0d274d !important;
+    padding: 5% 0% 10% 15%;
+  }
+  .trendingImage {
+    width: 150px !important;
+    height: 150px !important;
+  }
+  .trendingTitle {
+    font-size: 1.2rem !important;
+    margin: 10px 0px !important;
+    font-weight: 700 !important;
+  }
+  .trendingSubTitle {
+    font-size: 0.8rem !important;
+    margin-top: 10px;
+  }
+
+  .trendingLogo {
+    margin: 2% 20% !important;
+  }
+  .flashIcon {
+    font-size: 50px !important;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 760px) {
+  .tabsClass {
+    width: 100% !important;
+    margin: auto !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: start !important;
+    text-align: start;
+  }
+  .tabContainer {
+    width: 80% !important;
+    margin: auto !important;
+  }
+  .tabButton {
+    font-size: 0.6rem !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    height: 55px !important;
+    text-align: start !important;
+    font-weight: 700 !important;
+  }
+  .trendingImageGrid {
+    width: 170px !important;
+    border-radius: 50px 0 50px 0;
+    border: 1px solid #0d274d !important;
+    padding: 5% 0% 10% 15%;
+  }
+  .trendingImage {
+    width: 150px !important;
+    height: 150px !important;
+  }
+  .trendingTitle {
+    font-size: 1.2rem !important;
+    margin: 10px 0px !important;
+    font-weight: 700 !important;
+  }
+  .trendingSubTitle {
+    font-size: 0.8rem !important;
+    margin-top: 10px;
+  }
+
+  .trendingLogo {
+    margin: 2% 20% !important;
+  }
+  .flashIcon {
+    font-size: 50px !important;
+  }
+}
+@media screen and (min-width: 761px) and (max-width: 1024px) {
+  .tabsClass {
+    width: 80% !important;
+    margin: auto !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: start !important;
+    text-align: start;
+  }
+  .tabContainer {
+    width: 80% !important;
+    margin: auto !important;
+  }
+  .tabButton {
+    font-size: 0.8rem !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    height: 55px !important;
+    text-align: start !important;
+    font-weight: 700 !important;
+  }
+  .trendingImageGrid {
+    width: 150px !important;
+    height: 150px !important;
+    padding: 5% 0% 10% 0%;
+  }
+  .trendingImage {
+    width: 200px !important;
+    height: 200px !important;
+  }
+  .trendingTitle {
+    font-size: 1.5rem !important;
+    margin: 10px 0px !important;
+    font-weight: 700 !important;
+  }
+  .trendingSubTitle {
+    font-size: 1rem !important;
+    margin-top: 10px;
+  }
+
+  .trendingLogo {
+    margin: 2% 35% !important;
+  }
+  .flashIcon {
+    font-size: 50px !important;
+  }
+  .trendingText {
+    font-weight: 700 !important;
+  }
+  .hr {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1281px) {
+  .tabsClass {
+    width: 80% !important;
+    margin: auto !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: start !important;
+    text-align: start;
+  }
+  .tabContainer {
+    width: 100% !important;
+    margin: auto !important;
+  }
+  .tabButton {
+    font-size: 0.8rem !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    height: 55px !important;
+    text-align: start !important;
+    font-weight: 700 !important;
+  }
+  .trendingImageGrid {
+    width: 150px !important;
+    height: 150px !important;
+    padding: 0% 5% 0% 8%;
+  }
+  .trendingImage {
+    width: 200px !important;
+    height: 200px !important;
+  }
+  .content {
+    width: 80%;
+  }
+  .trendingTitle {
+    font-size: 1.5rem !important;
+    margin: 5px 0px;
+    font-weight: 700 !important;
+  }
+  .trendingSubTitle {
+    font-size: 1rem !important;
+    margin-top: 10px;
+  }
+
+  .trendingLogo {
+    margin: 2% 35% !important;
+  }
+  .flashIcon {
+    font-size: 50px !important;
+  }
+  .trendingText {
+    font-weight: 700 !important;
+  }
+  .hr {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .tabsClass {
+    width: 70% !important;
+    margin: auto !important;
+  }
+  .tabContainer {
+    width: 70% !important;
+    margin: auto !important;
+  }
+  .tabButton {
+    font-size: 1.2rem !important;
+    min-width: 80px !important;
+    max-width: 220px;
+    height: 85px !important;
+    text-align: start;
+  }
+
+  .trendingLogo {
+    margin: 0 0% 0% 45%;
+  }
+  .hr {
+    height: 2px;
+    background-color: #0d274d;
+  }
+
+  .trendingText {
+    font-weight: 700 !important;
+    color: #0d274d;
+  }
+}
