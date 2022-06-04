@@ -1,6 +1,6 @@
-.backgroundColor .topContainer{
+/* .backgroundColor .topContainer{
   width: 90%;
-}
+} */
 
 .backgroundColor {
   background: #f8fbff;
@@ -31,6 +31,10 @@
   left: -5%;
   position: absolute;
   top: 40%;
+  z-index: 99;
+}
+.firstImage{
+  width: 0;
 }
 .firstimage {
   height: 90px;
@@ -61,8 +65,8 @@
 .upto420{
   margin-left: 2%;
 }
-@media screen and(max-width: 576px) {
+@media screen and(max-width: 550px) {
  .topContainer .firstimage{
-    height: 50px !important;
+    margin-left: 20%;
   }
 }

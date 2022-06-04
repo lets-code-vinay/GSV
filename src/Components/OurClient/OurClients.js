@@ -57,28 +57,28 @@ const OurClients = () => {
           slidesToScroll: 1
         }
       },
-      {
-        breakpoint: 420,
-        settings: {
-          className:"upto420",
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 280,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
+      // {
+      //   breakpoint: 420,
+      //   settings: {
+      //     className:"upto420",
+      //     slidesToShow: 1,
+      //     slidesToScroll: 1
+      //   }
+      // },
+      // {
+      //   breakpoint: 280,
+      //   settings: {
+      //     slidesToShow: 1,
+      //     slidesToScroll: 1
+      //   }
+      // }
     ]
   };
   return (
     <>
       <div className="backgroundColor">
         
-        <div className="container-fluid topContainer">
+        <div className="container topContainer">
         <h2 className="ourClientHading">Our Clients</h2>
           <Slider {...settings}>
             <div className="firstImage ">
