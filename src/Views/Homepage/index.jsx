@@ -7,8 +7,8 @@ import Trending from "../../Components/Trending";
 const Homepage = () => {
   return (
     <>
-      {/* <StructuredNavbar /> */}
-      {/* <Trending /> */}
+      <StructuredNavbar />
+      <Trending />
       <OurClients />
     </>
   );
