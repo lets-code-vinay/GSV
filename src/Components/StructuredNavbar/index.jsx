@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Navbar from "../Navbar";
 import SubNavBar from "../SubNavBar";
+import MainNavBar from "../MainNavBar";
 
 export default function StructuredNavbar() {
   const [isSubNavbarOpened, setSubNavbarOpen] = useState(false);
@@ -19,10 +19,10 @@ export default function StructuredNavbar() {
 
   return (
     <>
-      <Navbar onSubNavbarOpen={handleSubNavbarOpen} />
+      <MainNavBar onSubNavbarOpen={handleSubNavbarOpen} />
 
       {isSubNavbarOpened && (
-        <SubNavBar subNavMenus={subNavMenus} isOpen={true} />
+        <SubNavBar subNavMenus={subNavMenus} isOpen={isSubNavbarOpened} />
       )}
     </>
   );

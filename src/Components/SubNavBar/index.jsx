@@ -1,37 +1,36 @@
-import React, { useState } from "react";
-import { Box, makeStyles, MenuItem, Typography } from "@material-ui/core";
+import React, { useRef, useState } from "react";
 import { object } from "prop-types";
+import { Box, makeStyles, MenuItem, Typography } from "@material-ui/core";
+import NavbarMenus from "../NavbarMenus";
 
 const SubNavBar = ({ subNavMenus, isOpen = true }) => {
   const classes = useStyles();
 
+  const refForNavMenus = useRef(null);
+
   const [isActive, setActive] = useState(false);
+  const [isMenuListingOpened, setMenuListingOpen] = useState(false);
+  const [menuListing, setMenuListing] = useState({});
 
   const handleMainNavbarClick = (menu) => (_) => {
-    // onSubNavbarOpen({ isOpen: true, menu, event }); // TODO
     setActive(menu.value);
+    setMenuListingOpen(!isMenuListingOpened);
+    setMenuListing(menu.menus);
   };
 
   return (
-    <Box
-      id={subNavMenus.value}
-      style={{
-        border: "2px solid red",
-      }}
-      className={`${classes.hello}  hello`}
-    >
+    <Box id={subNavMenus.value} className={`${classes.subMenuBar}  subMenuBar`}>
       {Object.values(subNavMenus.menus).map((menu, index) => {
-        console.log("menu", menu.label);
         return (
           <MenuItem
             onClick={handleMainNavbarClick(menu)}
             key={index}
+            ref={refForNavMenus}
             style={{
               borderBottom:
-                isActive === menu.value
-                  ? "3px solid #000000"
-                  : "3px solid transparent",
+                isActive === menu.value ? "3px solid blue" : "3px solid red",
             }}
+            className={`${classes.subMenu}  subMenu`}
           >
             <Typography variant={"body1"} className={classes.navbar_text}>
               {menu.label}
@@ -39,6 +38,10 @@ const SubNavBar = ({ subNavMenus, isOpen = true }) => {
           </MenuItem>
         );
       })}
+
+      {isMenuListingOpened && (
+        <NavbarMenus isOpen={isMenuListingOpened} navMenus={menuListing} />
+      )}
     </Box>
   );
 };
@@ -56,17 +59,23 @@ SubNavBar.propTypes = {
 SubNavBar.defaultProps = {
   subNavMenus: {},
 };
+
 export default SubNavBar;
 
 const useStyles = makeStyles((theme) => ({
+  subMenu: {
+    cursor: "pointer",
+  },
   navbar_text: {
-    fontSize: "1.3rem",
+    fontSize: "1rem",
     marginRight: "10%",
-    marginTop: "-12%",
-    paddingTop: "10%",
     color: "#000000",
   },
-  hello: {
+  subMenuBar: {
     fontSize: "1.3rem",
+    display: "flex",
+    borderBottom: "1px solid rgb(13,39,77, 0.5) ",
+    minWidth: "180px",
+    whiteSpace: "break-spaces",
   },
 }));
