@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { func } from "prop-types";
+
 import { makeStyles } from "@material-ui/core/styles";
 import { MoreVert as MoreIcon } from "@material-ui/icons";
 import {
@@ -12,8 +14,9 @@ import {
 } from "@material-ui/core";
 
 import Logo from "../../Assets/Images/white-logo.png";
+
 import { NAVBAR_MENUS } from "../../Configs/NavBar/navbar";
-import { func } from "prop-types";
+import { THEME_COLOR } from "../../Configs/Theme";
 
 const MainNavBar = ({ onSubNavbarOpen }) => {
   const classes = useStyles();
@@ -77,7 +80,7 @@ const MainNavBar = ({ onSubNavbarOpen }) => {
           return (
             <MenuItem
               key={`${menu.value}-${index}`}
-              style={{ borderBottom: "3px solid red" }}
+              style={{ borderBottom: `3px solid ${THEME_COLOR.color_4}` }}
             >
               <Typography
                 variant={"body1"}
@@ -110,7 +113,7 @@ const MainNavBar = ({ onSubNavbarOpen }) => {
 
             <div className={classes.grow} />
             <div className={`${classes.sectionDesktop} sectionDesktop`}>
-              {Object.values(NAVBAR_MENUS).map((menu,i) => {
+              {Object.values(NAVBAR_MENUS).map((menu, i) => {
                 return (
                   <MenuItem
                     onClick={handleMainNavbarClick(menu)}
@@ -157,14 +160,14 @@ const MainNavBar = ({ onSubNavbarOpen }) => {
 /**
  * Props validation
  */
- MainNavBar.propsType = {
+MainNavBar.propsType = {
   onSubNavbarOpen: func.isRequired,
 };
 
 /**
  *  Default Props
  */
- MainNavBar.defaultProps = {
+MainNavBar.defaultProps = {
   onSubNavbarOpen: () => {},
 };
 

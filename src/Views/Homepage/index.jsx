@@ -1,8 +1,9 @@
 import React from "react";
-import Footer from "../../Components/Footer";
-import OurClients from "../../Components/OurClient/OurClients";
+
 import StructuredNavbar from "../../Components/StructuredNavbar";
 import Trending from "../../Components/Trending";
+import OurClients from "../../Components/OurClient/OurClients";
+import Footer from "../../Components/Footer";
 
 
 const Homepage = () => {
