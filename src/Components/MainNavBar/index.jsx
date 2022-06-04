@@ -15,7 +15,7 @@ import Logo from "../../Assets/Images/white-logo.png";
 import { NAVBAR_MENUS } from "../../Configs/NavBar/navbar";
 import { func } from "prop-types";
 
-const Navbar = ({ onSubNavbarOpen }) => {
+const MainNavBar = ({ onSubNavbarOpen }) => {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
@@ -157,18 +157,18 @@ const Navbar = ({ onSubNavbarOpen }) => {
 /**
  * Props validation
  */
-Navbar.propsType = {
+ MainNavBar.propsType = {
   onSubNavbarOpen: func.isRequired,
 };
 
 /**
  *  Default Props
  */
-Navbar.defaultProps = {
+ MainNavBar.defaultProps = {
   onSubNavbarOpen: () => {},
 };
 
-export default Navbar;
+export default MainNavBar;
 
 const useStyles = makeStyles((theme) => ({
   grow: {
