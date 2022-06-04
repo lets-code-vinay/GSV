@@ -178,7 +178,7 @@ const useStyles = makeStyles((theme) => ({
   trendingLogo: {
     display: "flex",
     flexDirection: "row",
-    margin: "0 0 0 45%",
+    margin: "0 0 0 11%",
     fontWeight: "800",
     color: "#0d274d",
   },

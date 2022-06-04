@@ -5,7 +5,14 @@ import { IoIosPeople } from "react-icons/io";
 import { IoLocationSharp } from "react-icons/io5";
 import { BiMobileAlt, BiPhone } from "react-icons/bi";
 import { GiFactory } from "react-icons/gi";
-import { FaQuestion } from "react-icons/fa";
+import { RiFacebookBoxFill } from "react-icons/ri";
+import { FiYoutube } from "react-icons/fi";
+import {
+  FaQuestion,
+  FaTwitterSquare,
+  FaInstagram,
+  FaLinkedin,
+} from "react-icons/fa";
 import {
   MdAlternateEmail,
   MdOutlineLocationOn,
@@ -18,167 +25,189 @@ import "./style.css";
 
 import Logo from "../../Assets/Images/white-logo.png";
 import { THEME_COLOR } from "../../Configs/Theme";
+import FooterBottom from "../FooterBottom";
 
 const Footer = () => {
   const classes = useStyles();
   return (
-    <Box className={`${classes.footer} footer`}>
-      <Grid container className={`${classes.footerBody} footerBody`}>
-        <Grid item xs={12} sm={6} md={4} lg={3} id="grid">
-          <img
-            src={Logo}
-            alt={"logo of company"}
-            className={`${classes.footerLogo} footerLogo`}
-          />
-        </Grid>
-        <Grid item xs={6} sm={6} md={4} lg={3} id="grid">
-          <Typography
-            variant={"h5"}
-            className={`${classes.menuListTitle} menuListTitle`}
-          >
-            Menu
-          </Typography>
-          <Box className={`${classes.menuList} menuList`}>
-            <IoIosPeople className={`${classes.menuListIcon} menuListIcon`} />
-            <a href="#" className={`${classes.menuListLink} menuListLink`}>
-              <Typography
-                variant={"body1"}
-                className={`${classes.menuListText} menuListText`}
-              >
-                About
-              </Typography>
-            </a>
-          </Box>
-          <Box className={`${classes.menuList} menuList`}>
-            <MdOutlineLocationOn
-              className={`${classes.menuListIcon} menuListIcon`}
+    <>
+      <Box className={`${classes.footer} footer`}>
+        <Grid container className={`${classes.footerBody} footerBody`}>
+          <Grid item xs={12} sm={6} md={4} lg={3} id="grid">
+            <img
+              src={Logo}
+              alt={"logo of company"}
+              className={`${classes.footerLogo} footerLogo`}
             />
-            <a href="#" className={`${classes.menuListLink} menuListLink`}>
-              <Typography
-                variant={"body1"}
-                className={`${classes.menuListText} menuListText`}
-              >
-                Our Presence
-              </Typography>
-            </a>
-          </Box>
-          <Box className={`${classes.menuList} menuList`}>
-            <GiFactory className={`${classes.menuListIcon} menuListIcon`} />
-            <a href="#" className={`${classes.menuListLink} menuListLink`}>
-              <Typography
-                variant={"body1"}
-                className={`${classes.menuListText} menuListText`}
-              >
-                Industries
-              </Typography>
-            </a>
-          </Box>
-          <Box className={`${classes.menuList} menuList`}>
-            <MdOutlineStickyNote2
-              className={`${classes.menuListIcon} menuListIcon`}
-            />
-            <a href="#" className={`${classes.menuListLink} menuListLink`}>
-              <Typography
-                variant={"body1"}
-                className={`${classes.menuListText} menuListText`}
-              >
-                Career
-              </Typography>
-            </a>
-          </Box>
-        </Grid>
+          </Grid>
+          <Grid item xs={6} sm={6} md={4} lg={3} id="grid">
+            <Typography
+              variant={"h5"}
+              className={`${classes.menuListTitle} menuListTitle`}
+            >
+              Menu
+            </Typography>
+            <Box className={`${classes.menuList} menuList`}>
+              <IoIosPeople className={`${classes.menuListIcon} menuListIcon`} />
+              <a href="#" className={`${classes.menuListLink} menuListLink`}>
+                <Typography
+                  variant={"body1"}
+                  className={`${classes.menuListText} menuListText`}
+                >
+                  About
+                </Typography>
+              </a>
+            </Box>
+            <Box className={`${classes.menuList} menuList`}>
+              <MdOutlineLocationOn
+                className={`${classes.menuListIcon} menuListIcon`}
+              />
+              <a href="#" className={`${classes.menuListLink} menuListLink`}>
+                <Typography
+                  variant={"body1"}
+                  className={`${classes.menuListText} menuListText`}
+                >
+                  Our Presence
+                </Typography>
+              </a>
+            </Box>
+            <Box className={`${classes.menuList} menuList`}>
+              <GiFactory className={`${classes.menuListIcon} menuListIcon`} />
+              <a href="#" className={`${classes.menuListLink} menuListLink`}>
+                <Typography
+                  variant={"body1"}
+                  className={`${classes.menuListText} menuListText`}
+                >
+                  Industries
+                </Typography>
+              </a>
+            </Box>
+            <Box className={`${classes.menuList} menuList`}>
+              <MdOutlineStickyNote2
+                className={`${classes.menuListIcon} menuListIcon`}
+              />
+              <a href="#" className={`${classes.menuListLink} menuListLink`}>
+                <Typography
+                  variant={"body1"}
+                  className={`${classes.menuListText} menuListText`}
+                >
+                  Career
+                </Typography>
+              </a>
+            </Box>
+          </Grid>
 
-        <Grid item xs={6} sm={6} md={4} lg={3} id="grid">
-          <Typography
-            variant={"h5"}
-            className={`${classes.menuListTitle} menuListTitle`}
-          >
-            Support
-          </Typography>
+          <Grid item xs={6} sm={6} md={4} lg={3} id="grid">
+            <Typography
+              variant={"h5"}
+              className={`${classes.menuListTitle} menuListTitle`}
+            >
+              Support
+            </Typography>
 
-          <Box className={`${classes.menuList} menuList`}>
-            <FaQuestion className={`${classes.menuListIcon} menuListIcon`} />
-            <a href="#" className={`${classes.menuListLink} menuListLink`}>
-              <Typography
-                variant={"body1"}
-                className={`${classes.menuListText} menuListText`}
-              >
-                FAQ
-              </Typography>
-            </a>
-          </Box>
-          <Box className={`${classes.menuList} menuList`}>
-            <MdOutlineEditNote
-              className={`${classes.menuListIcon} menuListIcon`}
-            />
-            <a href="#" className={`${classes.menuListLink} menuListLink`}>
-              <Typography
-                variant={"body1"}
-                className={`${classes.menuListText} menuListText`}
-              >
-                Terms & Conditions
-              </Typography>
-            </a>
-          </Box>
-          <Box className={`${classes.menuList} menuList`}>
-            <MdOutlinePrivacyTip
-              className={`${classes.menuListIcon} menuListIcon`}
-            />
-            <a href="#" className={`${classes.menuListLink} menuListLink`}>
-              <Typography
-                variant={"body1"}
-                className={`${classes.menuListText} menuListText`}
-              >
-                Privacy Policy
-              </Typography>
-            </a>
-          </Box>
-        </Grid>
+            <Box className={`${classes.menuList} menuList`}>
+              <FaQuestion className={`${classes.menuListIcon} menuListIcon`} />
+              <a href="#" className={`${classes.menuListLink} menuListLink`}>
+                <Typography
+                  variant={"body1"}
+                  className={`${classes.menuListText} menuListText`}
+                >
+                  FAQ
+                </Typography>
+              </a>
+            </Box>
+            <Box className={`${classes.menuList} menuList`}>
+              <MdOutlineEditNote
+                className={`${classes.menuListIcon} menuListIcon`}
+              />
+              <a href="#" className={`${classes.menuListLink} menuListLink`}>
+                <Typography
+                  variant={"body1"}
+                  className={`${classes.menuListText} menuListText`}
+                >
+                  Terms & Conditions
+                </Typography>
+              </a>
+            </Box>
+            <Box className={`${classes.menuList} menuList`}>
+              <MdOutlinePrivacyTip
+                className={`${classes.menuListIcon} menuListIcon`}
+              />
+              <a href="#" className={`${classes.menuListLink} menuListLink`}>
+                <Typography
+                  variant={"body1"}
+                  className={`${classes.menuListText} menuListText`}
+                >
+                  Privacy Policy
+                </Typography>
+              </a>
+            </Box>
+          </Grid>
 
-        <Grid item xs={12} sm={6} md={4} lg={3} id="grid">
-          <Typography
-            variant={"h5"}
-            className={`${classes.menuListTitle} menuListTitle`}
-          >
-            Contact Us
-          </Typography>
-          <Typography
-            variant={"body1"}
-            className={`${classes.menuListTextContact} menuListTextContact`}
-          >
-            <IoLocationSharp
-              className={`${classes.menuListIcon} menuListIcon`}
-            />
-            90B, Delhi - Jaipur Expy, Udyog Vihar, Sector 18, Gurugram, Haryana
-            (India) 122008
-          </Typography>
-          <br />
-          <Typography
-            variant={"body1"}
-            className={`${classes.menuListTextContact} menuListTextContact`}
-          >
-            <BiMobileAlt className={`${classes.menuListIcon} menuListIcon`} />
-            Mobile: 9818958822
-          </Typography>
-          <Typography
-            variant={"body1"}
-            className={`${classes.menuListTextContact} menuListTextContact`}
-          >
-            <BiPhone className={`${classes.menuListIcon} menuListIcon`} />
-            Phone: +91 - 124 4278999
-          </Typography>
-          <Typography
-            variant={"body1"}
-            className={`${classes.menuListTextContact} menuListTextContact`}
-          >
-            <MdAlternateEmail
-              className={`${classes.menuListIcon} menuListIcon`}
-            />
-            Email: sales@asianglobalsolutions.in
-          </Typography>
+          <Grid item xs={12} sm={6} md={4} lg={3} id="grid">
+            <Typography
+              variant={"h5"}
+              className={`${classes.menuListTitle} menuListTitle`}
+            >
+              Contact Us
+            </Typography>
+            <Typography
+              variant={"body1"}
+              className={`${classes.menuListTextContact} menuListTextContact`}
+            >
+              <IoLocationSharp
+                className={`${classes.menuListIcon} menuListIcon`}
+              />
+              90B, Delhi - Jaipur Expy, Udyog Vihar, Sector 18, Gurugram,
+              Haryana (India) 122008
+            </Typography>
+            <br />
+            <Typography
+              variant={"body1"}
+              className={`${classes.menuListTextContact} menuListTextContact`}
+            >
+              <BiMobileAlt className={`${classes.menuListIcon} menuListIcon`} />
+              Mobile: 9818958822
+            </Typography>
+            <Typography
+              variant={"body1"}
+              className={`${classes.menuListTextContact} menuListTextContact`}
+            >
+              <BiPhone className={`${classes.menuListIcon} menuListIcon`} />
+              Phone: +91 - 124 4278999
+            </Typography>
+            <Typography
+              variant={"body1"}
+              className={`${classes.menuListTextContact} menuListTextContact`}
+            >
+              <MdAlternateEmail
+                className={`${classes.menuListIcon} menuListIcon`}
+              />
+              Email: sales@asianglobalsolutions.in
+            </Typography>
+
+            <Box className={`${classes.socialMedia} socialMedia`}>
+              <a href="#" className={`${classes.socialIcon} socialIcon`}>
+                <RiFacebookBoxFill />
+              </a>
+              <a href="#" className={`${classes.socialIcon} socialIcon`}>
+                <FaTwitterSquare />
+              </a>
+              <a href="#" className={`${classes.socialIcon} socialIcon`}>
+                <FaInstagram />
+              </a>
+              <a href="#" className={`${classes.socialIcon} socialIcon`}>
+                <FaLinkedin />
+              </a>
+              <a href="#" className={`${classes.socialIcon} socialIcon`}>
+                <FiYoutube />
+              </a>
+            </Box>
+          </Grid>
         </Grid>
-      </Grid>
-    </Box>
+      </Box>
+      <FooterBottom />
+    </>
   );
 };
 
@@ -201,7 +230,7 @@ const useStyles = makeStyles((theme) => ({
     color: THEME_COLOR.color_3,
     borderBottom: `2px solid ${THEME_COLOR.color_3}`,
     width: "80%",
-    marginBottom: "20px",
+    marginBottom: "10px",
     fontWeight: "600",
   },
   menuList: {
@@ -243,6 +272,18 @@ const useStyles = makeStyles((theme) => ({
     cursor: "default",
     color: THEME_COLOR.popular_color,
 
+    "&:hover": {
+      color: THEME_COLOR.color_5,
+    },
+  },
+  socialMedia: {
+    width: "80%",
+    display: "flex",
+    justifyContent: "space-between",
+  },
+  socialIcon: {
+    fontSize: "1.5rem",
+    color: "white",
     "&:hover": {
       color: THEME_COLOR.color_5,
     },

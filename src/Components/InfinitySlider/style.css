@@ -1,0 +1,39 @@
+/* Uncomment when you want to do styling statically */
+
+/* @keyframes slider {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-25rem * 3));
+  }
+} */
+/* .slid {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  align-items: center;
+  justify-content: space-between;
+} */
+/*
+.slid .slider-track {
+   animation: slider 30s linear infinite;
+  display: flex;
+  justify-content: space-around;
+  width: calc(25rem * 6); 
+}
+*/
+/* 
+.slid .slider-track .sliding-img img {
+ height: 6rem;
+  width: 20rem;
+  cursor: pointer; 
+}
+*/
+
+/* .slid .slider-track .sliding-img img:hover {
+  cursor: pointer;
+  border-radius: 60% 0 60% 0;
+  border-top: 2px solid #0d274d;
+  border-bottom: 2px solid #0d274d;
+} */
