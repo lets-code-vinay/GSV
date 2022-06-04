@@ -12,7 +12,6 @@ import "./style.css";
 import { THEME_COLOR } from "../../Configs/Theme";
 
 const NavbarMenus = ({ isOpen, navMenus }) => {
-  console.log(navMenus);
   const classes = useStyles();
 
   const [isMenuOpened, setOpen] = useState(isOpen);
@@ -77,7 +76,6 @@ const NavbarMenus = ({ isOpen, navMenus }) => {
                       { value = "", image = "", label = "", menus = {} },
                       index
                     ) => {
-                      console.log(value, image, label, menus);
                       if (value === "POPULAR") return null;
                       return (
                         <Grid item xs={12} sm={6} md={6} lg={6}>
