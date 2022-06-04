@@ -1,3 +1,13 @@
+.FooterBottom {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0d2d7d;
+}
+
 /* 320px — 480px: Mobile devices
 481px — 768px: iPads, Tablets
 769px — 1024px: Small screens, laptops

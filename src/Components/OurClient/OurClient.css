@@ -1,7 +1,3 @@
-.backgroundColor {
-  background: #f8fbff;
-}
-
 .ourClientHading {
   text-align: center;
   font-family: "Inter";
@@ -29,7 +25,7 @@
   top: 40%;
   z-index: 99;
 }
-.firstImage{
+.firstImage {
   width: 0;
 }
 .firstimage {
@@ -58,11 +54,58 @@
   color: #0d274d;
   margin-top: 6.5%;
 }
-.upto420{
+.upto420 {
   margin-left: 2%;
 }
 @media screen and(max-width: 550px) {
- .topContainer .firstimage{
+  .topContainer .firstimage {
     margin-left: 20%;
+  }
+}
+
+/* 320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets
+769px — 1024px: Small screens, laptops
+1025px — 1200px: Desktops, large screens
+1201px and more —  Extra large screens, TV */
+@media screen and (min-width: 279px) and (max-width: 480px) {
+  .hr {
+    margin-bottom: 10px;
+    width: 90% !important;
+    margin: 2% !important;
+  }
+  .imageToResponsive {
+    width: 50%;
+    margin-left: 2%;
+  }
+
+  .ourClientsTitle .ourClientsIcon,
+  .ourClientsTitle .ourClientsText {
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 760px) {
+  .hr {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 761px) and (max-width: 1024px) {
+  .hr {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1281px) {
+  .hr {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .hr {
+    height: 2px;
+    background-color: #0d274d;
   }
 }
