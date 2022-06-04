@@ -1,15 +1,18 @@
 import React from "react";
-import IBM from "../../Assets/ibm.png";
+import Slider from "react-slick";
+import { ChevronLeft, ChevronRight } from "react-feather";
+import "slick-carousel/slick/slick.css";
+
 import "./OurClient.css";
+
+import IBM from "../../Assets/ibm.png";
 import Granitize from "../../Assets/Granitize.png";
+import TouchBase from "../../Assets/touchBase.png";
+import TechBserver from "../../Assets/techBserver.png";
 import BestWestern from "../../Assets/bestWestern.png";
 import EljayEngineering from "../../Assets/eljayEngineering.png";
-import TechBserver from "../../Assets/techBserver.png";
-import TouchBase from "../../Assets/touchBase.png";
 import AirportAuthority from "../../Assets/airportAuthority.png";
-import { ChevronLeft, ChevronRight } from "react-feather";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
+
 
 const OurClients = () => {
   const settings = {
@@ -57,6 +60,7 @@ const OurClients = () => {
           slidesToScroll: 1
         }
       },
+      //  needs this code for responsive in future-------
       // {
       //   breakpoint: 420,
       //   settings: {
