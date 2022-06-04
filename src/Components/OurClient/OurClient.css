@@ -4,29 +4,33 @@
 
 .ourClientHading {
   text-align: center;
-  font-family: "Roboto";
+  font-family: "Inter";
   font-style: normal;
-  font-weight: 100;
+  font-weight: 300;
   font-size: 51px;
   line-height: 60px;
   color: rgba(0, 0, 0, 0.6);
-  margin-bottom: 6.5%;
+  padding: 3%;
 }
 .imageArray2 {
   margin-top: 5%;
 }
-.container .slick-next {
+.topContainer .slick-next {
   cursor: pointer;
   position: absolute;
-  right: 0;
+  right: -3%;
   position: absolute;
   top: 40%;
 }
-.container .slick-prev {
+.topContainer .slick-prev {
   cursor: pointer;
   left: -5%;
   position: absolute;
   top: 40%;
+  z-index: 99;
+}
+.firstImage{
+  width: 0;
 }
 .firstimage {
   height: 90px;
@@ -37,6 +41,7 @@
 }
 .secondImage {
   margin-top: 15%;
+  margin-left: 13%;
 }
 .eightImage {
   margin-top: 23%;
@@ -52,4 +57,12 @@
   text-decoration-line: underline;
   color: #0d274d;
   margin-top: 6.5%;
+}
+.upto420{
+  margin-left: 2%;
+}
+@media screen and(max-width: 550px) {
+ .topContainer .firstimage{
+    margin-left: 20%;
+  }
 }
