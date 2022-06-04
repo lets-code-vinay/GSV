@@ -113,12 +113,12 @@ export default Trending;
 
 const useStyles = makeStyles((theme) => ({
   containerTrending: {
-    padding: "6% 4%",
+    padding: "2% 4%",
     backgroundColor: THEME_COLOR.light_sky,
   },
 
   tabsClass: {
-    width: "60%",
+    width: "90%",
     margin: "10px auto",
     borderBottom: `5px solid ${THEME_COLOR.main_color} !important`,
     "&:active": {
@@ -132,7 +132,7 @@ const useStyles = makeStyles((theme) => ({
     padding: "4% 5%",
     backgroundColor: THEME_COLOR.light_sky,
   },
-  tabContainer: { width: "60%", margin: "auto" },
+  tabContainer: { width: "90%", margin: "auto" },
   tabButton: {
     fontSize: "1rem",
     fontWeight: "700",

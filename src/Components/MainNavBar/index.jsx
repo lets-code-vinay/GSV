@@ -15,7 +15,7 @@ import Logo from "../../Assets/Images/white-logo.png";
 import { NAVBAR_MENUS } from "../../Configs/NavBar/navbar";
 import { func } from "prop-types";
 
-const Navbar = ({ onSubNavbarOpen }) => {
+const MainNavBar = ({ onSubNavbarOpen }) => {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
@@ -110,7 +110,7 @@ const Navbar = ({ onSubNavbarOpen }) => {
 
             <div className={classes.grow} />
             <div className={`${classes.sectionDesktop} sectionDesktop`}>
-              {Object.values(NAVBAR_MENUS).map((menu) => {
+              {Object.values(NAVBAR_MENUS).map((menu,i) => {
                 return (
                   <MenuItem
                     onClick={handleMainNavbarClick(menu)}
@@ -120,6 +120,7 @@ const Navbar = ({ onSubNavbarOpen }) => {
                           ? "3px solid #ffffff"
                           : "3px solid transparent",
                     }}
+                    key={i}
                   >
                     <Typography
                       variant={"body1"}
@@ -156,18 +157,18 @@ const Navbar = ({ onSubNavbarOpen }) => {
 /**
  * Props validation
  */
-Navbar.propsType = {
+ MainNavBar.propsType = {
   onSubNavbarOpen: func.isRequired,
 };
 
 /**
  *  Default Props
  */
-Navbar.defaultProps = {
+ MainNavBar.defaultProps = {
   onSubNavbarOpen: () => {},
 };
 
-export default Navbar;
+export default MainNavBar;
 
 const useStyles = makeStyles((theme) => ({
   grow: {
