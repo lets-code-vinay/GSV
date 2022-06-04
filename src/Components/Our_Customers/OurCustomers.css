@@ -1,15 +1,51 @@
-.firstDiv .container-fluid {
+/* .firstDiv .container-fluid {
   width: 88%;
+} */
+.headerHeading{
+  margin: 3rem;
+  text-align: center;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 44px;
+  color: #000000;
+}
+.leftArrow{
+  border: none;
+  background-color: #FFFFFF;
+}
+.rightArrow{
+  border: none;
+  background-color: #FFFFFF;
+}
+.styleSecondSlide{
+  background-color: #FFFFFF;
+}
+.styleSecondSlide .card-body {
+  padding: 50px 30px 0px 30px;
+  margin-top: .25rem;
+}
+.writer{
+  padding: 15px;
+}
+.styleCard {
+  box-shadow: 0px 0px 4px 1px rgb(0 0 0 / 25%);
+  border-radius: 10px;
+  width: 23rem;
+}
+.styleSecondSlide .card {
+  border: none;
 }
 .containerClass .slick-next {
   cursor: pointer;
-  right: 42%;
+  right: 40%;
   position: absolute;
   top: 0%;
 }
 .containerClass .slick-prev {
   cursor: pointer;
-  left: 42%;
+  left: 40%;
   position: absolute;
   top: 0%;
   z-index: 99;
@@ -17,7 +53,7 @@
 .styleSecondSlide .slick-arrow {
   display: none !important;
 }
-.styleTopSlidHead {
+.healthCare {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
@@ -68,6 +104,16 @@
 
   color: #000000;
 }
-.styleCardGovernment{
+.darkColor{
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 19px;
+  text-align: center;
+
+  color: #000000;
+}
+.styleCardGovernment {
   margin: 0 92px 0 92px;
 }

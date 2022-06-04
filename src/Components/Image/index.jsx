@@ -1,10 +1,22 @@
 import React from "react";
 import { string } from "prop-types";
 
-const Image = ({ source = "", text = "", imageClass = "" }) => {
+const ImgRenderer = ({
+  source = "",
+  text = "",
+  imageClass = "",
+  width = "",
+  height = "",
+}) => {
   return (
     <>
-      <img src={source} alt={text} className={imageClass} />
+      <img
+        src={source}
+        alt={text}
+        className={imageClass}
+        width={width}
+        height={height}
+      />
     </>
   );
 };
@@ -12,19 +24,23 @@ const Image = ({ source = "", text = "", imageClass = "" }) => {
 /**
  * Props validation
  */
-Image.propTypes = {
+ImgRenderer.propTypes = {
   alt: string,
+  height: string,
   imageClass: string,
   source: string,
+  width: string,
 };
 
 /**
  * Default Props
  */
-Image.propTypes = {
+ImgRenderer.defaultProps = {
   alt: "",
   imageClass: "",
   source: "",
+  width: "",
+  height: "",
 };
 
-export default Image;
+export default ImgRenderer;
