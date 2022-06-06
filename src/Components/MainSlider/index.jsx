@@ -18,7 +18,6 @@ const MainSlider = () => {
   const [currentSlideData, setCurrentSlideData] = useState({});
 
   const setMovieKey = (currentSlide) => {
-    console.log(currentSlide);
     setCurrentSlideData(Object.values(MAIN_SLIDER_DATA)[currentSlide || 0]);
   };
 
