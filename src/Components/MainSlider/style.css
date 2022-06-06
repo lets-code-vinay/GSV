@@ -4,15 +4,129 @@
 1025px — 1200px: Desktops, large screens
 1201px and more —  Extra large screens, TV */
 @media screen and (min-width: 279px) and (max-width: 480px) {
+  .infoBlock .informationBar {
+    width: 90%;
+    height: 60px;
+    position: absolute;
+    top: 14% !important;
+  }
+  .informationBar .informationMSGContainer {
+    width: 100%;
+    height: fit-content;
+    color: #ffffff;
+    text-shadow: 1px 1px solid black;
+    border-radius: 0 40px 40px 0;
+    opacity: 0.5;
+  }
+  .informationMSGContainer .informationMSG {
+    color: #ffffff !important;
+    padding: 1%;
+    font-size: 0.6rem;
+    opacity: 1;
+  }
+  .informationBarTitle {
+    color: #ffffff;
+    padding: 3%;
+    text-shadow: 2px 2px black;
+    font-size: 1rem !important;
+    width: 80%;
+  }
 }
 
 @media screen and (min-width: 481px) and (max-width: 760px) {
+  .infoBlock .informationBar {
+    width: 90%;
+    height: 60px;
+    position: absolute;
+    top: 14% !important;
+  }
+  .informationBar .informationMSGContainer {
+    width: 100%;
+    height: fit-content;
+    color: #ffffff;
+    text-shadow: 1px 1px solid black;
+    border-radius: 0 40px 40px 0;
+    opacity: 0.5;
+  }
+  .informationMSGContainer .informationMSG {
+    color: #ffffff !important;
+    padding: 1%;
+    font-size: 1rem;
+    opacity: 1;
+  }
+  .informationBarTitle {
+    color: #ffffff;
+    padding: 3%;
+    text-shadow: 2px 2px black;
+    font-size: 1.5rem !important;
+    width: 80%;
+  }
 }
-@media screen and (min-width: 761px) and (max-width: 1024px) {
+@media screen and (min-width: 761px) and (max-width: 1023px) {
+  .infoBlock .informationBar {
+    width: 90%;
+    height: 60px;
+    position: absolute;
+    top: 15% !important;
+  }
+  .informationBar .informationMSGContainer {
+    width: 100%;
+    height: fit-content;
+    color: #ffffff;
+    text-shadow: 1px 1px solid black;
+    border-radius: 0 40px 40px 0;
+    opacity: 0.8;
+  }
+  .informationMSGContainer .informationMSG {
+    color: #ffffff !important;
+    padding: 2%;
+    font-size: 1rem;
+    opacity: 1;
+  }
+  .informationBarTitle {
+    color: #ffffff;
+    padding: 3%;
+    text-shadow: 2px 2px black;
+    font-size: 1.5rem !important;
+    width: 80%;
+  }
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1281px) {
+@media screen and (min-width: 1024px) and (max-width: 1281px) {
+  .infoBlock .informationBar {
+    width: 90%;
+    height: 60px;
+    position: absolute;
+    top: 20% !important;
+  }
+  .informationBar .informationMSGContainer {
+    width: 100%;
+    height: fit-content;
+    color: #ffffff;
+    text-shadow: 1px 1px solid black;
+    border-radius: 0 40px 40px 0;
+    opacity: 0.8;
+  }
+  .informationMSGContainer .informationMSG {
+    color: #ffffff !important;
+    padding: 2%;
+    font-size: 1rem;
+    opacity: 1;
+  }
+  .informationBarTitle {
+    color: #ffffff;
+    padding: 3%;
+    text-shadow: 2px 2px black;
+    font-size: 1.5rem !important;
+    width: 80%;
+  }
 }
 
 @media screen and (min-width: 1920px) {
+  .informationBar {
+    width: 60%;
+    height: 210px;
+    position: absolute;
+    top: 45% !important;
+  }
 }

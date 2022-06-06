@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
-
 import { Box, makeStyles, Typography } from "@material-ui/core";
+
+import "./style.css";
+import { MAIN_SLIDER_DATA } from "../../Configs/MainSlider";
+
+import { Carousel } from "react-responsive-carousel";
 
 import SECURITY from "../../Assets/Images/Slider-images/2-security.jpg";
 import NETWORK from "../../Assets/Images/Slider-images/1-network.jpg";
 import DATA from "../../Assets/Images/Slider-images/3-data.jpg";
-
-import { MAIN_SLIDER_DATA } from "../../Configs/MainSlider";
 
 const MainSlider = () => {
   const classes = useStyles();
@@ -69,7 +70,7 @@ const MainSlider = () => {
         </Carousel>
       </span>
 
-      <Box className={`${classes.imageBlock} imageBlock block`}>
+      <Box className={`${classes.infoBlock} infoBlock block`}>
         <Box className={`${classes.informationBar} informationBar`}>
           <Typography
             variant={"h4"}
@@ -118,12 +119,6 @@ const useStyles = makeStyles((theme) => ({
     padding: "2%",
     fontSize: "1.8rem",
     opacity: "1",
-
-    "-webkit-text-fill-color": "white",
-    "-moz-text-stroke-color": "rgb(0, 0, 0, 0.5)",
-    "-webkit-text-stroke-color": "rgb(0, 0, 0, 0.5)",
-    "-moz-text-stroke-width": "1px",
-    "-webkit-text-stroke-width": "1px",
   },
   informationBarTitle: {
     color: "#ffffff",

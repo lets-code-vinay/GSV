@@ -229,7 +229,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "row",
     padding: "2% 0 0 0",
-    alignTitle: "center",
+    alignItem: "center",
   },
 
   ourClientsIcon: {
