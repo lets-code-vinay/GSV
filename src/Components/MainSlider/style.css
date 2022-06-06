@@ -8,7 +8,7 @@
     width: 90%;
     height: 60px;
     position: absolute;
-    top: 14% !important;
+    top: 15% !important;
   }
   .informationBar .informationMSGContainer {
     width: 100%;
@@ -30,6 +30,16 @@
     text-shadow: 2px 2px black;
     font-size: 1rem !important;
     width: 80%;
+  }
+  .carousel .control-dots {
+    width: 60%;
+    top: 50%;
+    left: -3%;
+  }
+  .carousel .control-dots .dot {
+    width: 20%;
+    border-radius: 0;
+    height: 4px;
   }
 }
 
@@ -61,7 +71,18 @@
     font-size: 1.5rem !important;
     width: 80%;
   }
+  .carousel .control-dots {
+    width: 60%;
+    top: 55%;
+    left: -5%;
+  }
+  .carousel .control-dots .dot {
+    width: 20%;
+    border-radius: 0;
+    height: 4px;
+  }
 }
+
 @media screen and (min-width: 761px) and (max-width: 1023px) {
   .infoBlock .informationBar {
     width: 90%;
@@ -70,7 +91,7 @@
     top: 15% !important;
   }
   .informationBar .informationMSGContainer {
-    width: 100%;
+    width: 90%;
     height: fit-content;
     color: #ffffff;
     text-shadow: 1px 1px solid black;
@@ -88,7 +109,17 @@
     padding: 3%;
     text-shadow: 2px 2px black;
     font-size: 1.5rem !important;
-    width: 80%;
+    width: 70%;
+  }
+  .carousel .control-dots {
+    width: 60%;
+    top: 50%;
+    left: -8%;
+  }
+  .carousel .control-dots .dot {
+    width: 20%;
+    border-radius: 0;
+    height: 5px;
   }
 }
 
@@ -120,6 +151,17 @@
     font-size: 1.5rem !important;
     width: 80%;
   }
+  .carousel .control-dots {
+    width: 60%;
+    height: 36%;
+    top: 62% !important;
+    left: -8%;
+  }
+  .carousel .control-dots .dot {
+    width: 20%;
+    border-radius: 0;
+    height: 4px;
+  }
 }
 
 @media screen and (min-width: 1920px) {
@@ -127,6 +169,61 @@
     width: 60%;
     height: 210px;
     position: absolute;
-    top: 45% !important;
+    top: 42% !important;
+    margin-bottom: 10%;
+  }
+  .informationBarTitle {
+    margin-bottom: 2%;
+  }
+  .carousel .control-dots {
+    width: 60%;
+    height: 36%;
+    top: 72% !important;
+    left: -8%;
+  }
+  .carousel .control-dots .dot {
+    width: 20%;
+    border-radius: 0;
+    height: 5px;
+  }
+}
+
+@media screen and (min-height: 739px) and (max-height: 920px) {
+  .infoBlock .informationBar {
+    width: 90%;
+    height: 60px;
+    position: absolute;
+    top: 13% !important;
+  }
+  .informationBar .informationMSGContainer {
+    width: 100%;
+    height: fit-content;
+    color: #ffffff;
+    text-shadow: 1px 1px solid black;
+    border-radius: 0 40px 40px 0;
+    opacity: 0.5;
+  }
+  .informationMSGContainer .informationMSG {
+    color: #ffffff !important;
+    padding: 1%;
+    font-size: 0.6rem;
+    opacity: 1;
+  }
+  .informationBarTitle {
+    color: #ffffff;
+    padding: 3%;
+    text-shadow: 2px 2px black;
+    font-size: 1rem !important;
+    width: 80%;
+  }
+  .carousel .control-dots {
+    width: 60%;
+    top: 54%;
+    left: -3%;
+  }
+  .carousel .control-dots .dot {
+    width: 20%;
+    border-radius: 0;
+    height: 4px;
   }
 }
