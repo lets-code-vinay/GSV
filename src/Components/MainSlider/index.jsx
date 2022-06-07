@@ -21,7 +21,7 @@ const MainSlider = () => {
     setCurrentSlideData(Object.values(MAIN_SLIDER_DATA)[currentSlide || 0]);
   };
 
-  const { bg_color, heading, subtitle } = currentSlideData || {};
+  const { bg_color = "", heading = "", subtitle = "" } = currentSlideData || {};
 
   return (
     <>

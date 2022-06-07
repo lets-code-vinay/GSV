@@ -185,7 +185,6 @@ const useStyles = makeStyles((theme) => ({
   logo: {
     "&:hover": {
       cursor: "pointer",
-      backgroundColor: "red",
     },
     width: "20%",
   },
@@ -242,7 +241,4 @@ const useStyles = makeStyles((theme) => ({
   mobile3Dots: {
     color: "#ffffff",
   },
-  // mobileMenu: {
-  //   backgroundColor: "#080C1F",
-  // },
 }));
