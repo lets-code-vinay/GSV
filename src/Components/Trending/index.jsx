@@ -120,10 +120,10 @@ const useStyles = makeStyles((theme) => ({
   tabsClass: {
     width: "90%",
     margin: "10px auto",
-    borderBottom: `5px solid ${THEME_COLOR.main_color} !important`,
+    borderBottom: `5px solid ${THEME_COLOR.main_color}`,
     "&:active": {
       boxShadow: "none",
-      color: `${THEME_COLOR.light_sky} !important`,
+      color: `${THEME_COLOR.light_sky}`,
       backgroundColor: THEME_COLOR.light_sky,
     },
   },
@@ -148,9 +148,7 @@ const useStyles = makeStyles((theme) => ({
     "&:active": {
       boxShadow: "none",
       // color: `${THEME_COLOR.light_sky} !important`,
-      color: "red !important",
       backgroundColor: `${THEME_COLOR.color_3} !important`,
-      borderBottom: "6px solid blue !important",
     },
   },
 
