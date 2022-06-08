@@ -83,11 +83,11 @@ const NavbarMenus = ({ isOpen, navMenus }) => {
                             <Box
                               className={`${classes.MenuTitleContainer} MenuTitleContainer`}
                             >
-                              <img
+                              {/* <img
                                 src={image}
                                 alt={label}
                                 style={{ width: "24px" }}
-                              />
+                              /> */}
 
                               <Typography
                                 variant={"h5"}
@@ -141,11 +141,11 @@ const NavbarMenus = ({ isOpen, navMenus }) => {
                           <Box
                             className={`${classes.popularTitleContainer} popularTitleContainer`}
                           >
-                            <img
+                            {/* <img
                               src={image}
                               alt={label}
                               style={{ width: "24px" }}
-                            />
+                            /> */}
 
                             <Typography
                               variant={"h5"}
@@ -258,12 +258,11 @@ const useStyles = makeStyles((theme) => ({
   MenuTitleContainer: {
     display: "flex",
     justifyContent: "start",
-    borderBottom: `2px solid ${THEME_COLOR.main_color} `,
     marginBottom: "10px",
     width: "80%",
   },
   mainMenuTitle: {
-    margin: "10px 15px !important",
+    margin: "10px 0",
     color: THEME_COLOR.main_color,
     fontWeight: "600",
   },
@@ -292,12 +291,11 @@ const useStyles = makeStyles((theme) => ({
   popularTitleContainer: {
     display: "flex",
     justifyContent: "start",
-    borderBottom: `2px solid ${THEME_COLOR.main_color} `,
     marginBottom: "10px",
     width: "40%",
   },
   popularTitle: {
-    margin: "10px 15px !important",
+    margin: "10px 0px",
     color: THEME_COLOR.main_color,
     fontWeight: "600",
   },

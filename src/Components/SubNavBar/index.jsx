@@ -18,7 +18,7 @@ const SubNavBar = ({ subNavMenus, isOpen = true }) => {
     setMenuListing(menu.menus);
   };
 
-  return (
+  return !subNavMenus.isMore ? (
     <Box id={subNavMenus.value} className={`${classes.subMenuBar}  subMenuBar`}>
       {Object.values(subNavMenus.menus).map((menu, index) => {
         return (
@@ -40,9 +40,15 @@ const SubNavBar = ({ subNavMenus, isOpen = true }) => {
       })}
 
       {isMenuListingOpened && (
-        <NavbarMenus isOpen={isMenuListingOpened} navMenus={menuListing} />
+        <NavbarMenus
+          isOpen={isMenuListingOpened}
+          navMenus={menuListing}
+          isActive={isActive}
+        />
       )}
     </Box>
+  ) : (
+    <h3>Menu page should be here</h3>
   );
 };
 
