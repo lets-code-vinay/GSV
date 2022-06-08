@@ -81,12 +81,12 @@ export default function Technologies() {
       <Grid container spacing={1} className="marginTop">
         <Grid item xs={7} className="bck1">
           <section className="Software_Define hoverImg imageRight">
-            <div style={{ color: "white", padding: "20px" }} >
-              Data Center
+            <div style={{ color: "white", padding: "20px" }}>
+              <h3 className="text">Software-Defined Networking</h3>
             </div>
           </section>
           {/* <div className="card_back_img"> */}
-          {/* <h3 className="text">Software-Defined Networking</h3> */}
+          {/*  */}
           {/* <img src={Software_Define_Grid} className="imageRight hoverImg" /> */}
           {/* <h4>Lets us Help you to come in Future of SDN</h4> */}
           {/* <p className="para">
@@ -156,12 +156,18 @@ export default function Technologies() {
           {cardBox.map((item) => {
             return (
               <Card sx={{ minWidth: 275 }} className="cardMenu">
-                <CardContent className="cardContent">
-                  <section className={item.className}>
-                    <div style={{ color: "white", padding: "20px" }}>
-                      {item.text}
+                <CardContent className="cardContent position-relative">
+                  <div className="overlay">
+                    <div className={item.className}>
+                    <h3 style={{ color: "white", padding: "20px" }}>
+                      {item.heading}
+                    </h3>
                     </div>
-                  </section>
+                    <div className="imgInnerContent">
+                      <h3>{item.text}</h3>
+                      <p >{item.para}</p>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             );

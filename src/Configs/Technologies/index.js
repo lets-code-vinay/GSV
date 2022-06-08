@@ -8,38 +8,50 @@ import Docker_img from "../../Assets/Images/Docker_img.png"
 export const cardBox = [
   {
     id: 1,
-    text: "Dev Ops",
+    heading: "Dev Ops",
     img: DevOps,
-    className:"devOps"
+    className:"overlayImg devOps",
+    para:"this is dummy para you can change this ",
+    text:"this is devops"
   },
   {
     id: 2,
     img: Data_Center,
-    text: "Data Center",
-    className:"data-center"
+    heading: "Data Center",
+    className:"overlayImg data-center",
+    para:"this is dummy para you can change this ",
+    text:"this is data center"
   },
   {
     id: 3,
     img: Cloud_Computing,
-    text: "Cloud Computing",
-    className:"cloudComputing"
+    heading: "Cloud Computing",
+    className:"overlayImg cloudComputing",
+    para:"this is dummy para you can change this ",
+    text:"this is cloud computing"
   },
   {
     id: 4,
     img: DesktopImage,
-    text: "Desktop",
-    className:"desktop"
+    heading: "Desktop",
+    className:"overlayImg desktop",
+    para:"this is dummy para you can change this ",
+    text:"this is desktop"
   },
   {
     id: 5,
     img: Networking,
-    text: "Networking",
-    className:"networking"
+    heading: "Networking",
+    className:"overlayImg networking",
+    para:"this is dummy para you can change this ",
+    text:"this is network"
   },
   {
     id: 6,
     img: Docker_img,
-    text: "Docker",
-    className:"docker"
+    heading: "Docker",
+    className:"overlayImg docker",
+    para:"this is dummy para you can change this ",
+    text:"this is docker"
   },
 ];
