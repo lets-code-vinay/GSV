@@ -14,7 +14,7 @@
 .topContainer .slick-next {
   cursor: pointer;
   position: absolute;
-  right: -3%;
+  /* right: -3%; */
   position: absolute;
   top: 40%;
 }
@@ -104,8 +104,13 @@
 }
 
 @media screen and (min-width: 1920px) {
-  .hr {
+ .topContainer .hr {
     height: 2px;
     background-color: #0d274d;
+    width: 90% !important;
+    margin: 2% auto;
+  }
+  .ourClientsTitle{
+    margin-left: 16%;
   }
 }

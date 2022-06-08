@@ -5,6 +5,7 @@ import Trending from "../../Components/Trending";
 import OurClients from "../../Components/OurClient/OurClients";
 import Footer from "../../Components/Footer";
 import InfinitySliderContainer from "../../Components/InfinitySliderContainers";
+import Technologies from "../../Components/Technologies";
 
 const Homepage = () => {
   return (
@@ -12,6 +13,7 @@ const Homepage = () => {
       <StructuredNavbar />
       <Trending />
       <InfinitySliderContainer />
+      <Technologies />
       <OurClients />
       <Footer />
     </>
