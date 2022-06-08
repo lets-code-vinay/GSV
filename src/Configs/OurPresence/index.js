@@ -1,6 +1,6 @@
-export const ASIA_ROTATION = [-80, -30, 0];
-export const AFRICA_ROTATION = [-20, -8, 0];
-export const SOUTH_AMERICA_ROTATION = [58, 20, 0];
+export const ASIA_ROTATION = [-85, -20, 0];
+export const AFRICA_ROTATION = [-20, 0, 0];
+export const SOUTH_AMERICA_ROTATION = [58, 30, 0];
 
 export const SOUTH_AMERICA = [
   {
