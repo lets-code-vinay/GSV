@@ -1,25 +1,9 @@
 import React from "react";
 import { Box, Grid, makeStyles, Typography } from "@material-ui/core";
 
-import { IoIosPeople } from "react-icons/io";
-import { IoLocationSharp } from "react-icons/io5";
-import { BiMobileAlt, BiPhone } from "react-icons/bi";
-import { GiFactory } from "react-icons/gi";
 import { RiFacebookBoxFill } from "react-icons/ri";
 import { FiYoutube } from "react-icons/fi";
-import {
-  FaQuestion,
-  FaTwitterSquare,
-  FaInstagram,
-  FaLinkedin,
-} from "react-icons/fa";
-import {
-  MdAlternateEmail,
-  MdOutlineLocationOn,
-  MdOutlineStickyNote2,
-  MdOutlineEditNote,
-  MdOutlinePrivacyTip,
-} from "react-icons/md";
+import { FaTwitterSquare, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 import "./style.css";
 
@@ -48,7 +32,6 @@ const Footer = () => {
               Menu
             </Typography>
             <Box className={`${classes.menuList} menuList`}>
-              <IoIosPeople className={`${classes.menuListIcon} menuListIcon`} />
               <a href="#" className={`${classes.menuListLink} menuListLink`}>
                 <Typography
                   variant={"body1"}
@@ -59,9 +42,6 @@ const Footer = () => {
               </a>
             </Box>
             <Box className={`${classes.menuList} menuList`}>
-              <MdOutlineLocationOn
-                className={`${classes.menuListIcon} menuListIcon`}
-              />
               <a href="#" className={`${classes.menuListLink} menuListLink`}>
                 <Typography
                   variant={"body1"}
@@ -72,7 +52,6 @@ const Footer = () => {
               </a>
             </Box>
             <Box className={`${classes.menuList} menuList`}>
-              <GiFactory className={`${classes.menuListIcon} menuListIcon`} />
               <a href="#" className={`${classes.menuListLink} menuListLink`}>
                 <Typography
                   variant={"body1"}
@@ -83,9 +62,6 @@ const Footer = () => {
               </a>
             </Box>
             <Box className={`${classes.menuList} menuList`}>
-              <MdOutlineStickyNote2
-                className={`${classes.menuListIcon} menuListIcon`}
-              />
               <a href="#" className={`${classes.menuListLink} menuListLink`}>
                 <Typography
                   variant={"body1"}
@@ -106,7 +82,7 @@ const Footer = () => {
             </Typography>
 
             <Box className={`${classes.menuList} menuList`}>
-              <FaQuestion className={`${classes.menuListIcon} menuListIcon`} />
+              {/* <FaQuestion className={`${classes.menuListIcon} menuListIcon`} /> */}
               <a href="#" className={`${classes.menuListLink} menuListLink`}>
                 <Typography
                   variant={"body1"}
@@ -117,9 +93,6 @@ const Footer = () => {
               </a>
             </Box>
             <Box className={`${classes.menuList} menuList`}>
-              <MdOutlineEditNote
-                className={`${classes.menuListIcon} menuListIcon`}
-              />
               <a href="#" className={`${classes.menuListLink} menuListLink`}>
                 <Typography
                   variant={"body1"}
@@ -130,9 +103,6 @@ const Footer = () => {
               </a>
             </Box>
             <Box className={`${classes.menuList} menuList`}>
-              <MdOutlinePrivacyTip
-                className={`${classes.menuListIcon} menuListIcon`}
-              />
               <a href="#" className={`${classes.menuListLink} menuListLink`}>
                 <Typography
                   variant={"body1"}
@@ -155,9 +125,6 @@ const Footer = () => {
               variant={"body1"}
               className={`${classes.menuListTextContact} menuListTextContact`}
             >
-              <IoLocationSharp
-                className={`${classes.menuListIcon} menuListIcon`}
-              />
               90B, Delhi - Jaipur Expy, Udyog Vihar, Sector 18, Gurugram,
               Haryana (India) 122008
             </Typography>
@@ -166,23 +133,18 @@ const Footer = () => {
               variant={"body1"}
               className={`${classes.menuListTextContact} menuListTextContact`}
             >
-              <BiMobileAlt className={`${classes.menuListIcon} menuListIcon`} />
               Mobile: 9818958822
             </Typography>
             <Typography
               variant={"body1"}
               className={`${classes.menuListTextContact} menuListTextContact`}
             >
-              <BiPhone className={`${classes.menuListIcon} menuListIcon`} />
               Phone: +91 - 124 4278999
             </Typography>
             <Typography
               variant={"body1"}
               className={`${classes.menuListTextContact} menuListTextContact`}
             >
-              <MdAlternateEmail
-                className={`${classes.menuListIcon} menuListIcon`}
-              />
               Email: sales@asianglobalsolutions.in
             </Typography>
 
@@ -228,7 +190,6 @@ const useStyles = makeStyles((theme) => ({
   menuListTitle: {
     fontSize: "1.6rem",
     color: THEME_COLOR.color_3,
-    borderBottom: `2px solid ${THEME_COLOR.color_3}`,
     width: "80%",
     marginBottom: "10px",
     fontWeight: "600",
@@ -279,11 +240,12 @@ const useStyles = makeStyles((theme) => ({
   socialMedia: {
     width: "80%",
     display: "flex",
-    justifyContent: "space-between",
+    justifyContent: "start",
   },
   socialIcon: {
     fontSize: "1.5rem",
     color: "white",
+    marginRight: "15px",
     "&:hover": {
       color: THEME_COLOR.color_5,
     },
