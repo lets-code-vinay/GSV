@@ -2,6 +2,8 @@ import React, { useRef, useState } from "react";
 import { object } from "prop-types";
 import { Box, makeStyles, MenuItem, Typography } from "@material-ui/core";
 import NavbarMenus from "../NavbarMenus";
+import About from "../More/SideBarTab/About";
+import SideBar from "../More/SideBarTab";
 
 const SubNavBar = ({ subNavMenus, isOpen = true }) => {
   const classes = useStyles();
@@ -48,7 +50,8 @@ const SubNavBar = ({ subNavMenus, isOpen = true }) => {
       )}
     </Box>
   ) : (
-    <h3>Menu page should be here</h3>
+    <SideBar />
+    // <h3>Menu page should be here</h3>
   );
 };
 
