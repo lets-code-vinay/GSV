@@ -1,9 +1,92 @@
 .box-padding {
   /* padding: 2%; */
 }
-.overlay{
+.overlay {
   width: 100%;
+  flex-basis: 50%;
+  width: 100%;
+  flex-grow: 1;
+  overflow: hidden;
+  position: static;
+  flex-wrap: wrap;
   height: 100%;
+  border-radius: 30px;
+}
+.overlay:focus {
+  border: 3px solid #00c;
+  border-radius: 5px;
+  box-shadow: 0 0 0 3px #fff;
+  outline: 0;
+}
+.headingCard {
+  padding: 6px 26px;
+  position: absolute;
+  font-size: 1.4rem;
+  line-height: 1.429;
+  z-index: 999;
+  /* margin-bottom: 0.714em; */
+  color: white;
+  width: 20vw;
+}
+.imgInnerContent {
+  max-height: 0;
+  height: 100%;
+  margin: 0;
+  transition: all 0.4s ease-in-out;
+  transform: translateX(-100%);
+  opacity: 0;
+}
+.imgInnerContent:hover {
+  max-height: 100px;
+  margin-bottom: 0.9375em;
+  opacity: 1;
+  transform: translateX(0);
+}
+.overlayImg {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  /* padding-top: 56.25%; */
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.darkOverlay:hover {
+  background: rgba(13, 39, 77, 0.9);
+}
+.darkOverlay {
+  position: absolute;
+  /* bottom: 0; */
+  /* padding: 45px 20px 5px; */
+  /* top: 0; */
+  background-image: linear-gradient(
+    to bottom,
+    rgba(249, 243, 243, 0) 26%,
+    rgba(22, 20, 20, 0.27) 78%,
+    #000 95%,
+    #000 95%
+  );
+}
+.overlayImg:hover {
+  transform: translateX(-30px);
+  transition: all 0.4s linear;
+  /* animation: animateImage 1s alternate infinite; */
+}
+@keyframes animateImage {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+.overlayImgClass {
+  width: 100%;
+  transform: translateX(0) scale(1.2);
+  transition: all 0.4s linear;
 }
 .cardContent .overlay .overlayImg {
   /* position: absolute; */
@@ -13,51 +96,64 @@
   height: 100%;
   object-fit: cover;
 }
-.cardContent .overlay .overlayImg::before{
+.cardContent .overlay:focus .overlayImg::before {
+  background: rgba(13, 39, 77, 0.9);
+  width: 15vw;
+}
+.cardContent .overlay .overlayImg::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgba(9, 16, 80, 0.705), rgb(80, 77, 77));
+  background: rgba(13, 39, 77, 0.9);
+  
   mix-blend-mode: multiply;
   transition: 0.5s;
   opacity: 0;
+}
+/* .cardContent .overlay:focus .overlayImg::before {
+  background: rgba(13, 39, 77, 0.9);
+} */
+.cardContent .overlay:hover .overlayImg::before {
+  opacity: 1;
   border-radius: 30px;
 }
-.cardContent .overlay:hover .overlayImg::before{
-opacity: 1;
-border-radius: 30px;
-}
-.cardContent .overlay .imgInnerContent{
+.cardContent .overlay .imgInnerContent {
   position: absolute;
-  /* top: 0; */
-  /* left: 0; */
-  /* width: 100%; */
-  /* height: 100%; */
-  /* z-index: 1; */
   display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
   flex-direction: column;
 }
-.cardContent .overlay .imgInnerContent p{
+.cardContent .overlay .imgInnerContent p {
   text-transform: uppercase;
   transform: translateY(200px);
   font-size: 20px;
+  opacity: 0;
 }
-.cardContent .overlay:hover .imgInnerContent p{
-transform: translateY(0);
-transition-delay: .6s;
-color: white;
-padding-top: 20px;
+.cardContent .overlay:hover .imgInnerContent p {
+  transform: translateY(0);
+  transition-delay: 0.3s;
+  color: white;
+  opacity: 1;
+  position: absolute;
+  top: -65px;
+  width: 18vw;
+  padding-left: 10px;
+  animation: animatePara 1s;
+}
+@keyframes animatePara {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
 .commonCardStyle {
-  /* position: absolute; */
-  /* bottom: 10%; */
-  /* left: 5%; */
-  /* display: none; */
   font-weight: 400;
   color: white;
   font-size: 25px;
@@ -122,7 +218,7 @@ padding-top: 20px;
 }
 .hoverEffect:hover {
   cursor: pointer;
-  animation: animate 1s alternate infinite;
+  animation: animate 1s;
 }
 @keyframes animate {
   0% {
@@ -136,8 +232,6 @@ padding-top: 20px;
   }
 }
 .card_back_img {
-  /* background: #FFFFFF; */
-  /* background-image: url(../../Assets/card_back_img.jpg); */
   border-radius: 0px;
   background-repeat: no-repeat;
 }
@@ -148,12 +242,7 @@ padding-top: 20px;
   display: block;
 }
 .hoverImg:hover {
-  /* transform: translateX(0) scale(1.04); */
-  /* transform: scale(1.06); */
-  /* transform-origin: center right; */
-  /* transition: all .4s ease; */
-  cursor: pointer;
-  animation: animate 1s alternate infinite;
+  animation: animate 1s;
 }
 @keyframes animate {
   0% {
@@ -188,16 +277,13 @@ padding-top: 20px;
   background-repeat: no-repeat;
 }
 .data-center:hover {
-  animation: animate_common 1s alternate infinite;
+  animation: animate_common 1s;
 }
 @keyframes animate_common {
   0% {
     transform: translateX(0px);
   }
   50% {
-    transform: translateX(-5px);
-  }
-  100% {
     transform: translateX(-5px);
   }
 }
@@ -209,7 +295,7 @@ padding-top: 20px;
   background-repeat: no-repeat;
 }
 .networking:hover {
-  animation: animate_common 1s alternate infinite;
+  animation: animate_common 1s;
 }
 .devOps {
   width: 100%;
@@ -219,7 +305,7 @@ padding-top: 20px;
   background-repeat: no-repeat;
 }
 .devOps:hover {
-  animation: animate_common 1s alternate infinite;
+  animation: animate_common 1s;
 }
 .docker {
   width: 100%;
@@ -229,7 +315,7 @@ padding-top: 20px;
   background-repeat: no-repeat;
 }
 .docker:hover {
-  animation: animate_common 1s alternate infinite;
+  animation: animate_common 1s;
 }
 .desktop {
   width: 100%;
@@ -239,7 +325,7 @@ padding-top: 20px;
   background-repeat: no-repeat;
 }
 .desktop:hover {
-  animation: animate_common 1s alternate infinite;
+  animation: animate_common 1s;
 }
 .cloudComputing {
   width: 100%;
@@ -249,7 +335,7 @@ padding-top: 20px;
   background-repeat: no-repeat;
 }
 .cloudComputing:hover {
-  animation: animate_common 1s alternate infinite;
+  animation: animate_common 1s;
 }
 .display {
   display: flex;
@@ -291,6 +377,13 @@ padding-top: 20px;
 769px — 1024px: Small screens, laptops
 1025px — 1200px: Desktops, large screens
 1201px and more —  Extra large screens, TV */
+/* @media only screen and (min-width: 1024px){
+.imgInnerContent {
+    position: absolute;
+    
+    background-image: linear-gradient(to bottom,rgba(249,243,243,0) 26%,rgba(22,20,20,0.27) 78%,#000 95%,#000 95%);
+} */
+
 @media screen and (min-width: 279px) and (max-width: 480px) {
   .hr {
     margin-bottom: 10px;

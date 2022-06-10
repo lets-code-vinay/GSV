@@ -153,20 +153,30 @@ export default function Technologies() {
 
       <Grid container spacing={0} className="cardGrid">
         <Grid className="cardBody">
-          {cardBox.map((item) => {
+          {cardBox.map((item, i) => {
             return (
-              <Card sx={{ minWidth: 275 }} className="cardMenu">
+              <Card key={i} sx={{ minWidth: 275 }} className="cardMenu">
                 <CardContent className="cardContent position-relative">
                   <div className="overlay">
-                    <div className={item.className}>
-                    <h3 style={{ color: "white", padding: "20px" }}>
-                      {item.heading}
-                    </h3>
+                   
+                    <div className={item.className} src={item.img}>
+                      {/* style={{ color: "white", padding: "20px" }} */}
+
+                      <img
+                        src={item.img}
+                        width="100%"
+                        height="100%"
+                        alt="Master the digital landscape"
+                        className="overlayImgClass"
+                      />
                     </div>
-                    <div className="imgInnerContent">
-                      <h3>{item.text}</h3>
-                      <p >{item.para}</p>
-                    </div>
+                    <div className="darkOverlay">
+                      <h3 className="headingCard">{item.heading}</h3>
+                      <div className="imgInnerContent">
+                        <h3>{item.text}</h3>
+                        <p>{item.para}</p>
+                      </div>
+                    </div> 
                   </div>
                 </CardContent>
               </Card>

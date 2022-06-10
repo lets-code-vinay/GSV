@@ -10,7 +10,7 @@ export const cardBox = [
     id: 1,
     heading: "Dev Ops",
     img: DevOps,
-    className:"overlayImg devOps",
+    className:"overlayImg",
     para:"this is dummy para you can change this ",
     text:"this is devops"
   },
@@ -18,7 +18,7 @@ export const cardBox = [
     id: 2,
     img: Data_Center,
     heading: "Data Center",
-    className:"overlayImg data-center",
+    className:"overlayImg",
     para:"this is dummy para you can change this ",
     text:"this is data center"
   },
@@ -26,7 +26,7 @@ export const cardBox = [
     id: 3,
     img: Cloud_Computing,
     heading: "Cloud Computing",
-    className:"overlayImg cloudComputing",
+    className:"overlayImg",
     para:"this is dummy para you can change this ",
     text:"this is cloud computing"
   },
@@ -34,7 +34,7 @@ export const cardBox = [
     id: 4,
     img: DesktopImage,
     heading: "Desktop",
-    className:"overlayImg desktop",
+    className:"overlayImg",
     para:"this is dummy para you can change this ",
     text:"this is desktop"
   },
@@ -42,7 +42,7 @@ export const cardBox = [
     id: 5,
     img: Networking,
     heading: "Networking",
-    className:"overlayImg networking",
+    className:"overlayImg",
     para:"this is dummy para you can change this ",
     text:"this is network"
   },
@@ -50,7 +50,7 @@ export const cardBox = [
     id: 6,
     img: Docker_img,
     heading: "Docker",
-    className:"overlayImg docker",
+    className:"overlayImg",
     para:"this is dummy para you can change this ",
     text:"this is docker"
   },
