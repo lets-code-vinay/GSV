@@ -78,78 +78,37 @@ export default function Technologies() {
           />
         </Grid>
       </Grid>
-      <Grid container spacing={1} className="marginTop">
-        <Grid item xs={7} className="bck1">
-          <section className="Software_Define hoverImg imageRight">
-            <div style={{ color: "white", padding: "20px" }}>
-              <h3 className="text">Software-Defined Networking</h3>
-            </div>
-          </section>
-          {/* <div className="card_back_img"> */}
-          {/*  */}
-          {/* <img src={Software_Define_Grid} className="imageRight hoverImg" /> */}
-          {/* <h4>Lets us Help you to come in Future of SDN</h4> */}
-          {/* <p className="para">
-            Cisco SD-WAN, Cisco DNA-C, Cisco ACI, VeloCloud, Sliverlight and
-            many more.{" "}
-          </p> */}
-          {/* </div> */}
+      <Grid
+        container
+        columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+        className="marginTop "
+      >
+        <Grid item xs={8} className="bck1">
+          <div className="divImgClass imageLeft" src={Software_Define_Grid}>
+            <img src={Software_Define_Grid} className="imgTagSoftware" />
+          </div>
+          <h3 className="text">Software-Defined Networking</h3>
         </Grid>
-        <Grid item xs={5}>
-          {/* <div className="bgColor card-background"> */}
-          <img src={Security_Img} className="imageLeft" />
-          {/* </div> */}
+        <Grid item xs={4} className="bck2">
+          <div className="secirutyOverlay">
+            <div
+              className="bgColor card-background divSecurity"
+              src={Security_Img}
+            >
+              <img src={Security_Img} className="imageRight securityImgTag" />
+            </div>
+            <div className="topHeading">
+              <p>Security</p>
+              <div className="rightImgGradient">
+                <h3 className="heading3">Security</h3>
+                <div className="paraDiv">
+                  <p>this is paragraph</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </Grid>
       </Grid>
-
-      {/* <Grid container spacing={0} className="cardGrid">
-        <Grid className="cardBody d-flex">
-          <Card sx={{ minWidth: 275 }} className="cardMenu">
-            <CardContent className="cardContent">
-              <section className="data-center">
-              <div style={{color: "white", padding:"20px"}} className="test">Data Center</div>
-              </section>
-            </CardContent>
-          </Card>
-          <Card sx={{ minWidth: 275 }} className="cardMenu">
-            <CardContent className="cardContent">
-              <section className="networking">
-              <div style={{color: "white", padding:"20px"}}>Networking</div>
-              </section>
-            </CardContent>
-          </Card>
-          <Card sx={{ minWidth: 275 }} className="cardMenu">
-            <CardContent className="cardContent">
-              <section className="devOps">
-              <div style={{color: "white", padding:"20px"}}>Dev Ops</div>
-              </section>
-            </CardContent>
-          </Card>
-          <Card sx={{ minWidth: 275 }} className="cardMenu">
-            <CardContent className="cardContent">
-              <section className="docker">
-              <div style={{color: "white", padding:"20px"}}>Docker</div>
-              </section>
-            </CardContent>
-          </Card>
-          <Card sx={{ minWidth: 275 }} className="cardMenu">
-            <CardContent className="cardContent">
-              <section className="desktop">
-              <div style={{color: "white", padding:"20px"}}>Desktop</div>
-              </section>
-            </CardContent>
-          </Card>
-          {/* <section className="backImg"> */}
-      {/* <Card sx={{ minWidth: 275 }} className="cardMenu">
-            <CardContent className="cardContent">
-              <section className="cloudComputing">
-                <div style={{color: "white", padding:"20px"}}>Cloud Computing</div>
-              </section>
-            </CardContent>
-          </Card> */}
-      {/* </section> */}
-      {/* </Grid> */}
-      {/* </Grid>  */}
 
       <Grid container spacing={0} className="cardGrid">
         <Grid className="cardBody">
@@ -158,7 +117,6 @@ export default function Technologies() {
               <Card key={i} sx={{ minWidth: 275 }} className="cardMenu">
                 <CardContent className="cardContent position-relative">
                   <div className="overlay">
-                   
                     <div className={item.className} src={item.img}>
                       {/* style={{ color: "white", padding: "20px" }} */}
                       <img
@@ -173,9 +131,11 @@ export default function Technologies() {
                       <h3 className="headingCard">{item.heading}</h3>
                       <div className="imgInnerContent">
                         <h3>{item.text}</h3>
-                        <p>{item.para}</p>
+                        <div className="para">
+                          <p>{item.para}</p>
+                        </div>
                       </div>
-                    </div> 
+                    </div>
                   </div>
                 </CardContent>
               </Card>

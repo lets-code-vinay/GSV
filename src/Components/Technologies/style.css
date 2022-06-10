@@ -20,30 +20,29 @@
 }
 .darkOverlay .headingCard {
   padding: 6px 26px;
-    position: absolute;
-    font-size: 1.4rem;
-    line-height: 1.429;
-    /* z-index: 999; */
-    margin-bottom: 7.714em;
-    color: white;
-    width: 20vw;
-    /* top: 0%; */
-    bottom: 0;
+  position: absolute;
+  font-size: 1.4rem;
+  line-height: 1.429;
+  /* z-index: 999; */
+  margin-bottom: 7.714em;
+  color: white;
+  width: 20vw;
+  /* top: 0%; */
+  bottom: 85px;
 }
 .imgInnerContent {
   max-height: 0;
   height: 100%;
   margin: 0;
   transition: all 0.4s ease-in-out;
-  transform: translateX(-100%);
-  /* opacity: 0; */
-  /* padding-right: 20px; */
+  /* transform: translateX(-100%); */
+  opacity: 0;
+  padding-right: 20px;
 }
 .imgInnerContent:hover {
-  max-height: 100px;
-  margin-bottom: 0.9375em;
+  /* max-height: 100px; */
+  /* margin-bottom: 0.9375em; */
   opacity: 1;
-  animation: animatePara 1s;
 
   /* transform: translateX(0); */
 }
@@ -75,18 +74,6 @@
 .overlayImg:hover {
   transform: translateX(-30px);
   transition: all 0.4s linear;
-  /* animation: animateImage 1s alternate infinite; */
-}
-@keyframes animateImage {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(0px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
 }
 .overlayImgClass {
   width: 100%;
@@ -100,8 +87,28 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: 0.4s linear;
+
+  /* transform: translateX(100%); */
 }
-.cardContent .overlay:focus .overlayImg::before {
+.para {
+  max-height: 0;
+  height: 100%;
+  margin: 0;
+  transition: all 0.4s ease-in-out;
+  /* transform: translateY(-100%); */
+  opacity: 1;
+}
+.cardContent .overlay .para:focus {
+  max-height: 100px;
+  margin-bottom: 0.9375em;
+  opacity: 1;
+  position: absolute;
+  /* transform: translateX(-100%); */
+  animation: animatePara 1s;
+  top: 0;
+}
+.cardContent .overlay:hover .overlayImg::before {
   background: rgba(13, 39, 77, 0.9);
   width: 15vw;
 }
@@ -112,55 +119,55 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(13, 39, 77, 0.9);
-  
+  background-image: linear-gradient(
+    to bottom,
+    rgba(249, 243, 243, 0) 26%,
+    rgba(22, 20, 20, 0.27) 78%,
+    #000 95%,
+    #000 95%
+  );
+
   mix-blend-mode: multiply;
   transition: 0.5s;
   opacity: 0;
 }
-/* .cardContent .overlay:focus .overlayImg::before {
-  background: rgba(13, 39, 77, 0.9);
-} */
-.cardContent .overlay:hover .overlayImg::before {
-  opacity: 1;
-  border-radius: 30px;
-}
+
 .cardContent .overlay:hover .imgInnerContent {
   position: absolute;
   transition-delay: 0.3s;
   /* display: flex; */
+  transition: all 0.5s linear;
   flex-direction: column;
   opacity: 1;
   animation: animatePara 1s;
-
 }
 .cardContent .overlay .imgInnerContent p {
   text-transform: uppercase;
-  transform: translateY(200px);
+  /* transform: translateY(200px); */
   font-size: 20px;
   opacity: 0;
 }
 .cardContent .overlay:hover .imgInnerContent p {
   /* transform: translateY(0); */
-  transition-delay: 0.3s;
+  transition-delay: 0.2s;
   color: white;
   opacity: 1;
   position: absolute;
-  top: -65px;
+  top: -115px;
   width: 18vw;
+  transition: 0.4s linear;
   padding-left: 10px;
   /* animation: animatePara 1s; */
-
 }
 @keyframes animatePara {
   0% {
-    transform: translateX(-10%);
+    transform: translateX(-100%);
   }
   50% {
-    transform: translateX(30%);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(30%);
+    transform: translateX(0%);
   }
 }
 .commonCardStyle {
@@ -169,24 +176,7 @@
   font-size: 25px;
   transition: 0.8s;
 }
-.overlayImg .commonCardStyle:hover {
-  display: block;
-  transform: translate(10px, 10px);
-}
-.overlayImg .hoverEffectTest:hover {
-  display: block;
-}
-.hoverEffectTest {
-  /* display: flex; */
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  transition: 0.8s;
-  padding: 15% 0 0 5%;
-  color: white;
-  font-weight: 100;
-  font-size: 25px;
-}
+
 .column_first {
   background: #0d274d;
   border-radius: 10px 0px 0px 10px;
@@ -245,108 +235,7 @@
   border-radius: 0px;
   background-repeat: no-repeat;
 }
-.technologiesPage .marginTop {
-  margin-top: 45px;
-}
-.bck1:hover + .text + .para {
-  display: block;
-}
-.hoverImg:hover {
-  animation: animate 1s;
-}
-@keyframes animate {
-  0% {
-    transform: translateX(0px);
-  }
-  50% {
-    transform: translateX(-10px);
-  }
-  100% {
-    transform: translateX(-10px);
-  }
-}
-.imageRight {
-  width: 112%;
-  height: 99%;
-}
-.imageLeft {
-  padding-left: 70px;
-  width: 100%;
-}
-.Software_Define {
-  background-image: url(../../Assets/Images/Software_Define_grid.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
-.data-center {
-  width: 100%;
-  height: 100%;
-  border-radius: 30px;
-  background-image: url(../../Assets/Images/data-center.png);
-  background-repeat: no-repeat;
-}
-.data-center:hover {
-  animation: animate_common 1s;
-}
-@keyframes animate_common {
-  0% {
-    transform: translateX(0px);
-  }
-  50% {
-    transform: translateX(-5px);
-  }
-}
-.networking {
-  width: 100%;
-  height: 100%;
-  border-radius: 30px;
-  background-image: url(../../Assets/Images/networking.png);
-  background-repeat: no-repeat;
-}
-.networking:hover {
-  animation: animate_common 1s;
-}
-.devOps {
-  width: 100%;
-  height: 100%;
-  border-radius: 30px;
-  background-image: url(../../Assets/Images/devops.png);
-  background-repeat: no-repeat;
-}
-.devOps:hover {
-  animation: animate_common 1s;
-}
-.docker {
-  width: 100%;
-  height: 100%;
-  border-radius: 30px;
-  background-image: url(../../Assets/Images/Docker_img.png);
-  background-repeat: no-repeat;
-}
-.docker:hover {
-  animation: animate_common 1s;
-}
-.desktop {
-  width: 100%;
-  height: 100%;
-  border-radius: 30px;
-  background-image: url(../../Assets/Images/desktop-image.png);
-  background-repeat: no-repeat;
-}
-.desktop:hover {
-  animation: animate_common 1s;
-}
-.cloudComputing {
-  width: 100%;
-  height: 100%;
-  border-radius: 30px;
-  background-image: url(../../Assets/Images/cloud_computing.png);
-  background-repeat: no-repeat;
-}
-.cloudComputing:hover {
-  animation: animate_common 1s;
-}
 .display {
   display: flex;
 }
@@ -381,7 +270,120 @@
   background: #0d274d;
   border-radius: 30px;
 }
+/* --------------left software img style--------- */
+.technologiesPage .bck2 {
+  padding-left: 15px !important;
+}
+.technologiesPage .marginTop {
+  margin-top: 45px;
+}
+.marginTop .bck1 {
+  position: relative;
+}
+.imageLeft {
+  /* width: 112%; */
+  height: 100%;
+}
+.text {
+  position: absolute;
+  top: 28px;
+  left: 4%;
+  color: white;
+}
+.imageRight {
+  /* padding-left: 70px; */
+  width: 100%;
+}
 
+.imgTagSoftware:hover {
+  transform: translateX(-30px) scale(1.2);
+}
+.imgTagSoftware {
+  width: 100%;
+  transform: translateX(0) scale(1.2);
+  transition: all 0.4s linear;
+}
+
+/* ------------right secirity img style-------- */
+.marginTop .bck2 {
+  position: relative;
+  /* overflow: hidden; */
+  /* border-radius: 30px; */
+}
+.divImgClass {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 77vh;
+  overflow: hidden;
+  border-radius: 30px;
+}
+.secirutyOverlay {
+  overflow: hidden;
+  border-radius: 30px;
+}
+.divSecurity {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 77vh;
+}
+.securityImgTag {
+  width: 100%;
+  transform: translateX(0) scale(1.2);
+  transition: all 0.4s linear;
+}
+.securityImgTag:hover {
+  transform: translateX(-30px) scale(1.2);
+}
+.topHeading {
+  position: absolute;
+  bottom: 0;
+  padding: 45px 20px 5px;
+  top: 0;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(249, 243, 243, 0) 26%,
+    rgba(22, 20, 20, 0.27) 78%,
+    #000 95%,
+    #000 95%
+  );
+  width: 97%;
+  border-radius: 30px;
+  padding: 15px 15px 0;
+  transition: all 0.4s ease;
+}
+.topHeading:hover {
+  background: linear-gradient(#0d274d, transparent);
+}
+.rightImgGradient {
+  position: absolute;
+  bottom: 0;
+  transition: background 0.6s ease-in-out;
+  padding-right: 20px;
+}
+.heading3 {
+  position: absolute;
+  bottom: 109px;
+}
+.paraDiv {
+  max-height: 0;
+  height: 100%;
+  margin: 0;
+  transition: all 0.4s ease-in-out;
+  transform: translateX(-100%);
+  opacity: 0;
+}
+.paraDiv:focus {
+  max-height: 100px;
+  margin-bottom: 0.9375em;
+  opacity: 1;
+  transform: translateX(-100%);
+}
 /* 320px — 480px: Mobile devices
 481px — 768px: iPads, Tablets
 769px — 1024px: Small screens, laptops
