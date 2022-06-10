@@ -18,15 +18,17 @@
   box-shadow: 0 0 0 3px #fff;
   outline: 0;
 }
-.headingCard {
+.darkOverlay .headingCard {
   padding: 6px 26px;
-  position: absolute;
-  font-size: 1.4rem;
-  line-height: 1.429;
-  z-index: 999;
-  /* margin-bottom: 0.714em; */
-  color: white;
-  width: 20vw;
+    position: absolute;
+    font-size: 1.4rem;
+    line-height: 1.429;
+    /* z-index: 999; */
+    margin-bottom: 7.714em;
+    color: white;
+    width: 20vw;
+    /* top: 0%; */
+    bottom: 0;
 }
 .imgInnerContent {
   max-height: 0;
@@ -34,13 +36,16 @@
   margin: 0;
   transition: all 0.4s ease-in-out;
   transform: translateX(-100%);
-  opacity: 0;
+  /* opacity: 0; */
+  /* padding-right: 20px; */
 }
 .imgInnerContent:hover {
   max-height: 100px;
   margin-bottom: 0.9375em;
   opacity: 1;
-  transform: translateX(0);
+  animation: animatePara 1s;
+
+  /* transform: translateX(0); */
 }
 .overlayImg {
   display: block;
@@ -120,10 +125,14 @@
   opacity: 1;
   border-radius: 30px;
 }
-.cardContent .overlay .imgInnerContent {
+.cardContent .overlay:hover .imgInnerContent {
   position: absolute;
-  display: flex;
+  transition-delay: 0.3s;
+  /* display: flex; */
   flex-direction: column;
+  opacity: 1;
+  animation: animatePara 1s;
+
 }
 .cardContent .overlay .imgInnerContent p {
   text-transform: uppercase;
@@ -132,7 +141,7 @@
   opacity: 0;
 }
 .cardContent .overlay:hover .imgInnerContent p {
-  transform: translateY(0);
+  /* transform: translateY(0); */
   transition-delay: 0.3s;
   color: white;
   opacity: 1;
@@ -140,17 +149,18 @@
   top: -65px;
   width: 18vw;
   padding-left: 10px;
-  animation: animatePara 1s;
+  /* animation: animatePara 1s; */
+
 }
 @keyframes animatePara {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(-10%);
   }
   50% {
-    transform: translateX(0px);
+    transform: translateX(30%);
   }
   100% {
-    transform: translateX(0px);
+    transform: translateX(30%);
   }
 }
 .commonCardStyle {

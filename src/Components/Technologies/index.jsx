@@ -161,7 +161,6 @@ export default function Technologies() {
                    
                     <div className={item.className} src={item.img}>
                       {/* style={{ color: "white", padding: "20px" }} */}
-
                       <img
                         src={item.img}
                         width="100%"
