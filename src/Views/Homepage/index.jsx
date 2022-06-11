@@ -12,7 +12,7 @@ const Homepage = () => {
   return (
     <>
       <StructuredNavbar />
-      {/* <MainSlider /> */}
+      <MainSlider />
       <Trending />
       <InfinitySliderContainer />
       <OurPresence />

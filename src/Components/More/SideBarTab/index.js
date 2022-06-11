@@ -26,14 +26,6 @@ const SideBar = (props) => {
   const filteredLabel = SideMenu.filter((item, i) => {
     return item;
   });
-  console.log(SideMenu.label);
-  const handleAboutBtn = (value) => {
-    Navigate("./about");
-    setIsAboutActive(true);
-  };
-  const handleChoose = () => {
-    setChoose(() => !choose);
-  };
   console.log(storeLabel);
   return (
     <Grid container spacing={2}>
@@ -57,7 +49,7 @@ const SideBar = (props) => {
           </div>
         </div>
       </Grid>
-      <Grid item xs={10} className="displayFlex">
+      <Grid item xs={10} >
         {props.children}
       </Grid>
     </Grid>

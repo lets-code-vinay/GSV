@@ -3,11 +3,11 @@ import React from "react";
 import SideBar from "..";
 import "./style.css"
 
-const Industries = () => {
+const Blogs = () => {
   return (
     <SideBar>
       <Grid xs={12}>
-      <h1 className="industriesHeading my-5">Industries</h1>
+      <h1 className="blogsHeading my-5">Blogs</h1>
       <div>
         <p>Coming Soon...</p>
       </div>
@@ -16,4 +16,4 @@ const Industries = () => {
   );
 };
 
-export default Industries;
+export default Blogs;

@@ -35,18 +35,18 @@ export const SideMenu = [
     id: 6,
     className: "commonClass",
     label: "Blog",
-    path: "/about",
+    path: "/blogs",
   },
   {
     id: 7,
     className: "commonClass",
     label: "Career",
-    path: "/about",
+    path: "/career",
   },
   {
     id: 8,
     className: "commonClass",
     label: "Contact Us",
-    path: "/about",
+    path: "/contact",
   },
 ];

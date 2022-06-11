@@ -1,25 +1,32 @@
 import React, { useRef, useState } from "react";
 import { object } from "prop-types";
-import { Box, makeStyles, MenuItem, Typography } from "@material-ui/core";
+import { Box, makeStyles, MenuItem, Typography, Modal, Grid } from "@material-ui/core";
 import NavbarMenus from "../NavbarMenus";
 import About from "../More/SideBarTab/About";
 import SideBar from "../More/SideBarTab";
+import { useNavigate } from "react-router-dom";
 
 const SubNavBar = ({ subNavMenus, isOpen = true }) => {
   const classes = useStyles();
 
+  const navigate = useNavigate();
   const refForNavMenus = useRef(null);
 
   const [isActive, setActive] = useState(false);
   const [isMenuListingOpened, setMenuListingOpen] = useState(false);
   const [menuListing, setMenuListing] = useState({});
+  const [isMoreOpen, setIsMoreOpen] = useState(!false)
 
   const handleMainNavbarClick = (menu) => (_) => {
     setActive(menu.value);
     setMenuListingOpen(!isMenuListingOpened);
     setMenuListing(menu.menus);
+    setIsMoreOpen(true)
   };
 
+  const handleClose = () => {
+    setIsMoreOpen(false)
+  }
   return !subNavMenus.isMore ? (
     <Box id={subNavMenus.value} className={`${classes.subMenuBar}  subMenuBar`}>
       {Object.values(subNavMenus.menus).map((menu, index) => {
@@ -50,8 +57,22 @@ const SubNavBar = ({ subNavMenus, isOpen = true }) => {
       )}
     </Box>
   ) : (
-    <SideBar />
-    // <h3>Menu page should be here</h3>
+    <>
+    {
+      isMoreOpen && navigate("/about") 
+    }
+     {/* <ClickAwayListener onClickAway={handleClickAway}> */}
+     {/* <Modal
+        open={isMoreOpen}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={BoxModalstyles} style={{ backgroundColor: "white", height :"100%" }}>
+        <SideBar />
+        </Box>
+      </Modal> */}
+    </>
   );
 };
 
@@ -70,7 +91,18 @@ SubNavBar.defaultProps = {
 };
 
 export default SubNavBar;
-
+const BoxModalstyles = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: "100%",
+  height:"100%",
+  bgcolor: 'white',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+};
 const useStyles = makeStyles((theme) => ({
   subMenu: {
     cursor: "pointer",
