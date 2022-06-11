@@ -1,27 +1,10 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import { CgArrowLongRight } from "react-icons/cg";
-import { styled } from "@mui/material/styles";
-import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
+import React from "react";
 import Grid from "@mui/material/Grid";
-import { SideMenu } from "../../../Configs/More";
-import AboutPageImage from "../../../Assets/Images/aboutPage.png";
+import AboutPageImage from "../../../../Assets/Images/aboutPage.png";
 import "./About.css";
-import WhyChooseUs from "./WhyChoose/index";
-import SideBar from "./index";
+import SideBar from "../index";
 
 const About = (props) => {
-  const [step, setStep] = useState(1);
-  const [storeLabel, setStoreLabel] = useState();
-  const [choose, setChoose] = useState(false);
-  const [industries, setIndustries] = useState(false);
-  const [presence, setPresence] = useState(false);
-  const [customers, setCustomers] = useState(false);
-  //   const [choose, setChoose] = useState(false)
-  //   const [choose, setChoose] = useState(false)
-  //   const [choose, setChoose] = useState(false)
-
   return (
     <SideBar>
       <Grid item xs={12} className="displayFlex">

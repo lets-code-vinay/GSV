@@ -1,8 +1,8 @@
 import React from "react";
-import Homepage from "./Views/Homepage";
-import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import About from "./Components/More/SideBarTab/About";
+import "./App.css";
+import Homepage from "./Views/Homepage";
+import About from "./Components/More/SideBarTab/About/index";
 import WhyChooseUs from "./Components/More/SideBarTab/WhyChoose";
 import Industries from "./Components/More/SideBarTab/Industries/Index";
 import OurPresence from "./Components/Presence";

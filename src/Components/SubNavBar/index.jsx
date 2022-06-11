@@ -2,7 +2,6 @@ import React, { useRef, useState } from "react";
 import { object } from "prop-types";
 import { Box, makeStyles, MenuItem, Typography, Modal, Grid } from "@material-ui/core";
 import NavbarMenus from "../NavbarMenus";
-import About from "../More/SideBarTab/About";
 import SideBar from "../More/SideBarTab";
 import { useNavigate } from "react-router-dom";
 
@@ -58,12 +57,7 @@ const SubNavBar = ({ subNavMenus, isOpen = true }) => {
       )}
     </Box>
   ) : (
-    <>
-    {
-      isMoreOpen && navigate("/about") 
-    }
-     {/* <ClickAwayListener onClickAway={handleClickAway}> */}
-     {/* <Modal
+     <Modal
         open={isMoreOpen}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
@@ -72,8 +66,7 @@ const SubNavBar = ({ subNavMenus, isOpen = true }) => {
         <Box sx={BoxModalstyles} style={{ backgroundColor: "white", height :"100%" }}>
         <SideBar />
         </Box>
-      </Modal> */}
-    </>
+      </Modal>
   );
 };
 

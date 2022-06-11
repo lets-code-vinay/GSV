@@ -2,6 +2,7 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import SideBar from "..";
 import "./WhyChoose.css"
+import AboutPageImage from "../../../../Assets/Images/aboutPage.png";
 
 const WhyChooseUs = () => {
   return (
@@ -24,9 +25,9 @@ const WhyChooseUs = () => {
           </div>
         </Grid>
         <Grid item xs={12} className="displayFlex">
-          <Grid xs={4}>
+          <Grid item xs={4}>
             <div>
-              <img src="/igm" alt="here image show" />
+              <img src={AboutPageImage} alt="here image show" height={`100%`} width={`95%`}/>
             </div>
           </Grid>
           <Grid item xs={8}>

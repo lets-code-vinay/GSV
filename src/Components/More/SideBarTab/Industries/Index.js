@@ -2,16 +2,21 @@ import { Grid } from "@mui/material";
 import React from "react";
 import SideBar from "..";
 import "./style.css"
+import { IndustriesCardData } from "../../../../Configs/IndutriesCard";
 
 const Industries = () => {
   return (
     <SideBar>
-      <Grid item xs={12}>
-      <h1 className="industriesHeading my-5">Industries</h1>
-      <div>
-        <p>Coming Soon...</p>
-      </div>
-      </Grid>
+        <h1 className="industriesHeading my-5">Industries</h1>
+        <Grid container className="displayFlex">
+          {
+            IndustriesCardData.map((item, i) => {
+              return <Grid item sm={6} xs={12} md={9} lg={4} >
+                <img src={item.img} />
+              </Grid>
+            })
+          }
+        </Grid>
     </SideBar>
   );
 };

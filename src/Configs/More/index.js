@@ -1,4 +1,3 @@
-import About from "../../Components/More/SideBarTab/About";
 export const SideMenu = [
   {
     id: 1,
