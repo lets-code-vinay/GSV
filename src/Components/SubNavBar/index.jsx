@@ -18,10 +18,11 @@ const SubNavBar = ({ subNavMenus, isOpen = true }) => {
   const [isMoreOpen, setIsMoreOpen] = useState(!false)
 
   const handleMainNavbarClick = (menu) => (_) => {
+    setIsMoreOpen(true)
+
     setActive(menu.value);
     setMenuListingOpen(!isMenuListingOpened);
     setMenuListing(menu.menus);
-    setIsMoreOpen(true)
   };
 
   const handleClose = () => {

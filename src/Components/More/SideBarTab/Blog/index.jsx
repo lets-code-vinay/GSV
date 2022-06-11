@@ -6,7 +6,7 @@ import "./style.css"
 const Blogs = () => {
   return (
     <SideBar>
-      <Grid xs={12}>
+      <Grid item xs={12}>
       <h1 className="blogsHeading my-5">Blogs</h1>
       <div>
         <p>Coming Soon...</p>

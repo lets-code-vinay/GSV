@@ -6,7 +6,7 @@ import "./style.css"
 const Industries = () => {
   return (
     <SideBar>
-      <Grid xs={12}>
+      <Grid item xs={12}>
       <h1 className="industriesHeading my-5">Industries</h1>
       <div>
         <p>Coming Soon...</p>

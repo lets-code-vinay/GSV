@@ -6,7 +6,7 @@ import "./style.css"
 const Contact = () => {
   return (
     <SideBar>
-      <Grid xs={12}>
+      <Grid item xs={12}>
       <h1 className="contactHeading my-5">Contact</h1>
       <div>
         <p>Coming Soon...</p>

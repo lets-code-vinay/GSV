@@ -23,13 +23,13 @@ const WhyChooseUs = () => {
             </p>
           </div>
         </Grid>
-        <Grid xs={12} className="displayFlex">
+        <Grid item xs={12} className="displayFlex">
           <Grid xs={4}>
             <div>
               <img src="/igm" alt="here image show" />
             </div>
           </Grid>
-          <Grid xs={8}>
+          <Grid item xs={8}>
             <div>
               <h4 className="textColorRed">Technology Expense Managemant and solution</h4>
               <p className="backTextColor">Here first para line </p>

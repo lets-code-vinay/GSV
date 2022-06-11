@@ -24,7 +24,7 @@ const About = (props) => {
 
   return (
     <SideBar>
-      <Grid xs={12} className="displayFlex">
+      <Grid item xs={12} className="displayFlex">
         <Grid item xs={5}>
           <div>
             <h1 className="aboutHeading my-5">About Us</h1>

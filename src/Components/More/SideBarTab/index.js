@@ -28,7 +28,7 @@ const SideBar = (props) => {
   });
   console.log(storeLabel);
   return (
-    <Grid container spacing={2}>
+    <Grid item container spacing={2}>
       <Grid item xs={2}>
         <div>
           <div className="my-5">
