@@ -10,6 +10,7 @@ import {
 import "./styles.css";
 import PieChart from "./PieChart";
 import { INSIGHT_DATA } from "./PieChart/insightData";
+import Logo from "../../Assets/Images/blueLogo.png";
 
 const Insight = () => {
   const classes = useStyles();
@@ -17,7 +18,7 @@ const Insight = () => {
   const [insightDetail, setInsightDetail] = useState(
     Object.keys(INSIGHT_DATA)[0]
   );
-  console.log("sdfsd", Object.keys(INSIGHT_DATA)[0]);
+
   /**
    * @description update values in right grid from selection
    *
@@ -51,6 +52,11 @@ const Insight = () => {
           <PieChart
             data={INSIGHT_DATA}
             fetchInsightDetails={getInsightDetail}
+          />
+          <img
+            src={Logo}
+            alt={"logo inside"}
+            className={`${classes.logoInside} logoInside`}
           />
         </Grid>
         <Grid item xs={12} sm={12} md={6} lg={6}>
@@ -108,5 +114,11 @@ const useStyles = makeStyles((theme) => ({
   pieButton: {
     color: "white",
     marginTop: "5%",
+  },
+  logoInside: {
+    position: "relative",
+    top: "-58%",
+    width: "20%",
+    left: "40%",
   },
 }));
