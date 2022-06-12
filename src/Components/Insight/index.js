@@ -31,10 +31,8 @@ const Insight = () => {
   const {
     data: {
       color = "#0d274d",
-      id = INSIGHT_DATA.our_services.id,
       info = INSIGHT_DATA.our_services.info,
       label = INSIGHT_DATA.our_services.label,
-      value = INSIGHT_DATA.our_services.value,
     } = {},
   } = insightDetail || INSIGHT_DATA.our_services;
 

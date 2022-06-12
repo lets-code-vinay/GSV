@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { ResponsivePie } from "@nivo/pie";
+import "../styles.css";
 
 import { shape } from "prop-types";
 
 const PieChart = ({ data = {}, fetchInsightDetails }) => {
-  const [isHovered, setHovered] = useState(false);
   /**
    * @description Getting value of current slice
    *
@@ -13,7 +13,6 @@ const PieChart = ({ data = {}, fetchInsightDetails }) => {
    */
   const handleMouseEnter = (node, event) => {
     fetchInsightDetails(node);
-    setHovered(true);
   };
 
   /**
@@ -22,9 +21,7 @@ const PieChart = ({ data = {}, fetchInsightDetails }) => {
    * @param {Object} node
    * @param {Object} event
    */
-  const handleMouseLeave = (_, __) => {
-    setHovered(false);
-  };
+  const handleMouseLeave = (_, __) => {};
 
   /**
    * @description Getting value of current slice on click
@@ -40,7 +37,7 @@ const PieChart = ({ data = {}, fetchInsightDetails }) => {
       data={Object.values(data)}
       margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
       OrdinalColorScaleConfig={{ Categorical: "Dark 2" }}
-      innerRadius={0.5}
+      innerRadius={0.4}
       padAngle={0}
       //   cornerRadius={3}
       enableArcLabels={true}
@@ -48,14 +45,27 @@ const PieChart = ({ data = {}, fetchInsightDetails }) => {
       activeOuterRadiusOffset={20}
       borderWidth={0.5}
       borderColor={{ from: "color", modifiers: [["darker", 0.2]] }}
-      arcLabel={({ label = "" }) => label}
+      arcLabelsTextColor="grey"
+      //  -- uncomment when tooltip is being asked to used and it can be customizes --
+      //   tooltip={({ datum = {} }) => {
+      //     console.log(datum);
+      //     const { label = "", data: { text_color = "red" } = {} } = datum;
+      //     return (
+      //       <Box className="insightTooltip">
+      //         <h5 style={{ color: "white" }}>Insight</h5>
+      //         <div style={{ color: text_color }}>{label}</div>
+      //       </Box>
+      //     );
+      //   }}
+      tooltip={() => <div display="none"></div>}
+      arcLabel={({ label = "" }) => `${label}`}
       arcLinkLabel={() => "20%"}
       arcLinkLabelsSkipAngle={10}
-      arcLinkLabelsTextColor="#333333"
+      arcLinkLabelsTextColor="white"
       arcLinkLabelsThickness={2}
       arcLinkLabelsColor={{ from: "color" }}
       arcLabelsSkipAngle={10}
-      arcLabelsTextColor={{ from: "color", modifiers: [["darker", 10]] }}
+      arcLabelsRadiusOffset={0.6}
       onMouseEnter={(node, e) => handleMouseEnter(node, e)}
       onMouseLeave={(node, e) => handleMouseLeave(node, e)}
       onClick={(node, e) => handleClick(node, e)}
