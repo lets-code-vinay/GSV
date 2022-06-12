@@ -44,11 +44,7 @@ const PieChart = ({ data = {}, fetchInsightDetails }) => {
       arcLabelsTextColor={{ from: "color", modifiers: [["darker", 10]] }}
       onMouseEnter={(node, e) => handleMouseEnter(node, e)}
       onClick={(node, e) => handleClick(node, e)}
-      motionConfig={{ mass: 5, tension: 105, friction: 5 }}
-      //   colors={(item) => {
-      //     console.log("item", item);
-      //     return Object.values(data).find(({ color }) => color);
-      //   }}
+      motionConfig={{ mass: 1, tension: 50, friction: 5 }}
       defs={[
         {
           id: "dots",
