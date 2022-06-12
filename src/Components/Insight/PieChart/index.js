@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { ResponsivePie } from "@nivo/pie";
+
 import { shape } from "prop-types";
 
 const PieChart = ({ data = {}, fetchInsightDetails }) => {
+  const [isHovered, setHovered] = useState(false);
   /**
    * @description Getting value of current slice
    *
@@ -11,6 +13,17 @@ const PieChart = ({ data = {}, fetchInsightDetails }) => {
    */
   const handleMouseEnter = (node, event) => {
     fetchInsightDetails(node);
+    setHovered(true);
+  };
+
+  /**
+   * @description Getting value of current slice
+   *
+   * @param {Object} node
+   * @param {Object} event
+   */
+  const handleMouseLeave = (_, __) => {
+    setHovered(false);
   };
 
   /**
@@ -35,6 +48,7 @@ const PieChart = ({ data = {}, fetchInsightDetails }) => {
       activeOuterRadiusOffset={20}
       borderWidth={0.5}
       borderColor={{ from: "color", modifiers: [["darker", 0.2]] }}
+      arcLabel={({ label = "" }) => label}
       arcLinkLabel={() => "20%"}
       arcLinkLabelsSkipAngle={10}
       arcLinkLabelsTextColor="#333333"
@@ -43,8 +57,27 @@ const PieChart = ({ data = {}, fetchInsightDetails }) => {
       arcLabelsSkipAngle={10}
       arcLabelsTextColor={{ from: "color", modifiers: [["darker", 10]] }}
       onMouseEnter={(node, e) => handleMouseEnter(node, e)}
+      onMouseLeave={(node, e) => handleMouseLeave(node, e)}
       onClick={(node, e) => handleClick(node, e)}
       motionConfig={{ mass: 1, tension: 50, friction: 5 }}
+      colors={[
+        // when client require some extra color combination
+        // isHovered ? "#002446" : "grey",
+        // isHovered ? "#46b6e6" : "grey",
+        // isHovered ? "#3c454a" : "grey",
+        // isHovered ? "#41d946" : "grey",
+        // isHovered ? "#9d0402" : "grey",
+        // isHovered ? "#cfd4db" : "grey",
+        // isHovered ? "#2b5879" : "grey",
+        "#002446",
+        "#46b6e6",
+        "#3c454a",
+        "#41d946",
+        "#9d0402",
+        "#cfd4db",
+        "#2b5879",
+      ]}
+      colorBy="index"
       defs={[
         {
           id: "dots",
