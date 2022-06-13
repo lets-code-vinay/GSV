@@ -57,7 +57,7 @@ export default function Technologies() {
             </div>
           </div>
         </Grid>
-        <Grid item xs={6} sm={6} md={6}>
+        <Grid item xs={6} sm={6} md={6} className="wireGridClass">
           <div className="wireImage" src={technologyWireImage}>
             <img
               src={technologyWireImage}
@@ -69,11 +69,7 @@ export default function Technologies() {
           </div>
         </Grid>
       </Grid>
-      <Grid
-        container
-        columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-        className="marginTop "
-      >
+      <Grid container className="marginTop">
         <Grid item xs={8} className="bck1">
           <div className="softwareImageOverlay">
             <div className="divImgClass imageLeft" src={Software_Define_Grid}>
@@ -117,8 +113,7 @@ export default function Technologies() {
             </div>
           </div>
         </Grid>
-      </Grid>
-
+        </Grid>
       <Grid container spacing={0} className="cardGrid">
         <Grid className="cardBody">
           {cardBox.map((item, i) => {
