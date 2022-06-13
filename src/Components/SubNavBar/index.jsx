@@ -1,6 +1,9 @@
 import React, { useRef, useState } from "react";
 import { object } from "prop-types";
 import { Box, makeStyles, MenuItem, Typography } from "@material-ui/core";
+
+import "./styles.css";
+
 import NavbarMenus from "../NavbarMenus";
 
 const SubNavBar = ({ subNavMenus, isOpen = true }) => {
@@ -28,11 +31,16 @@ const SubNavBar = ({ subNavMenus, isOpen = true }) => {
             ref={refForNavMenus}
             style={{
               borderBottom:
-                isActive === menu.value ? "3px solid blue" : "3px solid red",
+                isActive === menu.value
+                  ? "3px solid #002446"
+                  : "3px solid #fff",
             }}
             className={`${classes.subMenu}  subMenu`}
           >
-            <Typography variant={"body1"} className={classes.navbar_text}>
+            <Typography
+              variant={"body1"}
+              className={` ${classes.navbar_text} navbar_text`}
+            >
               {menu.label}
             </Typography>
           </MenuItem>
@@ -76,6 +84,8 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "1rem",
     marginRight: "10%",
     color: "#000000",
+    whiteSpace: "initial",
+    width: "70%",
   },
   subMenuBar: {
     fontSize: "1.3rem",
@@ -83,5 +93,6 @@ const useStyles = makeStyles((theme) => ({
     borderBottom: "1px solid rgb(13,39,77, 0.5) ",
     minWidth: "180px",
     whiteSpace: "break-spaces",
+    justifyContent: "center",
   },
 }));
