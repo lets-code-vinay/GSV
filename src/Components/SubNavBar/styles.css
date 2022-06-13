@@ -15,4 +15,10 @@
 }
 
 @media screen and (min-width: 1920px) {
+  .MuiTabs-flexContainer {
+    width: 18%;
+  }
+  .subMenuBar {
+    height: 84px;
+  }
 }

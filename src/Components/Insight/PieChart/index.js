@@ -48,7 +48,6 @@ const PieChart = ({ data = {}, fetchInsightDetails }) => {
       arcLabelsTextColor="grey"
       //  -- uncomment when tooltip is being asked to used and it can be customizes --
       //   tooltip={({ datum = {} }) => {
-      //     console.log(datum);
       //     const { label = "", data: { text_color = "red" } = {} } = datum;
       //     return (
       //       <Box className="insightTooltip">

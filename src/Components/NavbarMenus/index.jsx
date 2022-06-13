@@ -4,187 +4,176 @@ import {
   Box,
   ClickAwayListener,
   Grid,
-  Grow,
   makeStyles,
   Typography,
 } from "@material-ui/core";
+
 import "./style.css";
+
 import { THEME_COLOR } from "../../Configs/Theme";
 
-const NavbarMenus = ({ isOpen, navMenus }) => {
+const NavbarMenus = ({ isOpen, navMenus = {} }) => {
   const classes = useStyles();
 
-  const [isMenuOpened, setOpen] = useState(isOpen);
   const [isPopularEnabled] = useState(
     Object.keys(navMenus.menus).includes("POPULAR")
   );
 
-  const handleClose = (e) => {
-    setOpen(false);
-  };
+  const handleClose = (_) => {};
 
   return (
     <>
       <ClickAwayListener onClickAway={handleClose}>
-        <Grow
-          in={isMenuOpened}
-          style={{ transformOrigin: "0 0 0" }}
-          {...(isMenuOpened ? { timeout: 600 } : {})}
-        >
-          <Grid container className={`${classes.subMenu_1} subMenu_1`}>
-            <Grid
-              item
-              xs={0}
-              sm={0}
-              md={2}
-              lg={2}
-              className={`${classes.menuImage} menuImage`}
-            >
-              <Box className={`${classes.imageBlock} imageBlock block`}>
-                <img
-                  src={navMenus.image}
-                  alt={navMenus.title}
-                  className={`${classes.imageSubMenu} imageSubMenu`}
-                />
-                <Box className={`${classes.informationBar} informationBar`}>
+        <Grid container className={`${classes.subMenu_1} subMenu_1`}>
+          <Grid
+            item
+            xs={0}
+            sm={0}
+            md={2}
+            lg={2}
+            className={`${classes.menuImage} menuImage`}
+          >
+            <Box className={`${classes.imageBlock} imageBlock block`}>
+              <img
+                src={navMenus.image}
+                alt={navMenus.title}
+                className={`${classes.imageSubMenu} imageSubMenu`}
+              />
+              <Box className={`${classes.informationBar} informationBar`}>
+                <Typography
+                  variant={"h4"}
+                  className={`${classes.informationBarTitle} informationBarTitle`}
+                >
+                  {navMenus.title}{" "}
+                </Typography>
+                <Box
+                  className={`${classes.informationMSGContainer} informationMSGContainer`}
+                  style={{ backgroundColor: THEME_COLOR.color_5 }}
+                >
                   <Typography
-                    variant={"h4"}
-                    className={`${classes.informationBarTitle} informationBarTitle`}
+                    variant="body1"
+                    className={`${classes.informationMSG} informationMSG`}
                   >
-                    {navMenus.title}{" "}
+                    {navMenus.subtitle}
                   </Typography>
-                  <Box
-                    className={`${classes.informationMSGContainer} informationMSGContainer`}
-                    style={{ backgroundColor: THEME_COLOR.color_5 }}
-                  >
-                    <Typography
-                      variant="body1"
-                      className={`${classes.informationMSG} informationMSG`}
-                    >
-                      {navMenus.subtitle}
-                    </Typography>
-                  </Box>
                 </Box>
               </Box>
-            </Grid>
+            </Box>
+          </Grid>
 
-            <Grid item xs={12} sm={12} md={6} lg={6}>
-              <Box className={`${classes.menuBlock} menuBlock`}>
-                <Grid container>
-                  {Object.values(navMenus.menus).map(
-                    (
-                      { value = "", image = "", label = "", menus = {} },
-                      index
-                    ) => {
-                      if (value === "POPULAR") return null;
-                      return (
-                        <Grid item xs={12} sm={6} md={6} lg={6}>
-                          <Box key={index}>
-                            <Box
-                              className={`${classes.MenuTitleContainer} MenuTitleContainer`}
-                            >
-                              {/* <img
+          <Grid item xs={12} sm={12} md={6} lg={6}>
+            <Box className={`${classes.menuBlock} menuBlock`}>
+              <Grid container>
+                {Object.values(navMenus.menus).map(
+                  ({ value = "", label = "", menus = {} }, index) => {
+                    if (value === "POPULAR") return null;
+                    return (
+                      <Grid item xs={12} sm={6} md={6} lg={6}>
+                        <Box key={index}>
+                          <Box
+                            className={`${classes.MenuTitleContainer} MenuTitleContainer`}
+                          >
+                            {/* <img
                                 src={image}
                                 alt={label}
                                 style={{ width: "24px" }}
                               /> */}
 
-                              <Typography
-                                variant={"h5"}
-                                className={`${classes.mainMenuTitle} mainMenuTitle`}
-                              >
-                                {label}
-                              </Typography>
-                            </Box>
-                            {Object.values(menus).map(
-                              ({ path = "", value, label }, index) => {
-                                return (
-                                  <Grid item sm={12} xs={12} md={6} lg={6}>
-                                    <a
-                                      href={path}
-                                      key={`${value}-${index}`}
-                                      className={`${classes.mainMenuLink} mainMenuLink`}
-                                      target="_blank"
-                                      rel="noreferrer"
-                                    >
-                                      <Typography
-                                        className={`${classes.mainMenuText} mainMenuText`}
-                                        variant={"body1"}
-                                      >
-                                        {label}
-                                      </Typography>
-                                    </a>
-                                  </Grid>
-                                );
-                              }
-                            )}
+                            <Typography
+                              variant={"h5"}
+                              className={`${classes.mainMenuTitle} mainMenuTitle`}
+                            >
+                              {label}
+                            </Typography>
                           </Box>
-                        </Grid>
-                      );
-                    }
-                  )}
-                </Grid>
-              </Box>
-            </Grid>
+                          {Object.values(menus).map(
+                            ({ path = "", value, label }, index) => {
+                              return (
+                                <Grid item sm={12} xs={12} md={6} lg={6}>
+                                  <a
+                                    href={path}
+                                    key={`${value}-${index}`}
+                                    className={`${classes.mainMenuLink} mainMenuLink`}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                  >
+                                    <Typography
+                                      className={`${classes.mainMenuText} mainMenuText`}
+                                      variant={"body1"}
+                                    >
+                                      {label}
+                                    </Typography>
+                                  </a>
+                                </Grid>
+                              );
+                            }
+                          )}
+                        </Box>
+                      </Grid>
+                    );
+                  }
+                )}
+              </Grid>
+            </Box>
+          </Grid>
 
-            {isPopularEnabled && (
-              <Grid item xs={12} sm={12} md={4} lg={4}>
-                <Box
-                  className={`${classes.popularBlock} popularBlock block`}
-                  style={{ backgroundColor: THEME_COLOR.popular_color }}
-                >
-                  {Object.values(navMenus.menus).map(
-                    ({ value = "", image = "", label, menus }, index) => {
-                      if (value !== "POPULAR") return null;
-                      return (
-                        <Box key={index}>
-                          <Box
-                            className={`${classes.popularTitleContainer} popularTitleContainer`}
-                          >
-                            {/* <img
+          {isPopularEnabled && (
+            <Grid item xs={12} sm={12} md={4} lg={4}>
+              <Box
+                className={`${classes.popularBlock} popularBlock block`}
+                style={{ backgroundColor: THEME_COLOR.popular_color }}
+              >
+                {Object.values(navMenus.menus).map(
+                  ({ value = "", label, menus }, index) => {
+                    if (value !== "POPULAR") return null;
+                    return (
+                      <Box key={index}>
+                        <Box
+                          className={`${classes.popularTitleContainer} popularTitleContainer`}
+                        >
+                          {/* <img
                               src={image}
                               alt={label}
                               style={{ width: "24px" }}
                             /> */}
 
-                            <Typography
-                              variant={"h5"}
-                              className={`${classes.popularTitle} popularTitle`}
-                            >
-                              {label}
-                            </Typography>
-                          </Box>
-                          <Grid container>
-                            {Object.values(menus).map((popMenu, index) => {
-                              return (
-                                <Grid item sm={12} xs={12} md={6} lg={6}>
-                                  <a
-                                    href={popMenu.path}
-                                    key={`${popMenu.value}-${index}`}
-                                    className={`${classes.popularLink} popularLink`}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                  >
-                                    <Typography
-                                      className={`${classes.popularText} popularText`}
-                                      variant={"body1"}
-                                    >
-                                      {popMenu.label}
-                                    </Typography>
-                                  </a>
-                                </Grid>
-                              );
-                            })}
-                          </Grid>
+                          <Typography
+                            variant={"h5"}
+                            className={`${classes.popularTitle} popularTitle`}
+                          >
+                            {label}
+                          </Typography>
                         </Box>
-                      );
-                    }
-                  )}
-                </Box>
-              </Grid>
-            )}
-          </Grid>
-        </Grow>
+                        <Grid container>
+                          {Object.values(menus).map((popMenu, index) => {
+                            return (
+                              <Grid item sm={12} xs={12} md={6} lg={6}>
+                                <a
+                                  href={popMenu.path}
+                                  key={`${popMenu.value}-${index}`}
+                                  className={`${classes.popularLink} popularLink`}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                >
+                                  <Typography
+                                    className={`${classes.popularText} popularText`}
+                                    variant={"body1"}
+                                  >
+                                    {popMenu.label}
+                                  </Typography>
+                                </a>
+                              </Grid>
+                            );
+                          })}
+                        </Grid>
+                      </Box>
+                    );
+                  }
+                )}
+              </Box>
+            </Grid>
+          )}
+        </Grid>
       </ClickAwayListener>
     </>
   );
@@ -258,7 +247,7 @@ const useStyles = makeStyles((theme) => ({
   MenuTitleContainer: {
     display: "flex",
     justifyContent: "start",
-    marginBottom: "10px",
+    margin: "8% 0px 3%",
     width: "80%",
   },
   mainMenuTitle: {
@@ -272,6 +261,7 @@ const useStyles = makeStyles((theme) => ({
 
   mainMenuText: {
     textDecoration: "none",
+    marginBottom: "5%",
 
     color: THEME_COLOR.main_color,
     "&:hover": {
@@ -291,7 +281,7 @@ const useStyles = makeStyles((theme) => ({
   popularTitleContainer: {
     display: "flex",
     justifyContent: "start",
-    marginBottom: "10px",
+    margin: "6% 0px 3%",
     width: "40%",
   },
   popularTitle: {
@@ -306,6 +296,7 @@ const useStyles = makeStyles((theme) => ({
 
   popularText: {
     textDecoration: "none",
+    marginBottom: "5%",
 
     color: THEME_COLOR.main_color,
     "&:hover": {
