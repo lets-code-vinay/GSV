@@ -17,35 +17,35 @@
   position: relative;
   flex-wrap: wrap;
   height: 100%;
-  border-radius: 15px;
+  border-radius: 40px;
 }
-.cardTopHeading{
+.cardTopHeading {
   position: absolute;
   top: 0;
   color: white;
   padding: 9px 0px 0px 20px;
 }
-.cardText{
+.cardText {
   position: absolute;
-    bottom: 0;
-    transition: .3s linear;
-    color: white;
-    font-size: 25px;
+  bottom: 0;
+  transition: 0.3s linear;
+  color: white;
+  font-size: 25px;
   font-weight: 500;
   padding: 15px;
 }
-.overlay:hover .cardTextDiv  h4{
+.overlay:hover .cardTextDiv h4 {
   transform: translateY(-80px);
   color: white;
 }
-.cardTextDiv p{
+.cardTextDiv p {
   position: absolute;
   bottom: 0;
   opacity: 0;
   color: white;
   padding: 15px;
 }
-.overlay:hover .headingMainDiv .cardTextDiv  .paragraph p{
+.overlay:hover .headingMainDiv .cardTextDiv .paragraph p {
   opacity: 1 !important;
   color: white;
   font-size: 15px;
@@ -53,18 +53,16 @@
   animation: animateParaText 1s alternate;
 }
 @keyframes animateParaText {
-  0%{
-    transform: translateX(-100%)
+  0% {
+    transform: translateX(-100%);
   }
-  50%{
+  50% {
     transform: translateX(0);
   }
-  100%{
+  100% {
     transform: translateX(0);
   }
-  
 }
-
 
 .imgInnerContent:hover {
   opacity: 1;
@@ -93,7 +91,6 @@
 .cardContent .overlay .overlayImg {
   object-fit: cover;
   transition: 0.4s linear;
-
 }
 .para {
   max-height: 0;
@@ -168,7 +165,7 @@
 
 .column_first {
   background: #0d274d;
-  border-radius: 10px 0px 0px 10px;
+  border-radius: 40px 0px 0px 40px;
   width: 100%;
   height: 100%;
   color: white;
@@ -194,6 +191,7 @@
   font-size: 30px;
   padding-left: 6%;
   line-height: 35px;
+  margin: 22% 0% 0%;
   color: #ffffff;
 }
 .card_text {
@@ -255,26 +253,26 @@
   border-radius: 15px;
 }
 /* --------------left software img style--------- */
-.cardTextHeading{
+.cardTextHeading {
   position: absolute;
-    bottom: 35px;
-    transition: .3s linear;
-    color: white;
-    font-size: 25px;
+  bottom: 35px;
+  transition: 0.3s linear;
+  color: white;
+  font-size: 25px;
   font-weight: 500;
   padding-left: 15px;
 }
-.softwareImageOverlay:hover .cardDiv  h4{
+.softwareImageOverlay:hover .cardDiv h4 {
   transform: translateY(-50px);
   color: white;
 }
-.cardDiv p{
+.cardDiv p {
   position: absolute;
   bottom: 25px;
   opacity: 0;
   color: white;
 }
-.softwareImageOverlay:hover .cardDiv  .paraText p{
+.softwareImageOverlay:hover .cardDiv .paraText p {
   opacity: 1 !important;
   color: white;
   font-size: 20px;
@@ -291,7 +289,7 @@
   width: 100%;
   height: 77vh;
   overflow: hidden;
-  border-radius: 15px;
+  border-radius: 40px;
 }
 .technologiesPage .bck2 {
   padding-left: 15px !important;
@@ -312,7 +310,6 @@
   color: white;
 }
 
-
 .imgTagSoftware:hover {
   transform: translateX(-30px) scale(1.2);
 }
@@ -323,18 +320,18 @@
 }
 
 /* ------------right security img style-------- */
-.npm  {
+.npm {
   position: absolute;
   top: 28px;
   left: 4%;
   color: white;
 }
-.cardTextHeadingSecurity{
+.cardTextHeadingSecurity {
   position: absolute;
-    bottom: 0px;
-    transition: .3s linear;
-    color: white;
-    font-size: 25px;
+  bottom: 0px;
+  transition: 0.3s linear;
+  color: white;
+  font-size: 25px;
   font-weight: 500;
   padding-left: 15px;
 }
@@ -350,18 +347,18 @@
   transform: translateX(0) scale(1.2);
   transition: all 0.4s linear;
 }
-.cardDivSecurity{
+.cardDivSecurity {
   position: absolute;
   bottom: 35px;
 }
-.securityOverlay:hover .cardDivSecurity  h4{
+.securityOverlay:hover .cardDivSecurity h4 {
   transform: translateY(-80px);
   color: white;
 }
-.paraTextSecurity p{
+.paraTextSecurity p {
   opacity: 0;
 }
-.securityOverlay:hover .cardDivSecurity  .paraTextSecurity p{
+.securityOverlay:hover .cardDivSecurity .paraTextSecurity p {
   opacity: 1 !important;
   color: white;
   font-size: 20px;
@@ -374,7 +371,7 @@
   height: 77vh;
   width: 100%;
 }
-.textSecurity{
+.textSecurity {
   position: absolute;
   top: 0;
   padding: 20px;
@@ -389,11 +386,11 @@
   width: 100%;
   height: 81vh;
   overflow: hidden;
-  border-radius: 15px;
+  border-radius: 40px;
 }
 .divSecurity {
   overflow: hidden;
-  border-radius: 15px;
+  border-radius: 40px;
 }
 .divSecurity {
   display: block;
@@ -413,7 +410,7 @@
   height: 100%;
   transform: translateX(-30px) scale(1.2);
 }
-.securityImgTagHover{
+.securityImgTagHover {
   height: 100%;
   transform: translateX(-30px) scale(1.2);
 }

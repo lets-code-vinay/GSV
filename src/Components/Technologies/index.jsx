@@ -1,12 +1,14 @@
-import React, { useState } from "react";
-import { GrTechnology } from "react-icons/gr";
-import { styled } from "@mui/material/styles";
-import Box from "@mui/material/Box";
-import { makeStyles } from "@material-ui/core/styles";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid";
+import React from "react";
+import { FaConnectdevelop } from "react-icons/fa";
+
+import {
+  Grid,
+  Card,
+  CardContent,
+  Box,
+  makeStyles,
+  Typography,
+} from "@material-ui/core";
 
 import "./style.css";
 
@@ -17,21 +19,13 @@ import { cardBox } from "../../Configs/Technologies";
 
 export default function Technologies() {
   const classes = useStyles();
-  const [isHover, setIsHover] = useState(false);
-  const handleHoverEvent = (e) => {
-    setIsHover(true);
-    e.target.style.background = "red";
-    console.log("mouse hover");
-  };
-  const handleMouseLeaveEvent = () => {
-    console.log("mouse out");
-    setIsHover(false);
-  };
+
   return (
-    <Box className="technologiesPage" style={{ width: "80%", margin: "auto" }}>
+    <Box className={`${classes.technologiesPage} technologiesPage`}>
       <Box className={`${classes.technologiesTitle} technologiesTitle`}>
-        <GrTechnology
+        <FaConnectdevelop
           className={`${classes.TechnologiesIcon} TechnologiesIcon`}
+          color="blue"
         />
         <Typography
           variant="h4"
@@ -41,11 +35,9 @@ export default function Technologies() {
         </Typography>
       </Box>
 
-      <hr className={`${classes.hr} hr`} />
-
-      <p>
-        We provide services belongs to all IT technlogoies We provide services
-        belongs to all IT technlogoies{" "}
+      <p className={`${classes.technologiesSubtitle} technologiesSubtitle`}>
+        We provide services belongs to all IT technologies We provide services
+        belongs to all IT technologies
       </p>
 
       <Grid container spacing={0} className={`${classes.grid1} grid1`}>
@@ -72,6 +64,7 @@ export default function Technologies() {
               height="100%"
               width="100%"
               className="hoverEffect"
+              alt="tech"
             />
           </div>
         </Grid>
@@ -84,7 +77,11 @@ export default function Technologies() {
         <Grid item xs={8} className="bck1">
           <div className="softwareImageOverlay">
             <div className="divImgClass imageLeft" src={Software_Define_Grid}>
-              <img src={Software_Define_Grid} className="imgTagSoftware" />
+              <img
+                src={Software_Define_Grid}
+                className="imgTagSoftware"
+                alt="tech"
+              />
             </div>
             <h3 className="text">Software-Defined Networking</h3>
             <div className="headingMainDivSoftware">
@@ -94,8 +91,8 @@ export default function Technologies() {
                 </h4>
                 <div className="paraText">
                   <p>
-                    Cisco-SDWAN, Cisco-DNA-C, Cisco ACI, VeloCloud,Silverlight
-                    and many more
+                    Cisco-SDWAN, Cisco-DNA-C, Cisco ACI, Velo Cloud, Silver
+                    light and many more
                   </p>
                 </div>
               </div>
@@ -103,20 +100,18 @@ export default function Technologies() {
           </div>
         </Grid>
         <Grid item xs={4} className="bck2">
-        <div className="securityOverlay position-relative">
+          <div className="securityOverlay position-relative">
             <div className="divImgClassSecurity imageRight" src={Security_Img}>
-              <img src={Security_Img} className="imgTagSecurity" />
+              <img src={Security_Img} className="imgTagSecurity" alt="tech" />
             </div>
             <h3 className="textSecurity">Security</h3>
             <div className="headingMainDivSoftware">
               <div className="cardDivSecurity">
                 <h4 className="cardTextHeadingSecurity">
-                Advance Security tactics{" "}
+                  Advance Security tactics{" "}
                 </h4>
                 <div className="paraTextSecurity">
-                  <p>
-                  Cybersecurity, AMP, Network and Cloud Security
-                  </p>
+                  <p>Cybersecurity, AMP, Network and Cloud Security</p>
                 </div>
               </div>
             </div>
@@ -165,25 +160,27 @@ export default function Technologies() {
 }
 
 const useStyles = makeStyles((theme) => ({
+  technologiesPage: {
+    width: "80%",
+    margin: "5% auto",
+  },
   technologiesTitle: {
     display: "flex",
     flexDirection: "row",
-    margin: "0 0 0 15%",
+    margin: "0 0 0 7%",
     padding: "2% 0 0 0",
     color: "#0d274d",
   },
+  technologiesSubtitle: {
+    margin: " 2% 7% 3.5%",
+  },
   TechnologiesIcon: {
-    fontSize: "60px",
+    fontSize: "50px",
     transform: "rotate(15deg)",
     margin: "0 10px 0 0",
-    color: "#0d274d",
+    color: "#0d274d !important",
   },
   technologiesText: {
     fontWeight: "800",
-  },
-
-  technologiesPage: {
-    width: "80%",
-    margin: "auto",
   },
 }));
