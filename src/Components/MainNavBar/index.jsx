@@ -206,7 +206,6 @@ const useStyles = makeStyles((theme) => ({
 
   menuButton: {
     marginRight: theme.spacing(2),
-    backgroundColor: "#0D274D",
   },
   login_button: {
     fontSize: "1.3rem",
