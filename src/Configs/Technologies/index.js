@@ -11,47 +11,47 @@ export const cardBox = [
     heading: "Dev Ops",
     img: DevOps,
     className:"overlayImg",
-    para:"this is dummy para you can change this ",
-    text:"this is devops"
+    para:"DevOps is the combination of cultural philosophies, practices, and tools that increases an organization's ability ",
+    text:"Definition"
   },
   {
     id: 2,
     img: Data_Center,
     heading: "Data Center",
     className:"overlayImg",
-    para:"this is dummy para you can change this ",
-    text:"this is data center"
+    para:"It is a facility that centralizes an organization's shared IT operations and equipment for the purposes of storing and processing",
+    text:"Definition"
   },
   {
     id: 3,
     img: Cloud_Computing,
     heading: "Cloud Computing",
     className:"overlayImg",
-    para:"this is dummy para you can change this ",
-    text:"this is cloud computing"
+    para:"Cloud computing is the delivery of computing services—including servers, storage, databases, networking,and intelligence—over the Internet",
+    text:"Definition"
   },
   {
     id: 4,
     img: DesktopImage,
-    heading: "Desktop",
+    heading: "DSA",
     className:"overlayImg",
-    para:"this is dummy para you can change this ",
-    text:"this is desktop"
+    para:"Data Structures are a specialized means of organizing and storing data in computers in such a way that we can perform operations on the stored data",
+    text:"Definition"
   },
   {
     id: 5,
     img: Networking,
     heading: "Networking",
     className:"overlayImg",
-    para:"this is dummy para you can change this ",
-    text:"this is network"
+    para:"A data network is a system designed to transfer data from one network access point to other or more network access via data switching, transmission lines",
+    text:"Definition"
   },
   {
     id: 6,
     img: Docker_img,
     heading: "Docker",
     className:"overlayImg",
-    para:"this is dummy para you can change this ",
-    text:"this is docker"
+    para:"Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure",
+    text:"Definition"
   },
 ];
