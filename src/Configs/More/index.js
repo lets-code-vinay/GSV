@@ -154,6 +154,7 @@ export const SideMenu = {
     className: "commonClass",
     label: "Our Presence",
     path: "/about",
+    title: "Our Presence",
   },
   our_customers: {
     id: 5,

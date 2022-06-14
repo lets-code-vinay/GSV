@@ -7,8 +7,7 @@ import { SideMenu } from "../../../Configs/More";
 import ImageText from "./ImageText";
 import GridPage from "./GridPage/Index";
 import ImageTextList from "./ImageTextList";
-import MapCharts from "../../Presence/Maps";
-import OurPresence from "../../Presence";
+import MapContainer from "../../Presence/MapContainer";
 
 const SideBar = (props) => {
   const {
@@ -84,7 +83,17 @@ const SideBar = (props) => {
             </div>
           </div>
         </Grid>
-        <Grid item xs={10}>
+
+        <Grid
+          item
+          xs={10}
+          style={{
+            backgroundColor:
+              optionType.type == "map" && optionType.value == "our_presence"
+                ? "#0d274d"
+                : "white",
+          }}
+        >
           {optionType.type == "image_text" && (
             <ImageText
               title={optionType.title}
@@ -102,7 +111,9 @@ const SideBar = (props) => {
             <GridPage title={optionType.title} />
           )}
 
-          {optionType.type == "map" && <OurPresence />}
+          {optionType.type == "map" && (
+            <MapContainer isMapTitleEnable={true} title={optionType.title} />
+          )}
 
           {optionType.type == "image_text_list" && (
             <ImageTextList
@@ -126,7 +137,7 @@ const useStyles = makeStyles((theme) => ({
   menuListing: {
     display: "flex",
     flexDirection: "row",
-    justifyContent: "space-between",
+    justifyContent: "flex-start",
   },
 
   sideBarOptions: {
@@ -136,5 +147,10 @@ const useStyles = makeStyles((theme) => ({
   },
   arrowBox: {
     marginTop: "3%",
+  },
+  mapBox: {
+    backgroundColor: "#002446",
+    width: "100%",
+    height: "100%",
   },
 }));
