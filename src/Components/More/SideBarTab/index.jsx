@@ -5,6 +5,10 @@ import "./styles.css";
 import Arrow from "../../../Assets/Icons/arrow.svg";
 import { SideMenu } from "../../../Configs/More";
 import ImageText from "./ImageText";
+import GridPage from "./GridPage/Index";
+import ImageTextList from "./ImageTextList";
+import MapCharts from "../../Presence/Maps";
+import OurPresence from "../../Presence";
 
 const SideBar = (props) => {
   const {
@@ -27,8 +31,9 @@ const SideBar = (props) => {
   /**
    * @description Showing sidebar arrow on condition basis
    */
-  const onShowArrow = (value) => (_) => {
+  const onShowArrow = (value, menu) => (_) => {
     setShowArrow(value);
+    setOptionType(menu);
   };
 
   /**
@@ -61,8 +66,8 @@ const SideBar = (props) => {
                   >
                     <Button
                       variant={"body"}
-                      onMouseEnter={onShowArrow(value)}
-                      onMouseLeave={onHideArrow(value)}
+                      onMouseEnter={onShowArrow(value, menu)}
+                      onMouseLeave={onHideArrow(value, menu)}
                       onClick={onClickOption(menu)}
                       className={`${classes.sideBarOptions} sideBarOptions border-0 backgroundColorWhite`}
                     >
@@ -86,6 +91,27 @@ const SideBar = (props) => {
               subtitle={optionType.subtitle}
               image={optionType.image}
               alt={optionType.alt}
+            />
+          )}
+
+          {optionType.type == "grid" && (
+            <GridPage title={optionType.title} data={optionType.data} />
+          )}
+
+          {optionType.type == "coming_soon" && (
+            <GridPage title={optionType.title} />
+          )}
+
+          {optionType.type == "map" && <OurPresence />}
+
+          {optionType.type == "image_text_list" && (
+            <ImageTextList
+              title={optionType.title}
+              subtitle={optionType.subtitle}
+              image={optionType.image}
+              alt={optionType.alt}
+              listTitle={optionType.listTitle}
+              list={optionType.list}
             />
           )}
         </Grid>
