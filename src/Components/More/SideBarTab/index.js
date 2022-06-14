@@ -1,5 +1,5 @@
-import React from "react"
-import { Grid } from "@mui/material";
+import React from "react";
+import { Grid } from "@material-ui/core";
 import { CgArrowLongRight } from "react-icons/cg";
 import { NavLink } from "react-router-dom";
 import { SideMenu } from "../../../Configs/More";
@@ -12,21 +12,25 @@ const SideBar = (props) => {
         <div>
           <div className="my-5">
             {SideMenu.map(({ path = "", label = "" }, index) => {
-              return <NavLink to={path} style={{ textDecoration: "none" }} key={index}>
-                <div className="commonClass displayFlex" >
-                  <button
-                    className="border-0 backgroundColorWhite"
-                  >
-                    {label}
-                  </button>
-                  <CgArrowLongRight />
-                </div>
-              </NavLink>
+              return (
+                <NavLink
+                  to={path}
+                  style={{ textDecoration: "none" }}
+                  key={index}
+                >
+                  <div className="commonClass displayFlex">
+                    <button className="border-0 backgroundColorWhite">
+                      {label}
+                    </button>
+                    <CgArrowLongRight />
+                  </div>
+                </NavLink>
+              );
             })}
           </div>
         </div>
       </Grid>
-      <Grid item xs={10} >
+      <Grid item xs={10}>
         {props.children}
       </Grid>
     </Grid>

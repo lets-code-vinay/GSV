@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { object } from "prop-types";
-import { Box, makeStyles, MenuItem, Modal, Tab, Tabs } from "@material-ui/core";
+import { Box, makeStyles, Modal, Tab, Tabs } from "@material-ui/core";
 import SideBar from "../More/SideBarTab";
 
 import "./styles.css";
