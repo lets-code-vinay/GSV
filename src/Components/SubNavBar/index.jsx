@@ -1,72 +1,77 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { object } from "prop-types";
-import { Box, makeStyles, MenuItem, Typography, Modal, Grid } from "@material-ui/core";
-import NavbarMenus from "../NavbarMenus";
+import { Box, makeStyles, MenuItem, Modal, Tab, Tabs } from "@material-ui/core";
 import SideBar from "../More/SideBarTab";
-import { useNavigate } from "react-router-dom";
 
-const SubNavBar = ({ subNavMenus, isOpen = true }) => {
+import "./styles.css";
+
+function a11yProps(index) {
+  return {
+    id: `simple-tab-${index}`,
+    "aria-controls": `simple-tabpanel-${index}`,
+  };
+}
+
+const SubNavBar = ({ subNavMenus, isOpen, onNavMenus }) => {
   const classes = useStyles();
 
-  const navigate = useNavigate();
-  const refForNavMenus = useRef(null);
-
-  const [isActive, setActive] = useState(false);
-  const [isMenuListingOpened, setMenuListingOpen] = useState(false);
   const [menuListing, setMenuListing] = useState({});
-  const [isMoreOpen, setIsMoreOpen] = useState(!false)
+  const [value, setValue] = React.useState(0);
+  const [isMoreOpen, setIsMoreOpen] = useState(false);
 
-  const handleMainNavbarClick = (menu) => (_) => {
-    setIsMoreOpen(true)
+  const handleChange = (_, newValue) => {
+    setValue(newValue);
+    setIsMoreOpen(true);
 
-    setActive(menu.value);
-    setMenuListingOpen(!isMenuListingOpened);
-    setMenuListing(menu.menus);
+    setMenuListing(Object.values(subNavMenus.menus)[newValue] || menuListing);
+    onNavMenus(Object.values(subNavMenus.menus)[newValue] || menuListing);
   };
 
   const handleClose = () => {
-    setIsMoreOpen(false)
-  }
-  return !subNavMenus.isMore ? (
-    <Box id={subNavMenus.value} className={`${classes.subMenuBar}  subMenuBar`}>
-      {Object.values(subNavMenus.menus).map((menu, index) => {
-        return (
-          <MenuItem
-            onClick={handleMainNavbarClick(menu)}
-            key={index}
-            ref={refForNavMenus}
-            style={{
-              borderBottom:
-                isActive === menu.value ? "3px solid blue" : "3px solid red",
-            }}
-            className={`${classes.subMenu}  subMenu`}
-          >
-            <Typography variant={"body1"} className={classes.navbar_text}>
-              {menu.label}
-            </Typography>
-          </MenuItem>
-        );
-      })}
+    setIsMoreOpen(false);
+  };
 
-      {isMenuListingOpened && (
-        <NavbarMenus
-          isOpen={isMenuListingOpened}
-          navMenus={menuListing}
-          isActive={isActive}
-        />
-      )}
-    </Box>
-  ) : (
-     <Modal
-        open={isMoreOpen}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={BoxModalstyles} style={{ backgroundColor: "white", height :"100%" }}>
-        <SideBar />
+  return (
+    <>
+      {!subNavMenus.isMore ? (
+        <Box
+          sx={{ borderBottom: 1, borderColor: "divider" }}
+          id={subNavMenus.value}
+          className={`${classes.subMenuBar}  subMenuBar`}
+        >
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            aria-label="basic tabs example"
+          >
+            {Object.values(subNavMenus.menus).map((menu, index) => {
+              return (
+                <Tab
+                  label={menu.label}
+                  {...a11yProps({ index })}
+                  key={index}
+                  className={` ${classes.navbar_text} navbar_text`}
+                />
+              );
+            })}
+          </Tabs>
         </Box>
-      </Modal>
+      ) : (
+        <Modal
+          open={isMoreOpen}
+          onClose={handleClose}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          <Box
+            sx={BoxModalstyles}
+            style={{ backgroundColor: "white", height: "100%" }}
+          >
+            <SideBar />
+          </Box>
+        </Modal>
+      )}
+    </>
   );
 };
 
@@ -86,14 +91,14 @@ SubNavBar.defaultProps = {
 
 export default SubNavBar;
 const BoxModalstyles = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
   width: "100%",
-  height:"100%",
-  bgcolor: 'white',
-  border: '2px solid #000',
+  height: "100%",
+  bgcolor: "white",
+  border: "2px solid #000",
   boxShadow: 24,
   p: 4,
 };
@@ -105,6 +110,8 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "1rem",
     marginRight: "10%",
     color: "#000000",
+    whiteSpace: "initial",
+    width: "70%",
   },
   subMenuBar: {
     fontSize: "1.3rem",
@@ -112,5 +119,6 @@ const useStyles = makeStyles((theme) => ({
     borderBottom: "1px solid rgb(13,39,77, 0.5) ",
     minWidth: "180px",
     whiteSpace: "break-spaces",
+    justifyContent: "center",
   },
 }));
