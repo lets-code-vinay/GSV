@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { object } from "prop-types";
 import { Box, makeStyles, Modal, Tab, Tabs } from "@material-ui/core";
-import SideBar from "../More/SideBarTab";
 
 import "./styles.css";
+import { useRef } from "react";
 
 function a11yProps(index) {
   return {
@@ -14,26 +14,29 @@ function a11yProps(index) {
 
 const SubNavBar = ({ subNavMenus, isOpen, onNavMenus }) => {
   const classes = useStyles();
+  const anchorEle = useRef(null);
 
   const [menuListing, setMenuListing] = useState({});
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = useState(0);
+  const [anchor, setAnchor] = useState(anchorEle);
+
   const [isMoreOpen, setIsMoreOpen] = useState(false);
 
-  const handleChange = (_, newValue) => {
+  const handleChange = (event, newValue) => {
+    setAnchor();
     setValue(newValue);
-    setIsMoreOpen(true);
-
     setMenuListing(Object.values(subNavMenus.menus)[newValue] || menuListing);
     onNavMenus(Object.values(subNavMenus.menus)[newValue] || menuListing);
   };
 
+  // deal it for modal closing
   const handleClose = () => {
     setIsMoreOpen(false);
   };
 
   return (
-    <>
-      {!subNavMenus.isMore ? (
+    <Box ref={anchor}>
+      {!subNavMenus.isMore && (
         <Box
           sx={{ borderBottom: 1, borderColor: "divider" }}
           id={subNavMenus.value}
@@ -56,22 +59,8 @@ const SubNavBar = ({ subNavMenus, isOpen, onNavMenus }) => {
             })}
           </Tabs>
         </Box>
-      ) : (
-        <Modal
-          open={isMoreOpen}
-          onClose={handleClose}
-          aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description"
-        >
-          <Box
-            sx={BoxModalstyles}
-            style={{ backgroundColor: "white", height: "100%" }}
-          >
-            <SideBar />
-          </Box>
-        </Modal>
       )}
-    </>
+    </Box>
   );
 };
 
@@ -90,18 +79,7 @@ SubNavBar.defaultProps = {
 };
 
 export default SubNavBar;
-const BoxModalstyles = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: "100%",
-  height: "100%",
-  bgcolor: "white",
-  border: "2px solid #000",
-  boxShadow: 24,
-  p: 4,
-};
+
 const useStyles = makeStyles((theme) => ({
   subMenu: {
     cursor: "pointer",
