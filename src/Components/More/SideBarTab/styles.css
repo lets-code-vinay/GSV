@@ -1,0 +1,43 @@
+.backgroundColorWhite {
+  background-color: white;
+}
+
+.menuListing {
+  display: flex;
+  justify-content: space-around;
+}
+.commonClass {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  /* identical to box height */
+  padding: 15px 20px 0px 20px;
+  color: #000000;
+}
+
+.MuiGrid-root.MuiGrid-container.MuiGrid-spacing-xs-2.MuiGrid-item {
+  width: 98%;
+  margin: 4% auto;
+  background: #fff;
+}
+
+/* 320px — 480px: Mobile devices
+  481px — 768px: iPads, Tablets
+  769px — 1024px: Small screens, laptops
+  1025px — 1200px: Desktops, large screens
+  1201px and more —  Extra large screens, TV */
+@media screen and (min-width: 279px) and (max-width: 480px) {
+}
+
+@media screen and (min-width: 481px) and (max-width: 760px) {
+}
+@media screen and (min-width: 761px) and (max-width: 1024px) {
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1281px) {
+}
+
+@media screen and (min-width: 1920px) {
+}

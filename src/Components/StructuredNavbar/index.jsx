@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import SubNavBar from "../SubNavBar";
 import MainNavBar from "../MainNavBar";
+import SideBar from "../More/SideBarTab/index";
 import NavbarMenus from "../NavbarMenus";
 
 export default function StructuredNavbar() {
   const [isSubNavbarOpened, setSubNavbarOpen] = useState(false);
   const [subNavMenus, setSubNavMenus] = useState({});
   const [navMenus, setNavMenus] = useState({});
+  const [isMoreOpen, setIsMoreOpen] = useState(false);
+
+  const [isMoreRef, setMoreRef] = useState(null);
 
   /**
    * @description Opening and passing data to submenus
@@ -26,11 +30,25 @@ export default function StructuredNavbar() {
    */
   const handleNavMenus = (menus) => {
     setNavMenus(menus);
+    setIsMoreOpen(false);
+  };
+
+  /**
+   * @description Opening and passing data to More menus
+   *
+   * @param {Boolean} isMoreOpened
+   */
+  const handleMoreClick = ({ isMore, mainRef }) => {
+    setMoreRef(mainRef);
+    setIsMoreOpen(isMore);
   };
 
   return (
     <>
-      <MainNavBar onSubNavbarOpen={handleSubNavbarOpen} />
+      <MainNavBar
+        onSubNavbarOpen={handleSubNavbarOpen}
+        onMoreOpen={handleMoreClick}
+      />
 
       {/* ---- Sub nav bar --- */}
       {isSubNavbarOpened && (
@@ -46,6 +64,14 @@ export default function StructuredNavbar() {
         <NavbarMenus
           isOpen={Boolean(navMenus.value)}
           navMenus={navMenus.menus}
+        />
+      )}
+
+      {isMoreOpen && (
+        <SideBar
+          isMoreRef={isMoreRef}
+          isMoreOpen={isMoreOpen}
+          onMoreClick={handleMoreClick}
         />
       )}
     </>
