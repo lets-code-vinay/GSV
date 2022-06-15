@@ -54,7 +54,6 @@
 }
 .overlay:hover .overlayImg{
   background-color: rgba(10, 3, 70, 0.9);
-   /* background-color: #01106a; */
    opacity: 1; 
   transition: 0.4s ease-in-out;
 }
@@ -86,14 +85,13 @@
   margin: 0;
   padding: 0;
   width: 100%;
-  /* background-color: rgba(0, 0, 0, 0.05); */
 }
 .darkOverlay:hover {
   background: rgba(13, 39, 77, 0.9);
 }
 
-.overlayImg:hover {
-  transform: translateX(-30px);
+.overlayImgClass:hover {
+  transform: translateX(-30px) scale(1.2);
   transition: all 0.4s linear;
 }
 .overlayImgClass {
@@ -105,24 +103,10 @@
   object-fit: cover;
   transition: 0.4s linear;
 }
-/* .para {
-  max-height: 0;
-  height: 100%;
-  margin: 0;
-  transition: all 0.4s ease-in-out;
-  opacity: 1;
-} */
-.cardContent .overlay .para:focus {
-  max-height: 100px;
-  margin-bottom: 0.9375em;
-  opacity: 1;
-  position: absolute;
-  animation: animatePara 1s;
-  top: 0;
-}
 .cardContent .overlay:hover .overlayImg::before {
   width: 15vw;
 }
+
 .cardContent .overlay .overlayImg::before {
   content: "";
   position: absolute;
@@ -132,9 +116,19 @@
   height: 100%;
   mix-blend-mode: multiply;
   transition: 0.5s;
-  opacity: 0;
 }
-
+.cardContent .overlay .overlayImg {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: multiply;
+  transition: 0.5s;
+  opacity: 1;
+  background-image: linear-gradient(to bottom,rgba(249,243,243,0) 26%,rgba(22,20,20,0.27) 78%,#000 95%,#000 95%);
+}
 .cardContent .overlay:hover .imgInnerContent {
   position: absolute;
   transition-delay: 0.3s;
@@ -229,7 +223,6 @@
 .hoverEffect:hover {
   transform: translateX(-30px) scale(1.2);
   cursor: pointer;
-  /* animation: animate 1s; */
 }
 @keyframes animate {
   0% {
@@ -277,12 +270,15 @@
   border-radius: 30px;
 }
 /* --------------left software img style--------- */
+.softwareImageOverlay .divImgClass  {
+  opacity: 1;
+  background-image: linear-gradient(to bottom,rgba(249,243,243,0) 26%,rgba(22,20,20,0.27) 78%,#000 95%,#000 95%);
+}
 .softwareImageOverlay:hover .divImgClass img{
   opacity: 0.3;
 }
 .softwareImageOverlay:hover .divImgClass{
   background-color: rgba(10, 3, 70, 0.9);
-   /* background-color: #01106a; */
    opacity: 1;
   transition: 0.4s ease-in-out;
 }
@@ -323,7 +319,6 @@
   margin: 0;
   padding: 0;
   width: 100%;
-  /* height: 77vh; */
   overflow: hidden;
   border-radius: 15px;
 }
@@ -354,12 +349,15 @@
 }
 
 /* ------------right security img style-------- */
+.securityOverlay .divImgClassSecurity  {
+  opacity: 1;
+  background-image: linear-gradient(to bottom,rgba(249,243,243,0) 26%,rgba(22,20,20,0.27) 78%,#000 95%,#000 95%);
+}
 .securityOverlay:hover .divImgClassSecurity img{
   opacity: 0.3;
 }
 .securityOverlay:hover .divImgClassSecurity{
   background-color: rgba(10, 3, 70, 0.9);
-   /* background-color: #01106a; */
    opacity: 1;
   transition: 0.4s ease-in-out;
 }

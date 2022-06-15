@@ -73,7 +73,6 @@ const Technologies = () => {
         <Grid item xs={8} className="bck1">
           <Card className="cardMenu">
             <CardContent className="softwareImageOverlay">
-              {/* <div className="softwareImageOverlay"> */}
                 <div
                   className="divImgClass imageLeft"
                   src={Software_Define_Grid}
@@ -98,14 +97,12 @@ const Technologies = () => {
                     </div>
                   </div>
                 </div>
-              {/* </div> */}
             </CardContent>
           </Card>
         </Grid>
         <Grid item xs={4} className="bck2">
           <Card className="cardMenu">
             <CardContent className="securityOverlay">
-              {/* <div className="securityOverlay position-relative"> */}
               <div
                 className="divImgClassSecurity imageRight"
                 src={Security_Img}
@@ -124,11 +121,10 @@ const Technologies = () => {
                   </div>
                 </div>
               </div>
-              {/* </div> */}
             </CardContent>
           </Card>
         </Grid>
-      </Grid>
+      </Grid> 
       <Grid container spacing={0} className="cardGrid">
         <Grid className="cardBody">
           {cardBox.map((item, i) => {
