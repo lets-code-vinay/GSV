@@ -41,6 +41,7 @@ const MainSlider = () => {
           useKeyboardArrows={true}
           transitionTime="1000"
           interval="5000"
+          showStatus={false}
         >
           <div>
             <img

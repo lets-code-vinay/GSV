@@ -48,8 +48,18 @@
   color: white;
   padding: 15px;
 }
+.overlay:hover .overlayImg img{
+  opacity: 0.3;
+  background-color: rgba(10, 3, 70, 0.9);
+}
+.overlay:hover .overlayImg{
+  background-color: rgba(10, 3, 70, 0.9);
+   /* background-color: #01106a; */
+   opacity: 1; 
+  transition: 0.4s ease-in-out;
+}
 .overlay:hover .headingMainDiv .cardTextDiv .paragraph p {
-  opacity: 1 !important;
+  opacity: 1;
   color: white;
   font-size: 15px;
   font-weight: 400;
@@ -76,7 +86,7 @@
   margin: 0;
   padding: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.05);
+  /* background-color: rgba(0, 0, 0, 0.05); */
 }
 .darkOverlay:hover {
   background: rgba(13, 39, 77, 0.9);
@@ -95,13 +105,13 @@
   object-fit: cover;
   transition: 0.4s linear;
 }
-.para {
+/* .para {
   max-height: 0;
   height: 100%;
   margin: 0;
   transition: all 0.4s ease-in-out;
   opacity: 1;
-}
+} */
 .cardContent .overlay .para:focus {
   max-height: 100px;
   margin-bottom: 0.9375em;
@@ -267,6 +277,18 @@
   border-radius: 30px;
 }
 /* --------------left software img style--------- */
+.softwareImageOverlay:hover .divImgClass img{
+  opacity: 0.3;
+}
+.softwareImageOverlay:hover .divImgClass{
+  background-color: rgba(10, 3, 70, 0.9);
+   /* background-color: #01106a; */
+   opacity: 1;
+  transition: 0.4s ease-in-out;
+}
+.technologiesPage .softwareImageOverlay{
+  padding: 0 20px 0 0;
+}
 .cardTextHeading {
   position: absolute;
   bottom: 35px;
@@ -305,9 +327,7 @@
   overflow: hidden;
   border-radius: 15px;
 }
-.technologiesPage .bck2 {
-  padding-left: 15px !important;
-}
+
 .technologiesPage .marginTop {
   margin-top: 45px;
 }
@@ -334,6 +354,18 @@
 }
 
 /* ------------right security img style-------- */
+.securityOverlay:hover .divImgClassSecurity img{
+  opacity: 0.3;
+}
+.securityOverlay:hover .divImgClassSecurity{
+  background-color: rgba(10, 3, 70, 0.9);
+   /* background-color: #01106a; */
+   opacity: 1;
+  transition: 0.4s ease-in-out;
+}
+.technologiesPage .securityOverlay{
+  padding: 0 0 0 0;
+}
 .npm {
   position: absolute;
   top: 28px;
@@ -342,7 +374,7 @@
 }
 .cardTextHeadingSecurity {
   position: absolute;
-  bottom: 0px;
+  bottom: 40px;
   transition: 0.3s linear;
   color: white;
   font-size: 25px;
@@ -364,8 +396,9 @@
 .cardDivSecurity {
   position: absolute;
   bottom: 35px;
+  overflow: hidden;
 }
-.securityOverlay:hover .cardDivSecurity h4 {
+.securityOverlay:hover .headingMainDivSoftware h4 {
   transform: translateY(-80px);
   color: white;
 }
@@ -394,7 +427,6 @@
 }
 .divImgClassSecurity {
   display: block;
-  position: relative;
   margin: 0;
   padding: 0;
   width: 100%;

@@ -17,7 +17,7 @@ import Security_Img from "../../Assets//Images/security.png";
 import technologyWireImage from "../../Assets/Images/technology-wire.png";
 import { cardBox } from "../../Configs/Technologies";
 
-export default function Technologies() {
+const Technologies = () => {
   const classes = useStyles();
 
   return (
@@ -71,49 +71,64 @@ export default function Technologies() {
       </Grid>
       <Grid container className="marginTop">
         <Grid item xs={8} className="bck1">
-          <div className="softwareImageOverlay">
-            <div className="divImgClass imageLeft" src={Software_Define_Grid}>
-              <img
-                src={Software_Define_Grid}
-                className="imgTagSoftware"
-                alt="tech"
-              />
-            </div>
-            <h3 className="text">Software-Defined Networking</h3>
-            <div className="headingMainDivSoftware">
-              <div className="cardDiv">
-                <h4 className="cardTextHeading">
-                  Let us Help you to come in Future of SDN{" "}
-                </h4>
-                <div className="paraText">
-                  <p>
-                    Cisco-SDWAN, Cisco-DNA-C, Cisco ACI, Velo Cloud, Silver
-                    light and many more
-                  </p>
+          <Card className="cardMenu">
+            <CardContent className="softwareImageOverlay">
+              {/* <div className="softwareImageOverlay"> */}
+                <div
+                  className="divImgClass imageLeft"
+                  src={Software_Define_Grid}
+                >
+                  <img
+                    src={Software_Define_Grid}
+                    className="imgTagSoftware"
+                    alt="tech"
+                  />
                 </div>
-              </div>
-            </div>
-          </div>
+                <h3 className="text">Software-Defined Networking</h3>
+                <div className="headingMainDivSoftware">
+                  <div className="cardDiv">
+                    <h4 className="cardTextHeading">
+                      Let us Help you to come in Future of SDN{" "}
+                    </h4>
+                    <div className="paraText">
+                      <p>
+                        Cisco-SDWAN, Cisco-DNA-C, Cisco ACI, Velo Cloud, Silver
+                        light and many more
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              {/* </div> */}
+            </CardContent>
+          </Card>
         </Grid>
         <Grid item xs={4} className="bck2">
-          <div className="securityOverlay position-relative">
-            <div className="divImgClassSecurity imageRight" src={Security_Img}>
-              <img src={Security_Img} className="imgTagSecurity" alt="tech" />
-            </div>
-            <h3 className="textSecurity">Security</h3>
-            <div className="headingMainDivSoftware">
-              <div className="cardDivSecurity">
-                <h4 className="cardTextHeadingSecurity">
-                  Advance Security tactics{" "}
-                </h4>
-                <div className="paraTextSecurity">
-                  <p>Cybersecurity, AMP, Network and Cloud Security</p>
+          <Card className="cardMenu">
+            <CardContent className="securityOverlay">
+              {/* <div className="securityOverlay position-relative"> */}
+              <div
+                className="divImgClassSecurity imageRight"
+                src={Security_Img}
+              >
+                <img src={Security_Img} className="imgTagSecurity" alt="tech" />
+              </div>
+              <h3 className="textSecurity">Security</h3>
+              <div className="headingMainDivSoftware">
+              <h4 className="cardTextHeadingSecurity">
+                    Advance Security tactics{" "}
+                  </h4>
+                <div className="cardDivSecurity">
+                  
+                  <div className="paraTextSecurity">
+                    <p>Cybersecurity, AMP, Network and Cloud Security</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
+              {/* </div> */}
+            </CardContent>
+          </Card>
         </Grid>
-        </Grid>
+      </Grid>
       <Grid container spacing={0} className="cardGrid">
         <Grid className="cardBody">
           {cardBox.map((item, i) => {
@@ -152,7 +167,9 @@ export default function Technologies() {
       </Grid>
     </Box>
   );
-}
+};
+
+export default Technologies;
 
 const useStyles = makeStyles((theme) => ({
   technologiesPage: {
