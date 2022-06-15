@@ -1,73 +1,18 @@
 import * as React from "react";
-import PropTypes from "prop-types";
 
-import {
-  Tabs,
-  Tab,
-  Box,
-  Typography,
-  makeStyles,
-  Grid,
-} from "@material-ui/core";
+import { Box, Typography, makeStyles, Grid } from "@material-ui/core";
 
-import {
-  AFRICA,
-  AFRICA_ROTATION,
-  ASIA,
-  ASIA_ROTATION,
-  SOUTH_AMERICA,
-  SOUTH_AMERICA_ROTATION,
-} from "../../Configs/OurPresence/index.js";
-import MapCharts from "./Maps.jsx";
 import wave1 from "../../Assets/SVGs/wave1white.svg";
 import wave2 from "../../Assets/SVGs/wave2grey.svg";
-
-function Presence(props) {
-  const { children, value, index, ...other } = props;
-
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
-      {...other}
-    >
-      {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
-    </div>
-  );
-}
-
-Presence.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.number.isRequired,
-  value: PropTypes.number.isRequired,
-};
-
-function a11yProps(index) {
-  return {
-    id: `simple-tab-${index}`,
-    "aria-controls": `simple-tabpanel-${index}`,
-  };
-}
+import MapContainer from "./MapContainer.jsx";
 
 export default function OurPresence() {
-  const [value, setValue] = React.useState(0);
-
   const classes = useStyles();
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
 
   return (
     <>
       <Box className={`${classes.mainBody} mainBody`}>
-        <Box className={`${classes.wave1grey} wave1grey`}>
+        {/* <Box className={`${classes.wave1grey} wave1grey`}>
           <img
             src={wave2}
             alt="wave 1"
@@ -84,9 +29,9 @@ export default function OurPresence() {
           />
           <img src={wave1} alt="wave 1" />
           <img src={wave1} alt="wave 1" />
-        </Box>
+        </Box> */}
 
-        <Grid container>
+        <Grid container className={`${classes.mainGrid} mainGrid`}>
           <Grid
             item
             xs={12}
@@ -106,42 +51,7 @@ export default function OurPresence() {
           </Grid>
 
           <Grid item xs={12} sm={12} md={6} lg={6}>
-            <Box className={`${classes.presenceMain} presenceMain`}>
-              <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-                <Tabs
-                  value={value}
-                  onChange={handleChange}
-                  aria-label="basic tabs example"
-                >
-                  <Tab label="Item One" {...a11yProps(0)} />
-                  <Tab label="Item Two" {...a11yProps(1)} />
-                  <Tab label="Item Three" {...a11yProps(2)} />
-                </Tabs>
-              </Box>
-              <Presence value={value} index={0}>
-                <MapCharts
-                  markers={SOUTH_AMERICA}
-                  region={"Americas"}
-                  rotation={SOUTH_AMERICA_ROTATION}
-                />
-              </Presence>
-
-              <Presence value={value} index={1}>
-                <MapCharts
-                  markers={ASIA}
-                  region={"Asia"}
-                  rotation={ASIA_ROTATION}
-                />
-              </Presence>
-
-              <Presence value={value} index={2}>
-                <MapCharts
-                  markers={AFRICA}
-                  region={"Africa"}
-                  rotation={AFRICA_ROTATION}
-                />
-              </Presence>
-            </Box>
+            <MapContainer />
           </Grid>
         </Grid>
       </Box>
@@ -155,7 +65,9 @@ const useStyles = makeStyles((theme) => ({
     background: "#0d274d",
     color: "white",
     position: "relative",
+    paddingTop: "4%",
   },
+  mainGrid: {},
   gridLeft: {
     margin: "auto",
   },

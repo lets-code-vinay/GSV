@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { func } from "prop-types";
 
 import { makeStyles } from "@material-ui/core/styles";
@@ -18,8 +18,11 @@ import Logo from "../../Assets/Images/white-logo.png";
 import { NAVBAR_MENUS } from "../../Configs/NavBar/navbar";
 import { THEME_COLOR } from "../../Configs/Theme";
 
-const MainNavBar = ({ onSubNavbarOpen }) => {
+const MainNavBar = ({ onSubNavbarOpen, onMoreOpen }) => {
   const classes = useStyles();
+
+  const anchor = useRef(null);
+
   const [anchorEl, setAnchorEl] = useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
   const [isActive, setActive] = useState(false);
@@ -41,6 +44,8 @@ const MainNavBar = ({ onSubNavbarOpen }) => {
   };
 
   const handleMainNavbarClick = (menu) => (event) => {
+    onMoreOpen({ isMore: menu?.isMore, mainRef: anchor });
+
     onSubNavbarOpen({ isOpen: true, menu, event });
     setActive(menu.value);
   };
@@ -101,7 +106,12 @@ const MainNavBar = ({ onSubNavbarOpen }) => {
   return (
     <div className="Navbar" id="home">
       <div className={classes.grow}>
-        <AppBar position="static" className={classes.appBar} elevation={0}>
+        <AppBar
+          position="static"
+          className={classes.appBar}
+          elevation={0}
+          ref={anchor}
+        >
           <Toolbar>
             <Box edge="start" className={classes.menuButton} color="inherit">
               <img
