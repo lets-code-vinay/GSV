@@ -22,7 +22,7 @@ const InfinitySlider = ({ isSlideSpeedFast = false }) => {
         >
           {INFINITY_SLIDER_CONTENTS.map(({ name, image, alt }, index) => {
             return (
-              <div class="sliding-img" key={`${name}-${index}`}>
+              <div className="sliding-img" key={`${name}-${index}`}>
                 <img
                   src={image}
                   alt={alt}
