@@ -1,11 +1,11 @@
 import React from "react";
 
 import StructuredNavbar from "../../Components/StructuredNavbar";
-import MainSlider from "../../Components/MainSlider";
 import Trending from "../../Components/Trending";
-import Insight from "../../Components/Insight";
 import OurClients from "../../Components/OurClient/OurClients";
 import InfinitySliderContainer from "../../Components/InfinitySliderContainers";
+import MainSlider from "../../Components/MainSlider";
+import Insight from "../../Components/Insight";
 import OurPresence from "../../Components/Presence";
 import Footer from "../../Components/Footer";
 import Technologies from "../../Components/Technologies";
