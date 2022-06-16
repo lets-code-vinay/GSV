@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid } from "@material-ui/core";
+import { Grid, Box, Typography } from "@material-ui/core";
 
 import "./styles.css";
 
@@ -13,31 +13,34 @@ const ImageTextList = ({
 }) => {
   return (
     <>
-      <Grid container>
-        <Grid item xs={12} sm={12} md={12} lg={12}>
-          <div>
-            <h1 className="ImageTextList my-5">{title}</h1>
-            <p>{subtitle}</p>
-          </div>
+      <Box>
+        <h1 className="ImageTextList my-5">{title}</h1>
+        <Typography variant={"body1"} my={2} className="ImageTextListSubtitle">
+          {subtitle}
+        </Typography>
+      </Box>
+
+      <Grid container className="displayFlex">
+        <Grid item xs={12} sm={12} md={5} lg={4}>
+          <img src={image} height={`100%`} width={`95%`} alt={alt} />
         </Grid>
 
-        <Grid xs={12} sm={12} md={12} lg={12} className="displayFlex">
-          <Grid item xs={12} sm={12} md={5} lg={4}>
-            <div>
-              <img src={image} height={`100%`} width={`95%`} alt={alt} />
-            </div>
-          </Grid>
+        <Grid item xs={12} sm={12} md={7} lg={8}>
+          <h4 className="textColorRed">{listTitle}</h4>
 
-          <Grid item xs={12} sm={12} md={7} lg={8}>
-            <div>
-              <h4 className="textColorRed">{listTitle}</h4>
-              {list ||
-                [].map((list) => <p className="backTextColor">{list} </p>)}
-            </div>
-          </Grid>
+          {list.map((list, index) => {
+            return (
+              <Box className="list" key={index}>
+                <Typography variant={"h6"} className="backTextColor">
+                  {list}
+                </Typography>
+              </Box>
+            );
+          })}
         </Grid>
       </Grid>
     </>
   );
 };
+
 export default ImageTextList;

@@ -130,11 +130,11 @@ export const SideMenu = {
     alt: "Why Choose us",
     listTitle: "Technology Expense Management and solution",
     list: [
-      "Some random text here",
-      "Some random text here",
-      "Some random text here",
-      "Some random text here",
-      "Some random text here",
+      `Some random text here1 `,
+      "Some random text here2",
+      "Some random text here3",
+      "Some random text here4",
+      "Some random text here5",
     ],
   },
   industries: {
