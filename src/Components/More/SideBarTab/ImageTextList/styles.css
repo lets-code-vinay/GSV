@@ -12,5 +12,17 @@
   color: rgb(219, 21, 21);
 }
 .backTextColor {
-  background-color: #e7d1d1a6;
+  background-color: #fff1ee;
+  width: fit-content;
+  padding: 0 2%;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2%;
+}
+
+.displayFlex {
+  margin-top: 2%;
 }

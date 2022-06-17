@@ -11,6 +11,7 @@
     flex-direction: row;
     justify-content: start !important;
     text-align: start;
+    padding-left: 0px;
   }
   .tabContainer {
     width: 80% !important;
