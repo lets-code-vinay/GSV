@@ -215,8 +215,8 @@ const useStyles = makeStyles((theme) => ({
   hr: {
     height: "2px",
     backgroundColor: "#0d274d",
-    width: "130%",
-    margin: "2% -16%",
+    // width: "130%",
+    // margin: "2% -16%",
   },
 
   ourClientsText: {
