@@ -99,7 +99,7 @@ const OurClients = () => {
         </Box>
         <hr className={`${classes.hr} hr`} />
 
-        <Slider {...settings}>
+        <Slider {...settings} style={{ padding: "0 10%" }}>
           <Box className="firstImage ">
             <img
               src={Granitize}

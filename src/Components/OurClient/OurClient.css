@@ -14,13 +14,13 @@
 .topContainer .slick-next {
   cursor: pointer;
   position: absolute;
-  /* right: -3%; */
+  right: 3%;
   position: absolute;
   top: 40%;
 }
 .topContainer .slick-prev {
   cursor: pointer;
-  left: -5%;
+  left: 3%;
   position: absolute;
   top: 40%;
   z-index: 99;
@@ -111,13 +111,13 @@
 }
 
 @media screen and (min-width: 1920px) {
- .topContainer .hr {
+  .topContainer .hr {
     height: 2px;
     background-color: #0d274d;
     width: 90% !important;
     margin: 2% auto;
   }
-  .ourClientsTitle{
+  .ourClientsTitle {
     margin-left: 16%;
   }
 }
