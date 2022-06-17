@@ -19,8 +19,14 @@
 
 .MuiGrid-root.MuiGrid-container.MuiGrid-spacing-xs-2.MuiGrid-item {
   width: 98%;
-  margin: 4% auto;
+  position: absolute;
+  top: 4.8rem;
+  z-index: 10;
+  left: 1%;
+  margin: 0% auto;
   background: #fff;
+  min-height: 80vh;
+  max-height: 80vh;
 }
 
 /* 320px — 480px: Mobile devices
@@ -29,6 +35,15 @@
   1025px — 1200px: Desktops, large screens
   1201px and more —  Extra large screens, TV */
 @media screen and (min-width: 279px) and (max-width: 480px) {
+  .arrowBox {
+    display: none;
+  }
+  .sideBarMenus {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 @media screen and (min-width: 481px) and (max-width: 760px) {
@@ -40,4 +55,18 @@
 }
 
 @media screen and (min-width: 1920px) {
+  .sideBarOptions {
+    padding: 6px 0px;
+    width: fit-content;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1rem;
+  }
+
+  svg.rsm-svg {
+    height: 600px;
+  }
+  span.MuiButton-label {
+    justify-content: start;
+  }
 }
