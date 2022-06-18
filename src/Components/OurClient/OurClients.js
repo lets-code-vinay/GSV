@@ -97,7 +97,6 @@ const OurClients = () => {
             Our Clients
           </Typography>
         </Box>
-        <hr className={`${classes.hr} hr`} />
 
         <Slider {...settings} style={{ padding: "0 10%" }}>
           <Box className="firstImage ">
@@ -212,12 +211,7 @@ const useStyles = makeStyles((theme) => ({
   ourClientsMain: {
     margin: "3% 0",
   },
-  hr: {
-    height: "2px",
-    backgroundColor: "#0d274d",
-    // width: "130%",
-    // margin: "2% -16%",
-  },
+
 
   ourClientsText: {
     marginTop: "10px",
@@ -230,6 +224,8 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     padding: "2% 0 0 0",
     alignItem: "center",
+    // width: '68%',
+    // padding: '2% 0 2% 0%',
   },
 
   ourClientsIcon: {

@@ -1,18 +1,19 @@
 import React, { useState, useEffect, useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-import ibm from "../../Assets/ibm.png";
 import { ChevronLeft, ChevronRight } from "react-feather";
+import { IoPeopleCircleOutline } from 'react-icons/io5'
 import {
     Box,
-    ClickAwayListener,
-    Grid,
     makeStyles,
     Typography,
 } from "@material-ui/core";
 import "./style.css";
+import { TESTIMONIALS_OF } from "../../Configs/Testimonials";
 
-const OurCustomers = () => {
+const Testimonials = () => {
+    const classes = useStyles();
+
     const [nav1, setNav1] = useState(null);
     const [nav2, setNav2] = useState(null);
     const ref = useRef();
@@ -25,48 +26,33 @@ const OurCustomers = () => {
         setNav2(slider2);
     }, []);
 
-    const firstSlide = [
-        {
-            id: 1,
-            title: "HealthCare",
-        },
-        {
-            id: 2,
-            title: "Hospitality",
-        },
-        {
-            id: 3,
-            title: "Government",
-        },
-        {
-            id: 4,
-            title: "Financial Services",
-        },
-        {
-            id: 5,
-            title: "Retail",
-        },
-        {
-            id: 6,
-            title: "Test",
-        },
-    ]
+
     return (
-        <div className="firstDiv">
+        <div className={`${classes.testimanials} testimanials`}>
+            <Box className={`${classes.testimonialLogo} testimonialLogo`}>
+                <IoPeopleCircleOutline className={`${classes.flashIcon} flashIcon`} />
+                <Typography
+                    variant="h4"
+                    className={`${classes.testimonialTitle} testimonialTitle`}
+                >
+                    What our customers are saying
+                </Typography>
+            </Box>
+            <hr className={`${classes.hr} hr`} />
+
             <div className="container-fluid containerClass">
-                <Typography variant={"h2"}> What our customers are saying </Typography >
                 <Slider
                     className="sliderPadding"
                     asNavFor={nav2}
                     infinite={true}
-                    ref={(slider) => (slider1 = slider)}
+                    // ref={(slider) => (slider1 = slider)}
                     slidesToShow={5}
                     slidesToScroll={1}
                     nextArrow={<ChevronRight className="rightArrow" />}
                     prevArrow={<ChevronLeft className="leftArrow" />}
                 >
                     {
-                        firstSlide.map((item) => {
+                        TESTIMONIALS_OF.map((item) => {
                             return <div>
                                 <h3>{item.title}</h3>
                             </div>
@@ -75,8 +61,9 @@ const OurCustomers = () => {
                 </Slider>
                 <div className="styleSecondSlide">
                     <Slider
+                        className="secondSlideStyle"
                         asNavFor={nav1}
-                        ref={(slider) => (slider2 = slider)}
+                        // ref={(slider) => (slider2 = slider)}
                         slidesToShow={3}
                         swipeToSlide={true}
                         focusOnSelect={true}
@@ -86,9 +73,9 @@ const OurCustomers = () => {
                     >
                         <div>
                             <div className="card" style={{ width: "18rem" }}>
-                                {/* <img className="card-img-top" src="..." alt="Card image cap" /> */}
+                                <img className="card-img-top" src="..." alt="Card image cap" />
                                 <div className="card-body">
-                                    {/* <h5 className="card-title">Card title</h5> */}
+                                    <h5 className="card-title">Card title</h5>
                                     <Typography variant="body1" className="card-text">222222222
                                         "Fortinate's solutions have allowed us to be able to put our
                                         patients first as always and focus on satisfying their needs."
@@ -97,17 +84,15 @@ const OurCustomers = () => {
                                         <strong>-Mubaraka Ibrahim,</strong> IT Director MOHAPMministry
                                         of Health and Prevention
                                     </Typography>
-                                    {/* <div>
-                  <img src={ibm} />
-                </div> */}
+
                                 </div>
                             </div>
                         </div>
                         <div>
                             <div className="card" style={{ width: "18rem" }}>
-                                {/* <img className="card-img-top" src="..." alt="Card image cap" /> */}
+                                <img className="card-img-top" src="..." alt="Card image cap" />
                                 <div className="card-body">
-                                    {/* <h5 className="card-title">Card title</h5> */}
+                                    <h5 className="card-title">Card title</h5>
                                     <Typography className="card-text">
                                         "In our legacy enviornment, if our endpoint solution detacted
                                         something, it would take at least half a day for remediation
@@ -118,17 +103,15 @@ const OurCustomers = () => {
                                         <Typography>-Sahun Guthrie,</Typography> Senior Director, IT , Alberta
                                         Urban Mubicipalities Association (AUMA)
                                     </p>
-                                    {/* <div>
-                  <img src={ibm} />
-                </div> */}
+
                                 </div>
                             </div>
                         </div>
                         <div>
                             <div className="card" style={{ width: "18rem" }}>
-                                {/* <img className="card-img-top" src="..." alt="Card image cap" /> */}
+                                <img className="card-img-top" src="..." alt="Card image cap" />
                                 <div className="card-body">
-                                    {/* <h5 className="card-title">Card title</h5> */}
+                                    <h5 className="card-title">Card title</h5>
                                     <Typography className="card-text">
                                         "In our legacy enviornment, if our endpoint solution detacted
                                         something, it would take at least half a day for remediation
@@ -139,17 +122,15 @@ const OurCustomers = () => {
                                         <Typography>-Sahun Guthrie,</Typography> Senior Director, IT , Alberta
                                         Urban Mubicipalities Association (AUMA)
                                     </p>
-                                    {/* <div>
-                  <img src={ibm} />
-                </div> */}
+
                                 </div>
                             </div>
                         </div>
                         <div>
                             <div className="card" style={{ width: "18rem" }}>
-                                {/* <img className="card-img-top" src="..." alt="Card image cap" /> */}
+                                <img className="card-img-top" src="..." alt="Card image cap" />
                                 <div className="card-body">
-                                    {/* <h5 className="card-title">Card title</h5> */}
+                                    <h5 className="card-title">Card title</h5>
                                     <Typography className="card-text">
                                         "In our legacy enviornment, if our endpoint solution detacted
                                         something, it would take at least half a day for remediation
@@ -160,17 +141,15 @@ const OurCustomers = () => {
                                         <Typography>-Sahun Guthrie,</Typography> Senior Director, IT , Alberta
                                         Urban Mubicipalities Association (AUMA)
                                     </p>
-                                    {/* <div>
-                  <img src={ibm} />
-                </div> */}
+
                                 </div>
                             </div>
                         </div>
                         <div>
                             <div className="card" style={{ width: "18rem" }}>
-                                {/* <img className="card-img-top" src="..." alt="Card image cap" /> */}
+                                <img className="card-img-top" src="..." alt="Card image cap" />
                                 <div className="card-body">
-                                    {/* <h5 className="card-title">Card title</h5> */}
+                                    <h5 className="card-title">Card title</h5>
                                     <Typography className="card-text">
                                         "In our legacy enviornment, if our endpoint solution detacted
                                         something, it would take at least half a day for remediation
@@ -181,17 +160,15 @@ const OurCustomers = () => {
                                         <Typography>-Sahun Guthrie,</Typography> Senior Director, IT , Alberta
                                         Urban Mubicipalities Association (AUMA)
                                     </p>
-                                    {/* <div>
-                  <img src={ibm} />
-                </div> */}
+
                                 </div>
                             </div>
                         </div>
                         <div>
                             <div className="card" style={{ width: "18rem" }}>
-                                {/* <img className="card-img-top" src="..." alt="Card image cap" /> */}
+                                <img className="card-img-top" src="..." alt="Card image cap" />
                                 <div className="card-body">
-                                    {/* <h5 className="card-title">Card title</h5> */}
+                                    <h5 className="card-title">Card title</h5>
                                     <strong className="card-text">
                                         "In our legacy enviornment, if our endpoint solution detacted
                                         something, it would take at least half a day for remediation
@@ -202,17 +179,15 @@ const OurCustomers = () => {
                                         <strong>-Sahun Guthrie,</strong> Senior Director, IT , Alberta
                                         Urban Mubicipalities Association (AUMA)
                                     </p>
-                                    {/* <div>
-                  <img src={ibm} />
-                </div> */}
+
                                 </div>
                             </div>
                         </div>
                         <div>
                             <div className="card" style={{ width: "18rem" }}>
-                                {/* <img className="card-img-top" src="..." alt="Card image cap" /> */}
+                                <img className="card-img-top" src="..." alt="Card image cap" />
                                 <div className="card-body">
-                                    {/* <h5 className="card-title">Card title</h5> */}
+                                    <h5 className="card-title">Card title</h5>
                                     <strong className="card-text">
                                         "In our legacy enviornment, if our endpoint solution detacted
                                         something, it would take at least half a day for remediation
@@ -223,17 +198,15 @@ const OurCustomers = () => {
                                         <strong>-Sahun Guthrie,</strong> Senior Director, IT , Alberta
                                         Urban Mubicipalities Association (AUMA)
                                     </p>
-                                    {/* <div>
-                  <img src={ibm} />
-                </div> */}
+
                                 </div>
                             </div>
                         </div>
                         <div>
                             <div className="card" style={{ width: "18rem" }}>
-                                {/* <img className="card-img-top" src="..." alt="Card image cap" /> */}
+                                <img className="card-img-top" src="..." alt="Card image cap" />
                                 <div className="card-body">
-                                    {/* <h5 className="card-title">Card title</h5> */}
+                                    <h5 className="card-title">Card title</h5>
                                     <strong className="card-text">
                                         "In our legacy enviornment, if our endpoint solution detacted
                                         something, it would take at least half a day for remediation
@@ -244,17 +217,15 @@ const OurCustomers = () => {
                                         <strong>-Sahun Guthrie,</strong> Senior Director, IT , Alberta
                                         Urban Mubicipalities Association (AUMA)
                                     </p>
-                                    {/* <div>
-                  <img src={ibm} />
-                </div> */}
+
                                 </div>
                             </div>
                         </div>
                         <div>
                             <div className="card" style={{ width: "18rem" }}>
-                                {/* <img className="card-img-top" src="..." alt="Card image cap" /> */}
+                                <img className="card-img-top" src="..." alt="Card image cap" />
                                 <div className="card-body">
-                                    {/* <h5 className="card-title">Card title</h5> */}
+                                    <h5 className="card-title">Card title</h5>
                                     <strong className="card-text">
                                         "In our legacy enviornment, if our endpoint solution detacted
                                         something, it would take at least half a day for remediation
@@ -265,9 +236,7 @@ const OurCustomers = () => {
                                         <strong>-Sahun Guthrie,</strong> Senior Director, IT , Alberta
                                         Urban Mubicipalities Association (AUMA)
                                     </p>
-                                    {/* <div>
-                  <img src={ibm} />
-                </div> */}
+
                                 </div>
                             </div>
                         </div>
@@ -278,4 +247,31 @@ const OurCustomers = () => {
     );
     // }
 };
-export default OurCustomers;
+export default Testimonials;
+
+
+const useStyles = makeStyles((theme) => ({
+    testimanials: {
+        padding: "2% 4%",
+    },
+    testimonialLogo: {
+        display: "flex",
+        flexDirection: "row",
+        margin: "4% 0 1%  11%",
+        fontWeight: "800",
+        color: "#0d274d",
+    },
+    flashIcon: {
+        fontSize: "60px",
+        margin: "0 10px 0 0",
+        color: "#0d274d",
+    },
+    testimonialTitle: {
+        marginTop: '0.5rem',
+    },
+    hr: {
+        margin: "0 0 3%  0%",
+
+    }
+}))
+

@@ -1,3 +1,30 @@
+export const TESTIMONIALS_OF = [
+    {
+        id: 1,
+        title: "HealthCare",
+    },
+    {
+        id: 2,
+        title: "Hospitality",
+    },
+    {
+        id: 3,
+        title: "Government",
+    },
+    {
+        id: 4,
+        title: "Financial Services",
+    },
+    {
+        id: 5,
+        title: "Retail",
+    },
+    {
+        id: 6,
+        title: "Test",
+    },
+]
+
 export const Customer_Card_Data = {
     HealthCare: {
         lable: "HealthCare",

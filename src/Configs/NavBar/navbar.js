@@ -5474,9 +5474,9 @@ export const NAVBAR_MENUS = {
         label: "Our Presence",
         value: "OurPresence",
       },
-      OurCustomers: {
+      Testimonials: {
         label: "Our Customers",
-        value: "OurCustomers",
+        value: "Testimonials",
       },
       Blog: {
         label: "Blog",
