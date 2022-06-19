@@ -9,6 +9,7 @@ import Insight from "../../Components/Insight";
 import OurPresence from "../../Components/Presence";
 import Footer from "../../Components/Footer";
 import Technologies from "../../Components/Technologies";
+import Testimonials from "../../Components/Testimonials";
 
 const Homepage = () => {
   return (
@@ -20,6 +21,7 @@ const Homepage = () => {
       <InfinitySliderContainer />
       <Technologies />
       <OurPresence />
+      <Testimonials />
       <OurClients />
       <Footer />
     </>
