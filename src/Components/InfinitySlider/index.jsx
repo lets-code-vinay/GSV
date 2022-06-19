@@ -89,9 +89,6 @@ const useStyles = makeStyles((theme) => ({
     opacity: "0.2",
     "&:hover": {
       cursor: "pointer",
-      borderRadius: "60% 0 60% 0",
-      borderTop: "2px solid #0d274d",
-      borderBottom: "2px solid #0d274d",
       opacity: "1",
     },
   },
