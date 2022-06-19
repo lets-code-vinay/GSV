@@ -1,59 +1,231 @@
-export const TESTIMONIALS_OF = [
-    {
-        id: 1,
-        title: "HealthCare",
-    },
-    {
-        id: 2,
-        title: "Hospitality",
-    },
-    {
-        id: 3,
-        title: "Government",
-    },
-    {
-        id: 4,
-        title: "Financial Services",
-    },
-    {
-        id: 5,
-        title: "Retail",
-    },
-    {
-        id: 6,
-        title: "Test",
-    },
-]
+import AIRPORT from '../../Assets/airportAuthority.png'
 
-export const Customer_Card_Data = {
-    HealthCare: {
-        lable: "HealthCare",
-        about: " Fortinate's solutions have allowed us to be able to put our patients first as always and focus on satisfying their needs.",
-        author: "-Mubaraka Ibrahim,",
-        designation: "IT Director MOHAPMministry of Health and Prevention"
+/**
+ * @description constants for testimonial cards
+ */
+export const TESTIMONIAL_CARD_DATA = {
+    health_care: {
+        label: "Health Care",
+        value: 'health_care',
+        testimonials: {
+            client_1: {
+                value: 'client_1',
+                about: " government_1-Fortinate's solutions have allowed us to be able to put our patients first as always and focus on satisfying their needs.",
+                author: "-Mubaraka Ibrahim,",
+                designation: "IT Director MOHAPMministry of Health and Prevention",
+                image: AIRPORT,
+                client: 'government',
+            },
+            client_2: {
+                value: 'client_2',
+                about: " government_2,Fortinate's solutions have allowed us to be able to put our patients first as always and focus on satisfying their needs.",
+                author: "-David Ibrahim,",
+                designation: "IT Director MOHAPMministry of Health and Prevention",
+                image: AIRPORT,
+                client: 'government',
+            },
+            client_3: {
+                value: 'client_3',
+                about: " government_3 -Fortinate's solutions have allowed us to be able to put our patients first as always and focus on satisfying their needs.",
+                author: "-John Ibrahim,",
+                designation: "IT Director MOHAPMministry of Health and Prevention",
+                image: AIRPORT,
+                client: 'government',
+            },
+            client_4: {
+                value: 'client_4',
+                about: " government_4-Fortinate's solutions have allowed us to be able to put our patients first as always and focus on satisfying their needs.",
+                author: "-Oliver Ibrahim,",
+                designation: "IT Director MOHAPMministry of Health and Prevention",
+                image: AIRPORT,
+                client: 'government',
+            }
+        }
     },
-    Hospitality: {
-        lable: "Hospitality",
-        about: " Fortinate's solutions have allowed us to be able to put our patients first as always and focus on satisfying their needs.",
-        author: "-Mubaraka Ibrahim,",
-        designation: "IT Director MOHAPMministry of Health and Prevention"
+    hospitality: {
+        label: "Hospitality",
+        value: 'hospitality',
+        testimonials: {
+            client_1: {
+                value: 'client_1',
+                about: "Financial testimonials client_1-Fortinate's solutions have allowed us to be able to put our patients first as always and focus on satisfying their needs.",
+                author: "-Mubaraka Ibrahim,",
+                designation: "IT Director MOHAPMministry of Health and Prevention",
+                image: AIRPORT,
+                client: 'Financial',
+            },
+            client_2: {
+                value: 'client_2',
+                about: "Financial testimonials client_2,Fortinate's solutions have allowed us to be able to put our patients first as always and focus on satisfying their needs.",
+                author: "-David Ibrahim,",
+                designation: "IT Director MOHAPMministry of Health and Prevention",
+                image: AIRPORT,
+                client: 'Financial',
+            },
+            client_3: {
+                value: 'client_3',
+                about: " Financial testimonials client_3 -Fortinate's solutions have allowed us to be able to put our patients first as always and focus on satisfying their needs.",
+                author: "-John Ibrahim,",
+                designation: "IT Director MOHAPMministry of Health and Prevention",
+                image: AIRPORT,
+                client: 'Financial',
+            },
+            client_4: {
+                value: 'client_4',
+                about: "Financial testimonials client_4-Fortinate's solutions have allowed us to be able to put our patients first as always and focus on satisfying their needs.",
+                author: "-Oliver Ibrahim,",
+                designation: "IT Director MOHAPMministry of Health and Prevention",
+                image: AIRPORT,
+                client: 'Financial',
+            }
+        }
+
     },
-    Government: {
-        lable: "Government",
-        about: " Fortinate's solutions have allowed us to be able to put our patients first as always and focus on satisfying their needs.",
-        author: "-Mubaraka Ibrahim,",
-        designation: "IT Director MOHAPMministry of Health and Prevention"
+    government: {
+        label: "Government",
+        value: 'government',
+        testimonials: {
+            client_1: {
+                value: 'client_1',
+                about: "retail testimonials client_1-Fortinate's solutions have allowed us to be able to put our patients first as always and focus on satisfying their needs.",
+                author: "-Mubaraka Ibrahim,",
+                designation: "IT Director MOHAPMministry of Health and Prevention",
+                image: AIRPORT,
+                client: 'Retail',
+            },
+            client_2: {
+                value: 'client_2',
+                about: "retail testimonials client_2,Fortinate's solutions have allowed us to be able to put our patients first as always and focus on satisfying their needs.",
+                author: "-David Ibrahim,",
+                designation: "IT Director MOHAPMministry of Health and Prevention",
+                image: AIRPORT,
+                client: 'Retail',
+            },
+            client_3: {
+                value: 'client_3',
+                about: " retail testimonials client_3 -Fortinate's solutions have allowed us to be able to put our patients first as always and focus on satisfying their needs.",
+                author: "-John Ibrahim,",
+                designation: "IT Director MOHAPMministry of Health and Prevention",
+                image: AIRPORT,
+                client: 'Retail',
+            },
+            client_4: {
+                value: 'client_4',
+                about: "retail testimonials client_4-Fortinate's solutions have allowed us to be able to put our patients first as always and focus on satisfying their needs.",
+                author: "-Oliver Ibrahim,",
+                designation: "IT Director MOHAPMministry of Health and Prevention",
+                image: AIRPORT,
+                client: 'Retail',
+            }
+        }
+
     },
-    Financial_Services: {
-        lable: "Financial Services",
-        about: " Fortinate's solutions have allowed us to be able to put our patients first as always and focus on satisfying their needs.",
-        author: "-Mubaraka Ibrahim,",
-        designation: "IT Director MOHAPMministry of Health and Prevention"
+    financial_services: {
+        label: "Financial Services",
+        value: 'financial_services',
+        testimonials: {
+            client_1: {
+                value: 'client_1',
+                about: "IT testimonials client_1-Fortinate's solutions have allowed us to be able to put our patients first as always and focus on satisfying their needs.",
+                author: "-Mubaraka Ibrahim,",
+                designation: "IT Director MOHAPMministry of Health and Prevention",
+                image: AIRPORT,
+                client: 'IT',
+            },
+            client_2: {
+                value: 'client_2',
+                about: "IT testimonials client_2,Fortinate's solutions have allowed us to be able to put our patients first as always and focus on satisfying their needs.",
+                author: "-David Ibrahim,",
+                designation: "IT Director MOHAPMministry of Health and Prevention",
+                image: AIRPORT,
+                client: 'IT',
+            },
+            client_3: {
+                value: 'client_3',
+                about: " IT testimonials client_3 -Fortinate's solutions have allowed us to be able to put our patients first as always and focus on satisfying their needs.",
+                author: "-John Ibrahim,",
+                designation: "IT Director MOHAPMministry of Health and Prevention",
+                image: AIRPORT,
+                client: 'IT',
+            },
+        }
     },
-    Retail: {
-        lable: "Retail",
-        about: " Fortinate's solutions have allowed us to be able to put our patients first as always and focus on satisfying their needs.",
-        author: "-Mubaraka Ibrahim,",
-        designation: "IT Director MOHAPMministry of Health and Prevention"
+    retail: {
+        label: "Retail",
+        value: 'retail',
+        testimonials: {
+            client_1: {
+                value: 'client_1',
+                about: " health_care client_1-Fortinate's solutions have allowed us to be able to put our patients first as always and focus on satisfying their needs.",
+                author: "-Mubaraka Ibrahim,",
+                designation: "IT Director MOHAPMministry of Health and Prevention",
+                image: AIRPORT,
+                client: 'health_care',
+            },
+            client_2: {
+                value: 'client_2',
+                about: "health_care client_2,Fortinate's solutions have allowed us to be able to put our patients first as always and focus on satisfying their needs.",
+                author: "-David Ibrahim,",
+                designation: "IT Director MOHAPMministry of Health and Prevention",
+                image: AIRPORT,
+                client: 'health_care',
+            },
+            client_3: {
+                value: 'client_3',
+                about: "health_care client_3 -Fortinate's solutions have allowed us to be able to put our patients first as always and focus on satisfying their needs.",
+                author: "-John Ibrahim,",
+                designation: "IT Director MOHAPMministry of Health and Prevention",
+                image: AIRPORT,
+                client: 'health_care',
+            },
+            client_4: {
+                value: 'client_4',
+                about: "health_care client_4-Fortinate's solutions have allowed us to be able to put our patients first as always and focus on satisfying their needs.",
+                author: "-Oliver Ibrahim,",
+                designation: "IT Director MOHAPMministry of Health and Prevention",
+                image: AIRPORT,
+                client: 'health_care',
+            }
+        }
+
+    },
+    it_infrastructure: {
+        label: "IT & Infrastructure",
+        value: 'it_infrastructure',
+        testimonials: {
+            client_1: {
+                value: 'client_1',
+                about: " hospitality client_1-Fortinate's solutions have allowed us to be able to put our patients first as always and focus on satisfying their needs.",
+                author: "-Mubaraka Ibrahim,",
+                designation: "IT Director MOHAPMministry of Health and Prevention",
+                image: AIRPORT,
+                client: 'hospitality',
+            },
+            client_2: {
+                value: 'client_2',
+                about: "hospitality client_2,Fortinate's solutions have allowed us to be able to put our patients first as always and focus on satisfying their needs.",
+                author: "-David Ibrahim,",
+                designation: "IT Director MOHAPMministry of Health and Prevention",
+                image: AIRPORT,
+                client: 'hospitality',
+            },
+            client_3: {
+                value: 'client_3',
+                about: "hospitality client_3 -Fortinate's solutions have allowed us to be able to put our patients first as always and focus on satisfying their needs.",
+                author: "-John Ibrahim,",
+                designation: "IT Director MOHAPMministry of Health and Prevention",
+                image: AIRPORT,
+                client: 'hospitality',
+            },
+            client_4: {
+                value: 'client_4',
+                about: "hospitality client_4-Fortinate's solutions have allowed us to be able to put our patients first as always and focus on satisfying their needs.",
+                author: "-Oliver Ibrahim,",
+                designation: "IT Director MOHAPMministry of Health and Prevention",
+                image: AIRPORT,
+                client: 'hospitality',
+            }
+        }
     }
 }
+
