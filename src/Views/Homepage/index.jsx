@@ -19,9 +19,9 @@ const Homepage = () => {
       <Trending />
       <Insight />
       <InfinitySliderContainer />
-      <Testimonials />
       <Technologies />
       <OurPresence />
+      <Testimonials />
       <OurClients />
       <Footer />
     </>

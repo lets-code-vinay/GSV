@@ -2,73 +2,13 @@ import React, { useState, useEffect, useRef } from "react";
 import Slider from "react-slick";
 import { ChevronLeft, ChevronRight } from "react-feather";
 import { IoPeopleCircleOutline } from "react-icons/io5";
+import { Box, Grid, makeStyles, Paper, Typography } from "@material-ui/core";
 
 import "./style.css";
 import "slick-carousel/slick/slick.css";
 
-import { Box, Grid, makeStyles, Paper, Typography } from "@material-ui/core";
-
 import { TESTIMONIAL_CARD_DATA } from "../../Configs/Testimonials";
-
-/**
- * @description Breakpoint for client title
- */
-const responsive_slider = [
-  {
-    breakpoint: 1402,
-    settings: {
-      slidesToShow: 3,
-    },
-  },
-  {
-    breakpoint: 1024,
-    settings: {
-      slidesToShow: 3,
-    },
-  },
-  {
-    breakpoint: 760,
-    settings: {
-      slidesToShow: 3,
-    },
-  },
-  {
-    breakpoint: 480,
-    settings: {
-      slidesToShow: 1,
-    },
-  },
-];
-
-/**
- * @description Breakpoint for client card
- */
-const responsive_client = [
-  {
-    breakpoint: 1402,
-    settings: {
-      slidesToShow: 3,
-    },
-  },
-  {
-    breakpoint: 1024,
-    settings: {
-      slidesToShow: 3,
-    },
-  },
-  {
-    breakpoint: 801,
-    settings: {
-      slidesToShow: 2,
-    },
-  },
-  {
-    breakpoint: 480,
-    settings: {
-      slidesToShow: 1,
-    },
-  },
-];
+import { responsive_client, responsive_slider } from "./configs";
 
 const Testimonials = () => {
   const testimonialArr = Object.values(TESTIMONIAL_CARD_DATA);
@@ -189,10 +129,12 @@ const Testimonials = () => {
       </Box>
     </Box>
   );
-  // }
 };
 export default Testimonials;
 
+/**
+ * Styles
+ */
 const useStyles = makeStyles((theme) => ({
   testimonials: {
     padding: "2% 4%",

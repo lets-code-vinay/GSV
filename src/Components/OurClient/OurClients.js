@@ -224,8 +224,6 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     padding: "2% 0 0 0",
     alignItem: "center",
-    // width: '68%',
-    // padding: '2% 0 2% 0%',
   },
 
   ourClientsIcon: {
