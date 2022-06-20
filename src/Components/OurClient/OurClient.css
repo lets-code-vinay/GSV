@@ -25,23 +25,11 @@
   top: 40%;
   z-index: 99;
 }
-.firstImage {
-  width: 0;
-}
-.firstimage {
-  height: 90px;
-  margin-left: 15%;
-}
+
 .imageStyle {
   margin-top: 25%;
 }
-.secondImage {
-  margin-top: 15%;
-  margin-left: 13%;
-}
-.eightImage {
-  margin-top: 23%;
-}
+
 .allCustomer {
   cursor: pointer;
   font-family: "Roboto";
@@ -58,9 +46,9 @@
   margin-left: 2%;
 }
 @media screen and(max-width: 550px) {
-  .topContainer .firstimage {
+  /* .topContainer .firstimage {
     margin-left: 20%;
-  }
+  } */
 }
 
 /* 320px — 480px: Mobile devices
@@ -74,9 +62,13 @@
     width: 90% !important;
     margin: 2% !important;
   }
-  .imageToResponsive {
-    width: 50%;
-    margin-left: 2%;
+  .imageBlock .imageToResponsive {
+    width: 135px !important;
+    height: 50px !important;
+  }
+
+  .imageBlock .bottomImage {
+    margin: 20% auto 0 !important;
   }
 
   .ourClientsTitle .ourClientsIcon,
@@ -84,11 +76,42 @@
     font-size: 1.5rem;
     margin-top: 0;
   }
+
+  .imageToResponsive {
+    width: 90%;
+    margin: 5% auto !important;
+  }
+  .slick-slider svg.slick-arrow.slick-prev {
+    left: 0;
+  }
+
+  .topContainer .slick-next {
+    right: 0 !important;
+  }
 }
 
 @media screen and (min-width: 481px) and (max-width: 760px) {
   .hr {
     margin-bottom: 10px;
+  }
+
+  .imageToResponsive {
+    width: 8rem !important;
+    height: 3rem !important;
+    margin: 5% auto !important;
+  }
+  .imageBlock .bottomImage {
+    margin: 25% auto 0 !important;
+  }
+
+  .slick-slider svg.slick-arrow.slick-prev {
+    left: 0;
+    top: 40% !important;
+  }
+
+  .topContainer .slick-next {
+    right: 0 !important;
+    top: 40% !important;
   }
 }
 @media screen and (min-width: 761px) and (max-width: 1024px) {
@@ -101,12 +124,38 @@
   .ourClientsTitle {
     margin-left: 15%;
   }
+  .imageToResponsive {
+    width: 8rem !important;
+    height: 3rem !important;
+    margin: 5% auto !important;
+  }
+  .imageBlock .bottomImage {
+    margin: 28% auto 0 !important;
+  }
+
+  .slick-slider svg.slick-arrow.slick-prev {
+    left: 0;
+    top: 35%;
+  }
+
+  .topContainer .slick-next {
+    right: 0 !important;
+    top: 35% !important;
+  }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1281px) {
   .hr {
     margin-bottom: 10px;
     width: 50%;
+  }
+}
+
+@media screen and (min-width: 1282px) and (max-width: 1919px) {
+  .hr {
+    margin: 0 auto 10px;
+    width: 90%;
+    height: 2px;
   }
 }
 

@@ -22,7 +22,6 @@ const Trending = () => {
           Trending
         </Typography>
       </Box>
-      <hr className={`${classes.hr} hr`} />
       <Tabs
         id="controlled-tabs"
         defaultFocus={true}

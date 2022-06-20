@@ -156,7 +156,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "0.5rem",
   },
   hr: {
-    margin: "0 0 3%  0%",
+    margin: "1% auto 3%",
   },
   testimonialClientCard: {
     outline: "none",
