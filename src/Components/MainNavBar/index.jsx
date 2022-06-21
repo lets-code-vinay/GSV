@@ -18,6 +18,7 @@ import Logo from "../../Assets/Images/white-logo.png";
 import { NAVBAR_MENUS } from "../../Configs/NavBar/navbar";
 import { THEME_COLOR } from "../../Configs/Theme";
 
+import "./style.css";
 const MainNavBar = ({ onSubNavbarOpen, onMoreOpen }) => {
   const classes = useStyles();
 
@@ -104,11 +105,11 @@ const MainNavBar = ({ onSubNavbarOpen, onMoreOpen }) => {
 
   // --- Desktop Section ---
   return (
-    <div className="Navbar" id="home">
+    <div className={`${classes.Navbar} Navbar`} id="home">
       <div className={classes.grow}>
         <AppBar
           position="static"
-          className={classes.appBar}
+          className={`${classes.appBar} appBar`}
           elevation={0}
           ref={anchor}
         >
@@ -184,14 +185,16 @@ MainNavBar.defaultProps = {
 export default MainNavBar;
 
 const useStyles = makeStyles((theme) => ({
+  Navbar: {
+    position: "absolute",
+    top: "0",
+    width: "100%",
+    background: "#1e44714d",
+  },
   grow: {
     flexGrow: 0.5,
   },
 
-  appBar: {
-    color: "#0C1B29",
-    backgroundColor: "#0D274D",
-  },
   logo: {
     "&:hover": {
       cursor: "pointer",
@@ -200,11 +203,9 @@ const useStyles = makeStyles((theme) => ({
   },
 
   navbar_text: {
-    fontSize: "1.3rem",
-    marginRight: "10%",
-    marginTop: "-12%",
-    paddingTop: "10%",
     color: "#ffffff",
+    fontSize: "1.6rem",
+    fontWeight: "700",
   },
   navbar_text_mobile: {
     fontSize: "1.3rem",

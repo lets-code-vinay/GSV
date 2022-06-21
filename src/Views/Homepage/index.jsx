@@ -14,7 +14,6 @@ import Testimonials from "../../Components/Testimonials";
 const Homepage = () => {
   return (
     <>
-      <StructuredNavbar />
       <MainSlider />
       <Trending />
       <Insight />

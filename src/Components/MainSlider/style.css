@@ -142,7 +142,7 @@
     color: #ffffff !important;
     padding: 2%;
     font-size: 1rem;
-    opacity: 1;
+    background: rgba(0, 0, 0, 0.6);
   }
   .informationBarTitle {
     color: #ffffff;
@@ -193,7 +193,7 @@
     width: 90%;
     height: 60px;
     position: absolute;
-    top: 13% !important;
+    bottom: 26% !important;
   }
   .informationBar .informationMSGContainer {
     width: 100%;
@@ -201,24 +201,22 @@
     color: #ffffff;
     text-shadow: 1px 1px solid black;
     border-radius: 0 40px 40px 0;
-    opacity: 0.5;
   }
   .informationMSGContainer .informationMSG {
     color: #ffffff !important;
     padding: 1%;
-    font-size: 0.6rem;
-    opacity: 1;
+    font-size: 1.6rem;
   }
   .informationBarTitle {
     color: #ffffff;
     padding: 3%;
     text-shadow: 2px 2px black;
     font-size: 1rem !important;
-    width: 80%;
+    width: 40%;
   }
   .carousel .control-dots {
     width: 60%;
-    top: 54%;
+    bottom: 35%;
     left: -3%;
   }
   .carousel .control-dots .dot {
