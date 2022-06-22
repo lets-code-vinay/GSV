@@ -169,11 +169,13 @@
     width: 60%;
     height: 210px;
     position: absolute;
-    top: 42% !important;
+    /* top: 42% !important; */
     margin-bottom: 10%;
+    top: 72% !important;
   }
   .informationBarTitle {
     margin-bottom: 2%;
+    top: 40%;
   }
   .carousel .control-dots {
     width: 60%;

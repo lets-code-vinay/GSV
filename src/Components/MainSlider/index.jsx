@@ -112,13 +112,12 @@ const useStyles = makeStyles((theme) => ({
     height: "fit-content",
     color: "#ffffff",
     borderRadius: "0 80px 80px 0",
-    background: "rgba(0,0,0,0.6)",
+    background: "rgba(0,0,0,0.8)",
   },
   informationMSG: {
     color: "#ffffff",
     padding: "2%",
     fontSize: "1.8rem",
-    background: "rgba(0,0,0,0.6)",
   },
   informationBarTitle: {
     color: "#ffffff",
