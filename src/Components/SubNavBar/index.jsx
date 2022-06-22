@@ -35,7 +35,7 @@ const SubNavBar = ({ subNavMenus, isOpen, onNavMenus }) => {
   };
 
   return (
-    <Box ref={anchor}>
+    <Box ref={anchor} className={`${classes.headBar}  headBar`}>
       {!subNavMenus.isMore && (
         <Box
           sx={{ borderBottom: 1, borderColor: "divider" }}
@@ -81,6 +81,12 @@ SubNavBar.defaultProps = {
 export default SubNavBar;
 
 const useStyles = makeStyles((theme) => ({
+  headBar: {
+    position: "absolute",
+    top: "80px",
+    background: "white",
+    width: "100%",
+  },
   subMenu: {
     cursor: "pointer",
   },

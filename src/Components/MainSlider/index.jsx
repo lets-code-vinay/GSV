@@ -11,6 +11,7 @@ import { Carousel } from "react-responsive-carousel";
 import SECURITY from "../../Assets/Images/Slider-images/2-security.jpg";
 import NETWORK from "../../Assets/Images/Slider-images/1-network.jpg";
 import DATA from "../../Assets/Images/Slider-images/3-data.jpg";
+import StructuredNavbar from "../StructuredNavbar";
 
 const MainSlider = () => {
   const classes = useStyles();
@@ -68,32 +69,31 @@ const MainSlider = () => {
             />
           </div>
         </Carousel>
-      </span>
-
-      <Box className={`${classes.infoBlock} infoBlock block`}>
-        <Box className={`${classes.informationBar} informationBar`}>
-          <Typography
-            variant={"h4"}
-            className={`${classes.informationBarTitle} informationBarTitle`}
-          >
-            {heading || MAIN_SLIDER_DATA.slider_1.heading}
-          </Typography>
-
-          <Box
-            className={`${classes.informationMSGContainer} informationMSGContainer`}
-            style={{
-              backgroundColor: bg_color || MAIN_SLIDER_DATA.slider_1.bg_color,
-            }}
-          >
-            <Typography
-              variant="body1"
-              className={`${classes.informationMSG} informationMSG`}
+        <StructuredNavbar />
+        <Typography
+          variant={"h4"}
+          className={`${classes.informationBarTitle} informationBarTitle`}
+        >
+          {heading || MAIN_SLIDER_DATA.slider_1.heading}
+        </Typography>
+        <Box className={`${classes.infoBlock} infoBlock block`}>
+          <Box className={`${classes.informationBar} informationBar`}>
+            <Box
+              className={`${classes.informationMSGContainer} informationMSGContainer`}
+              style={{
+                backgroundColor: bg_color || MAIN_SLIDER_DATA.slider_1.bg_color,
+              }}
             >
-              {subtitle || MAIN_SLIDER_DATA.slider_1.subtitle}
-            </Typography>
+              <Typography
+                variant="body1"
+                className={`${classes.informationMSG} informationMSG`}
+              >
+                {subtitle || MAIN_SLIDER_DATA.slider_1.subtitle}
+              </Typography>
+            </Box>
           </Box>
         </Box>
-      </Box>
+      </span>
     </>
   );
 };
@@ -112,19 +112,20 @@ const useStyles = makeStyles((theme) => ({
     height: "fit-content",
     color: "#ffffff",
     borderRadius: "0 80px 80px 0",
-    opacity: "0.6",
+    background: "rgba(0,0,0,0.8)",
   },
   informationMSG: {
     color: "#ffffff",
     padding: "2%",
     fontSize: "1.8rem",
-    opacity: "1",
   },
   informationBarTitle: {
     color: "#ffffff",
     padding: "3%",
     textShadow: "2px 2px black",
-    fontSize: "4rem",
-    width: "80%",
+    fontSize: "3rem !important",
+    position: "absolute",
+    top: "27%",
+    width: "51%",
   },
 }));

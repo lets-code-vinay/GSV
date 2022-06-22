@@ -10,8 +10,8 @@ export const MAIN_SLIDER_DATA = {
     heading: "Providing Technology & IT Solutions for Every Business",
     subtitle:
       "Affixed pretend account ten natural. Need eat week even yet that. Incommode delighted he resolving sportsmen do in listening.",
-    bg_color: "#01011B",
-    information_color: "#01011B",
+    bg_color: "#1e447199",
+    information_color: "#1e447199",
   },
 
   slider_2: {
@@ -21,8 +21,8 @@ export const MAIN_SLIDER_DATA = {
     heading: "Providing Security & IT Solutions for Every Business",
     subtitle:
       "Security account ten natural. Need eat week even yet that. Incommode delighted he resolving sportsmen do in listening.",
-    bg_color: "#fa0300",
-    information_color: "#fa0300",
+    bg_color: "#b1221029",
+    information_color: "#b1221029",
   },
 
   slider_3: {
@@ -32,7 +32,7 @@ export const MAIN_SLIDER_DATA = {
     heading: "Providing Data & IT Solutions for Every Business",
     subtitle:
       "Data account ten natural. Need eat week even yet that. Incommode delighted he resolving sportsmen do in listening.",
-    bg_color: "#3d88b0",
-    information_color: "#3d88b0",
+    bg_color: "#193f6c52",
+    information_color: "#193f6c52",
   },
 };
