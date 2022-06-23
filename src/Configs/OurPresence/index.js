@@ -2,6 +2,7 @@ export const ASIA_ROTATION = [-85, -20, 0];
 export const AFRICA_ROTATION = [-20, 0, 0];
 export const SOUTH_AMERICA_ROTATION = [58, 30, 0];
 
+
 export const SOUTH_AMERICA = [
   {
     markerOffset: -30,
@@ -26,12 +27,29 @@ export const ASIA = [
   { markerOffset: 15, name: "Gurugram", coordinates: [77.0266, 28.4595] },
   { markerOffset: 15, name: "Delhi", coordinates: [77.1025, 28.7041] },
   { markerOffset: 15, name: "Patna", coordinates: [85.1376, 25.5941] },
-  { markerOffset: 15, name: "Delhi", coordinates: [77.1025, 28.7041] },
   { markerOffset: 15, name: "Ranchi", coordinates: [85.3096, 23.3441] },
-  { markerOffset: 15, name: "Delhi", coordinates: [88.3639, 22.5726] },
+  { markerOffset: 15, name: "Kolkata", coordinates: [88.3639, 22.5726] },
 ];
 
 export const AFRICA = [
   { markerOffset: 15, name: "Nigeria", coordinates: [8.6753, 9.082] },
   { markerOffset: 15, name: "Egypt", coordinates: [30.8025, 26.8206] },
 ];
+
+export const CONTINENTS = {
+  SOUTH_AMERICA: {
+    name: 'Latin America',
+    region: "Americas",
+    rotation: SOUTH_AMERICA_ROTATION, continent: SOUTH_AMERICA
+  },
+  ASIA: {
+    name: 'Asia',
+    region: "Asia",
+    rotation: ASIA_ROTATION, continent: ASIA
+  },
+  AFRICA: {
+    name: 'Africa',
+    region: "Africa",
+    rotation: AFRICA_ROTATION, continent: AFRICA
+  }
+}

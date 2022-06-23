@@ -36,13 +36,13 @@ export default function OurPresence() {
             item
             xs={12}
             sm={12}
-            md={6}
-            lg={6}
+            md={5}
+            lg={5}
             className={`${classes.gridLeft} gridLeft`}
           >
             <Box className={`${classes.leftSideWorld} leftSideWorld`}>
               <Typography variant={"h2"}>Worldwide Presence</Typography>
-              <Typography variant={"p"}>
+              <Typography variant={"body1"}>
                 We provide Best in class services belongs to all IT technologies
                 If you’re searching for talented tech minds who are dedicated to
                 their work, we are a perfect fit. We are a dynamic
@@ -50,7 +50,7 @@ export default function OurPresence() {
             </Box>
           </Grid>
 
-          <Grid item xs={12} sm={12} md={6} lg={6}>
+          <Grid item xs={12} sm={12} md={7} lg={7}>
             <MapContainer />
           </Grid>
         </Grid>
@@ -78,7 +78,7 @@ const useStyles = makeStyles((theme) => ({
   },
   leftSideWorld: {
     width: "80%",
-    marginLeft: "30%",
+    marginLeft: "15%",
   },
 
   wave1white: {
