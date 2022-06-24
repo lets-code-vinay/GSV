@@ -19,7 +19,7 @@ import { NAVBAR_MENUS } from "../../Configs/NavBar/navbar";
 import { THEME_COLOR } from "../../Configs/Theme";
 
 import "./style.css";
-const MainNavBar = ({ onSubNavbarOpen, onMoreOpen }) => {
+const MainNavBar = ({ onSubNavbarOpen, onMoreOpen, findActiveNav }) => {
   const classes = useStyles();
 
   const anchor = useRef(null);

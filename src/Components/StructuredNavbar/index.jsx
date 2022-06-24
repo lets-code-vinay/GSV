@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import SubNavBar from "../SubNavBar";
 import MainNavBar from "../MainNavBar";
 import SideBar from "../More/SideBarTab/index";
 import NavbarMenus from "../NavbarMenus";
+import "./style.css";
 
 export default function StructuredNavbar() {
   const [isSubNavbarOpened, setSubNavbarOpen] = useState(false);
@@ -11,7 +12,7 @@ export default function StructuredNavbar() {
   const [isMoreOpen, setIsMoreOpen] = useState(false);
 
   const [isMoreRef, setMoreRef] = useState(null);
-
+  const [easeOutClass, setEaseOutClass] = useState();
   /**
    * @description Opening and passing data to submenus
    *
@@ -43,11 +44,38 @@ export default function StructuredNavbar() {
     setIsMoreOpen(isMore);
   };
 
+  const findActiveNav = (activeNav) => {
+    // TODO: NEed to work here: Ashu
+    // console.log("active nave are this", activeNav)
+  };
+  const refOfSubNav = useRef(null);
+
+  useEffect(() => {
+    const checkMouseClickedOutside = (e) => {
+      if (
+        isSubNavbarOpened &&
+        refOfSubNav.current &&
+        !refOfSubNav.current.contains(e.target)
+      ) {
+        setSubNavbarOpen(false);
+        setEaseOutClass("test");
+        findActiveNav();
+      }
+    };
+
+    document.addEventListener("mousedown", checkMouseClickedOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", checkMouseClickedOutside);
+    };
+  }, [isSubNavbarOpened]);
+
   return (
     <>
       <MainNavBar
         onSubNavbarOpen={handleSubNavbarOpen}
         onMoreOpen={handleMoreClick}
+        findActiveNav={findActiveNav}
       />
 
       {/* ---- Sub nav bar --- */}
@@ -56,6 +84,8 @@ export default function StructuredNavbar() {
           subNavMenus={subNavMenus}
           isOpen={isSubNavbarOpened}
           onNavMenus={handleNavMenus}
+          refOfSubNav={refOfSubNav}
+          easeOutClass={easeOutClass}
         />
       )}
 

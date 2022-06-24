@@ -12,15 +12,13 @@ function a11yProps(index) {
   };
 }
 
-const SubNavBar = ({ subNavMenus, isOpen, onNavMenus }) => {
+const SubNavBar = ({ subNavMenus, onNavMenus, refOfSubNav, easeOutClass }) => {
   const classes = useStyles();
   const anchorEle = useRef(null);
 
   const [menuListing, setMenuListing] = useState({});
   const [value, setValue] = useState(0);
   const [anchor, setAnchor] = useState(anchorEle);
-
-  const [isMoreOpen, setIsMoreOpen] = useState(false);
 
   const handleChange = (event, newValue) => {
     setAnchor();
@@ -29,18 +27,14 @@ const SubNavBar = ({ subNavMenus, isOpen, onNavMenus }) => {
     onNavMenus(Object.values(subNavMenus.menus)[newValue] || menuListing);
   };
 
-  // deal it for modal closing
-  const handleClose = () => {
-    setIsMoreOpen(false);
-  };
-
   return (
     <Box ref={anchor} className={`${classes.headBar}  headBar`}>
       {!subNavMenus.isMore && (
         <Box
           sx={{ borderBottom: 1, borderColor: "divider" }}
           id={subNavMenus.value}
-          className={`${classes.subMenuBar}  subMenuBar`}
+          className={`${classes.subMenuBar}  subMenuBar ${easeOutClass}`}
+          ref={refOfSubNav}
         >
           <Tabs
             value={value}
