@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { object } from "prop-types";
 import { Box, makeStyles, Modal, Tab, Tabs } from "@material-ui/core";
 
 import "./styles.css";
-import { useRef } from "react";
 
 function a11yProps(index) {
   return {

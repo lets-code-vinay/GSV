@@ -19,14 +19,13 @@ import { NAVBAR_MENUS } from "../../Configs/NavBar/navbar";
 import { THEME_COLOR } from "../../Configs/Theme";
 
 import "./style.css";
-const MainNavBar = ({ onSubNavbarOpen, onMoreOpen, findActiveNav }) => {
+const MainNavBar = ({ onSubNavbarOpen, onMoreOpen,  setActive, isActive}) => {
   const classes = useStyles();
 
   const anchor = useRef(null);
 
   const [anchorEl, setAnchorEl] = useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
-  const [isActive, setActive] = useState(false);
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);

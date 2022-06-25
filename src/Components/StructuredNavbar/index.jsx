@@ -13,6 +13,8 @@ export default function StructuredNavbar() {
 
   const [isMoreRef, setMoreRef] = useState(null);
   const [easeOutClass, setEaseOutClass] = useState();
+  const [isActive, setActive] = useState(false);
+  const [isShowMegaMenu, setShowMegaMenu] = useState(false)
   /**
    * @description Opening and passing data to submenus
    *
@@ -20,7 +22,7 @@ export default function StructuredNavbar() {
    * @param {Object} menu
    */
   const handleSubNavbarOpen = ({ isOpen, menu, event }) => {
-    setSubNavbarOpen(isOpen);
+    setSubNavbarOpen(() => isOpen);
     setSubNavMenus(menu);
   };
 
@@ -32,6 +34,8 @@ export default function StructuredNavbar() {
   const handleNavMenus = (menus) => {
     setNavMenus(menus);
     setIsMoreOpen(false);
+    setShowMegaMenu(true)
+
   };
 
   /**
@@ -43,13 +47,9 @@ export default function StructuredNavbar() {
     setMoreRef(mainRef);
     setIsMoreOpen(isMore);
   };
-
-  const findActiveNav = (activeNav) => {
-    // TODO: NEed to work here: Ashu
-    // console.log("active nave are this", activeNav)
-  };
+  
+  //function to check if mouse outside click and close the navbar
   const refOfSubNav = useRef(null);
-
   useEffect(() => {
     const checkMouseClickedOutside = (e) => {
       if (
@@ -57,25 +57,26 @@ export default function StructuredNavbar() {
         refOfSubNav.current &&
         !refOfSubNav.current.contains(e.target)
       ) {
-        setSubNavbarOpen(false);
+        setSubNavbarOpen(() => !isSubNavbarOpened);
+        setShowMegaMenu(false)
         setEaseOutClass("test");
-        findActiveNav();
+        setActive(false)
       }
     };
 
-    document.addEventListener("mousedown", checkMouseClickedOutside);
+    document.addEventListener("mouseup", checkMouseClickedOutside);
 
     return () => {
-      document.removeEventListener("mousedown", checkMouseClickedOutside);
+      document.removeEventListener("mouseup", checkMouseClickedOutside);
     };
   }, [isSubNavbarOpened]);
-
   return (
     <>
       <MainNavBar
         onSubNavbarOpen={handleSubNavbarOpen}
         onMoreOpen={handleMoreClick}
-        findActiveNav={findActiveNav}
+        isActive={isActive}
+        setActive={setActive}
       />
 
       {/* ---- Sub nav bar --- */}
@@ -90,7 +91,7 @@ export default function StructuredNavbar() {
       )}
 
       {/* --- Navbar menus ---- */}
-      {isSubNavbarOpened && Boolean(navMenus.value) && !subNavMenus.isMore && (
+      {isSubNavbarOpened && Boolean(navMenus.value) && !subNavMenus.isMore && isShowMegaMenu && (
         <NavbarMenus
           isOpen={Boolean(navMenus.value)}
           navMenus={navMenus.menus}
