@@ -41,7 +41,7 @@ const Technologies = () => {
       </p>
 
       <Grid container spacing={0} className={`${classes.grid1} grid1`}>
-        <Grid item xs={6} sm={6} md={6}>
+        <Grid item xs={6} sm={6} md={6} lg={6} xl={6} className="grid_col_first">
           <div className="column_first">
             <h3 className="card_header">Enterprise Networking & Wireless</h3>
             <div>
@@ -51,13 +51,12 @@ const Technologies = () => {
             </div>
             <div>
               <h4 className="card_text">
-                Design, Deployment, Monitoring, Support, dsdasd, dasdasdsd
-                dsdsdsd trtrtr wewewew ewewe wewewe wewewewewe wewewewew{" "}
+                Design, Deployment, Monitoring, Support, and many more services 
               </h4>
             </div>
           </div>
         </Grid>
-        <Grid item xs={6} sm={6} md={6} className="wireGridClass">
+        <Grid item xs={6} sm={6} md={6} lg={6} xl={6} className="wireGridClass">
           <div className="wireImage" src={technologyWireImage}>
             <img
               src={technologyWireImage}
@@ -70,37 +69,34 @@ const Technologies = () => {
         </Grid>
       </Grid>
       <Grid container className="marginTop">
-        <Grid item xs={8} className="bck1">
+        <Grid item xs={12} sm={12} md={8} lg={8} xl={8} className="bck1">
           <Card className="cardMenu">
             <CardContent className="softwareImageOverlay">
-                <div
-                  className="divImgClass imageLeft"
+              <div className="divImgClass imageLeft" src={Software_Define_Grid}>
+                <img
                   src={Software_Define_Grid}
-                >
-                  <img
-                    src={Software_Define_Grid}
-                    className="imgTagSoftware"
-                    alt="tech"
-                  />
-                </div>
-                <h3 className="text">Software-Defined Networking</h3>
-                <div className="headingMainDivSoftware">
-                  <div className="cardDiv">
-                    <h4 className="cardTextHeading">
-                      Let us Help you to come in Future of SDN{" "}
-                    </h4>
-                    <div className="paraText">
-                      <p>
-                        Cisco-SDWAN, Cisco-DNA-C, Cisco ACI, Velo Cloud, Silver
-                        light and many more
-                      </p>
-                    </div>
+                  className="imgTagSoftware"
+                  alt="tech"
+                />
+              </div>
+              <h3 className="text">Software-Defined Networking</h3>
+              <div className="headingMainDivSoftware">
+                <div className="cardDiv">
+                  <h4 className="cardTextHeading">
+                    Let us Help you to come in Future of SDN{" "}
+                  </h4>
+                  <div className="paraText">
+                    <p>
+                      Cisco-SDWAN, Cisco-DNA-C, Cisco ACI, Velo Cloud, Silver
+                      light and many more
+                    </p>
                   </div>
                 </div>
+              </div>
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={4} className="bck2">
+        <Grid item xs={12} sm={12} md={4} lg={4} xl={4} className="bck2">
           <Card className="cardMenu">
             <CardContent className="securityOverlay">
               <div
@@ -111,11 +107,10 @@ const Technologies = () => {
               </div>
               <h3 className="textSecurity">Security</h3>
               <div className="headingMainDivSoftware">
-              <h4 className="cardTextHeadingSecurity">
-                    Advance Security tactics{" "}
-                  </h4>
+                <h4 className="cardTextHeadingSecurity">
+                  Advance Security tactics{" "}
+                </h4>
                 <div className="cardDivSecurity">
-                  
                   <div className="paraTextSecurity">
                     <p>Cybersecurity, AMP, Network and Cloud Security</p>
                   </div>
@@ -124,12 +119,12 @@ const Technologies = () => {
             </CardContent>
           </Card>
         </Grid>
-      </Grid> 
+      </Grid>
       <Grid container spacing={0} className="cardGrid">
-        <Grid className="cardBody">
+        <Grid className="cardBody" xs={12} sm={12}  >
           {cardBox.map((item, i) => {
             return (
-              <Card key={i} sx={{ minWidth: 275 }} className="cardMenu">
+              <Card key={i} className="cardMenu" xs={12} sm={12} md={4} lg={4} xl={4}>
                 <CardContent className="cardContent position-relative">
                   <div className="overlay">
                     <div className={item.className} src={item.img}>
