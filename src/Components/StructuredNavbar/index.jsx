@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import SubNavBar from "../SubNavBar";
 import MainNavBar from "../MainNavBar";
 import SideBar from "../More/SideBarTab/index";
 import NavbarMenus from "../NavbarMenus";
+import "./style.css";
 
 export default function StructuredNavbar() {
   const [isSubNavbarOpened, setSubNavbarOpen] = useState(false);
@@ -11,7 +12,9 @@ export default function StructuredNavbar() {
   const [isMoreOpen, setIsMoreOpen] = useState(false);
 
   const [isMoreRef, setMoreRef] = useState(null);
-
+  const [easeOutClass, setEaseOutClass] = useState();
+  const [isActive, setActive] = useState(false);
+  const [isShowMegaMenu, setShowMegaMenu] = useState(false)
   /**
    * @description Opening and passing data to submenus
    *
@@ -19,7 +22,7 @@ export default function StructuredNavbar() {
    * @param {Object} menu
    */
   const handleSubNavbarOpen = ({ isOpen, menu, event }) => {
-    setSubNavbarOpen(isOpen);
+    setSubNavbarOpen(() => isOpen);
     setSubNavMenus(menu);
   };
 
@@ -31,6 +34,8 @@ export default function StructuredNavbar() {
   const handleNavMenus = (menus) => {
     setNavMenus(menus);
     setIsMoreOpen(false);
+    setShowMegaMenu(true)
+
   };
 
   /**
@@ -42,12 +47,36 @@ export default function StructuredNavbar() {
     setMoreRef(mainRef);
     setIsMoreOpen(isMore);
   };
+  
+  //function to check if mouse outside click and close the navbar
+  const refOfSubNav = useRef(null);
+  useEffect(() => {
+    const checkMouseClickedOutside = (e) => {
+      if (
+        isSubNavbarOpened &&
+        refOfSubNav.current &&
+        !refOfSubNav.current.contains(e.target)
+      ) {
+        setSubNavbarOpen(() => !isSubNavbarOpened);
+        setShowMegaMenu(false)
+        setEaseOutClass("test");
+        setActive(false)
+      }
+    };
 
+    document.addEventListener("mouseup", checkMouseClickedOutside);
+
+    return () => {
+      document.removeEventListener("mouseup", checkMouseClickedOutside);
+    };
+  }, [isSubNavbarOpened]);
   return (
     <>
       <MainNavBar
         onSubNavbarOpen={handleSubNavbarOpen}
         onMoreOpen={handleMoreClick}
+        isActive={isActive}
+        setActive={setActive}
       />
 
       {/* ---- Sub nav bar --- */}
@@ -56,11 +85,13 @@ export default function StructuredNavbar() {
           subNavMenus={subNavMenus}
           isOpen={isSubNavbarOpened}
           onNavMenus={handleNavMenus}
+          refOfSubNav={refOfSubNav}
+          easeOutClass={easeOutClass}
         />
       )}
 
       {/* --- Navbar menus ---- */}
-      {isSubNavbarOpened && Boolean(navMenus.value) && !subNavMenus.isMore && (
+      {isSubNavbarOpened && Boolean(navMenus.value) && !subNavMenus.isMore && isShowMegaMenu && (
         <NavbarMenus
           isOpen={Boolean(navMenus.value)}
           navMenus={navMenus.menus}
