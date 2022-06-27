@@ -578,10 +578,13 @@
   .imageLeft {
     height: 50vh;
   }
+  .cardTextHeading{
+    bottom: 60px;
+  }
   .cardDiv p {
     position: absolute;
-    bottom: 30px;
-    opacity: 0;
+    bottom: 4px;
+    opacity: 1;
     font-size: 17px;
     padding-left: 15px;
     color: white;
@@ -594,6 +597,14 @@
     height: 50vh;
     transform: none;
     transition: none;
+}
+.cardTextHeadingSecurity{
+  bottom: 80px;
+}
+.paraTextSecurity p {
+  opacity: 1;
+  color: white;
+  padding: 0 0px 0 15px;
 }
 .cardMenu{
   width: 100%;
@@ -671,14 +682,23 @@
   .imageLeft {
     height: 50vh;
   }
-  .cardDiv p {
+  .cardTextHeading {
     position: absolute;
-    bottom: 30px;
-    opacity: 0;
-    font-size: 17px;
-    padding-left: 15px;
+    bottom: 70px;
+    transition: 0.3s linear;
     color: white;
-  }
+    font-size: 25px;
+    font-weight: 500;
+    padding-left: 15px;
+}
+.cardDiv p {
+  position: absolute;
+  bottom: 4px;
+  opacity: 1;
+  font-size: 17px;
+  padding-left: 15px;
+  color: white;
+}
   .bck2 .securityOverlay {
     padding: 15px 0;
   }
