@@ -56,8 +56,8 @@ const SideBar = (props) => {
   return (
     <ClickAwayListener onClickAway={handleClosePopover}>
       {isMoreOpen && (
-        <Grid item container spacing={2}>
-          <Grid item xs={12} sm={12} md={3} lg={2}>
+        <Grid  item={true} container spacing={2}>
+          <Grid  item={true} xs={12} sm={12} md={3} lg={2}>
             <div>
               <div className={`${classes.sideBarMenus} sideBarMenus`}>
                 {Object.values(SideMenu).map((menu, index) => {
@@ -94,7 +94,7 @@ const SideBar = (props) => {
           </Grid>
 
           <Grid
-            item
+            item={true}
             xs={12}
             sm={12}
             md={9}

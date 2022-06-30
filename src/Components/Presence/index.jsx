@@ -33,7 +33,7 @@ export default function OurPresence() {
 
         <Grid container className={`${classes.mainGrid} mainGrid`}>
           <Grid
-            item
+            item={true}
             xs={12}
             sm={12}
             md={5}
@@ -50,7 +50,7 @@ export default function OurPresence() {
             </Box>
           </Grid>
 
-          <Grid item xs={12} sm={12} md={7} lg={7}>
+          <Grid  item={true} xs={12} sm={12} md={7} lg={7}>
             <MapContainer />
           </Grid>
         </Grid>

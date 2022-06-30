@@ -17,14 +17,14 @@ const Footer = () => {
     <>
       <Box className={`${classes.footer} footer`}>
         <Grid container className={`${classes.footerBody} footerBody`}>
-          <Grid item xs={12} sm={6} md={4} lg={3} id="grid">
+          <Grid  item={true} xs={12} sm={6} md={4} lg={3} id="grid">
             <img
               src={Logo}
               alt={"logo of company"}
               className={`${classes.footerLogo} footerLogo`}
             />
           </Grid>
-          <Grid item xs={6} sm={6} md={4} lg={3} id="grid">
+          <Grid  item={true} xs={6} sm={6} md={4} lg={3} id="grid">
             <Typography
               variant={"h5"}
               className={`${classes.menuListTitle} menuListTitle`}
@@ -73,7 +73,7 @@ const Footer = () => {
             </Box>
           </Grid>
 
-          <Grid item xs={6} sm={6} md={4} lg={3} id="grid">
+          <Grid  item={true} xs={6} sm={6} md={4} lg={3} id="grid">
             <Typography
               variant={"h5"}
               className={`${classes.menuListTitle} menuListTitle`}
@@ -114,7 +114,7 @@ const Footer = () => {
             </Box>
           </Grid>
 
-          <Grid item xs={12} sm={6} md={4} lg={3} id="grid">
+          <Grid  item={true} xs={12} sm={6} md={4} lg={3} id="grid">
             <Typography
               variant={"h5"}
               className={`${classes.menuListTitle} menuListTitle`}

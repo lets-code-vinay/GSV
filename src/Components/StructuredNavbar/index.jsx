@@ -15,6 +15,7 @@ export default function StructuredNavbar() {
   const [easeOutClass, setEaseOutClass] = useState();
   const [isActive, setActive] = useState(false);
   const [isShowMegaMenu, setShowMegaMenu] = useState(false)
+  const [isActiveMegaMenu, setActiveMegaMenu] = useState(false)
   /**
    * @description Opening and passing data to submenus
    *
@@ -22,8 +23,9 @@ export default function StructuredNavbar() {
    * @param {Object} menu
    */
   const handleSubNavbarOpen = ({ isOpen, menu, event }) => {
-    setSubNavbarOpen(() => isOpen);
+    setSubNavbarOpen(isOpen);
     setSubNavMenus(menu);
+    setActiveMegaMenu(true)
   };
 
   /**
@@ -51,6 +53,7 @@ export default function StructuredNavbar() {
   //function to check if mouse outside click and close the navbar
   const refOfSubNav = useRef(null);
   useEffect(() => {
+    
     const checkMouseClickedOutside = (e) => {
       if (
         isSubNavbarOpened &&
@@ -70,6 +73,13 @@ export default function StructuredNavbar() {
       document.removeEventListener("mouseup", checkMouseClickedOutside);
     };
   }, [isSubNavbarOpened]);
+
+  useEffect(() => {
+    setSubNavbarOpen(true)
+
+  },[])
+
+  console.log("rhrh", navMenus)
   return (
     <>
       <MainNavBar
@@ -91,10 +101,12 @@ export default function StructuredNavbar() {
       )}
 
       {/* --- Navbar menus ---- */}
-      {isSubNavbarOpened && Boolean(navMenus.value) && !subNavMenus.isMore && isShowMegaMenu && (
+      {/* {isSubNavbarOpened && Boolean(navMenus.value) && !subNavMenus.isMore && isShowMegaMenu && ( */}
+      {isSubNavbarOpened && Boolean(navMenus.value) && !subNavMenus.isMore && (
         <NavbarMenus
           isOpen={Boolean(navMenus.value)}
           navMenus={navMenus.menus}
+          isActiveMegaMenu={isActiveMegaMenu}
         />
       )}
 

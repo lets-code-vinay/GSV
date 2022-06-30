@@ -11,7 +11,7 @@ function a11yProps(index) {
   };
 }
 
-const SubNavBar = ({ subNavMenus, onNavMenus, refOfSubNav, easeOutClass }) => {
+const SubNavBar = ({ subNavMenus = {}, onNavMenus, refOfSubNav, easeOutClass }) => {
   const classes = useStyles();
   const anchorEle = useRef(null);
 
@@ -22,8 +22,8 @@ const SubNavBar = ({ subNavMenus, onNavMenus, refOfSubNav, easeOutClass }) => {
   const handleChange = (event, newValue) => {
     setAnchor();
     setValue(newValue);
-    setMenuListing(Object.values(subNavMenus.menus)[newValue] || menuListing);
-    onNavMenus(Object.values(subNavMenus.menus)[newValue] || menuListing);
+    setMenuListing(Object.values(subNavMenus?.menus)[newValue] || menuListing);
+    onNavMenus(Object.values(subNavMenus?.menus)[newValue] || menuListing);
   };
 
   return (
@@ -31,7 +31,7 @@ const SubNavBar = ({ subNavMenus, onNavMenus, refOfSubNav, easeOutClass }) => {
       {!subNavMenus.isMore && (
         <Box
           sx={{ borderBottom: 1, borderColor: "divider" }}
-          id={subNavMenus.value}
+          id={subNavMenus?.value}
           className={`${classes.subMenuBar}  subMenuBar ${easeOutClass}`}
           ref={refOfSubNav}
         >
@@ -40,10 +40,10 @@ const SubNavBar = ({ subNavMenus, onNavMenus, refOfSubNav, easeOutClass }) => {
             onChange={handleChange}
             aria-label="basic tabs example"
           >
-            {Object.values(subNavMenus.menus).map((menu, index) => {
+            {Object.values(subNavMenus?.menus).map((menu, index) => {
               return (
                 <Tab
-                  label={menu.label}
+                  label={menu?.label}
                   {...a11yProps({ index })}
                   key={index}
                   className={` ${classes.navbar_text} navbar_text`}
@@ -76,7 +76,7 @@ export default SubNavBar;
 const useStyles = makeStyles((theme) => ({
   headBar: {
     position: "absolute",
-    top: "80px",
+    top: "87px",
     background: "white",
     width: "100%",
   },

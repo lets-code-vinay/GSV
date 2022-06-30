@@ -68,6 +68,14 @@ const MainSlider = () => {
               className="image-slider"
             />
           </div>
+          <div>
+            <img
+              src={DATA}
+              alt="DATA"
+              width={"100%"}
+              className="image-slider"
+            />
+          </div>
         </Carousel>
         <StructuredNavbar />
         <Typography
