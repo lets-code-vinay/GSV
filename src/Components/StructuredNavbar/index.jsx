@@ -74,10 +74,10 @@ export default function StructuredNavbar() {
     };
   }, [isSubNavbarOpened]);
 
-  useEffect(() => {
-    setSubNavbarOpen(true)
+  // useEffect(() => {
+  //   setSubNavbarOpen(true)
 
-  },[])
+  // },[])
 
   console.log("rhrh", navMenus)
   return (
