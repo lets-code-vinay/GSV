@@ -11,7 +11,12 @@ function a11yProps(index) {
   };
 }
 
-const SubNavBar = ({ subNavMenus = {}, onNavMenus, refOfSubNav, easeOutClass }) => {
+const SubNavBar = ({
+  subNavMenus = {},
+  onNavMenus,
+  refOfSubNav,
+  easeOutClass,
+}) => {
   const classes = useStyles();
   const anchorEle = useRef(null);
 
@@ -85,17 +90,16 @@ const useStyles = makeStyles((theme) => ({
   },
   navbar_text: {
     fontSize: "1rem",
-    marginRight: "10%",
+    marginRight: "2%",
     color: "#000000",
     whiteSpace: "initial",
-    width: "70%",
+    // width: "70%",
   },
   subMenuBar: {
     fontSize: "1.3rem",
-    display: "flex",
+    display: "inline",
     borderBottom: "1px solid rgb(13,39,77, 0.5) ",
     minWidth: "180px",
     whiteSpace: "break-spaces",
-    justifyContent: "center",
   },
 }));
