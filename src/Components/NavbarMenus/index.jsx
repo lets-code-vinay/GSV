@@ -190,7 +190,7 @@ const useStyles = makeStyles((theme) => ({
     position: "absolute",
     zIndex: "10",
     height: "82vh",
-    top: "20.5%",
+    top: "23%",
   },
 
   imageSubMenu: {
@@ -207,7 +207,7 @@ const useStyles = makeStyles((theme) => ({
     width: "20%",
     height: "210px",
     position: "absolute",
-    bottom: "0%",
+    bottom: "10%",
   },
   menuInformationMSGContainer: {
     width: "100%",
@@ -231,16 +231,15 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#ffffff",
     width: "100%",
     height: "100%",
-    padding: "0% 3% 0 10%",
+    padding: "3% 3% 0 10%",
   },
   MenuTitleContainer: {
     display: "flex",
     justifyContent: "start",
-    margin: "8% 0px 3%",
+    margin: "2% 0px 0%",
     width: "80%",
   },
   mainMenuTitle: {
-    margin: "10px 0",
     color: THEME_COLOR.main_color,
     fontWeight: "500",
   },
@@ -252,8 +251,8 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: "none",
     margin: "1% 0",
     width: "90%",
-
     color: THEME_COLOR.main_color,
+
     "&:hover": {
       color: THEME_COLOR.color_5,
       letterSpacing: "0",
@@ -264,17 +263,16 @@ const useStyles = makeStyles((theme) => ({
   popularBlock: {
     width: "100%",
     height: "100%",
-    padding: "2% 3%",
+    padding: "4% 3%",
   },
 
   popularTitleContainer: {
     display: "flex",
     justifyContent: "start",
-    margin: "6% 0px 3%",
+    margin: "2% 0px 0%",
     width: "40%",
   },
   popularTitle: {
-    margin: "10px 0px",
     color: THEME_COLOR.main_color,
     fontWeight: "500",
   },
@@ -285,7 +283,7 @@ const useStyles = makeStyles((theme) => ({
 
   popularText: {
     textDecoration: "none",
-    marginBottom: "5%",
+    margin: "1% 0",
     width: "80%",
 
     color: THEME_COLOR.main_color,

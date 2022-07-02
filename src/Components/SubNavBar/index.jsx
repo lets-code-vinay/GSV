@@ -41,6 +41,7 @@ const SubNavBar = ({
             value={value}
             onChange={handleChange}
             aria-label="basic tabs example"
+            className={`${classes.subMenuTabContainer}  subMenuTabContainer ${easeOutClass}`}
           >
             {Object.values(subNavMenus?.menus).map((menu, index) => {
               return (
@@ -84,6 +85,9 @@ const useStyles = makeStyles((theme) => ({
   },
   subMenu: {
     cursor: "pointer",
+  },
+  subMenuTabContainer: {
+    height: "4rem",
   },
   navbar_text: {
     fontSize: "1rem",
