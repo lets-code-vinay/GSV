@@ -95,7 +95,7 @@ const Testimonials = () => {
                 index
               ) => (
                 <Box
-                item={true}
+                item
                   xs={12}
                   sm={12}
                   md={4}

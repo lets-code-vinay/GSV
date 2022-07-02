@@ -40,7 +40,7 @@ const Insight = () => {
     <Paper elevation={24} className={`${classes.piePaper} piePaper`}>
       <Grid container className={`${classes.pieGrid} pieGrid`}>
         <Grid
-          item={true}
+          item
           xs={12}
           sm={12}
           md={6}
@@ -57,7 +57,7 @@ const Insight = () => {
             className={`${classes.logoInside} logoInside`}
           />
         </Grid>
-        <Grid  item={true} xs={12} sm={12} md={6} lg={6}>
+        <Grid  item xs={12} sm={12} md={6} lg={6}>
           <Box className={`${classes.pieDetail} pieDetail`}>
             <Typography
               variant={"h3"}

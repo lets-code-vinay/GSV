@@ -8,4 +8,5 @@ export const THEME_COLOR = {
   popular_color: "#F3F5F8",
   link_visited: "#051F64",
   security_red: "#4E0600",
+  data_green: '#3E3F86'
 };

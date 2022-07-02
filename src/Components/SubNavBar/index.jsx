@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { object } from "prop-types";
 import { Box, makeStyles, Modal, Tab, Tabs } from "@material-ui/core";
 
@@ -18,21 +18,18 @@ const SubNavBar = ({
   easeOutClass,
 }) => {
   const classes = useStyles();
-  const anchorEle = useRef(null);
 
   const [menuListing, setMenuListing] = useState({});
   const [value, setValue] = useState(0);
-  const [anchor, setAnchor] = useState(anchorEle);
 
   const handleChange = (event, newValue) => {
-    setAnchor();
     setValue(newValue);
     setMenuListing(Object.values(subNavMenus?.menus)[newValue] || menuListing);
     onNavMenus(Object.values(subNavMenus?.menus)[newValue] || menuListing);
   };
 
   return (
-    <Box ref={anchor} className={`${classes.headBar}  headBar`}>
+    <Box className={`${classes.headBar}  headBar`}>
       {!subNavMenus.isMore && (
         <Box
           sx={{ borderBottom: 1, borderColor: "divider" }}
@@ -81,7 +78,7 @@ export default SubNavBar;
 const useStyles = makeStyles((theme) => ({
   headBar: {
     position: "absolute",
-    top: "87px",
+    top: "81px",
     background: "white",
     width: "100%",
   },

@@ -52,7 +52,7 @@ const Trending = () => {
               >
                 <Grid container className={`${classes.tabMatter} tabMatter`}>
                   <Grid
-                     item={true}
+                     item
                     xs={12}
                     sm={6}
                     md={6}
@@ -66,7 +66,7 @@ const Trending = () => {
                       style={{ width: "250px", height: "250px" }}
                     />
                   </Grid>
-                  <Grid  item={true} xs={12} sm={6} md={6} lg={8}>
+                  <Grid  item xs={12} sm={6} md={6} lg={8}>
                     <Box className="content">
                       <Typography
                         variant={"h2"}

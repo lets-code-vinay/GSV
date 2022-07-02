@@ -1,14 +1,14 @@
 import { THEME_COLOR } from "../Theme";
-import NETWORK_IMAGE from "../../Assets/Images/network.jpg";
+import NETWORK_IMAGE from "../../Assets/Images/Menu-images/network-1.jpg";
 import LAN_ICON from "../../Assets/Icons/lan.svg";
 import WAN_ICON from "../../Assets/Icons/wan.svg";
 import WAM_ICON from "../../Assets/Icons/wireless.svg";
 import MISC_ICON from "../../Assets/Icons/misc.svg";
 import POPULAR_ICON from "../../Assets/Icons/popular.svg";
 
-import SECURITY_MAIN_IMAGE from "../../Assets/Images/security.jpg";
+import SECURITY_MAIN_IMAGE from "../../Assets/Images/Menu-images/security.jpg";
 
-import DATA_CENTER_SECURITY_IMAGE from "../../Assets/Images/data-center-security.jpg";
+import DATA_CENTER_SECURITY_IMAGE from "../../Assets/Images/Menu-images/data-center-security.jpg";
 
 export const NAVBAR_MENUS = {
   IT_INFRASTRUCTURE: {
@@ -132,6 +132,9 @@ export const NAVBAR_MENUS = {
               },
             },
 
+
+
+
             // Service Provider
             SERVICE_PROVIDER: {
               label: "Service Provider",
@@ -148,6 +151,16 @@ export const NAVBAR_MENUS = {
               },
             },
 
+            // Emply block to balance
+            EMPTY_BLOCK: {
+              label: "",
+              value: "EMPTY_BLOCK",
+              shaded: false,
+              icon: MISC_ICON,
+              image: MISC_ICON,
+              menus: {
+              },
+            },
 
             MISCELLANEOUS: {
               label: "Miscellaneous",
@@ -179,6 +192,8 @@ export const NAVBAR_MENUS = {
                 },
               },
             },
+
+
 
             // -- Popular ---
             POPULAR: {
@@ -263,7 +278,7 @@ export const NAVBAR_MENUS = {
         menus: {
           image: SECURITY_MAIN_IMAGE,
           title: "SECURITY",
-          security_red: THEME_COLOR.security_red,
+          color: THEME_COLOR.security_red,
           subtitle: `Security-Implement enterprise-class connectivity for wired and wireless. Multi-vendor technology and hardware's Satellite, deployment, monitoring and support`,
           menus: {
             // --SECURITY --
@@ -368,6 +383,16 @@ export const NAVBAR_MENUS = {
                   value: "MDR",
                   path: "/cybersecurity/Managed-Detection-Response ",
                 },
+              },
+            },
+            // Emply block to balance
+            EMPTY_BLOCK: {
+              label: "",
+              value: "EMPTY_BLOCK",
+              shaded: false,
+              icon: MISC_ICON,
+              image: MISC_ICON,
+              menus: {
               },
             },
 
@@ -514,6 +539,7 @@ export const NAVBAR_MENUS = {
       DATA_CENTER: {
         label: "DATA CENTER ",
         value: "DATA_CENTER",
+        color: THEME_COLOR.data_green,
         menus: {
           image: DATA_CENTER_SECURITY_IMAGE,
           title: "Data Center Security",
@@ -613,6 +639,17 @@ export const NAVBAR_MENUS = {
                   value: "OCVMS",
                   path: "/virtualization/Google-Cloud-VMware-Solution ",
                 },
+              },
+            },
+
+            // Emply block to balance
+            EMPTY_BLOCK: {
+              label: "",
+              value: "EMPTY_BLOCK",
+              shaded: false,
+              icon: MISC_ICON,
+              image: MISC_ICON,
+              menus: {
               },
             },
 

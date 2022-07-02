@@ -8,10 +8,10 @@ const GridPage = ({ data = [], title = "" }) => {
     <>
       <h1 className="gridHeading my-5">{title}</h1>
       <Grid container className="displayFlex">
-        {data.map((item, i) => {
+        {data.map((findItem, i) => {
           return (
-            <Grid  item={true} sm={6} xs={6} md={3} lg={3}>
-              <img src={item.img} alt="" className="gridPageImage" />
+            <Grid  item sm={6} xs={6} md={3} lg={3}>
+              <img src={findItem.img} alt="" className="gridPageImage" />
             </Grid>
           );
         })}

@@ -40,7 +40,7 @@ const Technologies = () => {
       </p>
 
       <Grid container spacing={0} className={`${classes.grid1} grid1`}>
-        <Grid  item={true} xs={6} sm={6} md={6}>
+        <Grid  item xs={6} sm={6} md={6}>
           <div className="column_first">
             <h3 className="card_header">Enterprise Networking & Wireless</h3>
             <div>
@@ -56,7 +56,7 @@ const Technologies = () => {
             </div>
           </div>
         </Grid>
-        <Grid  item={true} xs={6} sm={6} md={6} className="wireGridClass">
+        <Grid  item xs={6} sm={6} md={6} className="wireGridClass">
           <div className="wireImage" src={technologyWireImage}>
             <img
               src={technologyWireImage}
@@ -69,7 +69,7 @@ const Technologies = () => {
         </Grid>
       </Grid>
       <Grid container className="marginTop">
-        <Grid  item={true} xs={8} className="bck1">
+        <Grid  item xs={8} className="bck1">
           <Card className="cardMenu">
             <CardContent className="softwareImageOverlay">
               <div className="divImgClass imageLeft" src={Software_Define_Grid}>
@@ -96,7 +96,7 @@ const Technologies = () => {
             </CardContent>
           </Card>
         </Grid>
-        <Grid  item={true} xs={4} className="bck2">
+        <Grid  item xs={4} className="bck2">
           <Card className="cardMenu">
             <CardContent className="securityOverlay">
               <div
@@ -154,7 +154,7 @@ const Technologies = () => {
         </Grid>
       </Grid>
       <Grid container spacing={0} className="">
-        <Grid  item={true} style={{ width: "100%" }} className="boxBelow"></Grid>
+        <Grid  item style={{ width: "100%" }} className="boxBelow"></Grid>
       </Grid>
     </Box>
   );
