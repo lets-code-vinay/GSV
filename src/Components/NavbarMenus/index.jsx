@@ -20,8 +20,6 @@ const NavbarMenus = ({ isOpen, navMenus = {}, isActiveMegaMenu }) => {
     Object.keys(navMenus.menus).includes("POPULAR")
   );
 
-  console.log("nav menu mila kya", navMenus.menus);
-
   const handleClose = (_) => {};
 
   return (

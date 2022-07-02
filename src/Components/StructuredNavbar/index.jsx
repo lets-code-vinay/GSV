@@ -72,7 +72,6 @@ export default function StructuredNavbar() {
     };
   }, [isSubNavbarOpened]);
 
-  console.log("subNavMenus", subNavMenus)
   return (
     <>
       <MainNavBar

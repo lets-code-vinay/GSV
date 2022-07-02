@@ -1228,7 +1228,7 @@ export const NAVBAR_MENUS = {
     isMore: false,
     menus: {
       NETWORKING: {
-        label: "NETWORK WIRED AND WIRELESS-DND",
+        label: "NETWORK WIRED AND WIRELESS",
         value: "NETWORKING",
         menus: {
           image: NETWORK_IMAGE,
@@ -1489,7 +1489,7 @@ export const NAVBAR_MENUS = {
        * Security and cyber Security
        */
       SECURITY: {
-        label: "SECURITY AND CYBERSECURITY-DND",
+        label: "SECURITY AND CYBERSECURITY",
         value: "SECURITY",
         menus: {
           image: SECURITY_MAIN_IMAGE,
@@ -1749,7 +1749,7 @@ export const NAVBAR_MENUS = {
        * DATA CENTER AND VIRTUALIZATION
        */
       DATA_CENTER: {
-        label: "DATA CENTER AND VIRTUALIZATION-DND",
+        label: "DATA CENTER AND VIRTUALIZATION",
         value: "DATA_CENTER",
         menus: {
           image: DATA_CENTER_SECURITY_IMAGE,
@@ -2001,7 +2001,7 @@ export const NAVBAR_MENUS = {
        * COLLABORATION AND PRODUCTIVITY
        */
       COLLABORATION: {
-        label: "COLLABORATION AND PRODUCTIVITY-DND ",
+        label: "COLLABORATION AND PRODUCTIVITY",
         value: "COLLABORATION",
         menus: {
           image: SECURITY_MAIN_IMAGE,
@@ -2261,7 +2261,7 @@ export const NAVBAR_MENUS = {
        * SERVICE PROVIDER
        */
       SP: {
-        label: "SERVICE PROVIDER-DND ",
+        label: "SERVICE PROVIDER",
         value: "SP",
         menus: {
           image: SECURITY_MAIN_IMAGE,
@@ -2520,7 +2520,7 @@ export const NAVBAR_MENUS = {
        * CLOUD AND COMPUTING
        */
       CAC: {
-        label: "CLOUD AND COMPUTING-DND ",
+        label: "CLOUD AND COMPUTING",
         value: "CAC",
         menus: {
           image: SECURITY_MAIN_IMAGE,
@@ -2779,7 +2779,7 @@ export const NAVBAR_MENUS = {
        * INTERNET OF THINGS
        */
       IOT: {
-        label: "INTERNET OF THINGS (IoT)-DND ",
+        label: "INTERNET OF THINGS (IoT)",
         value: "IOT",
         menus: {
           image: SECURITY_MAIN_IMAGE,
