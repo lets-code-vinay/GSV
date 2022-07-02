@@ -113,16 +113,13 @@ const MainNavBar = ({ onSubNavbarOpen, onMoreOpen,  setActive, isActive}) => {
           ref={anchor}
         >
           <Toolbar>
-            <Box edge="start" className={classes.menuButton} color="inherit">
+            <Box edge="start" className={`${classes.menuButton} display`} color="inherit">
               <img
                 src={Logo}
                 alt="main-logo"
                 className={`${classes.logo} logo-1`}
               />
-            </Box>
-
-            <div className={classes.grow} />
-            <div className={`${classes.sectionDesktop} sectionDesktop`}>
+              <div className={`${classes.sectionDesktop} sectionDesktop`}>
               {Object.values(NAVBAR_MENUS).map((menu, i) => {
                 return (
                   <MenuItem
@@ -130,7 +127,7 @@ const MainNavBar = ({ onSubNavbarOpen, onMoreOpen,  setActive, isActive}) => {
                     style={{
                       borderBottom:
                         isActive === menu.value
-                          ? "3px solid #ffffff"
+                          ? "3px solid #ffff"
                           : "3px solid transparent",
                     }}
                     key={i}
@@ -145,6 +142,10 @@ const MainNavBar = ({ onSubNavbarOpen, onMoreOpen,  setActive, isActive}) => {
                 );
               })}
             </div>
+            </Box>
+
+            {/* <div className={classes.grow} /> */}
+            
 
             {/* To open icons */}
             <div className={`${classes.sectionMobile} sectionMobile`}>
@@ -198,13 +199,13 @@ const useStyles = makeStyles((theme) => ({
     "&:hover": {
       cursor: "pointer",
     },
-    width: "20%",
+    width: "11%",
   },
 
   navbar_text: {
     color: "#ffffff",
     fontSize: "1.6rem",
-    fontWeight: "700",
+    fontWeight: "400",
   },
   navbar_text_mobile: {
     fontSize: "1.3rem",
@@ -233,6 +234,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   sectionDesktop: {
+    marginLeft: "70px",
     display: "none",
     [theme.breakpoints.up("md")]: {
       display: "flex",

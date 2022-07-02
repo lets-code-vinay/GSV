@@ -16,7 +16,7 @@ const Trending = () => {
       <Box className={`${classes.trendingLogo} trendingLogo`}>
         <FlashOnIcon className={`${classes.flashIcon} flashIcon`} />
         <Typography
-          variant="h4"
+          variant={"h4"}
           className={`${classes.trendingText} trendingText`}
         >
           Trending
@@ -32,7 +32,7 @@ const Trending = () => {
             return (
               <Tab key={`${trending}-${index}`} style={{ padding: 0 }}>
                 <Button
-                  Boxor="outline-primary"
+                  boxor="outline-primary"
                   className={`${classes.tabButton} tabButton`}
                   id="tabButton"
                 >
@@ -52,7 +52,7 @@ const Trending = () => {
               >
                 <Grid container className={`${classes.tabMatter} tabMatter`}>
                   <Grid
-                    item
+                     item
                     xs={12}
                     sm={6}
                     md={6}
@@ -66,7 +66,7 @@ const Trending = () => {
                       style={{ width: "250px", height: "250px" }}
                     />
                   </Grid>
-                  <Grid item xs={12} sm={6} md={6} lg={8}>
+                  <Grid  item xs={12} sm={6} md={6} lg={8}>
                     <Box className="content">
                       <Typography
                         variant={"h2"}
@@ -75,7 +75,7 @@ const Trending = () => {
                         {title}
                       </Typography>
                       <Typography
-                        variant="body"
+                        variant={"body1"}
                         className={`${classes.trendingSubTitle} trendingSubTitle`}
                       >
                         {subtitle}
@@ -86,7 +86,7 @@ const Trending = () => {
                           href={link}
                           target="_blank"
                           className="btn btn-outline-primary"
-                          Boxor="outline-primary"
+                          boxor="outline-primary"
                           rel="noreferrer"
                         >
                           Join Now
@@ -94,7 +94,7 @@ const Trending = () => {
                       )}
 
                       {button && (
-                        <Button Boxor="outline-primary">{button}</Button>
+                        <Button boxor="outline-primary">{button}</Button>
                       )}
                     </Box>
                   </Grid>

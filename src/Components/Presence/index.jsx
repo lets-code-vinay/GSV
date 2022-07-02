@@ -50,7 +50,7 @@ export default function OurPresence() {
             </Box>
           </Grid>
 
-          <Grid item xs={12} sm={12} md={7} lg={7}>
+          <Grid  item xs={12} sm={12} md={7} lg={7}>
             <MapContainer />
           </Grid>
         </Grid>

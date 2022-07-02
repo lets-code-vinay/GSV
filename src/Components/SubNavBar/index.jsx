@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { object } from "prop-types";
 import { Box, makeStyles, Modal, Tab, Tabs } from "@material-ui/core";
 
@@ -11,27 +11,29 @@ function a11yProps(index) {
   };
 }
 
-const SubNavBar = ({ subNavMenus, onNavMenus, refOfSubNav, easeOutClass }) => {
+const SubNavBar = ({
+  subNavMenus = {},
+  onNavMenus,
+  refOfSubNav,
+  easeOutClass,
+}) => {
   const classes = useStyles();
-  const anchorEle = useRef(null);
 
   const [menuListing, setMenuListing] = useState({});
   const [value, setValue] = useState(0);
-  const [anchor, setAnchor] = useState(anchorEle);
 
   const handleChange = (event, newValue) => {
-    setAnchor();
     setValue(newValue);
-    setMenuListing(Object.values(subNavMenus.menus)[newValue] || menuListing);
-    onNavMenus(Object.values(subNavMenus.menus)[newValue] || menuListing);
+    setMenuListing(Object.values(subNavMenus?.menus)[newValue] || menuListing);
+    onNavMenus(Object.values(subNavMenus?.menus)[newValue] || menuListing);
   };
 
   return (
-    <Box ref={anchor} className={`${classes.headBar}  headBar`}>
+    <Box className={`${classes.headBar}  headBar`}>
       {!subNavMenus.isMore && (
         <Box
           sx={{ borderBottom: 1, borderColor: "divider" }}
-          id={subNavMenus.value}
+          id={subNavMenus?.value}
           className={`${classes.subMenuBar}  subMenuBar ${easeOutClass}`}
           ref={refOfSubNav}
         >
@@ -39,11 +41,12 @@ const SubNavBar = ({ subNavMenus, onNavMenus, refOfSubNav, easeOutClass }) => {
             value={value}
             onChange={handleChange}
             aria-label="basic tabs example"
+            className={`${classes.subMenuTabContainer}  subMenuTabContainer ${easeOutClass}`}
           >
-            {Object.values(subNavMenus.menus).map((menu, index) => {
+            {Object.values(subNavMenus?.menus).map((menu, index) => {
               return (
                 <Tab
-                  label={menu.label}
+                  label={menu?.label}
                   {...a11yProps({ index })}
                   key={index}
                   className={` ${classes.navbar_text} navbar_text`}
@@ -76,26 +79,28 @@ export default SubNavBar;
 const useStyles = makeStyles((theme) => ({
   headBar: {
     position: "absolute",
-    top: "80px",
+    top: "81px",
     background: "white",
     width: "100%",
   },
   subMenu: {
     cursor: "pointer",
   },
+  subMenuTabContainer: {
+    height: "4rem",
+  },
   navbar_text: {
     fontSize: "1rem",
-    marginRight: "10%",
+    marginRight: "2%",
     color: "#000000",
     whiteSpace: "initial",
-    width: "70%",
+    // width: "70%",
   },
   subMenuBar: {
     fontSize: "1.3rem",
-    display: "flex",
+    display: "inline",
     borderBottom: "1px solid rgb(13,39,77, 0.5) ",
     minWidth: "180px",
     whiteSpace: "break-spaces",
-    justifyContent: "center",
   },
 }));

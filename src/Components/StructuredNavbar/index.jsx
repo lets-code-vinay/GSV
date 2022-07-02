@@ -14,7 +14,8 @@ export default function StructuredNavbar() {
   const [isMoreRef, setMoreRef] = useState(null);
   const [easeOutClass, setEaseOutClass] = useState();
   const [isActive, setActive] = useState(false);
-  const [isShowMegaMenu, setShowMegaMenu] = useState(false)
+  const [isShowMegaMenu, setShowMegaMenu] = useState(false);
+  const [isActiveMegaMenu, setActiveMegaMenu] = useState(false);
   /**
    * @description Opening and passing data to submenus
    *
@@ -22,8 +23,9 @@ export default function StructuredNavbar() {
    * @param {Object} menu
    */
   const handleSubNavbarOpen = ({ isOpen, menu, event }) => {
-    setSubNavbarOpen(() => isOpen);
+    setSubNavbarOpen(isOpen);
     setSubNavMenus(menu);
+    setActiveMegaMenu(true);
   };
 
   /**
@@ -34,8 +36,7 @@ export default function StructuredNavbar() {
   const handleNavMenus = (menus) => {
     setNavMenus(menus);
     setIsMoreOpen(false);
-    setShowMegaMenu(true)
-
+    setShowMegaMenu(true);
   };
 
   /**
@@ -47,7 +48,7 @@ export default function StructuredNavbar() {
     setMoreRef(mainRef);
     setIsMoreOpen(isMore);
   };
-  
+
   //function to check if mouse outside click and close the navbar
   const refOfSubNav = useRef(null);
   useEffect(() => {
@@ -58,9 +59,9 @@ export default function StructuredNavbar() {
         !refOfSubNav.current.contains(e.target)
       ) {
         setSubNavbarOpen(() => !isSubNavbarOpened);
-        setShowMegaMenu(false)
+        setShowMegaMenu(false);
         setEaseOutClass("test");
-        setActive(false)
+        setActive(false);
       }
     };
 
@@ -70,6 +71,7 @@ export default function StructuredNavbar() {
       document.removeEventListener("mouseup", checkMouseClickedOutside);
     };
   }, [isSubNavbarOpened]);
+
   return (
     <>
       <MainNavBar
@@ -91,10 +93,12 @@ export default function StructuredNavbar() {
       )}
 
       {/* --- Navbar menus ---- */}
-      {isSubNavbarOpened && Boolean(navMenus.value) && !subNavMenus.isMore && isShowMegaMenu && (
+      {/* {isSubNavbarOpened && Boolean(navMenus.value) && !subNavMenus.isMore && isShowMegaMenu && ( */}
+      {isSubNavbarOpened && Boolean(navMenus.value) && !subNavMenus.isMore && (
         <NavbarMenus
           isOpen={Boolean(navMenus.value)}
           navMenus={navMenus.menus}
+          isActiveMegaMenu={isActiveMegaMenu}
         />
       )}
 
