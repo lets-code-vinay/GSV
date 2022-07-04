@@ -4,8 +4,16 @@ import alphabet from "../../Assets/Images/Slider-images/Alphabet_Inc_logo.svg";
 import karcher from "../../Assets/Images/Slider-images/Karcher_logo.svg";
 import timberland from "../../Assets/Images/Slider-images/Timberland_logo.svg";
 import Reddit from "../../Assets/Images/Slider-images/Reddit_logo.svg";
+// import Docker from "../../Assets/Images/Slider-images/Docker_logo.svg";
+
+
 
 export const INFINITY_SLIDER_CONTENTS = [
+  // {  // continue from here
+  //   name: "Docker",
+  //   image: Docker,
+  //   alt: "Docker logo",
+  // },
   {
     name: "Grammerly",
     image: grammerly,

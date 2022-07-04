@@ -11,10 +11,7 @@ const InfinitySlider = ({ isSlideSpeedFast = false }) => {
 
   return (
     <>
-      <div
-        className={`${classes.slid} slid`}
-        style={{ backgroundColor: THEME_COLOR.popular_color }}
-      >
+      <div className={`${classes.slid} slid`}>
         <div
           className={`${
             isSlideSpeedFast ? classes.highSpeed : classes.lowSpeed
@@ -47,7 +44,6 @@ const useStyles = makeStyles((theme) => ({
     overflow: "hidden",
     alignItems: "center",
     justifyContent: "space-between",
-    backgroundColor: THEME_COLOR.popular_color,
   },
 
   lowSpeed: {
@@ -86,9 +82,11 @@ const useStyles = makeStyles((theme) => ({
     height: "6rem",
     width: "20rem",
     cursor: "pointer",
+    filter: "grayscale(100%)",
     opacity: "0.2",
     "&:hover": {
       cursor: "pointer",
+      filter: "none",
       opacity: "1",
     },
   },
