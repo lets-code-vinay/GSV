@@ -3,6 +3,7 @@ import { func } from "prop-types";
 
 import { makeStyles } from "@material-ui/core/styles";
 import { MoreVert as MoreIcon } from "@material-ui/icons";
+import { BiUser, BiSearchAlt2, BiGlobe } from "react-icons/bi";
 import {
   AppBar,
   Toolbar,
@@ -19,7 +20,7 @@ import { NAVBAR_MENUS } from "../../Configs/NavBar/navbar";
 import { THEME_COLOR } from "../../Configs/Theme";
 
 import "./style.css";
-const MainNavBar = ({ onSubNavbarOpen, onMoreOpen,  setActive, isActive}) => {
+const MainNavBar = ({ onSubNavbarOpen, onMoreOpen, setActive, isActive }) => {
   const classes = useStyles();
 
   const anchor = useRef(null);
@@ -113,39 +114,57 @@ const MainNavBar = ({ onSubNavbarOpen, onMoreOpen,  setActive, isActive}) => {
           ref={anchor}
         >
           <Toolbar>
-            <Box edge="start" className={`${classes.menuButton} display`} color="inherit">
+            <Box
+              edge="start"
+              className={`${classes.menuButton} display`}
+              color="inherit"
+            >
               <img
                 src={Logo}
                 alt="main-logo"
                 className={`${classes.logo} logo-1`}
               />
               <div className={`${classes.sectionDesktop} sectionDesktop`}>
-              {Object.values(NAVBAR_MENUS).map((menu, i) => {
-                return (
-                  <MenuItem
-                    onClick={handleMainNavbarClick(menu)}
-                    style={{
-                      borderBottom:
-                        isActive === menu.value
-                          ? "3px solid #ffff"
-                          : "3px solid transparent",
-                    }}
-                    key={i}
-                  >
-                    <Typography
-                      variant={"body1"}
-                      className={classes.navbar_text}
+                {Object.values(NAVBAR_MENUS).map((menu, i) => {
+                  return (
+                    <MenuItem
+                      onClick={handleMainNavbarClick(menu)}
+                      style={{
+                        borderBottom:
+                          isActive === menu.value
+                            ? "3px solid #ffff"
+                            : "3px solid transparent",
+                      }}
+                      key={i}
                     >
-                      {menu.label}
-                    </Typography>
-                  </MenuItem>
-                );
-              })}
-            </div>
+                      <Typography
+                        variant={"body1"}
+                        className={classes.navbar_text}
+                      >
+                        {menu.label}
+                      </Typography>
+                    </MenuItem>
+                  );
+                })}
+              </div>
             </Box>
 
-            {/* <div className={classes.grow} /> */}
-            
+            <div className="display">
+              <BiSearchAlt2
+                style={{ height: "35px", width: " 35px", cursor: "pointer" }}
+              />
+              <BiUser
+                style={{
+                  height: "35px",
+                  width: " 35px",
+                  margin: " 0 15px",
+                  cursor: "pointer",
+                }}
+              />
+              <BiGlobe
+                style={{ height: "35px", width: " 35px", cursor: "pointer" }}
+              />
+            </div>
 
             {/* To open icons */}
             <div className={`${classes.sectionMobile} sectionMobile`}>
