@@ -4,7 +4,6 @@ import "../../../node_modules/react-tabs/style/react-tabs.css";
 import "./style.css";
 
 import { Box, Button, Grid, makeStyles, Typography } from "@material-ui/core";
-import { FlashOn as FlashOnIcon } from "@material-ui/icons";
 import { TRENDING_CONFIGS } from "../../Configs/Trending";
 import { THEME_COLOR } from "../../Configs/Theme";
 
@@ -14,7 +13,6 @@ const Trending = () => {
   return (
     <main className={`${classes.containerTrending} containerTrending`}>
       <Box className={`${classes.trendingLogo} trendingLogo`}>
-        <FlashOnIcon className={`${classes.flashIcon} flashIcon`} />
         <Typography
           variant={"h4"}
           className={`${classes.trendingText} trendingText`}
@@ -44,7 +42,10 @@ const Trending = () => {
         </TabList>
 
         {Object.values(TRENDING_CONFIGS).map(
-          ({ label, value, title, subtitle, icon, link, button }, index) => {
+          (
+            { label, value, title, subtitle, icon, link, button, subtitle2 },
+            index
+          ) => {
             return (
               <TabPanel
                 key={`${label}-${index}`}
@@ -52,7 +53,7 @@ const Trending = () => {
               >
                 <Grid container className={`${classes.tabMatter} tabMatter`}>
                   <Grid
-                     item
+                    item
                     xs={12}
                     sm={6}
                     md={6}
@@ -63,10 +64,9 @@ const Trending = () => {
                       src={icon}
                       alt={title}
                       className={`${classes.trendingImage} trendingImage`}
-                      style={{ width: "250px", height: "250px" }}
                     />
                   </Grid>
-                  <Grid  item xs={12} sm={6} md={6} lg={8}>
+                  <Grid item xs={12} sm={6} md={6} lg={8}>
                     <Box className="content">
                       <Typography
                         variant={"h2"}
@@ -80,6 +80,15 @@ const Trending = () => {
                       >
                         {subtitle}
                       </Typography>
+
+                      {subtitle2 && (
+                        <Typography
+                          variant={"body1"}
+                          className={`${classes.trendingSubTitle2} trendingSubTitle2`}
+                        >
+                          {subtitle2}
+                        </Typography>
+                      )}
 
                       {link && (
                         <a
@@ -166,17 +175,27 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "1.3",
   },
 
-  flashIcon: {
-    fontSize: "60px",
-    transform: "rotate(15deg)",
-    margin: "0 10px 0 0",
-    color: "#0d274d",
+  trendingSubTitle2: {
+    color: `${THEME_COLOR.color_3} !important`,
+    // fontWeight: "500",
+    fontSize: "1.2rem",
+    fontWeight: "700",
+    lineHeight: "1.3",
+    marginTop: "1rem",
   },
+
   trendingLogo: {
     display: "flex",
     flexDirection: "row",
     margin: "0 0 0 11%",
     fontWeight: "800",
     color: "#0d274d",
+  },
+  trendingText: {
+    fontWeight: "800",
+  },
+  trendingImage: {
+    width: "300px",
+    height: "300px",
   },
 }));

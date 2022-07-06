@@ -1,6 +1,5 @@
 import SASE from "../../Assets/Images/SASE-lock.png";
 import SDWAN from "../../Assets/Images/SDWAN.png";
-import FIREWALL from "../../Assets/Images/firewall.png";
 import HYPER_CONVERGED from "../../Assets/Images/hyper-convergent.png";
 import SDN from "../../Assets/Images/SDN.png";
 
@@ -10,47 +9,55 @@ export const TRENDING_CONFIGS = Object.freeze({
     value: "SASE",
     title: "What Is Secure Access Service Edge (SASE)?",
     subtitle:
-      "Secure access service edge, or SASE (pronounced “sassy”), is an emerging cybersecurity concept that Gartner first described in the August 2019 report The Future of Network Security in the Cloud and e Secure access service edge, or SASE (pronounced “sassy”), is an emerging cybersecurity concept that Gartner first described in the August 2019 report The Future",
+      `SASE refers to the whole framework, not a specific technology. Gartner, in its 2019 report "The Future of Network Security is in the Cloud," 
+      defined the SASE framework as a cloud-based cybersecurity solution that offers "comprehensive WAN capabilities with comprehensive network security functions
+       (such as SWG, CASB, FWaaS, and ZTNA) to support the dynamic secure access needs of digital enterprises." `,
+    subtitle2: `SASE is one of the most broadly accepted phrases, and we at GSV have implemented 
+      the SASE solution for multiple Enterprise Customers & Datacenters to ensure secure connectivity over the Public Internet.  `,
     icon: SASE,
     link: "",
     button: "",
   },
   SDWAN: {
-    label: "SDWAN-as-a-Service",
+    label: "SDWAN",
     value: "SDWAN",
     title: "What Is SDWAN-as-a-Service?",
-    subtitle:
-      "SDWAN-as-a-Service edge, or SASE (pronounced “sassy”), is an emerging cybersecurity concept that Gartner first described in the August 2019 report The Future of Network Security in the Cloud and e Secure access service edge, or SASE (pronounced “sassy”), is an emerging cybersecurity concept that Gartner first described in the August 2019 report The Future",
+    subtitle: `Post-COVID, SD-WAN has become far more critical as businesses shut down offices, driving either a hybrid work environment or a complete work-from-home (WFH) strategy. WFH went from temporary to permanent for many companies, which redefined the network edge`,
+    subtitle2: `VPNs, often the point-to-point solution for remote workers, gave way to always-on SD-WAN appliances for many tasks as the network edge extended into employees' homes. With businesses becoming more distributed, they have accelerated their migration plans to SD-WAN because of the improved experience and security for their WFH workforce.`,
+
     icon: SDWAN,
     link: "",
     button: "",
   },
-  FIREWALL: {
-    label: "Firewall-as-a-Service",
-    value: "FIREWALL",
-    title: "What Is Firewall-as-a-Service?",
-    subtitle:
-      "Firewall-as-a-Service edge, or SASE (pronounced “sassy”), is an emerging cybersecurity concept that Gartner first described in the August 2019 report The Future of Network Security in the Cloud and e Secure access service edge, or SASE (pronounced “sassy”), is an emerging cybersecurity concept that Gartner first described in the August 2019 report The Future",
-    icon: FIREWALL,
+  WIFI_6: {
+    label: "Wi-Fi 6",
+    value: "WIFI_6",
+    title: "What Is WI FI 6?",
+    subtitle: `5G is the talk of the town, with all the ISPs starting to support 5G. Some may believe that the next-generation wireless networks in the enterprise will revolve primarily around 5G, but equally important is the 802.11ax wireless standard, commonly known as Wi-Fi 6.`,
+    subtitle2: `WiFi6 delivers four times higher capacity and 75 percent lower latency, much better than earlier versions and operates in the 6 GHz band. At the same time, the 6E version also works in the same band with better design to process more data and support new technologies such as augmented/virtual reality cloud computing and telepresence.`,
+
+    icon: SDWAN,
     link: "",
     button: "",
   },
   HYPER_CONVERGED: {
-    label: "Hyper Converged Solutions",
+    label: "Hyper Converged",
     value: "HYPER_CONVERGED",
-    title: "What Is Hyper Converged Solutions?",
+    title: "What Is Hyper Converged Infrastructure?",
     subtitle:
-      "Hyper Converged Solutions edge, or SASE (pronounced “sassy”), is an emerging cybersecurity concept that Gartner first described in the August 2019 report The Future of Network Security in the Cloud and e Secure access service edge, or SASE (pronounced “sassy”), is an emerging cybersecurity concept that Gartner first described in the August 2019 report The Future",
+      "Hyper converged infrastructure (HCI) is a software-defined, unified system that combines a traditional data center's elements (Storage, Compute, Networking & Management) to increase efficiency and enable central management. ",
+    subtitle2: `Using this technology, we at GSV can help you with one-click automation, one-click upgrades and one management interface for your entire infrastructure. Implementation of HCI will dramatically reduce your time & effort for deploying & maintaining infrastructure, enabling IT teams to focus on needle-moving initiatives.`,
     icon: HYPER_CONVERGED,
     link: "",
     button: "",
   },
-  SDN: {
-    label: "SDN & Automation",
-    value: "SDN",
-    title: "What Is SDN?",
+  NETWORK_AUTOMATION: {
+    label: "NETWORK AUTOMATION ",
+    value: "NETWORK_AUTOMATION ",
+    title: "What Is NETWORK AUTOMATION ?",
     subtitle:
-      "SDN-as-a-Service edge, or SASE (pronounced “sassy”), is an emerging cybersecurity concept that Gartner first described in the August 2019 report The Future of Network Security in the Cloud and e Secure access service edge, or SASE (pronounced “sassy”), is an emerging cybersecurity concept that Gartner first described in the August 2019 report The Future",
+      `Network automation is planning, deploying, configuring, orchestrating, and assuring networks and services using the software. Network automation is increasingly required to manage modern, dynamic network complexities and orchestrate services efficiently and effectively. The end goal of network automation is to create" zero-touch" or autonomous networks.`,
+    subtitle2: `At GSV, we use Network Automation to help our customers to improve efficiency, reduce human error and lower operating expenses (Opex).`,
     icon: SDN,
     link: "",
     button: "",

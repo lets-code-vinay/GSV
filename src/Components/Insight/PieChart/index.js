@@ -21,7 +21,7 @@ const PieChart = ({ data = {}, fetchInsightDetails }) => {
    * @param {Object} node
    * @param {Object} event
    */
-  const handleMouseLeave = (_, __) => {};
+  const handleMouseLeave = (_, __) => { };
 
   /**
    * @description Getting value of current slice on click
@@ -45,7 +45,7 @@ const PieChart = ({ data = {}, fetchInsightDetails }) => {
       activeOuterRadiusOffset={20}
       borderWidth={0.5}
       borderColor={{ from: "color", modifiers: [["darker", 0.2]] }}
-      arcLabelsTextColor="grey"
+      arcLabelsTextColor="white"
       //  -- uncomment when tooltip is being asked to used and it can be customizes --
       //   tooltip={({ datum = {} }) => {
       //     const { label = "", data: { text_color = "red" } = {} } = datum;
@@ -64,7 +64,7 @@ const PieChart = ({ data = {}, fetchInsightDetails }) => {
       arcLinkLabelsThickness={2}
       arcLinkLabelsColor={{ from: "color" }}
       arcLabelsSkipAngle={10}
-      arcLabelsRadiusOffset={0.6}
+      arcLabelsRadiusOffset={0.53}
       onMouseEnter={(node, e) => handleMouseEnter(node, e)}
       onMouseLeave={(node, e) => handleMouseLeave(node, e)}
       onClick={(node, e) => handleClick(node, e)}

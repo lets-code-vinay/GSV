@@ -6,6 +6,8 @@ import {
   Box,
   Typography,
   Button,
+  Menu,
+  MenuList,
 } from "@material-ui/core";
 import "./styles.css";
 import PieChart from "./PieChart";
@@ -31,10 +33,10 @@ const Insight = () => {
   const {
     data: {
       color = "#0d274d",
-      info = INSIGHT_DATA.our_services.info,
-      label = INSIGHT_DATA.our_services.label,
+      info = INSIGHT_DATA.NETWORK.info,
+      label = INSIGHT_DATA.NETWORK.label,
     } = {},
-  } = insightDetail || INSIGHT_DATA.our_services;
+  } = insightDetail || INSIGHT_DATA.NETWORK;
 
   return (
     <Paper elevation={24} className={`${classes.piePaper} piePaper`}>
@@ -57,10 +59,11 @@ const Insight = () => {
             className={`${classes.logoInside} logoInside`}
           />
         </Grid>
-        <Grid  item xs={12} sm={12} md={6} lg={6}>
+
+        <Grid item xs={12} sm={12} md={6} lg={6}>
           <Box className={`${classes.pieDetail} pieDetail`}>
             <Typography
-              variant={"h3"}
+              variant={"h4"}
               className={`${classes.pieTitle} pieTitle`}
               style={{ color: color }}
             >
@@ -72,6 +75,7 @@ const Insight = () => {
             >
               {info}
             </Typography>
+
             <Button
               variant="contained"
               className={`${classes.pieButton} pieButton`}
@@ -103,7 +107,7 @@ const useStyles = makeStyles((theme) => ({
   },
   pieDetail: {
     width: "80%",
-    margin: "20% auto",
+    margin: "12% auto",
   },
   pieInfo: {
     marginTop: "5%",

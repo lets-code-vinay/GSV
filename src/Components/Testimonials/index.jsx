@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import { ChevronLeft, ChevronRight } from "react-feather";
-import { IoPeopleCircleOutline } from "react-icons/io5";
 import { Box, makeStyles, Typography } from "@material-ui/core";
 
 import "./style.css";
@@ -27,9 +26,6 @@ const Testimonials = () => {
   return (
     <Box className={`${classes.testimonials} testimonials`}>
       <Box className={`${classes.testimonialLogo} testimonialLogo`}>
-        <IoPeopleCircleOutline
-          className={`${classes.testimonialIcon} testimonialIcon`}
-        />
         <Typography
           variant="h4"
           className={`${classes.testimonialTitle} testimonialTitle`}
@@ -95,7 +91,7 @@ const Testimonials = () => {
                 index
               ) => (
                 <Box
-                item
+                  item
                   xs={12}
                   sm={12}
                   md={4}
@@ -147,11 +143,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "800",
     color: "#0d274d",
   },
-  testimonialIcon: {
-    fontSize: "60px",
-    margin: "0 10px 0 0",
-    color: "#0d274d",
-  },
+
   testimonialTitle: {
     marginTop: "0.5rem",
   },

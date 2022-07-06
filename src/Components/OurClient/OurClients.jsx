@@ -1,6 +1,5 @@
 import React from "react";
 import Slider from "react-slick";
-import { FaRegHandshake } from "react-icons/fa";
 import { ChevronLeft, ChevronRight } from "react-feather";
 import { Box, makeStyles, Typography } from "@material-ui/core";
 
@@ -85,9 +84,6 @@ const OurClients = () => {
   return (
     <Box className={`${classes.topContainer} container topContainer`}>
       <Box className={`${classes.ourClientsTitle} ourClientsTitle`}>
-        <FaRegHandshake
-          className={`${classes.ourClientsIcon} ourClientsIcon`}
-        />
         <Typography
           variant="h4"
           className={`${classes.ourClientsText} ourClientsText `}
@@ -249,12 +245,6 @@ const useStyles = makeStyles((theme) => ({
     color: "#0d274d",
     width: "90%",
     margin: "1% auto",
-  },
-
-  ourClientsIcon: {
-    color: "#0d274d",
-    fontSize: "50px",
-    margin: "0 10px 0 0",
   },
 
   imageToResponsive: {

@@ -5,6 +5,11 @@
   cursor: pointer;
 }
 
+.pieInfoMenu {
+  padding: 1px 0 1px 2% !important;
+  color: #0d274d;
+}
+
 /* 320px — 480px: Mobile devices
 481px — 768px: iPads, Tablets
 769px — 1024px: Small screens, laptops
