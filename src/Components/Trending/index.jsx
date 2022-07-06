@@ -42,7 +42,10 @@ const Trending = () => {
         </TabList>
 
         {Object.values(TRENDING_CONFIGS).map(
-          ({ label, value, title, subtitle, icon, link, button }, index) => {
+          (
+            { label, value, title, subtitle, icon, link, button, subtitle2 },
+            index
+          ) => {
             return (
               <TabPanel
                 key={`${label}-${index}`}
@@ -61,7 +64,6 @@ const Trending = () => {
                       src={icon}
                       alt={title}
                       className={`${classes.trendingImage} trendingImage`}
-                      style={{ width: "250px", height: "250px" }}
                     />
                   </Grid>
                   <Grid item xs={12} sm={6} md={6} lg={8}>
@@ -78,6 +80,15 @@ const Trending = () => {
                       >
                         {subtitle}
                       </Typography>
+
+                      {subtitle2 && (
+                        <Typography
+                          variant={"body1"}
+                          className={`${classes.trendingSubTitle2} trendingSubTitle2`}
+                        >
+                          {subtitle2}
+                        </Typography>
+                      )}
 
                       {link && (
                         <a
@@ -164,11 +175,27 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "1.3",
   },
 
+  trendingSubTitle2: {
+    color: `${THEME_COLOR.color_3} !important`,
+    // fontWeight: "500",
+    fontSize: "1.2rem",
+    fontWeight: "700",
+    lineHeight: "1.3",
+    marginTop: "1rem",
+  },
+
   trendingLogo: {
     display: "flex",
     flexDirection: "row",
     margin: "0 0 0 11%",
     fontWeight: "800",
     color: "#0d274d",
+  },
+  trendingText: {
+    fontWeight: "800",
+  },
+  trendingImage: {
+    width: "300px",
+    height: "300px",
   },
 }));

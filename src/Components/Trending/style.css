@@ -41,7 +41,8 @@
     margin: 10px 0px !important;
     font-weight: 700 !important;
   }
-  .trendingSubTitle {
+  .trendingSubTitle,
+  .trendingSubTitle2 {
     font-size: 0.8rem !important;
     margin-top: 10px;
   }
@@ -90,7 +91,7 @@
     margin: 10px 0px !important;
     font-weight: 700 !important;
   }
-  .trendingSubTitle {
+  .trendingSubTitle .trendingSubTitle2 {
     font-size: 0.8rem !important;
     margin-top: 10px;
   }
@@ -124,8 +125,8 @@
     font-weight: 700 !important;
   }
   .trendingImageGrid {
-    width: 150px !important;
-    height: 150px !important;
+    width: 200px !important;
+    height: 200px !important;
     padding: 5% 0% 10% 0%;
   }
   .trendingImage {
@@ -137,7 +138,7 @@
     margin: 10px 0px !important;
     font-weight: 700 !important;
   }
-  .trendingSubTitle {
+  .trendingSubTitle .trendingSubTitle2 {
     font-size: 1rem !important;
     margin-top: 10px;
   }
@@ -194,7 +195,7 @@
     margin: 5px 0px;
     font-weight: 700 !important;
   }
-  .trendingSubTitle {
+  .trendingSubTitle .trendingSubTitle2 {
     font-size: 1rem !important;
     margin-top: 10px;
   }
@@ -241,5 +242,9 @@
   .trendingText {
     font-weight: 700 !important;
     color: #0d274d;
+  }
+  .trendingImage {
+    width: 300px;
+    height: 300px;
   }
 }

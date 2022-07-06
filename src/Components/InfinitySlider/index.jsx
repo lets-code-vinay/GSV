@@ -3,7 +3,6 @@ import React from "react";
 import "./style.css";
 
 import { INFINITY_SLIDER_CONTENTS } from "../../Configs/InfinitySlider";
-import { THEME_COLOR } from "../../Configs/Theme";
 import { makeStyles } from "@material-ui/core";
 
 const InfinitySlider = ({ isSlideSpeedFast = false }) => {
@@ -19,7 +18,10 @@ const InfinitySlider = ({ isSlideSpeedFast = false }) => {
         >
           {INFINITY_SLIDER_CONTENTS.map(({ name, image, alt }, index) => {
             return (
-              <div className="sliding-img" key={`${name}-${index}`}>
+              <div
+                className={`${classes.sliderImageContainer} sliderImageContainer sliding-img`}
+                key={`${name}-${index}`}
+              >
                 <img
                   src={image}
                   alt={alt}
@@ -78,9 +80,14 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 
+  sliderImageContainer: {
+    height: "3rem",
+    width: "10rem",
+  },
+
   sliderImage: {
-    height: "6rem",
-    width: "20rem",
+    height: "3rem",
+    width: "10rem",
     cursor: "pointer",
     filter: "grayscale(100%)",
     opacity: "0.2",

@@ -93,10 +93,9 @@ export default function StructuredNavbar() {
       )}
 
       {/* --- Navbar menus ---- */}
-      {/* {isSubNavbarOpened && Boolean(navMenus.value) && !subNavMenus.isMore && isShowMegaMenu && ( */}
       {isSubNavbarOpened && Boolean(navMenus.value) && !subNavMenus.isMore && (
         <NavbarMenus
-          isOpen={Boolean(navMenus.value)}
+          isOpen={isSubNavbarOpened}
           navMenus={navMenus.menus}
           isActiveMegaMenu={isActiveMegaMenu}
         />

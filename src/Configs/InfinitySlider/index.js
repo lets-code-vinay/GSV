@@ -4,16 +4,34 @@ import alphabet from "../../Assets/Images/Slider-images/Alphabet_Inc_logo.svg";
 import karcher from "../../Assets/Images/Slider-images/Karcher_logo.svg";
 import timberland from "../../Assets/Images/Slider-images/Timberland_logo.svg";
 import Reddit from "../../Assets/Images/Slider-images/Reddit_logo.svg";
-// import Docker from "../../Assets/Images/Slider-images/Docker_logo.svg";
+import Netflix from "../../Assets/Images/Slider-images/Netflix_logo.svg";
+import Timberland from "../../Assets/Images/Slider-images/Timberland_logo.svg";
+import Trulia from "../../Assets/Images/Slider-images/Trulia_logo.svg";
+// import Twitch from "../../Assets/Images/Slider-images/Twitch_logo.svg";
 
 
 
 export const INFINITY_SLIDER_CONTENTS = [
-  // {  // continue from here
-  //   name: "Docker",
-  //   image: Docker,
-  //   alt: "Docker logo",
-  // },
+  {
+    name: "Twitch",
+    // image: Twitch,
+    alt: "Twitch logo",
+  },
+  {
+    name: "Trulia",
+    image: Trulia,
+    alt: "Trulia logo",
+  },
+  {
+    name: "Timberland",
+    image: Timberland,
+    alt: "Timberland logo",
+  },
+  {
+    name: "Netflix",
+    image: Netflix,
+    alt: "Netflix logo",
+  },
   {
     name: "Grammerly",
     image: grammerly,
