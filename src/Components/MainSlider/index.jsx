@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 
+import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Box, makeStyles, Typography } from "@material-ui/core";
 
 import "./style.css";
 import { MAIN_SLIDER_DATA } from "../../Configs/MainSlider";
-
-import { Carousel } from "react-responsive-carousel";
 
 import SECURITY from "../../Assets/Images/Slider-images/2-security.jpg";
 import NETWORK from "../../Assets/Images/Slider-images/1-network.jpg";
@@ -43,6 +42,7 @@ const MainSlider = () => {
           transitionTime="1000"
           interval="5000"
           showStatus={false}
+          showIndicators={false}
         >
           <div>
             <img
@@ -79,15 +79,15 @@ const MainSlider = () => {
         </Carousel>
         <StructuredNavbar />
         <Typography
-          variant={"h4"}
-          className={`${classes.informationBarTitle} informationBarTitle`}
+          variant={"body1"}
+          className={`${classes.sliderInformationBarTitle} sliderInformationBarTitle`}
         >
           {heading || MAIN_SLIDER_DATA.slider_1.heading}
         </Typography>
         <Box className={`${classes.infoBlock} infoBlock block`}>
           <Box className={`${classes.informationBar} informationBar`}>
             <Box
-              className={`${classes.informationMSGContainer} informationMSGContainer`}
+              className={`${classes.informationMsgContainer} informationMsgContainer`}
               style={{
                 backgroundColor: bg_color || MAIN_SLIDER_DATA.slider_1.bg_color,
               }}
@@ -113,9 +113,8 @@ const useStyles = makeStyles((theme) => ({
     width: "60%",
     height: "210px",
     position: "absolute",
-    top: "50%",
   },
-  informationMSGContainer: {
+  informationMsgContainer: {
     width: "100%",
     height: "fit-content",
     color: "#ffffff",
@@ -125,15 +124,10 @@ const useStyles = makeStyles((theme) => ({
   informationMSG: {
     color: "#ffffff",
     padding: "2%",
-    fontSize: "1.8rem",
   },
-  informationBarTitle: {
+  sliderInformationBarTitle: {
     color: "#ffffff",
-    padding: "3%",
     textShadow: "2px 2px black",
-    fontSize: "3rem !important",
     position: "absolute",
-    top: "27%",
-    width: "51%",
   },
 }));

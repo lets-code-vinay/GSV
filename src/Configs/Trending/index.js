@@ -2,6 +2,8 @@ import SASE from "../../Assets/Images/SASE-lock.png";
 import SDWAN from "../../Assets/Images/SDWAN.png";
 import HYPER_CONVERGED from "../../Assets/Images/hyper-convergent.png";
 import SDN from "../../Assets/Images/SDN.png";
+import WIFI6 from "../../Assets/Images/wifi6.png";
+
 
 export const TRENDING_CONFIGS = Object.freeze({
   SASE: {
@@ -36,7 +38,7 @@ export const TRENDING_CONFIGS = Object.freeze({
     subtitle: `5G is the talk of the town, with all the ISPs starting to support 5G. Some may believe that the next-generation wireless networks in the enterprise will revolve primarily around 5G, but equally important is the 802.11ax wireless standard, commonly known as Wi-Fi 6.`,
     subtitle2: `WiFi6 delivers four times higher capacity and 75 percent lower latency, much better than earlier versions and operates in the 6 GHz band. At the same time, the 6E version also works in the same band with better design to process more data and support new technologies such as augmented/virtual reality cloud computing and telepresence.`,
 
-    icon: SDWAN,
+    icon: WIFI6,
     link: "",
     button: "",
   },
