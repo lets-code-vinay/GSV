@@ -99,17 +99,26 @@
     color: #ffffff;
     padding: 3%;
     text-shadow: 2px 2px black;
-    font-size: 1.5rem;
+    font-size: 2rem !important;
     width: 95%;
     bottom: 40%;
   }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .sliderInformationBarTitle {
+    color: #ffffff;
+    padding: 3%;
+    text-shadow: 2px 2px black;
+    font-size: 3rem !important;
+    width: 80%;
+    bottom: 40%;
+  }
   .infoBlock .informationBar {
     width: 90%;
     height: 60px;
     position: absolute;
+    bottom: 12%;
   }
   .informationBar .informationMsgContainer {
     width: 100%;
@@ -117,23 +126,23 @@
     color: #ffffff;
     text-shadow: 1px 1px solid black;
     border-radius: 0 100px 100px 0;
-    opacity: 0.8;
   }
   .informationMsgContainer .informationMSG {
     color: #ffffff !important;
     padding: 1% 2%;
     font-size: 1.2rem;
   }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1920px) {
   .sliderInformationBarTitle {
     color: #ffffff;
     padding: 3%;
     text-shadow: 2px 2px black;
-    font-size: 2rem;
-    width: 80%;
+    width: 90%;
+    bottom: 40%;
+    font-size: 3rem !important;
   }
-}
-
-@media screen and (min-width: 1201px) and (max-width: 1920px) {
   .infoBlock .informationBar {
     width: 90%;
     height: 60px;
@@ -152,20 +161,12 @@
     padding: 1% 2%;
     font-size: 1.5rem;
   }
-  .sliderInformationBarTitle {
-    color: #ffffff;
-    padding: 3%;
-    text-shadow: 2px 2px black;
-    font-size: 2.3rem;
-    width: 90%;
-    bottom: 40%;
-  }
 }
 
 @media screen and (min-width: 1921px) {
   .sliderInformationBarTitle {
     margin-bottom: 2%;
-    font-size: 3rem;
+    font-size: 3rem !important;
     padding: 3%;
     width: 80%;
     bottom: 40%;
