@@ -11,14 +11,33 @@ import SECURITY from "../../Assets/Images/Slider-images/2-security.jpg";
 import NETWORK from "../../Assets/Images/Slider-images/1-network.jpg";
 import DATA from "../../Assets/Images/Slider-images/3-data.jpg";
 import StructuredNavbar from "../StructuredNavbar";
+import ActiveProgress from "./ActiveProgress";
 
 const MainSlider = () => {
   const classes = useStyles();
 
   const [currentSlideData, setCurrentSlideData] = useState({});
+  const [activeSlide, setActiveSlide] = useState(0);
 
-  const setMovieKey = (currentSlide) => {
+  /**
+   * @description Setting up slider data
+   *
+   * @param {Number} currentSlide
+   * @param {Object} Keys
+   */
+  const setMovieKey = (currentSlide, { key }) => {
+    setActiveSlide(key * 10);
     setCurrentSlideData(Object.values(MAIN_SLIDER_DATA)[currentSlide || 0]);
+  };
+
+  /**
+   * @description Change active slide on click indicators
+   *
+   * @param {Number} updateSlide
+   */
+  const setActiveSlider = (updateSlide) => {
+    setActiveSlide(updateSlide);
+    setCurrentSlideData(Object.values(MAIN_SLIDER_DATA)[updateSlide || 0]);
   };
 
   const { bg_color = "", heading = "", subtitle = "" } = currentSlideData || {};
@@ -77,13 +96,31 @@ const MainSlider = () => {
             />
           </div>
         </Carousel>
+
         <StructuredNavbar />
+
         <Typography
           variant={"body1"}
           className={`${classes.sliderInformationBarTitle} sliderInformationBarTitle`}
         >
           {heading || MAIN_SLIDER_DATA.slider_1.heading}
         </Typography>
+
+        <Box className={`${classes.progressBars} progressBars `}>
+          {Object.values(MAIN_SLIDER_DATA).map(({ title = "" }, index) => {
+            return (
+              <ActiveProgress
+                progressName={title}
+                progressCount={MAIN_SLIDER_DATA.length}
+                key={`${title}-${index}`}
+                activeSlide={activeSlide}
+                index={index}
+                onChangeSlide={setActiveSlider}
+              />
+            );
+          })}
+        </Box>
+
         <Box className={`${classes.infoBlock} infoBlock block`}>
           <Box className={`${classes.informationBar} informationBar`}>
             <Box
@@ -128,6 +165,12 @@ const useStyles = makeStyles((theme) => ({
   sliderInformationBarTitle: {
     color: "#ffffff",
     textShadow: "2px 2px black",
+    position: "absolute",
+  },
+
+  progressBars: {
+    display: "flex",
+    flexDirection: "row",
     position: "absolute",
   },
 }));
