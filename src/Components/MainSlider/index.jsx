@@ -65,32 +65,32 @@ const MainSlider = () => {
         >
           <div>
             <img
-              src={NETWORK}
-              alt="NETWORK"
+              src={Object.values(MAIN_SLIDER_DATA)[activeSlide].image}
+              alt={Object.values(MAIN_SLIDER_DATA)[activeSlide].title}
               width={"100%"}
               className="image-slider"
             />
           </div>
           <div>
             <img
-              src={SECURITY}
-              alt="SECURITY"
+              src={Object.values(MAIN_SLIDER_DATA)[activeSlide].image}
+              alt={Object.values(MAIN_SLIDER_DATA)[activeSlide].title}
               width={"100%"}
               className="image-slider"
             />
           </div>
           <div>
             <img
-              src={DATA}
-              alt="DATA"
+              src={Object.values(MAIN_SLIDER_DATA)[activeSlide].image}
+              alt={Object.values(MAIN_SLIDER_DATA)[activeSlide].title}
               width={"100%"}
               className="image-slider"
             />
           </div>
           <div>
             <img
-              src={DATA}
-              alt="DATA"
+              src={Object.values(MAIN_SLIDER_DATA)[activeSlide].image}
+              alt={Object.values(MAIN_SLIDER_DATA)[activeSlide].title}
               width={"100%"}
               className="image-slider"
             />
