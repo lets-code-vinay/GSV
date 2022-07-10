@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import {
   Box,
-  Button,
   ClickAwayListener,
   Grid,
   makeStyles,
+  Typography,
 } from "@material-ui/core";
 
 import "./styles.css";
@@ -76,7 +76,7 @@ const SideBar = (props) => {
                       className={`${classes.menuListing} commonClass menuListing`}
                       key={index}
                     >
-                      <Button
+                      <Typography
                         variant={"body"}
                         onMouseEnter={onShowArrow(value, menu)}
                         onMouseLeave={onHideArrow(value, menu)}
@@ -84,7 +84,7 @@ const SideBar = (props) => {
                         className={`${classes.sideBarOptions} sideBarOptions border-0 backgroundColorWhite`}
                       >
                         {label}
-                      </Button>
+                      </Typography>
                       <Box className={`${classes.arrowBox} arrowBox `}>
                         {Boolean(showArrow) && showArrow === value && (
                           <img
@@ -175,9 +175,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "flex-start",
   },
-  arrowBox: {
-    marginTop: "3%",
-  },
+  arrowBox: {},
   mapBox: {
     backgroundColor: "#002446",
     width: "100%",

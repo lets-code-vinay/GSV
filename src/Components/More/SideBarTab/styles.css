@@ -2,6 +2,9 @@
   background-color: white;
 }
 
+.menuListing * {
+  padding-top: 2%;
+}
 .menuListing {
   display: flex;
   justify-content: space-around;
@@ -9,17 +12,18 @@
 .commonClass {
   font-family: "Roboto";
   font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
+  font-weight: 500;
+  font-size: 1rem;
   line-height: 21px;
   /* identical to box height */
-  padding: 15px 20px 0px 0px;
+  padding: 20px 20px 0px 10px;
   color: #000000;
   text-align: start;
 }
 
 .sideBarOptions {
   width: 100%;
+  cursor: pointer;
 }
 .MuiGrid-root.MuiGrid-container.MuiGrid-spacing-xs-2.MuiGrid-item {
   width: 98%;

@@ -160,7 +160,7 @@ export const SideMenu = {
   },
   our_customers: {
     id: 5,
-    values: "our_customers",
+    value: "our_customers",
     type: "grid",
     className: "commonClass",
     label: "Our Customers",
