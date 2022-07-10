@@ -54,7 +54,7 @@ const MainSlider = () => {
           autoFocus={true}
           showArrows={true}
           infiniteLoop={true}
-          stopOnHover={true}
+          stopOnHover={false}
           swipeable={true}
           swipeScrollTolerance={10}
           useKeyboardArrows={true}
