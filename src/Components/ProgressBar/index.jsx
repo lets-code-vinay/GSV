@@ -28,7 +28,7 @@ export const ProgressBar = ({ activeSlide, index, onChangeSlide }) => {
    * @returns {Number} Progress
    */
   const getProgressValue = () => {
-    if (activeSlide == index) return progress;
+    if (activeSlide === index) return progress;
     if (activeSlide < index) return 0;
     if (activeSlide > index) return 100;
   };

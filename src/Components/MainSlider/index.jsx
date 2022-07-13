@@ -1,15 +1,12 @@
 import React, { useState } from "react";
 
 import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Box, makeStyles, Typography } from "@material-ui/core";
 
 import "./style.css";
 import { MAIN_SLIDER_DATA } from "../../Configs/MainSlider";
 
-import SECURITY from "../../Assets/Images/Slider-images/2-security.jpg";
-import NETWORK from "../../Assets/Images/Slider-images/1-network.jpg";
-import DATA from "../../Assets/Images/Slider-images/3-data.jpg";
 import StructuredNavbar from "../StructuredNavbar";
 import ActiveProgress from "./ActiveProgress";
 
@@ -54,7 +51,7 @@ const MainSlider = () => {
           autoFocus={true}
           showArrows={true}
           infiniteLoop={true}
-          stopOnHover={true}
+          stopOnHover={false}
           swipeable={true}
           swipeScrollTolerance={10}
           useKeyboardArrows={true}

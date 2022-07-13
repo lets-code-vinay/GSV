@@ -1,4 +1,5 @@
 import AboutPageImage from "../../Assets/Images/aboutPage.png";
+import ContactImage from "../../Assets/Images/contact-us.svg";
 
 // industries images
 import PublicSector from "../../Assets/Images/PublicSector.png";
@@ -18,6 +19,7 @@ import PODAR from "../../Assets/podar_judicial.png";
 import TechBServer from "../../Assets/techBserver.png";
 import TouchBase from "../../Assets/touchBase.png";
 import UAE_Ministry from "../../Assets/uae_Ministry.png";
+
 
 export const IndustriesCardData = [
   {
@@ -158,7 +160,7 @@ export const SideMenu = {
   },
   our_customers: {
     id: 5,
-    values: "our_customers",
+    value: "our_customers",
     type: "grid",
     className: "commonClass",
     label: "Our Customers",
@@ -186,11 +188,12 @@ export const SideMenu = {
   },
   contact_us: {
     id: 8,
-    type: "coming_soon",
+    type: "contact",
     value: "contact_us",
     className: "commonClass",
     label: "Contact Us",
     title: "Contact Us",
     path: "/contact",
+    image: ContactImage
   },
 };
