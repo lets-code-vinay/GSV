@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import emailjs from '@emailjs/browser'
 import {
   Box,
   ClickAwayListener,
@@ -16,7 +17,7 @@ import ImageText from "./ImageText";
 import GridPage from "./GridPage/Index";
 import ImageTextList from "./ImageTextList";
 import MapContainer from "../../Presence/MapContainer";
-import ContactUs from "./ContactUs";
+import ContactUs from "../../../Views/ContactUs";
 
 const SideBar = (props) => {
   const { isMoreOpen = false, onMoreClick = () => {} } = props || {};
