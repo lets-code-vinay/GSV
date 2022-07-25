@@ -5,6 +5,7 @@ import { Box, Button, Grid, makeStyles, TextField } from "@material-ui/core";
 import { Send as SendIcon } from "@material-ui/icons";
 
 import "./styles.css";
+import { validateInput } from "../../Utils/validateInputFields";
 
 const ContactUs = ({ title = "", subtitle = "", image = "", alt = "" }) => {
   const classes = useStyles();
@@ -78,8 +79,20 @@ const ContactUs = ({ title = "", subtitle = "", image = "", alt = "" }) => {
             margin="normal"
             value={fullName}
             onChange={handleFormData("fullName")}
-            // helperText="This is helper text"
-            // error={true}
+            error={Boolean(
+              validateInput({
+                value: fullName,
+                min: 3,
+                max: 50,
+                field: "Full Name",
+              })
+            )}
+            helperText={validateInput({
+              value: fullName,
+              min: 3,
+              max: 50,
+              field: "Full Name",
+            })}
           />
           <TextField
             id="email"
@@ -90,8 +103,20 @@ const ContactUs = ({ title = "", subtitle = "", image = "", alt = "" }) => {
             margin="normal"
             value={email}
             onChange={handleFormData("email")}
-            // helperText="This is helper text"
-            // error={true}
+            error={Boolean(
+              validateInput({
+                value: email,
+                min: 3,
+                max: 50,
+                field: "Email",
+              })
+            )}
+            helperText={validateInput({
+              value: email,
+              min: 3,
+              max: 50,
+              field: "Email",
+            })}
           />
           <TextField
             id="subject"
