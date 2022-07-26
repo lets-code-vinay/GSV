@@ -1,6 +1,7 @@
-import SECURITY from "../../Assets/Images/Slider-images/2-security.jpg";
 import NETWORK from "../../Assets/Images/Slider-images/1-network.jpg";
-import DATA from "../../Assets/Images/Slider-images/3-data.jpg";
+import SECURITY from "../../Assets/Images/Slider-images/2-security.jpg";
+import DATA from "../../Assets/Images/Slider-images/3-data.jfif";
+import SDWAN from "../../Assets/Images/Slider-images/4-sdwan.jpeg";
 
 export const MAIN_SLIDER_DATA = {
   slider_1: {
@@ -21,28 +22,28 @@ export const MAIN_SLIDER_DATA = {
     heading: "Full Security with Zero Trust",
     subtitle:
       "Does your hybrid workforce need better performance, flexibility, and security? Our all-in-one network and security as a service delivers the best experience for enterprises worldwide.",
-    bg_color: "#b1221029",
-    information_color: "#b1221029",
+    bg_color: "#086EB899",
+    information_color: "#086EB899",
   },
 
   slider_3: {
-    title: "Data center",
+    title: "SDWAN",
     value: "slider_3",
-    image: DATA,
+    image: SDWAN,
     heading: "SD-WAN Solutions for the Cloud Era",
     subtitle:
       "Thinking about modernising your Network & Cloud Infra? Benefit from our agile & flexible approach to SD-WAN for optimal performance and service levels connecting sites, hybrid workers and clouds.",
-    bg_color: "#193f6c52",
-    information_color: "#193f6c52",
+    bg_color: "#003CCC99",
+    information_color: "#003CCC99",
   },
   slider_4: {
     title: "Data center",
-    value: "slider_3",
+    value: "slider_4",
     image: DATA,
     heading: "Between data everywhere and exactly where you need it, there's a bridge that we create.",
     subtitle:
       "Are you concerned about Data Center Designing & Deployment? You can save time and money by utilizing our team of Data Center deployment specialists to deliver your data center infrastructure requirements. We take deployment risk, planning and execution off your plate so you can save your internal resources for your company’s other projects.",
-    bg_color: "#193f6c52",
-    information_color: "#193f6c52",
+    bg_color: "#2A5E6B99",
+    information_color: "#2A5E6B99",
   },
 };

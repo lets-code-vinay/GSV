@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+import { Box, Button, Grid, makeStyles, Typography } from "@material-ui/core";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "../../../node_modules/react-tabs/style/react-tabs.css";
+import "react-tabs/style/react-tabs.css";
 import "./style.css";
 
-import { Box, Button, Grid, makeStyles, Typography } from "@material-ui/core";
 import { TRENDING_CONFIGS } from "../../Configs/Trending";
 import { THEME_COLOR } from "../../Configs/Theme";
 
 const Trending = () => {
   const classes = useStyles();
+  const [tabIndex, setTabIndex] = useState(0);
 
   return (
     <main className={`${classes.containerTrending} containerTrending`}>
@@ -24,6 +26,9 @@ const Trending = () => {
         id="controlled-tabs"
         defaultFocus={true}
         selectedTabClassName="underline"
+        selectedIndex={tabIndex}
+        onSelect={(index) => setTabIndex(index)}
+        default={0}
       >
         <TabList className={`${classes.tabsClass} tabsClass`}>
           {Object.values(TRENDING_CONFIGS).map((trending, index) => {
@@ -36,6 +41,13 @@ const Trending = () => {
                 >
                   {trending.label}
                 </Button>
+                <Box
+                  className={`${classes.borderBottomClass} borderBottomClass`}
+                  style={{
+                    backgroundColor:
+                      index == tabIndex ? "#43C6AC" : "transparent",
+                  }}
+                ></Box>
               </Tab>
             );
           })}
@@ -43,7 +55,7 @@ const Trending = () => {
 
         {Object.values(TRENDING_CONFIGS).map(
           (
-            { label, value, title, subtitle, icon, link, button, subtitle2 },
+            { label, title, subtitle, icon, link, button, subtitle2 },
             index
           ) => {
             return (
@@ -56,7 +68,7 @@ const Trending = () => {
                     item
                     xs={12}
                     sm={6}
-                    md={6}
+                    md={4}
                     lg={4}
                     className={`${classes.trendingImageGrid} trendingImageGrid`}
                   >
@@ -66,7 +78,7 @@ const Trending = () => {
                       className={`${classes.trendingImage} trendingImage`}
                     />
                   </Grid>
-                  <Grid item xs={12} sm={6} md={6} lg={8}>
+                  <Grid item xs={12} sm={6} md={8} lg={8}>
                     <Box className="content">
                       <Typography
                         variant={"h2"}
@@ -126,18 +138,17 @@ const useStyles = makeStyles((theme) => ({
   },
 
   tabsClass: {
-    width: "90%",
+    float: "right",
     margin: "10px auto",
-    borderBottom: `5px solid ${THEME_COLOR.main_color}`,
     "&:active": {
       boxShadow: "none",
-      color: `${THEME_COLOR.light_sky}`,
-      backgroundColor: THEME_COLOR.light_sky,
+      borderBottom: "green",
+      color: "red",
     },
   },
 
   tabMatter: {
-    padding: "4% 5%",
+    padding: "4% 0%",
     backgroundColor: THEME_COLOR.light_sky,
   },
   tabContainer: { width: "90%", margin: "auto" },
@@ -149,15 +160,18 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
 
     "&:hover": {
-      backgroundColor: `${THEME_COLOR.main_color} !important`,
-      color: "white !important",
       boxShadow: "none",
     },
     "&:active": {
       boxShadow: "none",
-      // color: `${THEME_COLOR.light_sky} !important`,
       backgroundColor: `${THEME_COLOR.color_3} !important`,
+      borderBottom: "green",
     },
+  },
+
+  borderBottomClass: {
+    width: "100%",
+    height: "4px",
   },
 
   trendingTitle: {
@@ -169,7 +183,6 @@ const useStyles = makeStyles((theme) => ({
 
   trendingSubTitle: {
     color: `${THEME_COLOR.color_3} !important`,
-    // fontWeight: "500",
     fontSize: "1.2rem",
     fontWeight: "700",
     lineHeight: "1.3",
@@ -177,8 +190,6 @@ const useStyles = makeStyles((theme) => ({
 
   trendingSubTitle2: {
     color: `${THEME_COLOR.color_3} !important`,
-    // fontWeight: "500",
-    fontSize: "1.2rem",
     fontWeight: "700",
     lineHeight: "1.3",
     marginTop: "1rem",
