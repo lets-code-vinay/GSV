@@ -5,6 +5,8 @@ import "../../../node_modules/react-tabs/style/react-tabs.css";
 import "react-tabs/style/react-tabs.css";
 import "./style.css";
 
+import TRENDING_LOGO from "../../Assets/Icons/trending.svg";
+
 import { TRENDING_CONFIGS } from "../../Configs/Trending";
 import { THEME_COLOR } from "../../Configs/Theme";
 
@@ -15,6 +17,11 @@ const Trending = () => {
   return (
     <main className={`${classes.containerTrending} containerTrending`}>
       <Box className={`${classes.trendingLogo} trendingLogo`}>
+        <img
+          src={TRENDING_LOGO}
+          alt="Trending logo"
+          className={`${classes.trendingIcon} trendingIcon`}
+        />
         <Typography
           variant={"h4"}
           className={`${classes.trendingText} trendingText`}
@@ -54,10 +61,7 @@ const Trending = () => {
         </TabList>
 
         {Object.values(TRENDING_CONFIGS).map(
-          (
-            { label, title, subtitle, icon, link, button, subtitle2 },
-            index
-          ) => {
+          ({ label, title, subtitle, icon, link, button }, index) => {
             return (
               <TabPanel
                 key={`${label}-${index}`}
@@ -86,21 +90,8 @@ const Trending = () => {
                       >
                         {title}
                       </Typography>
-                      <Typography
-                        variant={"body1"}
-                        className={`${classes.trendingSubTitle} trendingSubTitle`}
-                      >
-                        {subtitle}
-                      </Typography>
 
-                      {subtitle2 && (
-                        <Typography
-                          variant={"body1"}
-                          className={`${classes.trendingSubTitle2} trendingSubTitle2`}
-                        >
-                          {subtitle2}
-                        </Typography>
-                      )}
+                      {subtitle}
 
                       {link && (
                         <a
@@ -137,9 +128,12 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: THEME_COLOR.light_sky,
   },
 
+  trendingIcon: {
+    marginTop: "-1%",
+  },
+
   tabsClass: {
     float: "right",
-    margin: "10px auto",
     "&:active": {
       boxShadow: "none",
       borderBottom: "green",
@@ -148,10 +142,12 @@ const useStyles = makeStyles((theme) => ({
   },
 
   tabMatter: {
-    padding: "4% 0%",
+    padding: "2% 0%",
     backgroundColor: THEME_COLOR.light_sky,
   },
+
   tabContainer: { width: "90%", margin: "auto" },
+
   tabButton: {
     fontSize: "1rem",
     fontWeight: "700",
@@ -181,20 +177,6 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "4%",
   },
 
-  trendingSubTitle: {
-    color: `${THEME_COLOR.color_3} !important`,
-    fontSize: "1.2rem",
-    fontWeight: "700",
-    lineHeight: "1.3",
-  },
-
-  trendingSubTitle2: {
-    color: `${THEME_COLOR.color_3} !important`,
-    fontWeight: "700",
-    lineHeight: "1.3",
-    marginTop: "1rem",
-  },
-
   trendingLogo: {
     display: "flex",
     flexDirection: "row",
@@ -203,7 +185,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#0d274d",
   },
   trendingText: {
-    fontWeight: "800",
+    fontWeight: "400",
   },
   trendingImage: {
     width: "300px",
