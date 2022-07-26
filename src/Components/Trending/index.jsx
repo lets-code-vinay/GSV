@@ -52,7 +52,7 @@ const Trending = () => {
                   className={`${classes.borderBottomClass} borderBottomClass`}
                   style={{
                     backgroundColor:
-                      index == tabIndex ? "#43C6AC" : "transparent",
+                      index === tabIndex ? "#43C6AC" : "transparent",
                   }}
                 ></Box>
               </Tab>
@@ -71,7 +71,7 @@ const Trending = () => {
                   <Grid
                     item
                     xs={12}
-                    sm={6}
+                    sm={5}
                     md={4}
                     lg={4}
                     className={`${classes.trendingImageGrid} trendingImageGrid`}
@@ -82,7 +82,7 @@ const Trending = () => {
                       className={`${classes.trendingImage} trendingImage`}
                     />
                   </Grid>
-                  <Grid item xs={12} sm={6} md={8} lg={8}>
+                  <Grid item xs={12} sm={7} md={8} lg={8}>
                     <Box className="content">
                       <Typography
                         variant={"h2"}

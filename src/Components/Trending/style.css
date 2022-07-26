@@ -13,7 +13,7 @@
     margin: auto !important;
     display: flex;
     flex-direction: row;
-    justify-content: start !important;
+    justify-content: center !important;
     text-align: start;
     padding-left: 0px;
   }
@@ -29,12 +29,13 @@
     text-align: start !important;
     font-weight: 700 !important;
   }
-  .trendingImageGrid {
+  .tabMatter > .trendingImageGrid {
     width: 170px !important;
-    height: 170px !important;
+    height: 200px !important;
     border-radius: 50px 0 50px 0;
     border: 1px solid #0d274d !important;
-    padding: 5% 0% 10% 15%;
+    padding: 9% 1% 0% 26%;
+    margin: 4% auto;
   }
   .trendingImage {
     width: 150px !important;
@@ -53,22 +54,18 @@
   .trendingLogo {
     margin: 2% 20% !important;
   }
-  .flashIcon {
-    font-size: 50px !important;
-  }
 }
 
 @media screen and (min-width: 481px) and (max-width: 760px) {
   .tabsClass {
-    width: 100% !important;
     margin: auto !important;
     display: flex;
     flex-direction: row;
-    justify-content: start !important;
+    justify-content: center !important;
     text-align: start;
   }
   .tabContainer {
-    width: 80% !important;
+    width: 90% !important;
     margin: auto !important;
   }
   .tabButton {
@@ -83,33 +80,34 @@
     width: 170px !important;
     border-radius: 50px 0 50px 0;
     border: 1px solid #0d274d !important;
-    padding: 5% 0% 10% 15%;
+    padding: 6% 2% 0% 3%;
   }
   .trendingImage {
-    width: 150px !important;
-    height: 150px !important;
+    width: 100%;
   }
   .trendingTitle {
     font-size: 1.2rem !important;
     margin: 10px 0px !important;
     font-weight: 700 !important;
+    width: 80%;
+    margin-left: 6% !important;
   }
   .trendingSubTitle {
-    font-size: 0.8rem;
-    margin-top: 10px;
+    margin-top: 10px !important;
+    width: 80%;
+    margin-left: 6% !important;
+    font-size: 0.8rem !important;
   }
 
   .trendingLogo {
-    margin: 2% 20% !important;
-  }
-  .flashIcon {
-    font-size: 50px !important;
+    margin: 2% 2% !important;
   }
 }
+
 @media screen and (min-width: 761px) and (max-width: 1024px) {
   .tabsClass {
     float: right;
-    width: 75% !important;
+    width: 60% !important;
     margin: auto !important;
     display: flex;
     flex-direction: row;
@@ -162,8 +160,7 @@
 @media screen and (min-width: 1025px) and (max-width: 1281px) {
   .tabsClass {
     float: right;
-
-    width: 80% !important;
+    width: 67% !important;
     margin: auto !important;
     display: flex;
     flex-direction: row;
@@ -216,12 +213,53 @@
   }
 }
 
+@media screen and (min-width: 1282px) and (max-width: 1919px) {
+  .tabsClass {
+    float: right;
+    width: 62% !important;
+    margin: auto !important;
+    display: flex;
+    justify-content: space-between;
+  }
+  .tabContainer {
+    width: 70% !important;
+    margin: auto !important;
+  }
+  .tabButton {
+    font-size: 1.2rem !important;
+    min-width: 80px !important;
+    max-width: 220px;
+    height: 32px !important;
+    text-align: start;
+  }
+
+  .trendingLogo {
+    margin: 0 0% 0% 45%;
+  }
+  .hr {
+    height: 2px;
+    background-color: #0d274d;
+  }
+
+  .trendingText {
+    font-weight: 500 !important;
+    color: #0d274d;
+  }
+  .trendingImageGrid {
+    width: 100%;
+  }
+  .trendingImage {
+    width: 90%;
+  }
+}
+
 @media screen and (min-width: 1920px) {
   .tabsClass {
     float: right;
-
-    width: 70% !important;
+    width: 62% !important;
     margin: auto !important;
+    display: flex;
+    justify-content: space-between;
   }
   .tabContainer {
     width: 70% !important;
