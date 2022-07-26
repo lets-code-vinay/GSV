@@ -92,6 +92,11 @@
   }
 }
 @media screen and (min-width: 761px) and (max-width: 1024px) {
+  .Navbar .appBar .appBarChild {
+    display: flex;
+    justify-content: space-between;
+    min-height: 45px;
+  }
   .nav-bar-icons .search {
     height: 24px;
     margin-left: 5px;
