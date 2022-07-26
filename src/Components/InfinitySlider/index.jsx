@@ -2,10 +2,9 @@ import React from "react";
 
 import "./style.css";
 
-import { INFINITY_SLIDER_CONTENTS } from "../../Configs/InfinitySlider";
 import { makeStyles } from "@material-ui/core";
 
-const InfinitySlider = ({ isSlideSpeedFast = false }) => {
+const InfinitySlider = ({ isSlideSpeedFast = false, images }) => {
   const classes = useStyles();
 
   return (
@@ -16,7 +15,7 @@ const InfinitySlider = ({ isSlideSpeedFast = false }) => {
             isSlideSpeedFast ? classes.highSpeed : classes.lowSpeed
           } slider-track`}
         >
-          {INFINITY_SLIDER_CONTENTS.map(({ name, image, alt }, index) => {
+          {images.map(({ name, image, alt }, index) => {
             return (
               <div
                 className={`${classes.sliderImageContainer} sliderImageContainer sliding-img`}
@@ -49,10 +48,10 @@ const useStyles = makeStyles((theme) => ({
   },
 
   lowSpeed: {
-    animation: `$slider 30s linear infinite`,
+    animation: `$slider 50s linear infinite`,
     display: "flex",
     justifyContent: "space-around",
-    width: "calc(25rem * 10)",
+    width: "calc(14rem * 7)",
   },
 
   "@keyframes slider": {
@@ -60,15 +59,16 @@ const useStyles = makeStyles((theme) => ({
       transform: "translateX(0)",
     },
     "100%": {
-      transform: `translateX(calc(-25rem * 3))`,
+      transform: `translateX(calc(14rem * 7))`,
     },
   },
 
   highSpeed: {
     animation: `$highSpeedSlide 30s linear infinite`,
     display: "flex",
+    position: "absolute",
     justifyContent: "space-around",
-    width: "calc(25rem * 8)",
+    width: "50%",
   },
 
   "@keyframes highSpeedSlide": {
@@ -76,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
       transform: "translateX(0)",
     },
     "100%": {
-      transform: `translateX(calc(25rem * 5))`,
+      transform: `100%`,
     },
   },
 
