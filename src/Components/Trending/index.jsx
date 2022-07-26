@@ -136,8 +136,6 @@ const useStyles = makeStyles((theme) => ({
     float: "right",
     "&:active": {
       boxShadow: "none",
-      borderBottom: "green",
-      color: "red",
     },
   },
 
@@ -161,7 +159,6 @@ const useStyles = makeStyles((theme) => ({
     "&:active": {
       boxShadow: "none",
       backgroundColor: `${THEME_COLOR.color_3} !important`,
-      borderBottom: "green",
     },
   },
 
