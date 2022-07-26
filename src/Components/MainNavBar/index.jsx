@@ -20,6 +20,7 @@ import { NAVBAR_MENUS } from "../../Configs/NavBar/navbar";
 import { THEME_COLOR } from "../../Configs/Theme";
 
 import "./style.css";
+
 const MainNavBar = ({ onSubNavbarOpen, onMoreOpen, setActive, isActive }) => {
   const classes = useStyles();
 
@@ -113,7 +114,7 @@ const MainNavBar = ({ onSubNavbarOpen, onMoreOpen, setActive, isActive }) => {
           elevation={0}
           ref={anchor}
         >
-          <Toolbar>
+          <Toolbar className={`${classes.appBarChild} appBarChild`}>
             <Box
               edge="start"
               className={`${classes.menuButton} display`}
@@ -136,10 +137,11 @@ const MainNavBar = ({ onSubNavbarOpen, onMoreOpen, setActive, isActive }) => {
                             : "3px solid transparent",
                       }}
                       key={i}
+                      className={`${classes.sectionDesktopMenus} sectionDesktopMenus`}
                     >
                       <Typography
                         variant={"body1"}
-                        className={classes.navbar_text}
+                        className={`${classes.navbar_text} navbar_text`}
                       >
                         {menu.label}
                       </Typography>
@@ -148,23 +150,12 @@ const MainNavBar = ({ onSubNavbarOpen, onMoreOpen, setActive, isActive }) => {
                 })}
               </div>
             </Box>
-
-            <div className="display">
-              <BiSearchAlt2
-                style={{ height: "35px", width: " 35px", cursor: "pointer" }}
-              />
-              <BiUser
-                style={{
-                  height: "35px",
-                  width: " 35px",
-                  margin: " 0 15px",
-                  cursor: "pointer",
-                }}
-              />
-              <BiGlobe
-                style={{ height: "35px", width: " 35px", cursor: "pointer" }}
-              />
-            </div>
+            <Box className="nav-bar-grow"></Box>
+            <Box className="nav-bar-icons">
+              <BiSearchAlt2 className="search" />
+              <BiUser className="profile" />
+              <BiGlobe className="globe" />
+            </Box>
 
             {/* To open icons */}
             <div className={`${classes.sectionMobile} sectionMobile`}>
@@ -218,14 +209,12 @@ const useStyles = makeStyles((theme) => ({
     "&:hover": {
       cursor: "pointer",
     },
-    width: "11%",
   },
 
   navbar_text: {
     color: "#ffffff",
-    fontSize: "1.6rem",
-    fontWeight: "400",
   },
+
   navbar_text_mobile: {
     fontSize: "1.3rem",
     marginRight: "10%",
@@ -253,7 +242,6 @@ const useStyles = makeStyles((theme) => ({
   },
 
   sectionDesktop: {
-    marginLeft: "70px",
     display: "none",
     [theme.breakpoints.up("md")]: {
       display: "flex",
@@ -265,7 +253,6 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("md")]: {
       display: "none",
     },
-    marginRight: "5%",
   },
 
   mobile3Dots: {
