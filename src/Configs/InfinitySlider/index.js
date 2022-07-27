@@ -53,6 +53,43 @@ export const INFINITY_SLIDER_CONTENTS = [
     alt: "VMWARE logo",
   },
 
+  // ----Repeat---
+  {
+    name: "CISCO",
+    image: CISCO,
+    alt: "CISCO logo",
+  },
+  {
+    name: "DELL",
+    image: DELL,
+    alt: "DELL logo",
+  },
+  {
+    name: "FORTINET",
+    image: FORTINET,
+    alt: "FORTINET logo",
+  },
+  {
+    name: "HP",
+    image: HP,
+    alt: "HP logo",
+  },
+  {
+    name: "JUNIPER",
+    image: JUNIPER,
+    alt: "JUNIPER logo",
+  },
+  {
+    name: "PALO_ALTO",
+    image: PALO_ALTO,
+    alt: "PALO_ALTO logo",
+  },
+  {
+    name: "VMWARE",
+    image: VMWARE,
+    alt: "VMWARE logo",
+  },
+
 ];
 
 
