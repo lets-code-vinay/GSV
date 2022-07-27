@@ -1,83 +1,188 @@
-import grammerly from "../../Assets/Images/Slider-images/Grammarly_logo.svg";
-import nexon from "../../Assets/Images/Slider-images/Nexon_logo.svg";
-import alphabet from "../../Assets/Images/Slider-images/Alphabet_Inc_logo.svg";
-import karcher from "../../Assets/Images/Slider-images/Karcher_logo.svg";
-import timberland from "../../Assets/Images/Slider-images/Timberland_logo.svg";
-import Reddit from "../../Assets/Images/Slider-images/Reddit_logo.svg";
-import Netflix from "../../Assets/Images/Slider-images/Netflix_logo.svg";
-import Timberland from "../../Assets/Images/Slider-images/Timberland_logo.svg";
-import Trulia from "../../Assets/Images/Slider-images/Trulia_logo.svg";
-// import Twitch from "../../Assets/Images/Slider-images/Twitch_logo.svg";
+import CISCO from '../../Assets/Images/vendors/First Line/CISCO.png'
+import DELL from '../../Assets/Images/vendors/First Line/dell.png'
+import FORTINET from '../../Assets/Images/vendors/First Line/Fortinet.png'
+import HP from '../../Assets/Images/vendors/First Line/hp.png'
+import JUNIPER from '../../Assets/Images/vendors/First Line/Juniper.png'
+import PALO_ALTO from '../../Assets/Images/vendors/First Line/Paloalto.png'
+import VMWARE from '../../Assets/Images/vendors/First Line/vmware.png'
 
-
+import AWS from '../../Assets/Images/vendors/Second line/AWS.png'
+import BROADCOM from '../../Assets/Images/vendors/Second line/broadcom.png'
+import D_LINK from '../../Assets/Images/vendors/Second line/dlink.png'
+import MICROSOFT from '../../Assets/Images/vendors/Second line/Microsoft.png'
+import GCP from '../../Assets/Images/vendors/Second line/GCP.png'
+import MIKROTIK from '../../Assets/Images/vendors/Second line/Mikrotik.png'
+import NOKIA from '../../Assets/Images/vendors/Second line/nokia.png'
+import SAMSUNG from '../../Assets/Images/vendors/Second line/samsung.png'
+import UBI from '../../Assets/Images/vendors/Second line/ubi.png'
 
 export const INFINITY_SLIDER_CONTENTS = [
   {
-    name: "Twitch",
-    // image: Twitch,
-    alt: "Twitch logo",
+    name: "CISCO",
+    image: CISCO,
+    alt: "CISCO logo",
   },
   {
-    name: "Trulia",
-    image: Trulia,
-    alt: "Trulia logo",
+    name: "DELL",
+    image: DELL,
+    alt: "DELL logo",
   },
   {
-    name: "Timberland",
-    image: Timberland,
-    alt: "Timberland logo",
+    name: "FORTINET",
+    image: FORTINET,
+    alt: "FORTINET logo",
   },
   {
-    name: "Netflix",
-    image: Netflix,
-    alt: "Netflix logo",
+    name: "HP",
+    image: HP,
+    alt: "HP logo",
   },
   {
-    name: "Grammerly",
-    image: grammerly,
-    alt: "grammerly logo",
+    name: "JUNIPER",
+    image: JUNIPER,
+    alt: "JUNIPER logo",
   },
   {
-    name: "Nexon",
-    image: nexon,
-    alt: "nexon logo",
+    name: "PALO_ALTO",
+    image: PALO_ALTO,
+    alt: "PALO_ALTO logo",
   },
   {
-    name: "Alphabet ",
-    image: alphabet,
-    alt: "alphabet logo",
-  },
-  {
-    name: "Karcher",
-    image: karcher,
-    alt: "karcher logo",
+    name: "VMWARE",
+    image: VMWARE,
+    alt: "VMWARE logo",
   },
 
+  // ----Repeat---
   {
-    name: "Reddit",
-    image: Reddit,
-    alt: "Reddit logo",
+    name: "CISCO",
+    image: CISCO,
+    alt: "CISCO logo",
   },
   {
-    name: "GitLab_logo",
-    image: grammerly,
-    alt: "GitLab_logo logo",
+    name: "DELL",
+    image: DELL,
+    alt: "DELL logo",
+  },
+  {
+    name: "FORTINET",
+    image: FORTINET,
+    alt: "FORTINET logo",
+  },
+  {
+    name: "HP",
+    image: HP,
+    alt: "HP logo",
+  },
+  {
+    name: "JUNIPER",
+    image: JUNIPER,
+    alt: "JUNIPER logo",
+  },
+  {
+    name: "PALO_ALTO",
+    image: PALO_ALTO,
+    alt: "PALO_ALTO logo",
+  },
+  {
+    name: "VMWARE",
+    image: VMWARE,
+    alt: "VMWARE logo",
   },
 
-  {
-    name: "Timberland",
-    image: timberland,
-    alt: "timberland logo",
-  },
-
-  {
-    name: "CD Projekt",
-    image: alphabet,
-    alt: "CD Projekt logo",
-  },
-  {
-    name: "Karcher",
-    image: karcher,
-    alt: "karcher logo",
-  },
 ];
+
+
+export const INFINITY_SLIDER_CONTENTS_BOTTOM = [
+  {
+    name: "AWS",
+    image: AWS,
+    alt: "AWS logo",
+  },
+  {
+    name: "BROADCOM",
+    image: BROADCOM,
+    alt: "BROADCOM logo",
+  },
+  {
+    name: "D_LINK",
+    image: D_LINK,
+    alt: "D_LINK logo",
+  },
+  {
+    name: "MICROSOFT",
+    image: MICROSOFT,
+    alt: "MICROSOFT logo",
+  },
+  {
+    name: "GCP",
+    image: GCP,
+    alt: "GCP logo",
+  }, {
+    name: "MIKROTIK",
+    image: MIKROTIK,
+    alt: "MIKROTIK logo",
+  },
+  {
+    name: "NOKIA",
+    image: NOKIA,
+    alt: "NOKIA logo",
+  },
+  {
+    name: "SAMSUNG",
+    image: SAMSUNG,
+    alt: "SAMSUNG logo",
+  },
+  {
+    name: "UBI",
+    image: UBI,
+    alt: "UBI logo",
+  },
+
+  // ------------ repeat
+
+  {
+    name: "AWS",
+    image: AWS,
+    alt: "AWS logo",
+  },
+  {
+    name: "BROADCOM",
+    image: BROADCOM,
+    alt: "BROADCOM logo",
+  },
+  {
+    name: "D_LINK",
+    image: D_LINK,
+    alt: "D_LINK logo",
+  },
+  {
+    name: "MICROSOFT",
+    image: MICROSOFT,
+    alt: "MICROSOFT logo",
+  },
+  {
+    name: "GCP",
+    image: GCP,
+    alt: "GCP logo",
+  }, {
+    name: "MIKROTIK",
+    image: MIKROTIK,
+    alt: "MIKROTIK logo",
+  },
+  {
+    name: "NOKIA",
+    image: NOKIA,
+    alt: "NOKIA logo",
+  },
+  {
+    name: "SAMSUNG",
+    image: SAMSUNG,
+    alt: "SAMSUNG logo",
+  },
+  {
+    name: "UBI",
+    image: UBI,
+    alt: "UBI logo",
+  },
+]
