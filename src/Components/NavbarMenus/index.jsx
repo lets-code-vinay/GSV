@@ -13,11 +13,11 @@ import "./styles.css";
 
 import { THEME_COLOR } from "../../Configs/Theme";
 
-const NavbarMenus = ({ isOpen, navMenus = {}, isActiveMegaMenu }) => {
+const NavbarMenus = ({ navMenus = {} }) => {
   const classes = useStyles();
 
   const [isPopularEnabled] = useState(
-    Object.keys(navMenus.menus).includes("POPULAR")
+    Object.keys(navMenus?.menus).includes("POPULAR")
   );
 
   const handleClose = (_) => {};
@@ -34,7 +34,7 @@ const NavbarMenus = ({ isOpen, navMenus = {}, isActiveMegaMenu }) => {
           className={`${classes.menuImage} menuImage`}
         >
           <Box className={`${classes.imageBlock} imageBlock block`}>
-            {/* image size 180 x 404 */}
+            {/* image size 180 x 404 */}{" "}
             <img
               src={navMenus?.image || null}
               alt={navMenus?.title}
@@ -173,7 +173,6 @@ const NavbarMenus = ({ isOpen, navMenus = {}, isActiveMegaMenu }) => {
  * Props validation
  */
 NavbarMenus.propTypes = {
-  isOpen: bool,
   navMenus: shape({}),
 };
 
@@ -181,7 +180,6 @@ NavbarMenus.propTypes = {
  *  Default Props
  */
 NavbarMenus.defaultProps = {
-  isOpen: false,
   navMenus: {},
 };
 
