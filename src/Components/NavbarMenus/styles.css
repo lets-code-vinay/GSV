@@ -1,26 +1,208 @@
 /* 320px — 480px: Mobile devices
-481px — 768px: iPads, Tablets
-769px — 1024px: Small screens, laptops
-1025px — 1200px: Desktops, large screens
-1201px and more —  Extra large screens, TV */
+  481px — 768px: iPads, Tablets
+  769px — 1024px: Small screens, laptops
+  1025px — 1200px: Desktops, large screens
+  1201px and more —  Extra large screens, TV */
 @media screen and (min-width: 279px) and (max-width: 480px) {
+  /* TODO: --Mobile responsiveness pending-- */
 }
 
 @media screen and (min-width: 481px) and (max-width: 760px) {
+  /* TODO: --Mobile responsiveness pending-- */
 }
+
+/* 
+  --current laptop size--- 
+*/
 @media screen and (min-width: 761px) and (max-width: 1024px) {
+  .imageSubMenu {
+    background-size: cover;
+    height: 82vh;
+  }
+
+  .imageBlock .menuInformationBar {
+    width: 33%;
+    bottom: 15%;
+    position: absolute;
+  }
+  .menuInformationMSGContainer {
+    width: 82%;
+    height: fit-content;
+  }
+
+  .menuInformationBar .menuInformationBarTitle {
+    font-size: 1.5rem;
+  }
+  .menuInformationMSGContainer > .menuInformationMSG {
+    font-size: 0.7rem;
+  }
+
   .subMenu1 {
     position: absolute;
-    top: 19.4% !important;
+    top: 17.2% !important;
     z-index: 10;
     height: 500px;
   }
+
+  .menuBlock div div {
+    align-items: end;
+    width: 67%;
+  }
+
+  .MenuTitleContainerBox {
+    margin: 4% 0;
+  }
+
+  .MenuTitleContainerBox > .MenuTitleContainer {
+    width: 90%;
+  }
+
+  .MenuTitleContainerBox > .MenuTitleContainer > .mainMenuTitle,
+  .popularTitleContainer > .popularTitle {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  .mainMenuLink > .mainMenuText,
+  .popularLink > .popularText {
+    font-size: 0.6rem;
+    line-height: 1.2rem;
+    width: 95%;
+  }
+
+  .popularBlock {
+    padding: 6% 3% 0 3%;
+  }
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1281px) {
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  .imageSubMenu {
+    background-size: cover;
+    height: 82vh;
+    width: 100%;
+  }
+
+  .imageBlock .menuInformationBar {
+    width: 33%;
+    bottom: 15%;
+    position: absolute;
+  }
+  .menuInformationBar .menuInformationMSGContainer {
+    width: 82%;
+    height: fit-content;
+    border-radius: 0 150px 150px 0;
+  }
+
+  .menuInformationBar .menuInformationBarTitle {
+    font-size: 1.7rem;
+  }
+  .menuInformationMSGContainer > .menuInformationMSG {
+    font-size: 1rem;
+  }
+
+  .subMenu1 {
+    position: absolute;
+    top: 19% !important;
+    z-index: 10;
+    height: 500px;
+  }
+
+  .menuBlock div div {
+    align-items: end;
+    width: 67%;
+  }
+
+  .MenuTitleContainerBox {
+    margin: 4% 0;
+  }
+
+  .MenuTitleContainerBox > .MenuTitleContainer {
+    width: 90%;
+  }
+
+  .MenuTitleContainerBox > .MenuTitleContainer > .mainMenuTitle,
+  .popularTitleContainer > .popularTitle {
+    width: 90%;
+    font-size: 1.8rem;
+  }
+
+  .mainMenuLink > .mainMenuText,
+  .popularLink > .popularText {
+    font-size: 1rem;
+    line-height: 2rem;
+    /* letter-spacing: 1.5px; */
+    width: 100%;
+  }
+
+  .popularBlock {
+    padding: 6% 3% 0 3%;
+  }
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1281px) and (max-width: 1920px) {
+  .imageSubMenu {
+    background-size: cover;
+    width: 100%;
+  }
+
+  .imageBlock .menuInformationBar {
+    width: 33%;
+    bottom: 15%;
+    position: absolute;
+  }
+  .menuInformationBar .menuInformationMSGContainer {
+    width: 82%;
+    height: fit-content;
+    border-radius: 0 150px 150px 0;
+  }
+
+  .menuInformationBar .menuInformationBarTitle {
+    font-size: 2.7rem;
+  }
+  .menuInformationMSGContainer > .menuInformationMSG {
+    font-size: 1.2rem;
+  }
+
+  .subMenu1 {
+    position: absolute;
+    top: 14% !important;
+    z-index: 10;
+    height: 500px;
+  }
+
+  .menuBlock div div {
+    align-items: end;
+    width: 67%;
+  }
+
+  .MenuTitleContainerBox {
+    margin: 4% 0;
+  }
+
+  .MenuTitleContainerBox > .MenuTitleContainer {
+    width: 90%;
+  }
+
+  .MenuTitleContainerBox > .MenuTitleContainer > .mainMenuTitle,
+  .popularTitleContainer > .popularTitle {
+    width: 90%;
+    font-size: 2rem;
+  }
+
+  .mainMenuLink > .mainMenuText,
+  .popularLink > .popularText {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 1px;
+    width: 95%;
+  }
+
+  .popularBlock {
+    padding: 6% 3% 0 3%;
+  }
+}
+
+@media screen and (min-width: 1921px) {
   .informationBar {
     width: 110%;
     height: 39%;
@@ -29,8 +211,67 @@
   }
   .root .subMenu1 {
     position: absolute;
-    top: 19.4% !important;
     z-index: 10;
     height: 500px;
+  }
+
+  .imageSubMenu {
+    background-size: cover;
+    width: 100%;
+  }
+
+  .imageBlock .menuInformationBar {
+    width: 33%;
+    bottom: 15%;
+    position: absolute;
+  }
+  .menuInformationBar .menuInformationMSGContainer {
+    width: 82%;
+    height: fit-content;
+    border-radius: 0 150px 150px 0;
+  }
+
+  .menuInformationBar .menuInformationBarTitle {
+    font-size: 2.7rem;
+  }
+  .menuInformationMSGContainer > .menuInformationMSG {
+    font-size: 1.2rem;
+  }
+
+  .subMenu1 {
+    position: absolute;
+    top: 14% !important;
+    z-index: 10;
+    height: 500px;
+  }
+
+  .menuBlock div div {
+    align-items: end;
+    width: 67%;
+  }
+
+  .MenuTitleContainerBox {
+    margin: 4% 0;
+  }
+
+  .MenuTitleContainerBox > .MenuTitleContainer {
+    width: 90%;
+  }
+
+  .MenuTitleContainerBox > .MenuTitleContainer > .mainMenuTitle,
+  .popularTitleContainer > .popularTitle {
+    width: 90%;
+    font-size: 2rem;
+  }
+
+  .mainMenuLink > .mainMenuText,
+  .popularLink > .popularText {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    width: 95%;
+  }
+
+  .popularBlock {
+    padding: 6% 3% 0 3%;
   }
 }

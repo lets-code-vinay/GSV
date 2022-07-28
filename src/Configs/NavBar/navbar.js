@@ -543,7 +543,7 @@ export const NAVBAR_MENUS = {
         menus: {
           image: DATA_CENTER_SECURITY_IMAGE,
           title: "Data Center Security",
-          security_red: THEME_COLOR.data_center_security,
+          color: THEME_COLOR.data_center_security,
           subtitle: `Data Center Security-Implement enterprise-class connectivity for wired and wireless. Multi-vendor technology and hardware's Satellite, deployment, monitoring and support`,
           menus: {
             // --DATA_CENTER --
@@ -841,7 +841,7 @@ export const NAVBAR_MENUS = {
         menus: {
           image: SECURITY_MAIN_IMAGE,
           title: "SECURITY",
-          security_red: THEME_COLOR.security_red,
+          color: THEME_COLOR.security_red,
           subtitle: `Security-Implement enterprise-class connectivity for wired and wireless. Multi-vendor technology and hardware's Satellite, deployment, monitoring and support`,
           menus: {
             // --SECURITY --
@@ -1008,7 +1008,7 @@ export const NAVBAR_MENUS = {
         menus: {
           image: SECURITY_MAIN_IMAGE,
           title: "SECURITY",
-          security_red: THEME_COLOR.security_red,
+          color: THEME_COLOR.security_red,
           subtitle: `Security-Implement enterprise-class connectivity for wired and wireless. Multi-vendor technology and hardware's Satellite, deployment, monitoring and support`,
           menus: {
             CAndC1: {
@@ -1133,7 +1133,7 @@ export const NAVBAR_MENUS = {
         menus: {
           image: SECURITY_MAIN_IMAGE,
           title: "SECURITY",
-          security_red: THEME_COLOR.security_red,
+          color: THEME_COLOR.security_red,
           subtitle: `Security-Implement enterprise-class connectivity for wired and wireless. Multi-vendor technology and hardware's Satellite, deployment, monitoring and support`,
           menus: {
             // --SECURITY --
@@ -1494,7 +1494,7 @@ export const NAVBAR_MENUS = {
         menus: {
           image: SECURITY_MAIN_IMAGE,
           title: "SECURITY",
-          security_red: THEME_COLOR.security_red,
+          color: THEME_COLOR.security_red,
           subtitle: `Security-Implement enterprise-class connectivity for wired and wireless. Multi-vendor technology and hardware's Satellite, deployment, monitoring and support`,
           menus: {
             // --SECURITY --
@@ -1754,7 +1754,7 @@ export const NAVBAR_MENUS = {
         menus: {
           image: DATA_CENTER_SECURITY_IMAGE,
           title: "Data Center Security",
-          security_red: THEME_COLOR.data_center_security,
+          color: THEME_COLOR.data_center_security,
           subtitle: `Data Center Security-Implement enterprise-class connectivity for wired and wireless. Multi-vendor technology and hardware's Satellite, deployment, monitoring and support`,
           menus: {
             // --SECURITY --
@@ -2006,7 +2006,7 @@ export const NAVBAR_MENUS = {
         menus: {
           image: SECURITY_MAIN_IMAGE,
           title: "SECURITY",
-          security_red: THEME_COLOR.security_red,
+          color: THEME_COLOR.security_red,
           subtitle: `Security-Implement enterprise-class connectivity for wired and wireless. Multi-vendor technology and hardware's Satellite, deployment, monitoring and support`,
           menus: {
             // --SECURITY --
@@ -2266,7 +2266,7 @@ export const NAVBAR_MENUS = {
         menus: {
           image: SECURITY_MAIN_IMAGE,
           title: "SECURITY",
-          security_red: THEME_COLOR.security_red,
+          color: THEME_COLOR.security_red,
           subtitle: `Security-Implement enterprise-class connectivity for wired and wireless. Multi-vendor technology and hardware's Satellite, deployment, monitoring and support`,
           menus: {
             // --SECURITY --
@@ -2525,7 +2525,7 @@ export const NAVBAR_MENUS = {
         menus: {
           image: SECURITY_MAIN_IMAGE,
           title: "SECURITY",
-          security_red: THEME_COLOR.security_red,
+          color: THEME_COLOR.security_red,
           subtitle: `Security-Implement enterprise-class connectivity for wired and wireless. Multi-vendor technology and hardware's Satellite, deployment, monitoring and support`,
           menus: {
             // --SECURITY --
@@ -2784,7 +2784,7 @@ export const NAVBAR_MENUS = {
         menus: {
           image: SECURITY_MAIN_IMAGE,
           title: "SECURITY",
-          security_red: THEME_COLOR.security_red,
+          color: THEME_COLOR.security_red,
           subtitle: `Security-Implement enterprise-class connectivity for wired and wireless. Multi-vendor technology and hardware's Satellite, deployment, monitoring and support`,
           menus: {
             // --SECURITY --
@@ -3308,7 +3308,7 @@ export const NAVBAR_MENUS = {
         menus: {
           image: SECURITY_MAIN_IMAGE,
           title: "SECURITY",
-          security_red: THEME_COLOR.security_red,
+          color: THEME_COLOR.security_red,
           subtitle: `Security-Implement enterprise-class connectivity for wired and wireless. Multi-vendor technology and hardware's Satellite, deployment, monitoring and support`,
           menus: {
             // --SECURITY --
@@ -3568,7 +3568,7 @@ export const NAVBAR_MENUS = {
         menus: {
           image: DATA_CENTER_SECURITY_IMAGE,
           title: "Data Center Security",
-          security_red: THEME_COLOR.data_center_security,
+          color: THEME_COLOR.data_center_security,
           subtitle: `Data Center Security-Implement enterprise-class connectivity for wired and wireless. Multi-vendor technology and hardware's Satellite, deployment, monitoring and support`,
           menus: {
             // --SECURITY --
@@ -3820,7 +3820,7 @@ export const NAVBAR_MENUS = {
         menus: {
           image: SECURITY_MAIN_IMAGE,
           title: "SECURITY",
-          security_red: THEME_COLOR.security_red,
+          color: THEME_COLOR.security_red,
           subtitle: `Security-Implement enterprise-class connectivity for wired and wireless. Multi-vendor technology and hardware's Satellite, deployment, monitoring and support`,
           menus: {
             // --SECURITY --
@@ -4080,7 +4080,7 @@ export const NAVBAR_MENUS = {
         menus: {
           image: SECURITY_MAIN_IMAGE,
           title: "SECURITY",
-          security_red: THEME_COLOR.security_red,
+          color: THEME_COLOR.security_red,
           subtitle: `Security-Implement enterprise-class connectivity for wired and wireless. Multi-vendor technology and hardware's Satellite, deployment, monitoring and support`,
           menus: {
             // --SECURITY --
@@ -4339,7 +4339,7 @@ export const NAVBAR_MENUS = {
         menus: {
           image: SECURITY_MAIN_IMAGE,
           title: "SECURITY",
-          security_red: THEME_COLOR.security_red,
+          color: THEME_COLOR.security_red,
           subtitle: `Security-Implement enterprise-class connectivity for wired and wireless. Multi-vendor technology and hardware's Satellite, deployment, monitoring and support`,
           menus: {
             // --SECURITY --
@@ -4598,7 +4598,7 @@ export const NAVBAR_MENUS = {
         menus: {
           image: SECURITY_MAIN_IMAGE,
           title: "SECURITY",
-          security_red: THEME_COLOR.security_red,
+          color: THEME_COLOR.security_red,
           subtitle: `Security-Implement enterprise-class connectivity for wired and wireless. Multi-vendor technology and hardware's Satellite, deployment, monitoring and support`,
           menus: {
             // --SECURITY --

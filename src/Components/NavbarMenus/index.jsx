@@ -27,13 +27,14 @@ const NavbarMenus = ({ isOpen, navMenus = {}, isActiveMegaMenu }) => {
       <Grid container className={`${classes.subMenu1} subMenu1`}>
         <Grid
           item
-          // xs={0}
-          // sm={0}
+          xs={0}
+          sm={0}
           md={2}
           lg={2}
           className={`${classes.menuImage} menuImage`}
         >
           <Box className={`${classes.imageBlock} imageBlock block`}>
+            {/* image size 180 x 404 */}
             <img
               src={navMenus?.image || null}
               alt={navMenus?.title}
@@ -69,9 +70,12 @@ const NavbarMenus = ({ isOpen, navMenus = {}, isActiveMegaMenu }) => {
             <Masonry gutter="1">
               {Object.values(navMenus?.menus).map(
                 ({ value = "", label = "", menus = {} }, index) => {
-                  if (value === "POPULAR") return "sdfsdf";
+                  if (value === "POPULAR") return "";
                   return (
-                    <Box key={index}>
+                    <Box
+                      key={index}
+                      className={`${classes.MenuTitleContainerBox} MenuTitleContainerBox`}
+                    >
                       <Box
                         className={`${classes.MenuTitleContainer} MenuTitleContainer`}
                       >
@@ -188,12 +192,10 @@ const useStyles = makeStyles((theme) => ({
     position: "absolute",
     zIndex: "10",
     height: "82vh",
-    top: "23%",
   },
 
   imageSubMenu: {
     objectFit: "cover",
-    height: "82vh",
     objectPosition: "20% 10%" /* try 20px 10px */,
   },
 
@@ -202,14 +204,9 @@ const useStyles = makeStyles((theme) => ({
   },
   //--------information bar-------------
   menuInformationBar: {
-    width: "20%",
-    height: "210px",
     position: "absolute",
-    bottom: "10%",
   },
   menuInformationMSGContainer: {
-    width: "100%",
-    height: "50%",
     color: "#ffffff",
     padding: "2%",
     borderRadius: "0 60px 60px 0",
@@ -217,12 +214,11 @@ const useStyles = makeStyles((theme) => ({
   menuInformationMSG: {
     color: "#ffffff",
     padding: "2%",
-    fontSize: "0.8rem",
   },
   menuInformationBarTitle: {
     color: "#ffffff",
     padding: "2%",
-    textShadow: "3px 3px black",
+    textShadow: "0px 0px 5px black",
   },
   //   ----------Menu block--------------
   menuBlock: {
@@ -261,7 +257,6 @@ const useStyles = makeStyles((theme) => ({
   popularBlock: {
     width: "100%",
     height: "100%",
-    padding: "4% 3%",
   },
 
   popularTitleContainer: {
@@ -287,7 +282,6 @@ const useStyles = makeStyles((theme) => ({
     color: THEME_COLOR.main_color,
     "&:hover": {
       color: THEME_COLOR.color_5,
-      // fontSize: "1.025rem",
       letterSpacing: "0",
     },
   },
