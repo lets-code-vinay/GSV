@@ -26,14 +26,12 @@
   cursor: pointer;
 }
 .MuiGrid-root.MuiGrid-container.MuiGrid-spacing-xs-2.MuiGrid-item {
-  width: 98%;
+  width: 100%;
   position: absolute;
-  /* top: 4.5rem; */
   z-index: 10;
-  left: 1%;
   margin: 0% auto;
   background: #fff;
-  min-height: 90vh;
+  min-height: 80vh;
   max-height: 90vh;
 }
 
@@ -119,7 +117,8 @@
 
 @media screen and (min-width: 1280px) and (max-width: 1919px) {
   .MuiGrid-root.MuiGrid-container.MuiGrid-spacing-xs-2.MuiGrid-item {
-    top: 4.5rem;
+    top: 5.1rem;
+    left: 0;
   }
   button.MuiButtonBase-root.MuiButton-root.makeStyles-sideBarOptions-338.sideBarOptions.border-0.backgroundColorWhite {
     width: 100%;

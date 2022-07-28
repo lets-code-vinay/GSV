@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import emailjs from '@emailjs/browser'
+import emailjs from "@emailjs/browser";
 import {
   Box,
   ClickAwayListener,
@@ -172,7 +172,6 @@ const useStyles = makeStyles((theme) => ({
   },
 
   sideBarOptions: {
-    // width: "60%",
     display: "flex",
     justifyContent: "flex-start",
   },
