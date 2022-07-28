@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { func } from "prop-types";
+import { bool, func } from "prop-types";
 
 import { makeStyles } from "@material-ui/core/styles";
 import { MoreVert as MoreIcon } from "@material-ui/icons";
@@ -21,7 +21,14 @@ import { THEME_COLOR } from "../../Configs/Theme";
 
 import "./style.css";
 
-const MainNavBar = ({ onSubNavbarOpen, onMoreOpen, setActive, isActive }) => {
+const MainNavBar = ({
+  onSubNavbarOpen,
+  onMoreOpen,
+  setActive,
+  isActive,
+  onNavMenus,
+  isSubSectionOpen,
+}) => {
   const classes = useStyles();
 
   const anchor = useRef(null);
@@ -48,8 +55,13 @@ const MainNavBar = ({ onSubNavbarOpen, onMoreOpen, setActive, isActive }) => {
   const handleMainNavbarClick = (menu) => (event) => {
     onMoreOpen({ isMore: menu?.isMore, mainRef: anchor });
 
-    onSubNavbarOpen({ isOpen: true, menu, event });
-    setActive(menu.value);
+    onSubNavbarOpen({
+      isOpen: true,
+      menu,
+      event,
+    });
+    setActive(menu);
+    onNavMenus(Object.values(menu?.menus)[0]);
   };
 
   const menuId = "primary-search-account-menu";
@@ -62,7 +74,6 @@ const MainNavBar = ({ onSubNavbarOpen, onMoreOpen, setActive, isActive }) => {
       transformOrigin={{ vertical: "top", horizontal: "right" }}
       open={isMenuOpen}
       onClose={handleMenuClose}
-      style={{ backgroundColor: "yellow" }}
     >
       <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
       <MenuItem onClick={handleMenuClose}>My account</MenuItem>
@@ -132,7 +143,7 @@ const MainNavBar = ({ onSubNavbarOpen, onMoreOpen, setActive, isActive }) => {
                       onClick={handleMainNavbarClick(menu)}
                       style={{
                         borderBottom:
-                          isActive === menu.value
+                          isSubSectionOpen && isActive.value === menu.value
                             ? "3px solid #ffff"
                             : "3px solid transparent",
                       }}
@@ -183,6 +194,8 @@ const MainNavBar = ({ onSubNavbarOpen, onMoreOpen, setActive, isActive }) => {
  */
 MainNavBar.propsType = {
   onSubNavbarOpen: func.isRequired,
+  onNavMenus: func,
+  isSubSectionOpen: bool,
 };
 
 /**
@@ -190,6 +203,8 @@ MainNavBar.propsType = {
  */
 MainNavBar.defaultProps = {
   onSubNavbarOpen: () => {},
+  onNavMenus: () => {},
+  isSubSectionOpen: false,
 };
 
 export default MainNavBar;
