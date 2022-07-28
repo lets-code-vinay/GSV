@@ -27,13 +27,14 @@ const NavbarMenus = ({ isOpen, navMenus = {}, isActiveMegaMenu }) => {
       <Grid container className={`${classes.subMenu1} subMenu1`}>
         <Grid
           item
-          // xs={0}
-          // sm={0}
+          xs={0}
+          sm={0}
           md={2}
           lg={2}
           className={`${classes.menuImage} menuImage`}
         >
           <Box className={`${classes.imageBlock} imageBlock block`}>
+            {/* image size 180 x 404 */}
             <img
               src={navMenus?.image || null}
               alt={navMenus?.title}
@@ -195,7 +196,6 @@ const useStyles = makeStyles((theme) => ({
 
   imageSubMenu: {
     objectFit: "cover",
-    height: "82vh",
     objectPosition: "20% 10%" /* try 20px 10px */,
   },
 
