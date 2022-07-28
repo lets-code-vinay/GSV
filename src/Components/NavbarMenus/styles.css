@@ -3,18 +3,18 @@
   769px — 1024px: Small screens, laptops
   1025px — 1200px: Desktops, large screens
   1201px and more —  Extra large screens, TV */
-@media screen and (min-width: 279px) and (max-width: 480px) {
+@media screen and (min-width: 279px) and (max-width: 479px) {
   /* TODO: --Mobile responsiveness pending-- */
 }
 
-@media screen and (min-width: 481px) and (max-width: 760px) {
+@media screen and (min-width: 480px) and (max-width: 759px) {
   /* TODO: --Mobile responsiveness pending-- */
 }
 
 /* 
   --current laptop size--- 
 */
-@media screen and (min-width: 761px) and (max-width: 1024px) {
+@media screen and (min-width: 760px) and (max-width: 1023px) {
   .imageSubMenu {
     background-size: cover;
     height: 82vh;
@@ -75,10 +75,11 @@
   }
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1280px) {
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
   .imageSubMenu {
     background-size: cover;
-    height: 82vh;
+    min-height: 82vh;
+    min-height: 82vh;
     width: 100%;
   }
 
@@ -102,9 +103,8 @@
 
   .subMenu1 {
     position: absolute;
-    top: 19% !important;
+    top: 20% !important;
     z-index: 10;
-    height: 500px;
   }
 
   .menuBlock div div {
@@ -130,7 +130,6 @@
   .popularLink > .popularText {
     font-size: 1rem;
     line-height: 2rem;
-    /* letter-spacing: 1.5px; */
     width: 100%;
   }
 
@@ -139,7 +138,7 @@
   }
 }
 
-@media screen and (min-width: 1281px) and (max-width: 1920px) {
+@media screen and (min-width: 128px) and (max-width: 1919px) {
   .imageSubMenu {
     background-size: cover;
     width: 100%;
@@ -202,7 +201,7 @@
   }
 }
 
-@media screen and (min-width: 1921px) {
+@media screen and (min-width: 1920px) {
   .informationBar {
     width: 110%;
     height: 39%;
