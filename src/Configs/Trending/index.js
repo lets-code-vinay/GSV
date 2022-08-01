@@ -3,10 +3,9 @@ import { Typography } from "@material-ui/core";
 
 import SASE from "../../Assets/Images/SASE-lock.png";
 import SDWAN from "../../Assets/Images/SDWAN.png";
-import HYPER_CONVERGED from "../../Assets/Images/hyper-convergent.png";
-import SDN from "../../Assets/Images/SDN.png";
-import WIFI6 from "../../Assets/Images/wifi6.png";
-
+import HYPER_CONVERGED from "../../Assets/Images/hyper-convergent.webp";
+import WIFI6 from "../../Assets/Images/wifi6.svg";
+import NETWORK_AUTOMATION from '../../Assets/Images/network-automation.svg'
 
 export const TRENDING_CONFIGS = Object.freeze({
   SASE: {
@@ -84,7 +83,7 @@ export const TRENDING_CONFIGS = Object.freeze({
       &nbsp; &nbsp; &nbsp; &nbsp; Network automation is planning, deploying, configuring, orchestrating, and assuring networks and services using the software. Network automation is increasingly required to manage modern, dynamic network complexities and orchestrate services efficiently and effectively. The end goal of network automation is to create" zero-touch" or autonomous networks. < br />
       &nbsp; &nbsp; &nbsp; &nbsp; At GSV, we use Network Automation to help our customers to improve efficiency, reduce human error and lower operating expenses (Opex).
     </Typography >,
-    icon: SDN,
+    icon: NETWORK_AUTOMATION,
     link: "",
     button: "",
   },
