@@ -2,13 +2,13 @@ import {
   Typography,
   MenuList,
 } from "@material-ui/core";
-import '../styles.css';
+import './styles.css';
 
 export const INSIGHT_DATA = {
   NETWORK: {
     id: "NETWORK",
-    label: `Network (Wired & Wireless)`,
-
+    // label: `Network (Wired & Wireless)`, // old label
+    label: `Network`,
     value: 10,
     color: "#002446",
     text_color: "white",
@@ -46,7 +46,8 @@ export const INSIGHT_DATA = {
 
   DATA_CENTER: {
     id: "DATA_CENTER",
-    label: "Data Center Virtualization",
+    // label: "Data Center Virtualization", // old label
+    label: "Data Center",
     value: 10,
     color: "#3c454a",
     text_color: "white",
