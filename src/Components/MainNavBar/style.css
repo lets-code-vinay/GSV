@@ -118,7 +118,7 @@
   }
 
   .navbar_text {
-    font-size: 24px;
+    font-size: 22px;
   }
   .display {
     display: flex;
@@ -156,7 +156,7 @@
   }
 
   .sectionDesktopMenus .navbar_text {
-    font-size: 1.35rem;
+    font-size: 22px;
   }
   .display {
     display: flex;
@@ -194,7 +194,7 @@
   }
 
   .sectionDesktopMenus .navbar_text {
-    font-size: 1.5rem;
+    font-size: 22px;
   }
   .display {
     display: flex;
@@ -232,7 +232,7 @@
   }
 
   .sectionDesktopMenus .navbar_text {
-    font-size: 1.8rem;
+    font-size: 24px;
   }
   .display {
     display: flex;

@@ -16,106 +16,108 @@ const Trending = () => {
 
   return (
     <main className={`${classes.containerTrending} containerTrending`}>
-      <Box className={`${classes.trendingLogo} trendingLogo`}>
-        <img
-          src={TRENDING_LOGO}
-          alt="Trending logo"
-          className={`${classes.trendingIcon} trendingIcon`}
-        />
-        <Typography
-          variant={"h4"}
-          className={`${classes.trendingText} trendingText`}
+      <Box className="container-div">
+        <Box className={`${classes.trendingLogo} trendingLogo`}>
+          <img
+            src={TRENDING_LOGO}
+            alt="Trending logo"
+            className={`${classes.trendingIcon} trendingIcon`}
+          />
+          <Typography
+            variant={"h4"}
+            className={`${classes.trendingText} trendingText`}
+          >
+            Trending
+          </Typography>
+        </Box>
+        <Tabs
+          id="controlled-tabs"
+          defaultFocus={true}
+          selectedTabClassName="underline"
+          selectedIndex={tabIndex}
+          onSelect={(index) => setTabIndex(index)}
+          default={0}
         >
-          Trending
-        </Typography>
-      </Box>
-      <Tabs
-        id="controlled-tabs"
-        defaultFocus={true}
-        selectedTabClassName="underline"
-        selectedIndex={tabIndex}
-        onSelect={(index) => setTabIndex(index)}
-        default={0}
-      >
-        <TabList className={`${classes.tabsClass} tabsClass`}>
-          {Object.values(TRENDING_CONFIGS).map((trending, index) => {
-            return (
-              <Tab key={`${trending}-${index}`} style={{ padding: 0 }}>
-                <Button
-                  boxor="outline-primary"
-                  className={`${classes.tabButton} tabButton`}
-                  id="tabButton"
-                >
-                  {trending.label}
-                </Button>
-                <Box
-                  className={`${classes.borderBottomClass} borderBottomClass`}
-                  style={{
-                    backgroundColor:
-                      index === tabIndex ? "#43C6AC" : "transparent",
-                  }}
-                ></Box>
-              </Tab>
-            );
-          })}
-        </TabList>
-
-        {Object.values(TRENDING_CONFIGS).map(
-          ({ label, title, subtitle, icon, link, button }, index) => {
-            return (
-              <TabPanel
-                key={`${label}-${index}`}
-                className={`${classes.tabContainer} tabContainer`}
-              >
-                <Grid container className={`${classes.tabMatter} tabMatter`}>
-                  <Grid
-                    item
-                    xs={12}
-                    sm={5}
-                    md={4}
-                    lg={4}
-                    className={`${classes.trendingImageGrid} trendingImageGrid`}
+          <TabList className={`${classes.tabsClass} tabsClass`}>
+            {Object.values(TRENDING_CONFIGS).map((trending, index) => {
+              return (
+                <Tab key={`${trending}-${index}`} style={{ padding: 0 }}>
+                  <Button
+                    boxor="outline-primary"
+                    className={`${classes.tabButton} tabButton`}
+                    id="tabButton"
                   >
-                    <img
-                      src={icon}
-                      alt={title}
-                      className={`${classes.trendingImage} trendingImage`}
-                    />
-                  </Grid>
-                  <Grid item xs={12} sm={7} md={8} lg={8}>
-                    <Box className="content">
-                      <Typography
-                        variant={"h2"}
-                        className={`${classes.trendingTitle} trendingTitle`}
-                      >
-                        {title}
-                      </Typography>
+                    {trending.label}
+                  </Button>
+                  <Box
+                    className={`${classes.borderBottomClass} borderBottomClass`}
+                    style={{
+                      backgroundColor:
+                        index === tabIndex ? "#43C6AC" : "transparent",
+                    }}
+                  ></Box>
+                </Tab>
+              );
+            })}
+          </TabList>
 
-                      {subtitle}
-
-                      {link && (
-                        <a
-                          href={link}
-                          target="_blank"
-                          className="btn btn-outline-primary"
-                          boxor="outline-primary"
-                          rel="noreferrer"
+          {Object.values(TRENDING_CONFIGS).map(
+            ({ label, title, subtitle, icon, link, button }, index) => {
+              return (
+                <TabPanel
+                  key={`${label}-${index}`}
+                  className={`${classes.tabContainer} tabContainer`}
+                >
+                  <Grid container className={`${classes.tabMatter} tabMatter`}>
+                    <Grid
+                      item
+                      xs={12}
+                      sm={5}
+                      md={4}
+                      lg={4}
+                      className={`${classes.trendingImageGrid} trendingImageGrid`}
+                    >
+                      <img
+                        src={icon}
+                        alt={title}
+                        className={`${classes.trendingImage} trendingImage`}
+                      />
+                    </Grid>
+                    <Grid item xs={12} sm={7} md={8} lg={8}>
+                      <Box className="content">
+                        <Typography
+                          variant={"h2"}
+                          className={`${classes.trendingTitle} trendingTitle`}
                         >
-                          Join Now
-                        </a>
-                      )}
+                          {title}
+                        </Typography>
 
-                      {button && (
-                        <Button boxor="outline-primary">{button}</Button>
-                      )}
-                    </Box>
+                        {subtitle}
+
+                        {link && (
+                          <a
+                            href={link}
+                            target="_blank"
+                            className="btn btn-outline-primary"
+                            boxor="outline-primary"
+                            rel="noreferrer"
+                          >
+                            Join Now
+                          </a>
+                        )}
+
+                        {button && (
+                          <Button boxor="outline-primary">{button}</Button>
+                        )}
+                      </Box>
+                    </Grid>
                   </Grid>
-                </Grid>
-              </TabPanel>
-            );
-          }
-        )}
-      </Tabs>
+                </TabPanel>
+              );
+            }
+          )}
+        </Tabs>
+      </Box>
     </main>
   );
 };
@@ -147,10 +149,7 @@ const useStyles = makeStyles((theme) => ({
   tabContainer: { width: "90%", margin: "auto" },
 
   tabButton: {
-    fontSize: "1rem",
-    fontWeight: "700",
-    color: `${THEME_COLOR.main_color} !important`,
-    minWidth: "180px",
+    color: `#000`,
     width: "100%",
 
     "&:hover": {
@@ -165,24 +164,23 @@ const useStyles = makeStyles((theme) => ({
   borderBottomClass: {
     width: "100%",
     height: "4px",
+    marginTop: "10px",
   },
 
   trendingTitle: {
-    color: `${THEME_COLOR.main_color} !important`,
-    fontWeight: "800",
-    fontSize: "2.5rem",
-    marginBottom: "4%",
+    color: `#000`,
   },
 
   trendingLogo: {
     display: "flex",
     flexDirection: "row",
-    margin: "0 0 0 11%",
+    margin: "0 0 0 3%",
     fontWeight: "800",
     color: "#0d274d",
   },
   trendingText: {
-    fontWeight: "400",
+    fontWeight: "300",
+    color: "#000",
   },
   trendingImage: {
     width: "300px",
