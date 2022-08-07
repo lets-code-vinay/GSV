@@ -42,7 +42,9 @@ export const MAIN_SLIDER_DATA = {
     image: DATA,
     heading: "Between data everywhere and exactly where you need it, there's a bridge that we create.",
     subtitle:
-      "Are you concerned about Data Center Designing & Deployment? You can save time and money by utilizing our team of Data Center deployment specialists to deliver your data center infrastructure requirements. We take deployment risk, planning and execution off your plate so you can save your internal resources for your company’s other projects.",
+      // "Are you concerned about Data Center Designing & Deployment? You can save time and money by utilizing our team of Data Center deployment specialists to deliver your data center infrastructure requirements. We take deployment risk, planning and execution off your plate so you can save your internal resources for your company’s other projects.",
+      "Are you concerned about Data Center Designing & Deployment? You can save time and money by utilizing our team of Data Center deployment specialists to deliver your data center infrastructure requirements.",
+
     bg_color: "#2A5E6B99",
     information_color: "#2A5E6B99",
   },

@@ -48,13 +48,13 @@
   color: white;
   padding: 15px;
 }
-.overlay:hover .overlayImg img{
+.overlay:hover .overlayImg img {
   opacity: 0.3;
   background-color: rgba(10, 3, 70, 0.9);
 }
-.overlay:hover .overlayImg{
+.overlay:hover .overlayImg {
   background-color: rgba(10, 3, 70, 0.9);
-   opacity: 1; 
+  opacity: 1;
   transition: 0.4s ease-in-out;
 }
 .overlay:hover .headingMainDiv .cardTextDiv .paragraph p {
@@ -127,7 +127,13 @@
   mix-blend-mode: multiply;
   transition: 0.5s;
   opacity: 1;
-  background-image: linear-gradient(to bottom,rgba(249,243,243,0) 26%,rgba(22,20,20,0.27) 78%,#000 95%,#000 95%);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(249, 243, 243, 0) 26%,
+    rgba(22, 20, 20, 0.27) 78%,
+    #000 95%,
+    #000 95%
+  );
 }
 .cardContent .overlay:hover .imgInnerContent {
   position: absolute;
@@ -210,12 +216,12 @@
   padding: 5% 14% 0px 5.5%;
   color: #ffffff;
 }
-.wireGridClass{
+.wireGridClass {
   overflow: hidden;
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
 }
-.hoverEffect{
+.hoverEffect {
   width: 100%;
   transform: translateX(0) scale(1.2);
   transition: all 0.4s linear;
@@ -234,10 +240,6 @@
   100% {
     transform: translateX(-10px);
   }
-}
-.card_back_img {
-  border-radius: 0px;
-  background-repeat: no-repeat;
 }
 
 .display {
@@ -270,19 +272,25 @@
   border-radius: 30px;
 }
 /* --------------left software img style--------- */
-.softwareImageOverlay .divImgClass  {
+.softwareImageOverlay .divImgClass {
   opacity: 1;
-  background-image: linear-gradient(to bottom,rgba(249,243,243,0) 26%,rgba(22,20,20,0.27) 78%,#000 95%,#000 95%);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(249, 243, 243, 0) 26%,
+    rgba(22, 20, 20, 0.27) 78%,
+    #000 95%,
+    #000 95%
+  );
 }
-.softwareImageOverlay:hover .divImgClass img{
+.softwareImageOverlay:hover .divImgClass img {
   opacity: 0.3;
 }
-.softwareImageOverlay:hover .divImgClass{
+.softwareImageOverlay:hover .divImgClass {
   background-color: rgba(10, 3, 70, 0.9);
-   opacity: 1;
+  opacity: 1;
   transition: 0.4s ease-in-out;
 }
-.technologiesPage .softwareImageOverlay{
+.technologiesPage .softwareImageOverlay {
   padding: 0 20px 0 0;
 }
 .cardTextHeading {
@@ -349,19 +357,25 @@
 }
 
 /* ------------right security img style-------- */
-.securityOverlay .divImgClassSecurity  {
+.securityOverlay .divImgClassSecurity {
   opacity: 1;
-  background-image: linear-gradient(to bottom,rgba(249,243,243,0) 26%,rgba(22,20,20,0.27) 78%,#000 95%,#000 95%);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(249, 243, 243, 0) 26%,
+    rgba(22, 20, 20, 0.27) 78%,
+    #000 95%,
+    #000 95%
+  );
 }
-.securityOverlay:hover .divImgClassSecurity img{
+.securityOverlay:hover .divImgClassSecurity img {
   opacity: 0.3;
 }
-.securityOverlay:hover .divImgClassSecurity{
+.securityOverlay:hover .divImgClassSecurity {
   background-color: rgba(10, 3, 70, 0.9);
-   opacity: 1;
+  opacity: 1;
   transition: 0.4s ease-in-out;
 }
-.technologiesPage .securityOverlay{
+.technologiesPage .securityOverlay {
   padding: 0 0 0 0;
 }
 .npm {

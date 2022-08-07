@@ -13,7 +13,7 @@ const ImageTextList = ({
 }) => {
   return (
     <>
-      <Box>
+      <Box className="title-block">
         <h1 className="ImageTextList my-5">{title}</h1>
         <Typography variant={"body1"} my={2} className="ImageTextListSubtitle">
           {subtitle}
@@ -21,11 +21,11 @@ const ImageTextList = ({
       </Box>
 
       <Grid container className="displayFlex">
-        <Grid  item xs={12} sm={12} md={5} lg={4}>
+        <Grid item xs={12} sm={12} md={5} lg={4}>
           <img src={image} height={`100%`} width={`95%`} alt={alt} />
         </Grid>
 
-        <Grid  item xs={12} sm={12} md={7} lg={8}>
+        <Grid item xs={12} sm={12} md={7} lg={8}>
           <h4 className="textColorRed">{listTitle}</h4>
 
           {list.map((list, index) => {
