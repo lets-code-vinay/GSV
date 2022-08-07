@@ -13,6 +13,32 @@ import { THEME_COLOR } from "../../Configs/Theme";
 const Trending = () => {
   const classes = useStyles();
   const [tabIndex, setTabIndex] = useState(0);
+  const [learnMore, setLearnMore] = useState(false);
+
+  /**
+   * @description Handling paragraph for trending
+   *
+   * @param {String} subtitle
+   * @param {Boolean} learnMore
+   * @returns {String}
+   */
+  const handleSubTitle = (subtitle, learnMore) => {
+    const originalPara = subtitle.split("#ENTER#").map((brk) => {
+      return <div className="trendingSubTitleForce">{brk}</div>;
+    });
+
+    // Shortening the paragraph
+    const shortPara = subtitle.split("").splice(0, 200).join("");
+
+    return learnMore ? originalPara : shortPara;
+  };
+
+  /**
+   * @description Handle LearnMore Button to display Learn More || Learn Less text
+   */
+  const handleLearnMore = () => {
+    setLearnMore(!learnMore);
+  };
 
   return (
     <main className={`${classes.containerTrending} containerTrending`}>
@@ -92,7 +118,19 @@ const Trending = () => {
                           {title}
                         </Typography>
 
-                        {subtitle}
+                        <Typography
+                          variant={"body1"}
+                          className="trendingSubTitle"
+                        >
+                          {handleSubTitle(subtitle, learnMore)}
+                        </Typography>
+
+                        <Typography
+                          onClick={handleLearnMore}
+                          className="learn-button"
+                        >
+                          {learnMore ? `Learn Less...` : `Learn More...`}
+                        </Typography>
 
                         {link && (
                           <a

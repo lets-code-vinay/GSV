@@ -16,8 +16,17 @@
   color: #000;
 }
 
-.trendingSubTitle {
+.trendingSubTitle,
+.trendingSubTitleForce {
   color: #000;
+  text-indent: 50px;
+}
+
+.learn-button {
+  color: #1e4471;
+  border-bottom: 2px solid #1e4471;
+  display: inline;
+  cursor: pointer;
 }
 
 /* 320px — 480px: Mobile devices
@@ -64,9 +73,13 @@
     margin: 5px 0px 6% 0px;
     font-weight: 300;
   }
-  .trendingSubTitle {
+  .trendingSubTitle,
+  .trendingSubTitleForce {
     font-size: 0.5rem;
     margin-top: 10px;
+  }
+  .learn-button {
+    font-size: 0.5rem;
   }
 
   .trendingLogo {
@@ -119,11 +132,15 @@
     font-weight: 300;
     width: 80%;
   }
-  .trendingSubTitle {
+  .trendingSubTitle,
+  .trendingSubTitleForce {
     margin-top: 10px !important;
     width: 80%;
     margin-left: 6% !important;
     font-size: 1.2rem !important;
+  }
+  .learn-button {
+    font-size: 1.2rem;
   }
 
   .trendingLogo {
@@ -187,11 +204,14 @@
     margin: 5px 0px 6% 0px;
     font-weight: 400 !important;
   }
-  .trendingSubTitle {
+  .trendingSubTitle,
+  .trendingSubTitleForce {
     font-size: 1.2rem !important;
     margin-top: 10px;
   }
-
+  .learn-button {
+    font-size: 1.2rem;
+  }
   .trendingLogo {
     margin: 2% 8% !important;
   }
@@ -242,11 +262,14 @@
     margin: 5px 0px 6% 0px;
     font-weight: 400 !important;
   }
-  .trendingSubTitle {
+  .trendingSubTitle,
+  .trendingSubTitleForce {
     font-size: 1.2rem !important;
     margin-top: 10px;
   }
-
+  .learn-button {
+    font-size: 1.2rem;
+  }
   .trendingLogo {
     margin: 2% 8%;
   }
@@ -305,7 +328,9 @@
     font-weight: 400;
   }
 
-  .trendingSubTitle {
+  .trendingSubTitle,
+  .trendingSubTitleForce,
+  .learn-button {
     font-size: 1.3rem !important;
   }
 }
@@ -353,7 +378,9 @@
     font-weight: 400;
   }
 
-  .trendingSubTitle {
+  .trendingSubTitle,
+  .trendingSubTitleForce,
+  .learn-button {
     font-size: 1.4rem !important;
   }
 }
