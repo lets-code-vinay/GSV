@@ -166,7 +166,7 @@ const useStyles = makeStyles((theme) => ({
   technologiesTitle: {
     display: "flex",
     flexDirection: "row",
-    margin: "0 0 0 7%",
+    // margin: "0 0 0 7%",
     padding: "3% 0",
     color: "#0d274d",
     alignItems: "center",

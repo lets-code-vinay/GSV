@@ -6,8 +6,6 @@ import {
   Box,
   Typography,
   Button,
-  Menu,
-  MenuList,
 } from "@material-ui/core";
 import "./styles.css";
 import PieChart from "./PieChart";

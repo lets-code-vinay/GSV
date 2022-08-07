@@ -1,11 +1,8 @@
-import React from 'react'
-import { Typography } from "@material-ui/core";
-
 import SASE from "../../Assets/Images/SASE-lock.png";
 import SDWAN from "../../Assets/Images/SDWAN.png";
 import HYPER_CONVERGED from "../../Assets/Images/hyper-convergent.webp";
 import WIFI6 from "../../Assets/Images/wifi6.svg";
-import NETWORK_AUTOMATION from '../../Assets/Images/network-automation.svg'
+import NETWORK_AUTOMATION from "../../Assets/Images/network-automation.svg";
 
 export const TRENDING_CONFIGS = Object.freeze({
   SASE: {

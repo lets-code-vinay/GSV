@@ -1,6 +1,5 @@
 import React from "react";
 
-import StructuredNavbar from "../../Components/StructuredNavbar";
 import Trending from "../../Components/Trending";
 import OurClients from "../../Components/OurClient/OurClients";
 import InfinitySliderContainer from "../../Components/InfinitySliderContainers";

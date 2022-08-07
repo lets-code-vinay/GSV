@@ -1,8 +1,6 @@
 import React from "react";
-import { MdMultipleStop } from "react-icons/md";
-import { Box, makeStyles, Typography } from "@material-ui/core";
+import { Box, makeStyles } from "@material-ui/core";
 import InfinitySlider from "../InfinitySlider";
-import { THEME_COLOR } from "../../Configs/Theme";
 import {
   INFINITY_SLIDER_CONTENTS,
   INFINITY_SLIDER_CONTENTS_BOTTOM,
