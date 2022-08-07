@@ -11,7 +11,9 @@
 #controlled-tabs {
   margin-top: 4%;
 }
-
+.content {
+  position: relative;
+}
 .content .trendingTitle {
   color: #000;
 }
@@ -29,6 +31,7 @@
   border-bottom: 2px solid #1e4471;
   display: inline;
   cursor: pointer;
+  position: absolute;
 }
 
 /* 320px — 480px: Mobile devices
