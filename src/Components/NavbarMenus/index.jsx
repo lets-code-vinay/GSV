@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { bool, shape } from "prop-types";
+import { shape } from "prop-types";
 import {
   Box,
+  Button,
   ClickAwayListener,
   Grid,
   makeStyles,
@@ -58,6 +59,12 @@ const NavbarMenus = ({ navMenus = {} }) => {
                   {navMenus?.subtitle}
                 </Typography>
               </Box>
+              <Button
+                className="get-in-touch"
+                style={{ backgroundColor: navMenus?.color }}
+              >
+                Get in touch
+              </Button>
             </Box>
           </Box>
         </Grid>

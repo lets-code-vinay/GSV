@@ -1,3 +1,11 @@
+.get-in-touch {
+  border-radius: 50px;
+  position: absolute;
+  left: 36%;
+  margin-top: 2%;
+  color: white;
+}
+
 /* 320px — 480px: Mobile devices
   481px — 768px: iPads, Tablets
   769px — 1024px: Small screens, laptops
@@ -22,7 +30,7 @@
 
   .imageBlock .menuInformationBar {
     width: 33%;
-    bottom: 15%;
+    bottom: -12%;
     position: absolute;
   }
   .menuInformationMSGContainer {
@@ -84,7 +92,7 @@
 
   .imageBlock .menuInformationBar {
     width: 33%;
-    bottom: 15%;
+    bottom: -12%;
     position: absolute;
   }
   .menuInformationBar .menuInformationMSGContainer {
@@ -148,7 +156,7 @@
 
   .imageBlock .menuInformationBar {
     width: 33%;
-    bottom: 15%;
+    bottom: -12%;
     position: absolute;
   }
   .menuInformationBar .menuInformationMSGContainer {
@@ -223,7 +231,7 @@
 
   .imageBlock .menuInformationBar {
     width: 33%;
-    bottom: 15%;
+    bottom: -12%;
     position: absolute;
   }
   .menuInformationBar .menuInformationMSGContainer {
