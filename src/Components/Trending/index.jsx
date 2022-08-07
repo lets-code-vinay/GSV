@@ -40,6 +40,13 @@ const Trending = () => {
     setLearnMore(!learnMore);
   };
 
+  /**
+   * @description Handle click tab button
+   */
+  const handleTabClick = () => {
+    setLearnMore(false);
+  };
+
   return (
     <main className={`${classes.containerTrending} containerTrending`}>
       <Box className="container-div">
@@ -72,6 +79,7 @@ const Trending = () => {
                     boxor="outline-primary"
                     className={`${classes.tabButton} tabButton`}
                     id="tabButton"
+                    onClick={handleTabClick}
                   >
                     {trending.label}
                   </Button>
@@ -128,6 +136,7 @@ const Trending = () => {
                         <Typography
                           onClick={handleLearnMore}
                           className="learn-button"
+                          style={{ bottom: learnMore ? "-5%" : "20%" }}
                         >
                           {learnMore ? `Learn Less...` : `Learn More...`}
                         </Typography>
