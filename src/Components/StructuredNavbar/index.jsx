@@ -63,6 +63,7 @@ const StructuredNavbar = () => {
         setActive={setActive}
         onNavMenus={setNavMenus}
         isSubSectionOpen={isSubNavbarOpened}
+        isMoreOpen={isMoreOpen}
       />
 
       {/* ---- Sub nav bar --- */}

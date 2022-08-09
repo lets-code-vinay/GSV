@@ -10,6 +10,7 @@
 .subMenu1 {
   position: absolute;
   z-index: 10;
+  border-top: 2px solid #1e4471;
 }
 
 /* 320px — 480px: Mobile devices

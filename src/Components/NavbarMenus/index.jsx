@@ -34,8 +34,8 @@ const NavbarMenus = ({ navMenus = {} }) => {
         item
         xs={0}
         sm={0}
-        md={2}
-        lg={2}
+        md={3}
+        lg={3}
         className={`${classes.menuImage} menuImage`}
       >
         <Box className={`${classes.imageBlock} imageBlock block`}>
@@ -74,7 +74,7 @@ const NavbarMenus = ({ navMenus = {} }) => {
         </Box>
       </Grid>
 
-      <Grid item xs={12} sm={12} md={6} lg={6}>
+      <Grid item xs={12} sm={12} md={3} lg={5}>
         <ResponsiveMasonry
           className={`${classes.menuBlock} menuBlock`}
           columnsCountBreakPoints={{ 350: 1, 750: 2 }}
