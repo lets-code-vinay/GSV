@@ -1,8 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, memo } from "react";
 import { object } from "prop-types";
-import { Box, makeStyles, Modal, Tab, Tabs } from "@material-ui/core";
+import {
+  Box,
+  ClickAwayListener,
+  makeStyles,
+  Tab,
+  Tabs,
+} from "@material-ui/core";
 
 import "./styles.css";
+import NavbarMenus from "../NavbarMenus";
 
 function a11yProps(index) {
   return {
@@ -14,49 +21,69 @@ function a11yProps(index) {
 const SubNavBar = ({
   subNavMenus = {},
   onNavMenus,
-  refOfSubNav,
-  easeOutClass,
+  isSubNavbarOpened = false,
+  navMenus,
+  onCloseSubNavbar,
 }) => {
   const classes = useStyles();
 
   const [menuListing, setMenuListing] = useState({});
   const [value, setValue] = useState(0);
 
+  /**
+   * @description Changing the values on button click
+   *
+   * @param {Object} _
+   * @param {Number} newValue
+   */
   const handleChange = (_, newValue) => {
     setValue(newValue);
     setMenuListing(Object.values(subNavMenus?.menus)[newValue] || menuListing);
     onNavMenus(Object.values(subNavMenus?.menus)[newValue] || menuListing);
   };
 
+  /**
+   * @description Closing sub Nav bar and menus by calling CB
+   */
+  const handleClose = (_) => {
+    onCloseSubNavbar(false);
+  };
+
   return (
-    <Box className={`${classes.headBar}  headBar`}>
-      {!subNavMenus.isMore && (
-        <Box
-          sx={{ borderBottom: 1, borderColor: "divider" }}
-          id={subNavMenus?.value}
-          className={`${classes.subMenuBar}  subMenuBar ${easeOutClass}`}
-          ref={refOfSubNav}
-        >
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            aria-label="basic tabs"
-            className={`${classes.subMenuTabContainer}  subMenuTabContainer ${easeOutClass}`}
+    <ClickAwayListener onClickAway={handleClose}>
+      <Box className={`${classes.headBar}  headBar`}>
+        {(!subNavMenus.isMore || isSubNavbarOpened) && (
+          <Box
+            sx={{ borderBottom: 1, borderColor: "divider" }}
+            id={subNavMenus?.value}
+            className={`${classes.subMenuBar}  subMenuBar`}
           >
-            {Object.values(subNavMenus?.menus).map((menu, index) => {
-              return (
-                <Tab
-                  label={menu?.label}
-                  {...a11yProps({ index })}
-                  key={index}
-                  className={` ${classes.sub_navbar_text} sub_navbar_text`}
-                />
-              );
-            })}
-          </Tabs>
-        </Box>
-      )}
-    </Box>
+            <Tabs
+              value={value}
+              onChange={handleChange}
+              aria-label="basic tabs"
+              className={`${classes.subMenuTabContainer}  subMenuTabContainer`}
+            >
+              {Object.values(subNavMenus?.menus).map((menu, index) => {
+                return (
+                  <Tab
+                    label={menu?.label}
+                    {...a11yProps({ index })}
+                    key={index}
+                    className={` ${classes.sub_navbar_text} sub_navbar_text`}
+                  />
+                );
+              })}
+            </Tabs>
+          </Box>
+        )}
+
+        {/* --- Navbar menus ---- */}
+        {isSubNavbarOpened && !subNavMenus.isMore && (
+          <NavbarMenus navMenus={navMenus} />
+        )}
+      </Box>
+    </ClickAwayListener>
   );
 };
 
@@ -74,13 +101,14 @@ SubNavBar.defaultProps = {
   subNavMenus: {},
 };
 
-export default SubNavBar;
+export default memo(SubNavBar);
 
 const useStyles = makeStyles((theme) => ({
   headBar: {
     position: "absolute",
     background: "white",
     width: "100%",
+    zIndex: 10,
   },
 
   subMenu: {

@@ -232,7 +232,6 @@ const useStyles = makeStyles((theme) => ({
     margin: "1% auto",
   },
   ourClientsText: {
-    fontWeight: "700",
     color: "#0d274d",
     fontWeight: "500",
   },

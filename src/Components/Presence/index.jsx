@@ -2,8 +2,9 @@ import * as React from "react";
 
 import { Box, Typography, makeStyles, Grid } from "@material-ui/core";
 
-import wave1 from "../../Assets/SVGs/wave1white.svg";
-import wave2 from "../../Assets/SVGs/wave2grey.svg";
+// TODO: use it or remove it when required
+// import wave1 from "../../Assets/SVGs/wave1white.svg";
+// import wave2 from "../../Assets/SVGs/wave2grey.svg";
 import MapContainer from "./MapContainer.jsx";
 
 export default function OurPresence() {
@@ -50,7 +51,7 @@ export default function OurPresence() {
             </Box>
           </Grid>
 
-          <Grid  item xs={12} sm={12} md={7} lg={7}>
+          <Grid item xs={12} sm={12} md={7} lg={7}>
             <MapContainer />
           </Grid>
         </Grid>

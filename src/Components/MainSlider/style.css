@@ -74,7 +74,7 @@
   }
 }
 
-@media screen and (min-width: 770px) and (max-width: 1025px) {
+@media screen and (min-width: 770px) and (max-width: 1023px) {
   .infoBlock .informationBar {
     width: 90%;
     height: 60px;
@@ -100,7 +100,7 @@
     padding: 3% 4%;
     text-shadow: 2px 2px black;
     font-size: 35px !important;
-    width: 60%;
+    width: 65%;
     bottom: 40%;
   }
 
