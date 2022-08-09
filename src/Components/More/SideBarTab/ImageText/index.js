@@ -5,13 +5,13 @@ import "./styles.css";
 const ImageText = ({ title = "", subtitle = "", image = "", alt = "" }) => {
   return (
     <Grid container className="displayFlex">
-      <Grid  item xs={12} sm={12} md={5} lg={5}>
+      <Grid item xs={12} sm={12} md={5} lg={5}>
         <div>
-          <h1 className="heading my-2">{title}</h1>
+          <h1 className="heading my-2">{title} </h1>
           <p className="subtitle">{subtitle}</p>
         </div>
       </Grid>
-      <Grid  item xs={12} sm={12} md={7} lg={7}>
+      <Grid item xs={12} sm={12} md={7} lg={7}>
         <img
           src={image}
           alt={alt}

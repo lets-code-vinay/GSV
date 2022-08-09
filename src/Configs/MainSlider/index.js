@@ -8,7 +8,7 @@ export const MAIN_SLIDER_DATA = {
     title: "Network",
     value: "slider_1",
     image: NETWORK,
-    heading: "Your Complete Technology Partner",
+    heading: "Providing Technology & IT Solutions for Every Business",
     subtitle:
       "We provide innovative IT infrastructure and tailored solutions to help you achieve your business goals, helping you stay ahead of the competition.",
     bg_color: "#1e447199",
@@ -40,9 +40,12 @@ export const MAIN_SLIDER_DATA = {
     title: "Data center",
     value: "slider_4",
     image: DATA,
-    heading: "Between data everywhere and exactly where you need it, there's a bridge that we create.",
+    // heading: "Between data everywhere and where you exactly need it, there's a bridge that we create.",
+    heading: "Between data everywhere and where you need it, there's a bridge that we create.",
     subtitle:
-      "Are you concerned about Data Center Designing & Deployment? You can save time and money by utilizing our team of Data Center deployment specialists to deliver your data center infrastructure requirements. We take deployment risk, planning and execution off your plate so you can save your internal resources for your company’s other projects.",
+      // "Are you concerned about Data Center Designing & Deployment? You can save time and money by utilizing our team of Data Center deployment specialists to deliver your data center infrastructure requirements. We take deployment risk, planning and execution off your plate so you can save your internal resources for your company’s other projects.",
+      "Are you concerned about Data Center Designing & Deployment? You can save time and money by utilizing our team of Data Center deployment specialists to deliver your data center infrastructure requirements.",
+
     bg_color: "#2A5E6B99",
     information_color: "#2A5E6B99",
   },

@@ -28,6 +28,7 @@ const MainNavBar = ({
   isActive,
   onNavMenus,
   isSubSectionOpen,
+  isMoreOpen,
 }) => {
   const classes = useStyles();
 
@@ -118,73 +119,75 @@ const MainNavBar = ({
   // --- Desktop Section ---
   return (
     <div className={`${classes.Navbar} Navbar`} id="home">
-      <div className={classes.grow}>
-        <AppBar
-          position="static"
-          className={`${classes.appBar} appBar`}
-          elevation={0}
-          ref={anchor}
-        >
-          <Toolbar className={`${classes.appBarChild} appBarChild`}>
-            <Box
-              edge="start"
-              className={`${classes.menuButton} display`}
+      <AppBar
+        position="static"
+        className={`${classes.grow} appBar`}
+        elevation={0}
+        ref={anchor}
+        style={{
+          backgroundColor:
+            isSubSectionOpen || isMoreOpen ? "#0D274D" : "transparent",
+        }}
+      >
+        <Toolbar className={`${classes.appBarChild} appBarChild`}>
+          <Box
+            edge="start"
+            className={`${classes.menuButton} display`}
+            color="inherit"
+          >
+            <img
+              src={Logo}
+              alt="main-logo"
+              className={`${classes.logo} logo-1`}
+            />
+            <div className={`${classes.sectionDesktop} sectionDesktop`}>
+              {Object.values(NAVBAR_MENUS).map((menu, i) => {
+                return (
+                  <MenuItem
+                    onClick={handleMainNavbarClick(menu)}
+                    style={{
+                      borderBottom:
+                        isSubSectionOpen && isActive.value === menu.value
+                          ? "3px solid #ffff"
+                          : "3px solid transparent",
+                    }}
+                    key={i}
+                    className={`${classes.sectionDesktopMenus} sectionDesktopMenus`}
+                  >
+                    <Typography
+                      variant={"body1"}
+                      className={`${classes.navbar_text} navbar_text`}
+                    >
+                      {menu.label}
+                    </Typography>
+                  </MenuItem>
+                );
+              })}
+            </div>
+          </Box>
+          <Box className="nav-bar-grow"></Box>
+          <Box className="nav-bar-icons">
+            <BiSearchAlt2 className="search" />
+            <BiUser className="profile" />
+            <BiGlobe className="globe" />
+          </Box>
+
+          {/* To open icons */}
+          <div className={`${classes.sectionMobile} sectionMobile`}>
+            <IconButton
+              aria-label="show more"
+              aria-controls={mobileMenuId}
+              aria-haspopup="true"
+              onClick={handleMobileMenuOpen}
               color="inherit"
             >
-              <img
-                src={Logo}
-                alt="main-logo"
-                className={`${classes.logo} logo-1`}
-              />
-              <div className={`${classes.sectionDesktop} sectionDesktop`}>
-                {Object.values(NAVBAR_MENUS).map((menu, i) => {
-                  return (
-                    <MenuItem
-                      onClick={handleMainNavbarClick(menu)}
-                      style={{
-                        borderBottom:
-                          isSubSectionOpen && isActive.value === menu.value
-                            ? "3px solid #ffff"
-                            : "3px solid transparent",
-                      }}
-                      key={i}
-                      className={`${classes.sectionDesktopMenus} sectionDesktopMenus`}
-                    >
-                      <Typography
-                        variant={"body1"}
-                        className={`${classes.navbar_text} navbar_text`}
-                      >
-                        {menu.label}
-                      </Typography>
-                    </MenuItem>
-                  );
-                })}
-              </div>
-            </Box>
-            <Box className="nav-bar-grow"></Box>
-            <Box className="nav-bar-icons">
-              <BiSearchAlt2 className="search" />
-              <BiUser className="profile" />
-              <BiGlobe className="globe" />
-            </Box>
-
-            {/* To open icons */}
-            <div className={`${classes.sectionMobile} sectionMobile`}>
-              <IconButton
-                aria-label="show more"
-                aria-controls={mobileMenuId}
-                aria-haspopup="true"
-                onClick={handleMobileMenuOpen}
-                color="inherit"
-              >
-                <MoreIcon className={`${classes.mobile3Dots} mobile3Dots`} />
-              </IconButton>
-            </div>
-          </Toolbar>
-        </AppBar>
-        {renderMobileMenu}
-        {renderMenu}
-      </div>
+              <MoreIcon className={`${classes.mobile3Dots} mobile3Dots`} />
+            </IconButton>
+          </div>
+        </Toolbar>
+      </AppBar>
+      {renderMobileMenu}
+      {renderMenu}
     </div>
   );
 };

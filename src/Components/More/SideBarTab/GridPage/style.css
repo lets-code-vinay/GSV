@@ -7,6 +7,12 @@
   color: #000000;
   border-bottom: 4px solid #1e4471;
   width: 32%;
+  margin: 2% 0;
+}
+
+.displayFlex {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* 320px — 480px: Mobile devices
@@ -20,9 +26,27 @@
 @media screen and (min-width: 481px) and (max-width: 760px) {
 }
 @media screen and (min-width: 761px) and (max-width: 1024px) {
+  .gridPageImage {
+    width: 150px;
+    height: 75px;
+    margin: 5% auto;
+  }
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1281px) {
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  .gridPageImage {
+    width: 170px;
+    height: 85px;
+    margin: 6% auto;
+  }
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1919px) {
+  .gridPageImage {
+    width: 180px;
+    height: 90px;
+    margin: 7% auto;
+  }
 }
 
 @media screen and (min-width: 1920px) {

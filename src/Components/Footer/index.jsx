@@ -17,14 +17,14 @@ const Footer = () => {
     <>
       <Box className={`${classes.footer} footer`}>
         <Grid container className={`${classes.footerBody} footerBody`}>
-          <Grid  item xs={12} sm={6} md={4} lg={3} id="grid">
+          <Grid item xs={12} sm={6} md={4} lg={3} id="grid">
             <img
               src={Logo}
               alt={"logo of company"}
               className={`${classes.footerLogo} footerLogo`}
             />
           </Grid>
-          <Grid  item xs={6} sm={6} md={4} lg={3} id="grid">
+          <Grid item xs={6} sm={6} md={4} lg={3} id="grid">
             <Typography
               variant={"h5"}
               className={`${classes.menuListTitle} menuListTitle`}
@@ -32,7 +32,10 @@ const Footer = () => {
               Menu
             </Typography>
             <Box className={`${classes.menuList} menuList`}>
-              <a href="#" className={`${classes.menuListLink} menuListLink`}>
+              <a
+                href="/contact-us"
+                className={`${classes.menuListLink} menuListLink`}
+              >
                 <Typography
                   variant={"body1"}
                   className={`${classes.menuListText} menuListText`}
@@ -42,7 +45,10 @@ const Footer = () => {
               </a>
             </Box>
             <Box className={`${classes.menuList} menuList`}>
-              <a href="#" className={`${classes.menuListLink} menuListLink`}>
+              <a
+                href="/contact-us"
+                className={`${classes.menuListLink} menuListLink`}
+              >
                 <Typography
                   variant={"body1"}
                   className={`${classes.menuListText} menuListText`}
@@ -52,7 +58,10 @@ const Footer = () => {
               </a>
             </Box>
             <Box className={`${classes.menuList} menuList`}>
-              <a href="#" className={`${classes.menuListLink} menuListLink`}>
+              <a
+                href="/contact-us"
+                className={`${classes.menuListLink} menuListLink`}
+              >
                 <Typography
                   variant={"body1"}
                   className={`${classes.menuListText} menuListText`}
@@ -62,7 +71,10 @@ const Footer = () => {
               </a>
             </Box>
             <Box className={`${classes.menuList} menuList`}>
-              <a href="#" className={`${classes.menuListLink} menuListLink`}>
+              <a
+                href="/contact-us"
+                className={`${classes.menuListLink} menuListLink`}
+              >
                 <Typography
                   variant={"body1"}
                   className={`${classes.menuListText} menuListText`}
@@ -73,7 +85,7 @@ const Footer = () => {
             </Box>
           </Grid>
 
-          <Grid  item xs={6} sm={6} md={4} lg={3} id="grid">
+          <Grid item xs={6} sm={6} md={4} lg={3} id="grid">
             <Typography
               variant={"h5"}
               className={`${classes.menuListTitle} menuListTitle`}
@@ -83,7 +95,10 @@ const Footer = () => {
 
             <Box className={`${classes.menuList} menuList`}>
               {/* <FaQuestion className={`${classes.menuListIcon} menuListIcon`} /> */}
-              <a href="#" className={`${classes.menuListLink} menuListLink`}>
+              <a
+                href="/contact-us"
+                className={`${classes.menuListLink} menuListLink`}
+              >
                 <Typography
                   variant={"body1"}
                   className={`${classes.menuListText} menuListText`}
@@ -93,7 +108,10 @@ const Footer = () => {
               </a>
             </Box>
             <Box className={`${classes.menuList} menuList`}>
-              <a href="#" className={`${classes.menuListLink} menuListLink`}>
+              <a
+                href="/contact-us"
+                className={`${classes.menuListLink} menuListLink`}
+              >
                 <Typography
                   variant={"body1"}
                   className={`${classes.menuListText} menuListText`}
@@ -103,7 +121,10 @@ const Footer = () => {
               </a>
             </Box>
             <Box className={`${classes.menuList} menuList`}>
-              <a href="#" className={`${classes.menuListLink} menuListLink`}>
+              <a
+                href="/contact-us"
+                className={`${classes.menuListLink} menuListLink`}
+              >
                 <Typography
                   variant={"body1"}
                   className={`${classes.menuListText} menuListText`}
@@ -114,7 +135,7 @@ const Footer = () => {
             </Box>
           </Grid>
 
-          <Grid  item xs={12} sm={6} md={4} lg={3} id="grid">
+          <Grid item xs={12} sm={6} md={4} lg={3} id="grid">
             <Typography
               variant={"h5"}
               className={`${classes.menuListTitle} menuListTitle`}
@@ -149,19 +170,34 @@ const Footer = () => {
             </Typography>
 
             <Box className={`${classes.socialMedia} socialMedia`}>
-              <a href="#" className={`${classes.socialIcon} socialIcon`}>
+              <a
+                href="/contact-us"
+                className={`${classes.socialIcon} socialIcon`}
+              >
                 <RiFacebookBoxFill />
               </a>
-              <a href="#" className={`${classes.socialIcon} socialIcon`}>
+              <a
+                href="/contact-us"
+                className={`${classes.socialIcon} socialIcon`}
+              >
                 <FaTwitterSquare />
               </a>
-              <a href="#" className={`${classes.socialIcon} socialIcon`}>
+              <a
+                href="/contact-us"
+                className={`${classes.socialIcon} socialIcon`}
+              >
                 <FaInstagram />
               </a>
-              <a href="#" className={`${classes.socialIcon} socialIcon`}>
+              <a
+                href="/contact-us"
+                className={`${classes.socialIcon} socialIcon`}
+              >
                 <FaLinkedin />
               </a>
-              <a href="#" className={`${classes.socialIcon} socialIcon`}>
+              <a
+                href="/contact-us"
+                className={`${classes.socialIcon} socialIcon`}
+              >
                 <FiYoutube />
               </a>
             </Box>

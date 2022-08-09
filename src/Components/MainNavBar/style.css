@@ -64,6 +64,7 @@
   .logo-1 {
     height: 20px;
     width: 85%;
+    margin-top: 1px;
   }
 }
 
@@ -89,13 +90,15 @@
   .logo-1 {
     height: 30px;
     width: 80%;
+    margin-top: 1px;
   }
 }
 @media screen and (min-width: 761px) and (max-width: 1024px) {
   .Navbar .appBar .appBarChild {
     display: flex;
     justify-content: space-between;
-    min-height: 45px;
+    min-height: 70px;
+    max-height: 80px;
   }
   .nav-bar-icons .search {
     height: 24px;
@@ -115,10 +118,11 @@
   .logo-1 {
     height: 24px;
     width: 70%;
+    margin-top: 1px;
   }
 
   .navbar_text {
-    font-size: 24px;
+    font-size: 22px;
   }
   .display {
     display: flex;
@@ -129,7 +133,7 @@
 @media screen and (min-width: 1025px) and (max-width: 1280px) {
   .Navbar .appBar .appBarChild {
     min-height: 80px;
-    max-height: 100px;
+    max-height: 90px;
   }
 
   .nav-bar-icons .search {
@@ -153,10 +157,11 @@
   .logo-1 {
     height: 30px;
     width: 20%;
+    margin-top: 1px;
   }
 
   .sectionDesktopMenus .navbar_text {
-    font-size: 1.35rem;
+    font-size: 22px;
   }
   .display {
     display: flex;
@@ -166,7 +171,7 @@
 
 @media screen and (min-width: 1281px) and (max-width: 1919px) {
   .Navbar .appBar .appBarChild {
-    min-height: 80px;
+    min-height: 90px;
     max-height: 100px;
   }
 
@@ -191,10 +196,11 @@
   .logo-1 {
     height: 35px;
     width: 20%;
+    margin-top: 1px;
   }
 
   .sectionDesktopMenus .navbar_text {
-    font-size: 1.5rem;
+    font-size: 22px;
   }
   .display {
     display: flex;
@@ -204,7 +210,7 @@
 
 @media screen and (min-width: 1920px) {
   .Navbar .appBar .appBarChild {
-    min-height: 80px;
+    min-height: 90px;
     max-height: 100px;
   }
 
@@ -229,10 +235,11 @@
   .logo-1 {
     height: 50px;
     width: 24%;
+    margin-top: 2px;
   }
 
   .sectionDesktopMenus .navbar_text {
-    font-size: 1.8rem;
+    font-size: 24px;
   }
   .display {
     display: flex;

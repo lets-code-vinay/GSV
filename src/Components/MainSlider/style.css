@@ -6,10 +6,10 @@
 @media screen and (min-width: 279px) and (max-width: 479px) {
   .sliderInformationBarTitle {
     color: #ffffff;
-    padding: 3%;
+    padding: 3% 4%;
     text-shadow: 2px 2px black;
-    font-size: 1rem;
-    width: 80%;
+    font-size: 40px;
+    width: 60%;
     bottom: 45%;
   }
   .infoBlock .informationBar {
@@ -44,8 +44,8 @@
     color: #ffffff;
     padding: 0% 4%;
     text-shadow: 2px 2px black;
-    font-size: 1.5rem;
-    width: 90%;
+    font-size: 35px !important;
+    width: 70%;
     bottom: 40%;
   }
   .infoBlock .informationBar {
@@ -74,7 +74,7 @@
   }
 }
 
-@media screen and (min-width: 770px) and (max-width: 1025px) {
+@media screen and (min-width: 770px) and (max-width: 1023px) {
   .infoBlock .informationBar {
     width: 90%;
     height: 60px;
@@ -97,10 +97,10 @@
   }
   .sliderInformationBarTitle {
     color: #ffffff;
-    padding: 3%;
+    padding: 3% 4%;
     text-shadow: 2px 2px black;
-    font-size: 2rem !important;
-    width: 95%;
+    font-size: 35px !important;
+    width: 65%;
     bottom: 40%;
   }
 
@@ -114,10 +114,10 @@
 @media screen and (min-width: 1024px) and (max-width: 1219px) {
   .sliderInformationBarTitle {
     color: #ffffff;
-    padding: 3%;
+    padding: 3% 4%;
     text-shadow: 2px 2px black;
-    font-size: 2rem !important;
-    width: 80%;
+    font-size: 40px !important;
+    width: 60%;
     bottom: 40%;
   }
   .infoBlock .informationBar {
@@ -148,14 +148,14 @@
 @media screen and (min-width: 1220px) and (max-width: 1919px) {
   .sliderInformationBarTitle {
     color: #ffffff;
-    padding: 3%;
+    padding: 3% 4%;
     text-shadow: 2px 2px black;
-    width: 90%;
+    width: 60%;
     bottom: 40%;
-    font-size: 3rem !important;
+    font-size: 55px !important;
   }
   .infoBlock .informationBar {
-    width: 70%;
+    width: 60%;
     height: 60px;
     position: absolute;
     bottom: 20%;
@@ -170,7 +170,7 @@
   .informationMsgContainer .informationMSG {
     color: #ffffff !important;
     padding: 1% 2%;
-    font-size: 1rem;
+    font-size: 24px;
   }
   .progressBars {
     width: 50%;
@@ -182,9 +182,9 @@
 @media screen and (min-width: 1920px) {
   .sliderInformationBarTitle {
     margin-bottom: 2%;
-    font-size: 3rem !important;
-    padding: 3%;
-    width: 80%;
+    font-size: 60px !important;
+    padding: 3% 4%;
+    width: 60%;
     bottom: 40%;
   }
   .infoBlock .informationBar {
