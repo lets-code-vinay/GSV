@@ -18,7 +18,7 @@ export const TRENDING_CONFIGS = Object.freeze({
         the SASE solution for multiple Enterprise Customers & Datacenters to ensure secure connectivity over the Public Internet.
     `,
     icon: SASE,
-    link: "",
+    link: "/sase",
     button: "",
   },
   SDWAN: {
@@ -30,7 +30,7 @@ export const TRENDING_CONFIGS = Object.freeze({
       VPNs, often the point - to - point solution for remote workers, gave way to always - on SD - WAN appliances for many tasks as the network edge extended into employees' homes. With businesses becoming more distributed, they have accelerated their migration plans to SD-WAN because of the improved experience and security for their WFH workforce.
     `,
     icon: SDWAN,
-    link: "",
+    link: "sdwan",
     button: "",
   },
   WIFI_6: {
@@ -42,7 +42,7 @@ export const TRENDING_CONFIGS = Object.freeze({
       WiFi6 delivers four times higher capacity and 75 percent lower latency, much better than earlier versions and operates in the 6 GHz band. At the same time, the 6E version also works in the same band with better design to process more data and support new technologies such as augmented/virtual reality cloud computing and telepresence.
     `,
     icon: WIFI6,
-    link: "",
+    link: "wifi-6",
     button: "",
   },
   HYPER_CONVERGED: {
@@ -54,7 +54,7 @@ export const TRENDING_CONFIGS = Object.freeze({
       Using this technology, we at GSV can help you with one-click automation, one-click upgrades and one management interface for your entire infrastructure. Implementation of HCI will dramatically reduce your time & effort for deploying & maintaining infrastructure, enabling IT teams to focus on needle-moving initiatives.
     `,
     icon: HYPER_CONVERGED,
-    link: "",
+    link: "hyper-converged",
     button: "",
   },
   NETWORK_AUTOMATION: {
@@ -66,7 +66,7 @@ export const TRENDING_CONFIGS = Object.freeze({
       At GSV, we use Network Automation to help our customers to improve efficiency, reduce human error and lower operating expenses (Opex).
     `,
     icon: NETWORK_AUTOMATION,
-    link: "",
+    link: "network-automation",
     button: "",
   },
 });

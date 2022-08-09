@@ -12,8 +12,8 @@ import { THEME_COLOR } from "../../Configs/Theme";
 
 const Trending = () => {
   const classes = useStyles();
+
   const [tabIndex, setTabIndex] = useState(0);
-  const [learnMore, setLearnMore] = useState(false);
 
   /**
    * @description Handling paragraph for trending
@@ -28,24 +28,24 @@ const Trending = () => {
     });
 
     // Shortening the paragraph
-    const shortPara = subtitle.split("").splice(0, 200).join("");
+    const shortPara = `${subtitle.split("").splice(0, 300).join("")}...`;
 
-    return learnMore ? originalPara : shortPara;
+    return subtitle.length > 250
+      ? shortPara
+      : subtitle.replaceAll("#ENTER#", "");
   };
 
   /**
    * @description Handle LearnMore Button to display Learn More || Learn Less text
    */
-  const handleLearnMore = () => {
-    setLearnMore(!learnMore);
+  const handleLearnMore = (path) => () => {
+    navigate(`/${path}`);
   };
 
   /**
    * @description Handle click tab button
    */
-  const handleTabClick = () => {
-    setLearnMore(false);
-  };
+  const handleTabClick = () => {};
 
   return (
     <main className={`${classes.containerTrending} containerTrending`}>
@@ -133,23 +133,16 @@ const Trending = () => {
                           {handleSubTitle(subtitle, learnMore)}
                         </Typography>
 
-                        <Typography
-                          onClick={handleLearnMore}
-                          className="learn-button"
-                          style={{ bottom: learnMore ? "-5%" : "20%" }}
-                        >
-                          {learnMore ? `Learn Less...` : `Learn More...`}
-                        </Typography>
-
                         {link && (
                           <a
                             href={link}
                             target="_blank"
-                            className="btn btn-outline-primary"
-                            boxor="outline-primary"
+                            className="btn btn-outline-primary learn-link"
                             rel="noreferrer"
                           >
-                            Join Now
+                            <Typography className="learn-button">
+                              {`Learn More...`}
+                            </Typography>
                           </a>
                         )}
 
@@ -230,7 +223,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#000",
   },
   trendingImage: {
-    width: "300px",
-    height: "300px",
+    width: "350px",
+    height: "375px",
   },
 }));
