@@ -1,18 +1,18 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, memo, useMemo } from "react";
+
 import SubNavBar from "../SubNavBar";
 import MainNavBar from "../MainNavBar";
 import SideBar from "../More/SideBarTab/index";
-import NavbarMenus from "../NavbarMenus";
 import "./style.css";
 
-export default function StructuredNavbar() {
+const StructuredNavbar = () => {
   const [isSubNavbarOpened, setSubNavbarOpen] = useState(false);
   const [subNavMenus, setSubNavMenus] = useState({});
   const [isMoreOpen, setIsMoreOpen] = useState(false);
-  const [isMoreRef, setMoreRef] = useState(null);
-  const [easeOutClass, setEaseOutClass] = useState();
   const [isActive, setActive] = useState({});
   const [navMenus, setNavMenus] = useState({});
+
+  const isActiveMemo = useMemo(() => isActive, [isActive]);
 
   /**
    * @description Opening and passing data to submenus
@@ -20,7 +20,7 @@ export default function StructuredNavbar() {
    * @param {Boolean} isOpen
    * @param {Object} menu
    */
-  const handleSubNavbarOpen = ({ isOpen, menu, event }) => {
+  const handleSubNavbarOpen = ({ isOpen, menu }) => {
     setSubNavbarOpen(isOpen);
     setSubNavMenus(menu);
   };
@@ -40,67 +40,47 @@ export default function StructuredNavbar() {
    *
    * @param {Boolean} isMoreOpened
    */
-  const handleMoreClick = ({ isMore, mainRef }) => {
-    setMoreRef(mainRef);
+  const handleMoreClick = ({ isMore }) => {
     setIsMoreOpen(isMore);
     setSubNavbarOpen(false);
   };
 
-  //function to check if mouse outside click and close the navbar
-  const refOfSubNav = useRef(null);
-
-  useEffect(() => {
-    const checkMouseClickedOutside = (e) => {
-      if (
-        isSubNavbarOpened &&
-        refOfSubNav.current &&
-        !refOfSubNav.current.contains(e.target)
-      ) {
-        setSubNavbarOpen(() => !isSubNavbarOpened);
-        setEaseOutClass("test");
-        setSubNavMenus({});
-      }
-    };
-
-    document.addEventListener("mouseup", checkMouseClickedOutside);
-
-    return () => {
-      document.removeEventListener("mouseup", checkMouseClickedOutside);
-    };
-  }, [isSubNavbarOpened]);
+  /**
+   * @description Closing sub Nav bar and menus through CB
+   *
+   * @param {Boolean} closeSubNavbar
+   */
+  const closeSubNavbar = (closeSubNavbar) => {
+    setSubNavbarOpen(closeSubNavbar);
+  };
 
   return (
     <>
       <MainNavBar
         onSubNavbarOpen={handleSubNavbarOpen}
         onMoreOpen={handleMoreClick}
-        isActive={isActive}
+        isActive={isActiveMemo}
         setActive={setActive}
         onNavMenus={setNavMenus}
         isSubSectionOpen={isSubNavbarOpened}
       />
+
       {/* ---- Sub nav bar --- */}
-      {isSubNavbarOpened && (
+      {isSubNavbarOpened && !isMoreOpen && (
         <SubNavBar
           subNavMenus={subNavMenus}
-          isOpen={isSubNavbarOpened}
+          isSubNavbarOpened={isSubNavbarOpened}
           onNavMenus={handleNavMenus}
-          refOfSubNav={refOfSubNav}
-          easeOutClass={easeOutClass}
+          navMenus={navMenus.menus}
+          onCloseSubNavbar={closeSubNavbar}
         />
       )}
 
-      {/* --- Navbar menus ---- */}
-      {isSubNavbarOpened && Boolean(navMenus.value) && !subNavMenus.isMore && (
-        <NavbarMenus navMenus={navMenus.menus} onNavMenus={setNavMenus} />
-      )}
-      {isMoreOpen && (
-        <SideBar
-          isMoreRef={isMoreRef}
-          isMoreOpen={isMoreOpen}
-          onMoreClick={handleMoreClick}
-        />
+      {isMoreOpen && isSubNavbarOpened && (
+        <SideBar isMoreOpen={isMoreOpen} onMoreClick={handleMoreClick} />
       )}
     </>
   );
-}
+};
+
+export default memo(StructuredNavbar);
