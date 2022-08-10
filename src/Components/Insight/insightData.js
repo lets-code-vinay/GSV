@@ -2,15 +2,40 @@ import {
   Typography,
   MenuList,
 } from "@material-ui/core";
-import '../styles.css';
+import './styles.css';
 
+
+/**
+ * Default Service Blog
+ */
+export const DEFAULT_SERVICES = {
+  id: "OUR_SERVICES",
+  label: `Our Services`,
+  value: 10,
+  color: "#002446",
+  button_text: 'Know More',
+  text_color: "white",
+  info: (<>
+    <Typography
+      variant={"body1"}
+      className={` pieInfoList`}
+    >
+      We provide Best in class services  belongs to all IT technologies If you’re searching for talented tech minds who are dedicated to their work, we are a perfect fit. We are a dynamic software development company based in USA.
+    </Typography>
+  </>)
+};
+
+/**
+    * Insight Services
+    */
 export const INSIGHT_DATA = {
   NETWORK: {
     id: "NETWORK",
-    label: `Network (Wired & Wireless)`,
-
+    // label: `Network (Wired & Wireless)`, // old label
+    label: `Network`,
     value: 10,
     color: "#002446",
+    button_text: "Know More",
     text_color: "white",
     info: (<>
       <Typography
@@ -32,6 +57,7 @@ export const INSIGHT_DATA = {
     label: "Cybersecurity",
     value: 10,
     color: "#46b6e6",
+    button_text: 'Know More',
     text_color: "white",
     info: (<>
       <Typography
@@ -46,9 +72,11 @@ export const INSIGHT_DATA = {
 
   DATA_CENTER: {
     id: "DATA_CENTER",
-    label: "Data Center Virtualization",
+    // label: "Data Center Virtualization", // old label
+    label: "Data Center",
     value: 10,
     color: "#3c454a",
+    button_text: 'Know More',
     text_color: "white",
     info: (<>
       <Typography
@@ -68,6 +96,7 @@ export const INSIGHT_DATA = {
     label: "Collaboration",
     value: 10,
     color: "#41d946",
+    button_text: 'Know More',
     text_color: "white",
     info: (<>
       <Typography
@@ -85,6 +114,7 @@ export const INSIGHT_DATA = {
     label: "Cloud & Computing",
     value: 10,
     color: "#9d0402",
+    button_text: 'Know More',
     text_color: "white",
 
     info: (<>
@@ -103,6 +133,7 @@ export const INSIGHT_DATA = {
     label: "Internet of Things",
     value: 10,
     color: "#cfd4db",
+    button_text: 'Know More',
     text_color: "white",
     info: (<>
       <Typography
@@ -120,6 +151,7 @@ export const INSIGHT_DATA = {
     label: "NOC/SOC",
     value: 10,
     color: "#2b5879",
+    button_text: 'Know More',
     text_color: "white",
     info: (<>
       <Typography

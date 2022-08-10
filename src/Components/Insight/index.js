@@ -8,16 +8,13 @@ import {
   Button,
 } from "@material-ui/core";
 import "./styles.css";
-import PieChart from "./PieChart";
-import { INSIGHT_DATA } from "./PieChart/insightData";
-import Logo from "../../Assets/Images/blueLogo.png";
+import PieChart from "./GooglePieChart";
+import { DEFAULT_SERVICES, INSIGHT_DATA } from "./insightData";
 
 const Insight = () => {
   const classes = useStyles();
+  const [insightDetail, setInsightDetail] = useState();
 
-  const [insightDetail, setInsightDetail] = useState(
-    Object.keys(INSIGHT_DATA)[0]
-  );
 
   /**
    * @description update values in right grid from selection
@@ -25,16 +22,14 @@ const Insight = () => {
    * @param {Object} insight
    */
   const getInsightDetail = (insight) => {
-    setInsightDetail(insight);
+    setInsightDetail(Object.values(INSIGHT_DATA)[insight]);
   };
 
   const {
-    data: {
-      color = "#0d274d",
-      info = INSIGHT_DATA.NETWORK.info,
-      label = INSIGHT_DATA.NETWORK.label,
-    } = {},
-  } = insightDetail || INSIGHT_DATA.NETWORK;
+    color = DEFAULT_SERVICES.color,
+    info = DEFAULT_SERVICES.info,
+    label = DEFAULT_SERVICES.label,
+  } = insightDetail || DEFAULT_SERVICES;
 
   return (
     <Paper elevation={24} className={`${classes.piePaper} piePaper`}>
@@ -43,7 +38,7 @@ const Insight = () => {
           item
           xs={12}
           sm={12}
-          md={6}
+          md={7}
           lg={6}
           className={`${classes.pieBox} pieBox`}
         >
@@ -51,14 +46,10 @@ const Insight = () => {
             data={INSIGHT_DATA}
             fetchInsightDetails={getInsightDetail}
           />
-          <img
-            src={Logo}
-            alt={"logo inside"}
-            className={`${classes.logoInside} logoInside`}
-          />
+
         </Grid>
 
-        <Grid item xs={12} sm={12} md={6} lg={6}>
+        <Grid item xs={12} sm={12} md={5} lg={6}>
           <Box className={`${classes.pieDetail} pieDetail`}>
             <Typography
               variant={"h4"}
@@ -106,7 +97,7 @@ const useStyles = makeStyles((theme) => ({
   },
   pieDetail: {
     width: "80%",
-    margin: "12% auto",
+    margin: "9% auto",
   },
   pieInfo: {
     marginTop: "5%",
@@ -115,11 +106,5 @@ const useStyles = makeStyles((theme) => ({
   pieButton: {
     color: "white",
     marginTop: "5%",
-  },
-  logoInside: {
-    position: "relative",
-    top: "-58%",
-    width: "20%",
-    left: "40%",
   },
 }));
