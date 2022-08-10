@@ -36,13 +36,6 @@ const Trending = () => {
   };
 
   /**
-   * @description Handle LearnMore Button to display Learn More || Learn Less text
-   */
-  const handleLearnMore = (path) => () => {
-    navigate(`/${path}`);
-  };
-
-  /**
    * @description Handle click tab button
    */
   const handleTabClick = () => {};
@@ -130,7 +123,7 @@ const Trending = () => {
                           variant={"body1"}
                           className="trendingSubTitle"
                         >
-                          {handleSubTitle(subtitle, learnMore)}
+                          {handleSubTitle(subtitle)}
                         </Typography>
 
                         {link && (
