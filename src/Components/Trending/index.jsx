@@ -23,9 +23,10 @@ const Trending = () => {
    * @returns {String}
    */
   const handleSubTitle = (subtitle, learnMore) => {
-    const originalPara = subtitle.split("#ENTER#").map((brk) => {
-      return <div className="trendingSubTitleForce">{brk}</div>;
-    });
+    // Uncomment when it is required in future
+    // const originalPara = subtitle.split("#ENTER#").map((brk) => {
+    //   return <div className="trendingSubTitleForce">{brk}</div>;
+    // });
 
     // Shortening the paragraph
     const shortPara = `${subtitle.split("").splice(0, 300).join("")}...`;

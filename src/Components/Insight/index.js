@@ -9,14 +9,12 @@ import {
 } from "@material-ui/core";
 import "./styles.css";
 import PieChart from "./GooglePieChart";
-import { INSIGHT_DATA } from "./insightData";
+import { DEFAULT_SERVICES, INSIGHT_DATA } from "./insightData";
 
 const Insight = () => {
   const classes = useStyles();
+  const [insightDetail, setInsightDetail] = useState();
 
-  const [insightDetail, setInsightDetail] = useState(
-    Object.keys(INSIGHT_DATA)[0]
-  );
 
   /**
    * @description update values in right grid from selection
@@ -28,10 +26,10 @@ const Insight = () => {
   };
 
   const {
-    color = "#0d274d",
-    info = INSIGHT_DATA.NETWORK.info,
-    label = INSIGHT_DATA.NETWORK.label,
-  } = insightDetail || INSIGHT_DATA.NETWORK;
+    color = DEFAULT_SERVICES.color,
+    info = DEFAULT_SERVICES.info,
+    label = DEFAULT_SERVICES.label,
+  } = insightDetail || DEFAULT_SERVICES;
 
   return (
     <Paper elevation={24} className={`${classes.piePaper} piePaper`}>
@@ -99,7 +97,7 @@ const useStyles = makeStyles((theme) => ({
   },
   pieDetail: {
     width: "80%",
-    margin: "12% auto",
+    margin: "9% auto",
   },
   pieInfo: {
     marginTop: "5%",

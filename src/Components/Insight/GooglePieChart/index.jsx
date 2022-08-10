@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Chart } from "react-google-charts";
-import { Button, Box } from "@material-ui/core";
+import { Button, Box, Typography } from "@material-ui/core";
 import "./style.css";
 
 import Logo from "../../../Assets/Images/blueLogo.png";
-import { INSIGHT_DATA } from "../insightData";
+import { DEFAULT_SERVICES, INSIGHT_DATA } from "../insightData";
 
 const PieChart = ({ fetchInsightDetails }) => {
   const [slice, setSlice] = useState(null);
-  const [color, setColor] = useState("#3C454A");
+  const [color, setColor] = useState(DEFAULT_SERVICES.color);
   const [insightData, setInsightData] = useState(
     Object.values(INSIGHT_DATA)[0]
   );
@@ -41,22 +41,22 @@ const PieChart = ({ fetchInsightDetails }) => {
     is3D: false,
     pieSliceText: "label",
     pieSliceTextStyle: {
-      color: "#1A73E8", // slice label color can be changed from here
+      color: "transparent", // slice label color can be changed from here
     },
     legend: "none",
     tooltip: {
       trigger: "none",
     },
     slices: {
-      [slice ?? 0]: {
+      [slice ?? null]: {
         offset: "0.04",
-        color: slice ? color[slice] : "#002446",
+        color: slice ? color[slice] : DEFAULT_SERVICES.color,
         textStyle: "roboto",
       },
     },
     width: "100%",
     height: "100%",
-    colors: ["#EDF1F2"], // Slice background color can be changed from here
+    colors: slice || slice == 0 ? ["#EDF1F2"] : color, // Slice background color can be changed from here
     chartArea: {
       left: "6%",
       top: "6%",
@@ -127,7 +127,7 @@ const PieChart = ({ fetchInsightDetails }) => {
                   chart,
                   "onmouseover",
                   (e) => {
-                    const { row, column } = e;
+                    const { row } = e;
                     handleSliceHoverIn(row);
                   }
                 );
@@ -135,7 +135,7 @@ const PieChart = ({ fetchInsightDetails }) => {
                   chart,
                   "onmouseout",
                   (e) => {
-                    const { row, column } = e;
+                    const { row } = e;
                     handleSliceHoverOut(row);
                   }
                 );
@@ -147,84 +147,36 @@ const PieChart = ({ fetchInsightDetails }) => {
             },
           ]}
         />
-        <img src={Logo} alt={"logo inside"} className={` logoInside`} />
+        <img src={Logo} alt={"logo inside"} className={`logoInside`} />
 
-        {(!slice || slice == 0) && (
-          <Button
-            className="button-0"
-            onClick={handleButtonClick(0)}
-            onMouseEnter={handleButtonMouseEnter(0)}
-            onMouseLeave={handleButtonMouseLeave(0)}
-          >
-            know More
-          </Button>
-        )}
-
-        {slice == 1 && (
-          <Button
-            className="button-1"
-            onClick={handleButtonClick(1)}
-            onMouseEnter={handleButtonMouseEnter(1)}
-            onMouseLeave={handleButtonMouseLeave(1)}
-          >
-            know More
-          </Button>
-        )}
-
-        {slice == 2 && (
-          <Button
-            className="button-2"
-            onClick={handleButtonClick(2)}
-            onMouseEnter={handleButtonMouseEnter(2)}
-            onMouseLeave={handleButtonMouseLeave(2)}
-          >
-            know More
-          </Button>
-        )}
-
-        {slice == 3 && (
-          <Button
-            variant="secondary"
-            className="button-3"
-            onClick={handleButtonClick(3)}
-            onMouseEnter={handleButtonMouseEnter(3)}
-            onMouseLeave={handleButtonMouseLeave(3)}
-          >
-            know More
-          </Button>
-        )}
-        {slice == 4 && (
-          <Button
-            variant="secondary"
-            className="button-4"
-            onClick={handleButtonClick(4)}
-            onMouseEnter={handleButtonMouseEnter(4)}
-            onMouseLeave={handleButtonMouseLeave(4)}
-          >
-            know More
-          </Button>
-        )}
-        {slice == 5 && (
-          <Button
-            variant="secondary"
-            className="button-5"
-            onClick={handleButtonClick(5)}
-            onMouseEnter={handleButtonMouseEnter(5)}
-            onMouseLeave={handleButtonMouseLeave(5)}
-          >
-            know More
-          </Button>
-        )}
-        {slice == 6 && (
-          <Button
-            variant="secondary"
-            className="button-6"
-            onClick={handleButtonClick(6)}
-            onMouseEnter={handleButtonMouseEnter(6)}
-            onMouseLeave={handleButtonMouseLeave(6)}
-          >
-            know More
-          </Button>
+        {Object.values(INSIGHT_DATA).map(
+          ({ button_text = "", label = "", text_color = "#000" }, index) => {
+            return (
+              <>
+                <Typography
+                  className={`insight-text insight-text-${index}`}
+                  style={{
+                    color: slice == index ? text_color : "black",
+                    transform: slice == index ? "scale(1.2)" : "scale(1)",
+                  }}
+                  onMouseEnter={handleButtonMouseEnter(index)}
+                  onMouseLeave={handleButtonMouseLeave(index)}
+                >
+                  {label}
+                </Typography>
+                {slice == index && (
+                  <Button
+                    className={`button button-${index}`}
+                    onClick={handleButtonClick(index)}
+                    onMouseEnter={handleButtonMouseEnter(index)}
+                    onMouseLeave={handleButtonMouseLeave(index)}
+                  >
+                    {button_text}
+                  </Button>
+                )}
+              </>
+            );
+          }
         )}
       </Box>
     </>
