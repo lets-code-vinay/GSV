@@ -22,16 +22,22 @@
 .trendingSubTitleForce {
   color: #000;
   text-indent: 50px;
-  height: 16rem;
   overflow: overlay;
+}
+
+.learn-link {
+  text-decoration: none;
+  bottom: -20%;
+  position: absolute;
 }
 
 .learn-button {
   color: #1e4471;
   border-bottom: 2px solid #1e4471;
-  display: inline;
   cursor: pointer;
-  position: absolute;
+  margin-top: 5%;
+  text-decoration: none;
+  width: fit-content;
 }
 
 /* 320px — 480px: Mobile devices
