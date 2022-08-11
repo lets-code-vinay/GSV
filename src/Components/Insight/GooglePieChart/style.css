@@ -603,26 +603,26 @@ svg {
   }
 
   .pie .insight-text-5 {
-    top: 34%;
-    left: 21%;
+    top: 34% !important;
+    left: 20% !important;
     min-width: 14%;
     max-width: 15%;
   }
 
   .pie .button-5 {
-    top: 47%;
-    left: 22%;
+    top: 47% !important;
+    left: 20% !important;
   }
 
   .pie .insight-text-4 {
-    top: 61%;
-    left: 26%;
+    top: 62% !important;
+    left: 20% !important;
     width: 15%;
     text-align: center;
   }
   .pie .button-4 {
-    top: 74%;
-    left: 26%;
+    top: 75% !important;
+    left: 22% !important;
   }
 
   .pie .insight-text-3 {
