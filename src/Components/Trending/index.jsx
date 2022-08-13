@@ -217,7 +217,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#000",
   },
   trendingImage: {
-    width: "350px",
-    height: "375px",
+    // width: "350px",
+    // height: "375px",
   },
 }));

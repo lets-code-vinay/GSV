@@ -1,13 +1,6 @@
 import React, { useState } from "react";
 import { shape } from "prop-types";
-import {
-  Box,
-  Button,
-  ClickAwayListener,
-  Grid,
-  makeStyles,
-  Typography,
-} from "@material-ui/core";
+import { Box, Button, Grid, makeStyles, Typography } from "@material-ui/core";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 import "./styles.css";

@@ -9,18 +9,27 @@ export const ProgressBar = ({ activeSlide, index, onChangeSlide }) => {
   React.useEffect(() => {
     const timer = setInterval(() => {
       setProgress((oldProgress) => {
+        console.log(
+          "oldProgress",
+          oldProgress,
+          "activeSlide",
+          activeSlide,
+          "index",
+          index
+        );
+
         if (oldProgress === 100) {
           return 0;
         }
 
-        return oldProgress + 10;
+        return oldProgress + 20;
       });
     }, 1000);
 
     return () => {
-      clearInterval(timer);
+      clearInterval(timer, activeSlide);
     };
-  }, []);
+  }, [activeSlide]);
 
   /**
    * @description Get progress percentage as per slide
@@ -73,4 +82,4 @@ ProgressBar.defaultProps = {
   onChangeSlide: () => {},
 };
 
-export default ProgressBar;
+export default React.memo(ProgressBar);
