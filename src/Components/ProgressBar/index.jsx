@@ -9,27 +9,18 @@ export const ProgressBar = ({ activeSlide, index, onChangeSlide }) => {
   React.useEffect(() => {
     const timer = setInterval(() => {
       setProgress((oldProgress) => {
-        console.log(
-          "oldProgress",
-          oldProgress,
-          "activeSlide",
-          activeSlide,
-          "index",
-          index
-        );
-
         if (oldProgress === 100) {
           return 0;
         }
 
-        return oldProgress + 20;
+        return oldProgress + 10;
       });
     }, 1000);
 
     return () => {
-      clearInterval(timer, activeSlide);
+      clearInterval(timer);
     };
-  }, [activeSlide]);
+  }, []);
 
   /**
    * @description Get progress percentage as per slide
