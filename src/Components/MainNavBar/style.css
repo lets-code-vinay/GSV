@@ -30,7 +30,10 @@
 769px — 1024px: Small screens, laptops
 1025px — 1200px: Desktops, large screens
 1201px and more —  Extra large screens, TV */
-@media screen and (min-width: 279px) and (max-width: 480px) {
+@media screen and (min-width: 279px) and (max-width: 479px) {
+  .sectionDesktop {
+    display: none;
+  }
   .Navbar .appBar .appBarChild {
     display: flex;
     justify-content: space-between;
@@ -68,7 +71,10 @@
   }
 }
 
-@media screen and (min-width: 481px) and (max-width: 760px) {
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .sectionDesktop {
+    display: none;
+  }
   .nav-bar-icons .search {
     height: 1.35rem;
     width: 1.35rem;
@@ -93,7 +99,14 @@
     margin-top: 1px;
   }
 }
-@media screen and (min-width: 761px) and (max-width: 1024px) {
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* .sectionMobile {
+    display: flex !important;
+  } */
+  .sectionDesktop {
+    display: none !important;
+  }
   .Navbar .appBar .appBarChild {
     display: flex;
     justify-content: space-between;
@@ -130,7 +143,13 @@
   }
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1280px) {
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .sectionMobile {
+    display: none !important;
+  }
+  .sectionDesktop {
+    display: flex !important;
+  }
   .Navbar .appBar .appBarChild {
     min-height: 80px;
     max-height: 90px;
@@ -169,7 +188,13 @@
   }
 }
 
-@media screen and (min-width: 1281px) and (max-width: 1919px) {
+@media screen and (min-width: 1280px) and (max-width: 1919px) {
+  .sectionMobile {
+    display: none !important;
+  }
+  .sectionDesktop {
+    display: flex !important;
+  }
   .Navbar .appBar .appBarChild {
     min-height: 90px;
     max-height: 100px;
@@ -209,6 +234,13 @@
 }
 
 @media screen and (min-width: 1920px) {
+  .sectionMobile {
+    display: none !important;
+  }
+  .sectionDesktop {
+    display: flex !important;
+  }
+
   .Navbar .appBar .appBarChild {
     min-height: 90px;
     max-height: 100px;
