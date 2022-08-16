@@ -27,14 +27,35 @@
 .mobile-menu-list {
   display: flex;
   justify-content: space-between;
-  padding: 3% 0%;
+  margin: 3% 0%;
+  cursor: pointer;
+}
+
+.mobile-menu-list:hover {
+  cursor: pointer;
+
+  background-color: rgba(128, 128, 128, 0.571);
+}
+
+.close-icon,
+.mobile-menu-icon,
+.mobile-menu-logo {
+  transition: 5s ease-in-out;
+  cursor: pointer;
+}
+
+.close-icon:hover {
+  transform: rotate(15deg);
+  cursor: pointer;
 }
 
 .mobile-menu-text {
   font-size: 1.5rem;
   font-weight: 500;
+  width: 100%;
 }
 .mobile-menu-arrow-icon {
+  border-radius: 0 !important;
   font-size: 2rem;
   font-weight: 500;
 }

@@ -11,14 +11,28 @@ import BlueLogo from "../../../Assets/Images/blueLogo.png";
 
 import "./style.css";
 import { NAVBAR_MENUS } from "../../../Configs/NavBar/navbar";
+import { func } from "prop-types";
 
-const MainMobileMenu = ({ isMobileNavbarOpened = false }) => {
+const MainMobileMenu = ({
+  isMobileNavbarOpened = false,
+  onCloseMobileMenu,
+}) => {
+  /**
+   * @description: Closing drawer
+   */
+  const handleCloseMobileMenu = () => {
+    onCloseMobileMenu(true);
+  };
+
   return (
     <>
       <Box>
         <Drawer className="main-mobile-menu" open={isMobileNavbarOpened}>
           <Box className="mobile-menu-top-bar">
-            <CloseIcon className="mobile-menu-icon" />
+            <CloseIcon
+              className="mobile-menu-icon close-icon"
+              onClick={handleCloseMobileMenu}
+            />
             <img
               src={BlueLogo}
               alt="Logo in blue"
@@ -52,6 +66,7 @@ const MainMobileMenu = ({ isMobileNavbarOpened = false }) => {
  */
 MainMobileMenu.propTypes = {
   isMobileNavbarOpened: bool,
+  onCloseMobileMenu: func,
 };
 
 /**
@@ -59,6 +74,7 @@ MainMobileMenu.propTypes = {
  */
 MainMobileMenu.defaultProps = {
   isMobileNavbarOpened: false,
+  onCloseMobileMenu: () => {},
 };
 
 export default MainMobileMenu;

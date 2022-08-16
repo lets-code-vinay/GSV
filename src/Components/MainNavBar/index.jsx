@@ -20,7 +20,7 @@ import Logo from "../../Assets/Images/white-logo.png";
 import { NAVBAR_MENUS } from "../../Configs/NavBar/navbar";
 
 import "./style.css";
-import MainMobileMenu from "./MainMobileMenu";
+import MobileNavBar from "../MobileNavBar";
 
 const MainNavBar = ({
   onSubNavbarOpen,
@@ -34,14 +34,14 @@ const MainNavBar = ({
   const classes = useStyles();
   const navigate = useNavigate();
 
-  const [isMobileNavbarOpened, setMobileNavbarOpen] = useState(null);
+  const [isMobileNavbarOpened, setMobileNavbarOpen] = useState(false);
 
   /**
    * @description: Handle mobile menus on icon click
    *
    * @param {Object} event
    */
-  const handleMobileMenuOpen = (event) => {
+  const handleMobileMenuOpen = (_) => {
     setMobileNavbarOpen(true);
   };
 
@@ -49,6 +49,7 @@ const MainNavBar = ({
    * @description: Closing mobile menus
    */
   const handleMobileMenuClose = () => {
+    console.log("here");
     setMobileNavbarOpen(false);
   };
 
@@ -121,21 +122,25 @@ const MainNavBar = ({
           </Box>
 
           {/* To open icons */}
-          <ClickAwayListener onClickAway={handleMobileMenuClose}>
-            <>
-              <IconButton
-                className={`${classes.sectionMobile} sectionMobile`}
-                aria-label="show more"
-                // aria-controls={mobileMenuId}
-                aria-haspopup="true"
-                onClick={handleMobileMenuOpen}
-                color="inherit"
-              >
-                <MoreIcon className={`${classes.mobile3Dots} mobile3Dots`} />
-              </IconButton>
-              <MainMobileMenu isMobileNavbarOpened={isMobileNavbarOpened} />
-            </>
-          </ClickAwayListener>
+          <>
+            <IconButton
+              className={`${classes.sectionMobile} sectionMobile`}
+              aria-label="show more"
+              aria-haspopup="true"
+              onClick={handleMobileMenuOpen}
+              color="inherit"
+            >
+              <MoreIcon className={`${classes.mobile3Dots} mobile3Dots`} />
+            </IconButton>
+            {isMobileNavbarOpened && (
+              <ClickAwayListener onClickAway={handleMobileMenuClose}>
+                <MobileNavBar
+                  isMobileNavbarOpened={isMobileNavbarOpened}
+                  onCloseMobileMenu={handleMobileMenuClose}
+                />
+              </ClickAwayListener>
+            )}
+          </>
         </Toolbar>
       </AppBar>
     </div>
