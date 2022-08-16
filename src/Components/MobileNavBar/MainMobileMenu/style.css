@@ -11,7 +11,7 @@
   align-items: center;
 
   padding: 3% 5%;
-  border-bottom: 1px solid #21314b;
+  border-bottom: 1px solid rgb(159, 145, 145);
 }
 
 .mobile-menu-logo {
@@ -19,15 +19,16 @@
 }
 
 .mobile-menu-container {
-  padding: 3% 10% 8%;
+  /* padding: 3% 10% 8%; */
   margin-top: 3%;
-  border-bottom: 1px solid #21314b;
+  border-bottom: 1px solid rgb(159, 145, 145);
 }
 
 .mobile-menu-list {
   display: flex;
   justify-content: space-between;
-  margin: 3% 0%;
+  margin: 2% 0%;
+  padding: 1% 10%;
   cursor: pointer;
 }
 

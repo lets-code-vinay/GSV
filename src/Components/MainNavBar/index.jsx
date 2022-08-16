@@ -12,7 +12,6 @@ import {
   MenuItem,
   Typography,
   Box,
-  ClickAwayListener,
 } from "@material-ui/core";
 
 import Logo from "../../Assets/Images/white-logo.png";
@@ -49,7 +48,6 @@ const MainNavBar = ({
    * @description: Closing mobile menus
    */
   const handleMobileMenuClose = () => {
-    console.log("here");
     setMobileNavbarOpen(false);
   };
 
@@ -132,14 +130,11 @@ const MainNavBar = ({
             >
               <MoreIcon className={`${classes.mobile3Dots} mobile3Dots`} />
             </IconButton>
-            {isMobileNavbarOpened && (
-              <ClickAwayListener onClickAway={handleMobileMenuClose}>
-                <MobileNavBar
-                  isMobileNavbarOpened={isMobileNavbarOpened}
-                  onCloseMobileMenu={handleMobileMenuClose}
-                />
-              </ClickAwayListener>
-            )}
+
+            <MobileNavBar
+              isMobileNavbarOpened={isMobileNavbarOpened}
+              onCloseMobileMenu={handleMobileMenuClose}
+            />
           </>
         </Toolbar>
       </AppBar>
