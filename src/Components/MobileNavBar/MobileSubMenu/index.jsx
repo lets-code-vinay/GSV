@@ -6,6 +6,7 @@ import { bool, shape, func, string } from "prop-types";
 import "./style.css";
 
 import MobileMenuTopBar from "../MobileMenuTopBar";
+import MobileList from "../MobileList";
 
 const MobileSubMenu = ({
   isMobileSubMenuOpened = false,
@@ -34,7 +35,12 @@ const MobileSubMenu = ({
       </Box>
 
       {Object.values(mobileSubMenus).map(({ label }, index) => {
-        return <Typography>{label}</Typography>;
+        return (
+          <>
+            <Typography>{label}</Typography>)
+            <MobileList />
+          </>
+        );
       })}
     </Drawer>
   );
