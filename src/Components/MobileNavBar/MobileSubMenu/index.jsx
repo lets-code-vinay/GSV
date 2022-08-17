@@ -34,12 +34,9 @@ const MobileSubMenu = ({
         <Typography></Typography>
       </Box>
 
-      {Object.values(mobileSubMenus).map(({ label }, index) => {
+      {Object.values(mobileSubMenus).map(({ label, menus }, index) => {
         return (
-          <>
-            <Typography>{label}</Typography>)
-            <MobileList />
-          </>
+          <MobileList menuIndex={index} title={label} mobileSubMenus={menus} />
         );
       })}
     </Drawer>
