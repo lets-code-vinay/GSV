@@ -42,7 +42,17 @@ const MobileList = ({ title, mobileSubMenus, menuIndex }) => {
             alt={mobileSubMenus.label}
             className="menu-list-image"
           />
-          <MobileNestedList />
+          {Object.values(mobileSubMenus).map((subMenus, index) => {
+            console.log("subMenus", subMenus.menus);
+            return (
+              <MobileNestedList
+                value={subMenus?.value}
+                listIndex={index}
+                label={subMenus?.label}
+                listMenus={mobileSubMenus.menus}
+              />
+            );
+          })}
         </AccordionDetails>
       </Accordion>
     </>

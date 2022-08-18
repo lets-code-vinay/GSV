@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import {
   makeStyles,
   ListSubheader,
@@ -29,9 +29,16 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const MobileNestedList = () => {
+const MobileNestedList = ({
+  value = "",
+  listIndex = "",
+  label = "",
+  listMenus = "",
+}) => {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
+
+  console.log(listMenus);
 
   const handleClick = () => {
     setOpen(!open);
@@ -39,12 +46,15 @@ const MobileNestedList = () => {
 
   return (
     <List
+      key={`${value}-${listIndex}`}
       component="nav"
       aria-labelledby="nested-list-subheader"
       subheader={
-        <ListSubheader component="div" id="nested-list-subheader">
-          Nested List Items
-        </ListSubheader>
+        Boolean(label) && (
+          <ListSubheader component="div" id="nested-list-subheader">
+            {label}
+          </ListSubheader>
+        )
       }
       className={classes.root}
     >
@@ -81,4 +91,4 @@ const MobileNestedList = () => {
   );
 };
 
-export default MobileNestedList;
+export default memo(MobileNestedList);
