@@ -24,6 +24,7 @@ export const NAVBAR_MENUS = {
         value: "NETWORKING",
         menus: {
           image: NETWORK_IMAGE,
+          test: "TEST-b",
           mobile_image: MOBILE_NETWORK,
           title: "NETWORK",
           color: THEME_COLOR.color_4,
@@ -33,6 +34,7 @@ export const NAVBAR_MENUS = {
             LAN: {
               label: "LAN",
               value: "LAN",
+              test: "TEST-a",
               shaded: false,
               icon: LAN_ICON,
               image: LAN_ICON,
@@ -42,6 +44,7 @@ export const NAVBAR_MENUS = {
                   label: "Routing",
                   value: "ROUTING",
                   path: "/lan/routing",
+                  test: "TEST-as",
                 },
                 SWITCHING: {
                   label: "Switching",
@@ -1152,7 +1155,7 @@ export const NAVBAR_MENUS = {
           menus: {
             // --SECURITY --
             IOT1: {
-              label: "",
+              label: "Internet of Things",
               value: "IOT1",
               shaded: false,
               icon: LAN_ICON,

@@ -1,22 +1,17 @@
-import React, { memo } from "react";
+import React, { useState, memo } from "react";
+import { useNavigate } from "react-router-dom";
+import { shape, number, oneOfType, string } from "prop-types";
 import {
   makeStyles,
   ListSubheader,
   List,
   ListItem,
-  ListItemIcon,
   ListItemText,
   Collapse,
 } from "@material-ui/core";
+import { ExpandLess, ExpandMore } from "@material-ui/icons";
 
-import {
-  MoveToInbox as InboxIcon,
-  Drafts as DraftsIcon,
-  Send as SendIcon,
-  ExpandLess,
-  ExpandMore,
-  StarBorder,
-} from "@material-ui/icons";
+import "./style.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -31,22 +26,37 @@ const useStyles = makeStyles((theme) => ({
 
 const MobileNestedList = ({
   value = "",
-  listIndex = "",
+  menuIndex = "",
   label = "",
   listMenus = "",
 }) => {
   const classes = useStyles();
-  const [open, setOpen] = React.useState(true);
 
-  console.log(listMenus);
+  const navigate = useNavigate();
 
-  const handleClick = () => {
+  const [open, setOpen] = useState(false);
+  const [activeMenu, setActiveMenu] = useState(null);
+
+  /**
+   * @description Click on menu
+   */
+  const handleClick = (index) => () => {
     setOpen(!open);
+    setActiveMenu(index);
+  };
+
+  /**
+   * @description Redirect to menu page
+   *
+   * @param {String} path
+   */
+  const goToLink = (path) => () => {
+    navigate(path);
   };
 
   return (
     <List
-      key={`${value}-${listIndex}`}
+      key={`${value}-${menuIndex}`}
       component="nav"
       aria-labelledby="nested-list-subheader"
       subheader={
@@ -58,37 +68,68 @@ const MobileNestedList = ({
       }
       className={classes.root}
     >
-      <ListItem button>
-        <ListItemIcon>
-          <SendIcon />
-        </ListItemIcon>
-        <ListItemText primary="Sent mail" />
-      </ListItem>
-      <ListItem button>
-        <ListItemIcon>
-          <DraftsIcon />
-        </ListItemIcon>
-        <ListItemText primary="Drafts" />
-      </ListItem>
-      <ListItem button onClick={handleClick}>
-        <ListItemIcon>
-          <InboxIcon />
-        </ListItemIcon>
-        <ListItemText primary="Inbox" />
-        {open ? <ExpandLess /> : <ExpandMore />}
-      </ListItem>
-      <Collapse in={open} timeout="auto" unmountOnExit>
-        <List component="div" disablePadding>
-          <ListItem button className={classes.nested}>
-            <ListItemIcon>
-              <StarBorder />
-            </ListItemIcon>
-            <ListItemText primary="Starred" />
-          </ListItem>
-        </List>
-      </Collapse>
+      {Object.values(listMenus).map(({ label, value, menus }, index) => {
+        if (value === "EMPTY_BLOCK") return "";
+
+        const menuList = Object.values(menus);
+
+        return (
+          <>
+            <ListItem
+              button
+              onClick={handleClick(index)}
+              key={`${index}-${label}`}
+            >
+              <ListItemText primary={label} />
+              {open && activeMenu === index ? <ExpandLess /> : <ExpandMore />}
+            </ListItem>
+
+            <Collapse
+              in={open && activeMenu === index}
+              timeout="auto"
+              unmountOnExit
+            >
+              <List component="div" disablePadding>
+                {menuList.map((listData, index) => {
+                  const { label, path, value } = listData || {};
+                  return (
+                    <ListItem
+                      key={`${value}-${index}`}
+                      button
+                      className={`${classes.nested} nest-text`}
+                      onClick={goToLink(path)}
+                    >
+                      <ListItemText primary={label} />
+                    </ListItem>
+                  );
+                })}
+              </List>
+            </Collapse>
+          </>
+        );
+      })}
     </List>
   );
+};
+
+/**
+ * @description Prop validation
+ */
+MobileNestedList.propTypes = {
+  value: string,
+  menuIndex: oneOfType([string, number]),
+  label: string,
+  listMenus: shape({}),
+};
+
+/**
+ * @description Default Props
+ */
+MobileNestedList.defaultProps = {
+  value: "",
+  menuIndex: "" || 0,
+  label: "",
+  listMenus: {},
 };
 
 export default memo(MobileNestedList);

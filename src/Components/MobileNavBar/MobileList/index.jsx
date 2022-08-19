@@ -13,12 +13,14 @@ import MobileNestedList from "./MobileNestedList";
 
 const MobileList = ({ title, mobileSubMenus, menuIndex }) => {
   const [isExpanded, setExpand] = useState(false);
+  const [nestedData, setNestedData] = useState({});
 
   /**
    * @description; Handling expansion of according
    */
   const handleExpand = () => {
     setExpand(!isExpanded);
+    setNestedData(mobileSubMenus);
   };
 
   return (
@@ -26,14 +28,14 @@ const MobileList = ({ title, mobileSubMenus, menuIndex }) => {
       <Accordion
         disableGutters={false}
         onChange={handleExpand}
-        key={toString(menuIndex)}
+        key={menuIndex.toString()}
       >
         <AccordionSummary
           expandIcon={!isExpanded ? <AddIcon /> : <RemoveIcon />}
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography>{title}</Typography>
+          <Typography className="menu-list">{title}</Typography>
         </AccordionSummary>
         <AccordionDetails className="mobile-list-details">
           {/* TODO: menu Images for mobile nav-bar size 1110 * 476 */}
@@ -42,17 +44,13 @@ const MobileList = ({ title, mobileSubMenus, menuIndex }) => {
             alt={mobileSubMenus.label}
             className="menu-list-image"
           />
-          {Object.values(mobileSubMenus).map((subMenus, index) => {
-            console.log("subMenus", subMenus.menus);
-            return (
-              <MobileNestedList
-                value={subMenus?.value}
-                listIndex={index}
-                label={subMenus?.label}
-                listMenus={mobileSubMenus.menus}
-              />
-            );
-          })}
+
+          <MobileNestedList
+            menuIndex={menuIndex}
+            value={nestedData.value}
+            label={nestedData?.label}
+            listMenus={nestedData.menus}
+          />
         </AccordionDetails>
       </Accordion>
     </>

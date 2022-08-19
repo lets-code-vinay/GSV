@@ -98,7 +98,7 @@ const MainNavBar = ({
                           ? "3px solid #ffff"
                           : "3px solid transparent",
                     }}
-                    key={i}
+                    key={i + "-" + menu.value}
                     className={`${classes.sectionDesktopMenus} sectionDesktopMenus`}
                   >
                     <Typography

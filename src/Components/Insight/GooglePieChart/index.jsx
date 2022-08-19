@@ -166,7 +166,7 @@ const PieChart = ({ fetchInsightDetails }) => {
         {Object.values(INSIGHT_DATA).map(
           ({ button_text = "", label = "", text_color = "#000" }, index) => {
             return (
-              <>
+              <Box key={index + "-" + label}>
                 <Typography
                   className={`insight-text insight-text-${index}`}
                   style={{
@@ -189,7 +189,7 @@ const PieChart = ({ fetchInsightDetails }) => {
                     {button_text}
                   </Button>
                 )}
-              </>
+              </Box>
             );
           }
         )}

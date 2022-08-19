@@ -146,10 +146,16 @@ const NavbarMenus = ({ navMenus = {} }) => {
                     <Grid container>
                       {Object.values(menus).map((popMenu, index) => {
                         return (
-                          <Grid item sm={12} xs={12} md={6} lg={6}>
+                          <Grid
+                            item
+                            sm={12}
+                            xs={12}
+                            md={6}
+                            lg={6}
+                            key={`${popMenu.value}-${index}`}
+                          >
                             <a
                               href={popMenu.path}
-                              key={`${popMenu.value}-${index}`}
                               className={`${classes.popularLink} popularLink`}
                               target="_blank"
                               rel="noreferrer"
