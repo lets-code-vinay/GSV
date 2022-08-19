@@ -10,7 +10,14 @@ const GridPage = ({ data = [], title = "" }) => {
       <Grid container className="displayFlex">
         {data.map((findItem, i) => {
           return (
-            <Grid  item sm={6} xs={6} md={3} lg={3}>
+            <Grid
+              item
+              sm={6}
+              xs={6}
+              md={3}
+              lg={3}
+              index={i + "-" + findItem.img}
+            >
               <img src={findItem.img} alt="" className="gridPageImage" />
             </Grid>
           );

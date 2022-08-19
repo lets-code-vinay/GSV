@@ -7,8 +7,11 @@ import MISC_ICON from "../../Assets/Icons/misc.svg";
 import POPULAR_ICON from "../../Assets/Icons/popular.svg";
 
 import SECURITY_MAIN_IMAGE from "../../Assets/Images/Menu-images/security.jpg";
-
 import DATA_CENTER_SECURITY_IMAGE from "../../Assets/Images/Menu-images/data-center-security.jpg";
+
+import MOBILE_SECURITY_IMAGE from "../../Assets/Images/Menu-images/mobile-cyber-security.png";
+import MOBILE_DATA_SECURITY_IMAGE from "../../Assets/Images/Menu-images/mobile-data-security.jpg";
+import MOBILE_NETWORK from "../../Assets/Images/Menu-images/mobile-network.jpg";
 
 export const NAVBAR_MENUS = {
   IT_INFRASTRUCTURE: {
@@ -21,6 +24,8 @@ export const NAVBAR_MENUS = {
         value: "NETWORKING",
         menus: {
           image: NETWORK_IMAGE,
+          test: "TEST-b",
+          mobile_image: MOBILE_NETWORK,
           title: "NETWORK",
           color: THEME_COLOR.color_4,
           subtitle: `Implement enterprise-class connectivity for wired and wireless.Multi-vendor technology and hardware's Satellite, deployment, monitoring and support`,
@@ -29,14 +34,17 @@ export const NAVBAR_MENUS = {
             LAN: {
               label: "LAN",
               value: "LAN",
+              test: "TEST-a",
               shaded: false,
               icon: LAN_ICON,
               image: LAN_ICON,
+              mobile_image: "",
               menus: {
                 ROUTING: {
                   label: "Routing",
                   value: "ROUTING",
                   path: "/lan/routing",
+                  test: "TEST-as",
                 },
                 SWITCHING: {
                   label: "Switching",
@@ -77,6 +85,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: WAN_ICON,
               image: WAN_ICON,
+              mobile_image: "",
               menus: {
                 SD_WAN: {
                   label: "SD-WAN",
@@ -103,6 +112,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: WAM_ICON,
               image: WAM_ICON,
+              mobile_image: "",
               menus: {
                 WI_FI_6: {
                   label: "Wi-Fi-6",
@@ -132,9 +142,6 @@ export const NAVBAR_MENUS = {
               },
             },
 
-
-
-
             // Service Provider
             SERVICE_PROVIDER: {
               label: "Service Provider",
@@ -142,6 +149,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: MISC_ICON,
               image: MISC_ICON,
+              mobile_image: "",
               menus: {
                 CMW: {
                   label: "Cloud Managed Wireless",
@@ -151,15 +159,15 @@ export const NAVBAR_MENUS = {
               },
             },
 
-            // Emply block to balance
+            // Empty block to balance
             EMPTY_BLOCK: {
               label: "",
               value: "EMPTY_BLOCK",
               shaded: false,
               icon: MISC_ICON,
               image: MISC_ICON,
-              menus: {
-              },
+              mobile_image: "",
+              menus: {},
             },
 
             MISCELLANEOUS: {
@@ -168,6 +176,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: MISC_ICON,
               image: MISC_ICON,
+              mobile_image: "",
               menus: {
                 OOB_MANAGEMENT: {
                   label: "OOB Management",
@@ -193,8 +202,6 @@ export const NAVBAR_MENUS = {
               },
             },
 
-
-
             // -- Popular ---
             POPULAR: {
               label: "POPULAR",
@@ -202,6 +209,7 @@ export const NAVBAR_MENUS = {
               shaded: true,
               icon: POPULAR_ICON,
               image: POPULAR_ICON,
+              mobile_image: "",
               menus: {
                 // -- Cisco DNA
                 CISCO_DNA: {
@@ -277,6 +285,7 @@ export const NAVBAR_MENUS = {
         value: "SECURITY",
         menus: {
           image: SECURITY_MAIN_IMAGE,
+          mobile_image: MOBILE_SECURITY_IMAGE,
           title: "SECURITY",
           color: THEME_COLOR.security_red,
           subtitle: `Security-Implement enterprise-class connectivity for wired and wireless. Multi-vendor technology and hardware's Satellite, deployment, monitoring and support`,
@@ -288,6 +297,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: LAN_ICON,
               image: LAN_ICON,
+              mobile_image: "",
               menus: {
                 NETWORK_SECURITY: {
                   label: "Network Security",
@@ -347,6 +357,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: MISC_ICON,
               image: MISC_ICON,
+              mobile_image: "",
               menus: {
                 VCISCOS: {
                   label: "Virtual CISCO Services",
@@ -392,8 +403,8 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: MISC_ICON,
               image: MISC_ICON,
-              menus: {
-              },
+              mobile_image: "",
+              menus: {},
             },
 
             MISCELLANEOUS: {
@@ -402,6 +413,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: MISC_ICON,
               image: MISC_ICON,
+              mobile_image: "",
               menus: {
                 CMS: {
                   label: "Cloud Managed Security",
@@ -424,8 +436,7 @@ export const NAVBAR_MENUS = {
                   path: "/miscellaneous/Centralized-Security-Solution",
                 },
                 SAAS_N: {
-                  label:
-                    "Security-as-a-Service for Networks",
+                  label: "Security-as-a-Service for Networks",
                   value: "SAAS_N",
                   path: "/miscellaneous/Security-as-a-Service-for-Networks",
                 },
@@ -439,6 +450,7 @@ export const NAVBAR_MENUS = {
               shaded: true,
               icon: POPULAR_ICON,
               image: POPULAR_ICON,
+              mobile_image: "",
               menus: {
                 // -- Cisco ASA
                 CISCO_ASA: {
@@ -526,7 +538,6 @@ export const NAVBAR_MENUS = {
                   value: "OTHER_VENDER",
                   path: "/other-vender-hot-items",
                 },
-
               },
             },
           },
@@ -534,7 +545,7 @@ export const NAVBAR_MENUS = {
       },
 
       /**
-       * DATA CENTER 
+       * DATA CENTER
        */
       DATA_CENTER: {
         label: "DATA CENTER ",
@@ -542,6 +553,7 @@ export const NAVBAR_MENUS = {
         color: THEME_COLOR.data_green,
         menus: {
           image: DATA_CENTER_SECURITY_IMAGE,
+          mobile_image: MOBILE_DATA_SECURITY_IMAGE,
           title: "Data Center Security",
           color: THEME_COLOR.data_center_security,
           subtitle: `Data Center Security-Implement enterprise-class connectivity for wired and wireless. Multi-vendor technology and hardware's Satellite, deployment, monitoring and support`,
@@ -553,6 +565,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: LAN_ICON,
               image: LAN_ICON,
+              mobile_image: "",
               menus: {
                 ASSURANCE_INSIGHT: {
                   label: "Assurance & Insight",
@@ -613,6 +626,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: MISC_ICON,
               image: MISC_ICON,
+              mobile_image: "",
               menus: {
                 OMC: {
                   label: "Operate Multi Cloud",
@@ -649,8 +663,8 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: MISC_ICON,
               image: MISC_ICON,
-              menus: {
-              },
+              mobile_image: "",
+              menus: {},
             },
 
             MISCELLANEOUS: {
@@ -659,6 +673,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: MISC_ICON,
               image: MISC_ICON,
+              mobile_image: "",
               menus: {
                 CK: {
                   label: "Containers & Kubernetes",
@@ -671,20 +686,17 @@ export const NAVBAR_MENUS = {
                   path: "/miscellaneous/Build-Apps-Microservices",
                 },
                 MBaaS: {
-                  label:
-                    "Managed-Backup-as-a-Service",
+                  label: "Managed-Backup-as-a-Service",
                   value: "MBaaS",
                   path: "/miscellaneous/Managed-Backup-as-a-Service",
                 },
                 MCS: {
-                  label:
-                    "Managed Cloud Services",
+                  label: "Managed Cloud Services",
                   value: "MCS",
                   path: "/miscellaneous/Managed-Cloud-Services",
                 },
                 CDTS: {
-                  label:
-                    "Cloud Data Tiering Services",
+                  label: "Cloud Data Tiering Services",
                   value: "CDTS",
                   path: "/miscellaneous/Cloud-Data-Tiering-Services",
                 },
@@ -698,6 +710,7 @@ export const NAVBAR_MENUS = {
               shaded: true,
               icon: POPULAR_ICON,
               image: POPULAR_ICON,
+              mobile_image: "",
               menus: {
                 // -- Cisco ACI
                 CISCO_ACI: {
@@ -840,6 +853,7 @@ export const NAVBAR_MENUS = {
         value: "COLLABORATION",
         menus: {
           image: SECURITY_MAIN_IMAGE,
+          mobile_image: MOBILE_SECURITY_IMAGE,
           title: "SECURITY",
           color: THEME_COLOR.security_red,
           subtitle: `Security-Implement enterprise-class connectivity for wired and wireless. Multi-vendor technology and hardware's Satellite, deployment, monitoring and support`,
@@ -851,6 +865,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: LAN_ICON,
               image: LAN_ICON,
+              mobile_image: "",
               menus: {
                 CONFERENCING: {
                   label: "Conferencing",
@@ -910,13 +925,13 @@ export const NAVBAR_MENUS = {
               },
             },
 
-
             MISCELLANEOUS: {
               label: "Miscellaneous",
               value: "MISCELLANEOUS",
               shaded: false,
               icon: MISC_ICON,
               image: MISC_ICON,
+              mobile_image: "",
               menus: {
                 PS: {
                   label: "Professional Services",
@@ -929,14 +944,12 @@ export const NAVBAR_MENUS = {
                   path: "/miscellaneous/Managed-Services",
                 },
                 SS: {
-                  label:
-                    "Support Services",
+                  label: "Support Services",
                   value: "SS",
                   path: "/miscellaneous/Support-Services",
                 },
                 LS: {
-                  label:
-                    "Learning Services",
+                  label: "Learning Services",
                   value: "LS",
                   path: "/miscellaneous/Learning-Services",
                 },
@@ -950,6 +963,7 @@ export const NAVBAR_MENUS = {
               shaded: true,
               icon: POPULAR_ICON,
               image: POPULAR_ICON,
+              mobile_image: "",
               menus: {
                 // -- Desk Camera
                 DESK_CAMERA: {
@@ -1007,6 +1021,7 @@ export const NAVBAR_MENUS = {
         value: "CAC",
         menus: {
           image: SECURITY_MAIN_IMAGE,
+          mobile_image: MOBILE_SECURITY_IMAGE,
           title: "SECURITY",
           color: THEME_COLOR.security_red,
           subtitle: `Security-Implement enterprise-class connectivity for wired and wireless. Multi-vendor technology and hardware's Satellite, deployment, monitoring and support`,
@@ -1017,6 +1032,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: LAN_ICON,
               image: LAN_ICON,
+              mobile_image: "",
               menus: {
                 CLOUD_CONSULTING: {
                   label: "Cloud-Consulting",
@@ -1038,7 +1054,6 @@ export const NAVBAR_MENUS = {
                   value: "AWS_CM",
                   path: "/cloud-and-computing/AWS Cloud Migration",
                 },
-
               },
             },
             CAndC2: {
@@ -1047,6 +1062,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: MISC_ICON,
               image: MISC_ICON,
+              mobile_image: "",
               menus: {
                 HC: {
                   label: "Hybrid Cloud",
@@ -1081,13 +1097,13 @@ export const NAVBAR_MENUS = {
               },
             },
 
-
             CAndC3: {
               label: "",
               value: "CAndC3",
               shaded: false,
               icon: MISC_ICON,
               image: MISC_ICON,
+              mobile_image: "",
               menus: {
                 HC: {
                   label: "Hybrid Cloud",
@@ -1132,17 +1148,19 @@ export const NAVBAR_MENUS = {
         value: "IOT",
         menus: {
           image: SECURITY_MAIN_IMAGE,
+          mobile_image: MOBILE_SECURITY_IMAGE,
           title: "SECURITY",
           color: THEME_COLOR.security_red,
           subtitle: `Security-Implement enterprise-class connectivity for wired and wireless. Multi-vendor technology and hardware's Satellite, deployment, monitoring and support`,
           menus: {
             // --SECURITY --
             IOT1: {
-              label: "",
+              label: "Internet of Things",
               value: "IOT1",
               shaded: false,
               icon: LAN_ICON,
               image: LAN_ICON,
+              mobile_image: "",
               menus: {
                 INDUSTRIAL_NETWORKING: {
                   label: "Industiral Networking",
@@ -1177,7 +1195,6 @@ export const NAVBAR_MENUS = {
               },
             },
 
-
             // -- Popular ---
             POPULAR: {
               label: "POPULAR",
@@ -1185,6 +1202,7 @@ export const NAVBAR_MENUS = {
               shaded: true,
               icon: POPULAR_ICON,
               image: POPULAR_ICON,
+              mobile_image: "",
               menus: {
                 CISCO_C_IR_S_R: {
                   label: "Cisco Catalyst IR Series Routers",
@@ -1211,7 +1229,6 @@ export const NAVBAR_MENUS = {
                   value: "I_WiFi",
                   path: "/Industrial-Wi-Fi",
                 },
-
               },
             },
           },
@@ -1219,7 +1236,6 @@ export const NAVBAR_MENUS = {
       },
     },
   },
-
 
   // ---------------------------
   DND: {
@@ -1232,6 +1248,7 @@ export const NAVBAR_MENUS = {
         value: "NETWORKING",
         menus: {
           image: NETWORK_IMAGE,
+          mobile_image: MOBILE_NETWORK,
           title: "NETWORK",
           color: THEME_COLOR.color_4,
           subtitle: `Implement enterprise-class connectivity for wired and wireless.Multi-vendor technology and hardware's Satellite, deployment, monitoring and support`,
@@ -1243,6 +1260,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: LAN_ICON,
               image: LAN_ICON,
+              mobile_image: "",
               menus: {
                 ROUTING: {
                   label: "Routing",
@@ -1283,6 +1301,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: WAN_ICON,
               image: WAN_ICON,
+              mobile_image: "",
               menus: {
                 SD_WAN: {
                   label: "SD WAN",
@@ -1314,6 +1333,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: WAM_ICON,
               image: WAM_ICON,
+              mobile_image: "",
               menus: {
                 WI_FI_6: {
                   label: "Wi-Fi-6",
@@ -1349,6 +1369,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: MISC_ICON,
               image: MISC_ICON,
+              mobile_image: "",
               menus: {
                 OOB_MANAGEMENT: {
                   label: "OOB Management",
@@ -1380,6 +1401,7 @@ export const NAVBAR_MENUS = {
               shaded: true,
               icon: POPULAR_ICON,
               image: POPULAR_ICON,
+              mobile_image: "",
               menus: {
                 // -- Cisco DNA
                 CISCO_DNA: {
@@ -1493,6 +1515,7 @@ export const NAVBAR_MENUS = {
         value: "SECURITY",
         menus: {
           image: SECURITY_MAIN_IMAGE,
+          mobile_image: MOBILE_SECURITY_IMAGE,
           title: "SECURITY",
           color: THEME_COLOR.security_red,
           subtitle: `Security-Implement enterprise-class connectivity for wired and wireless. Multi-vendor technology and hardware's Satellite, deployment, monitoring and support`,
@@ -1504,6 +1527,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: LAN_ICON,
               image: LAN_ICON,
+              mobile_image: "",
               menus: {
                 NETWORK_SECURITY: {
                   label: "Network Security",
@@ -1558,6 +1582,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: MISC_ICON,
               image: MISC_ICON,
+              mobile_image: "",
               menus: {
                 CSC: {
                   label: "Cybersecurity Consulting",
@@ -1598,6 +1623,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: "",
               image: "",
+              mobile_image: "",
               menus: {},
             },
 
@@ -1607,6 +1633,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: MISC_ICON,
               image: MISC_ICON,
+              mobile_image: "",
               menus: {
                 CMS: {
                   label: "Cloud Managed Security",
@@ -1634,6 +1661,7 @@ export const NAVBAR_MENUS = {
               shaded: true,
               icon: POPULAR_ICON,
               image: POPULAR_ICON,
+              mobile_image: "",
               menus: {
                 // -- Cisco ASA
                 CISCO_ASA: {
@@ -1753,6 +1781,7 @@ export const NAVBAR_MENUS = {
         value: "DATA_CENTER",
         menus: {
           image: DATA_CENTER_SECURITY_IMAGE,
+          mobile_image: MOBILE_DATA_SECURITY_IMAGE,
           title: "Data Center Security",
           color: THEME_COLOR.data_center_security,
           subtitle: `Data Center Security-Implement enterprise-class connectivity for wired and wireless. Multi-vendor technology and hardware's Satellite, deployment, monitoring and support`,
@@ -1764,6 +1793,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: LAN_ICON,
               image: LAN_ICON,
+              mobile_image: "",
               menus: {
                 NETWORK_SECURITY: {
                   label: "Network Security",
@@ -1819,6 +1849,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: MISC_ICON,
               image: MISC_ICON,
+              mobile_image: "",
               menus: {
                 CSC: {
                   label: "Cybersecurity Consulting",
@@ -1859,6 +1890,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: MISC_ICON,
               image: MISC_ICON,
+              mobile_image: "",
               menus: {
                 CMS: {
                   label: "Cloud Managed Security",
@@ -1886,6 +1918,7 @@ export const NAVBAR_MENUS = {
               shaded: true,
               icon: POPULAR_ICON,
               image: POPULAR_ICON,
+              mobile_image: "",
               menus: {
                 // -- Cisco ASA
                 CISCO_ASA: {
@@ -2005,6 +2038,7 @@ export const NAVBAR_MENUS = {
         value: "COLLABORATION",
         menus: {
           image: SECURITY_MAIN_IMAGE,
+          mobile_image: MOBILE_SECURITY_IMAGE,
           title: "SECURITY",
           color: THEME_COLOR.security_red,
           subtitle: `Security-Implement enterprise-class connectivity for wired and wireless. Multi-vendor technology and hardware's Satellite, deployment, monitoring and support`,
@@ -2016,6 +2050,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: LAN_ICON,
               image: LAN_ICON,
+              mobile_image: "",
               menus: {
                 NETWORK_SECURITY: {
                   label: "Network Security",
@@ -2070,6 +2105,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: MISC_ICON,
               image: MISC_ICON,
+              mobile_image: "",
               menus: {
                 CSC: {
                   label: "Cybersecurity Consulting",
@@ -2110,6 +2146,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: "",
               image: "",
+              mobile_image: "",
               menus: {},
             },
 
@@ -2119,6 +2156,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: MISC_ICON,
               image: MISC_ICON,
+              mobile_image: "",
               menus: {
                 CMS: {
                   label: "Cloud Managed Security",
@@ -2146,6 +2184,7 @@ export const NAVBAR_MENUS = {
               shaded: true,
               icon: POPULAR_ICON,
               image: POPULAR_ICON,
+              mobile_image: "",
               menus: {
                 // -- Cisco ASA
                 CISCO_ASA: {
@@ -2265,6 +2304,7 @@ export const NAVBAR_MENUS = {
         value: "SP",
         menus: {
           image: SECURITY_MAIN_IMAGE,
+          mobile_image: MOBILE_SECURITY_IMAGE,
           title: "SECURITY",
           color: THEME_COLOR.security_red,
           subtitle: `Security-Implement enterprise-class connectivity for wired and wireless. Multi-vendor technology and hardware's Satellite, deployment, monitoring and support`,
@@ -2276,6 +2316,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: LAN_ICON,
               image: LAN_ICON,
+              mobile_image: "",
               menus: {
                 NETWORK_SECURITY: {
                   label: "Network Security",
@@ -2330,6 +2371,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: MISC_ICON,
               image: MISC_ICON,
+              mobile_image: "",
               menus: {
                 CSC: {
                   label: "Cybersecurity Consulting",
@@ -2370,6 +2412,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: "",
               image: "",
+              mobile_image: "",
               menus: {},
             },
 
@@ -2379,6 +2422,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: MISC_ICON,
               image: MISC_ICON,
+              mobile_image: "",
               menus: {
                 CMS: {
                   label: "Cloud Managed Security",
@@ -2406,6 +2450,7 @@ export const NAVBAR_MENUS = {
               shaded: true,
               icon: POPULAR_ICON,
               image: POPULAR_ICON,
+              mobile_image: "",
               menus: {
                 // -- Cisco ASA
                 CISCO_ASA: {
@@ -2524,6 +2569,7 @@ export const NAVBAR_MENUS = {
         value: "CAC",
         menus: {
           image: SECURITY_MAIN_IMAGE,
+          mobile_image: MOBILE_SECURITY_IMAGE,
           title: "SECURITY",
           color: THEME_COLOR.security_red,
           subtitle: `Security-Implement enterprise-class connectivity for wired and wireless. Multi-vendor technology and hardware's Satellite, deployment, monitoring and support`,
@@ -2535,6 +2581,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: LAN_ICON,
               image: LAN_ICON,
+              mobile_image: "",
               menus: {
                 NETWORK_SECURITY: {
                   label: "Network Security",
@@ -2589,6 +2636,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: MISC_ICON,
               image: MISC_ICON,
+              mobile_image: "",
               menus: {
                 CSC: {
                   label: "Cybersecurity Consulting",
@@ -2629,6 +2677,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: "",
               image: "",
+              mobile_image: "",
               menus: {},
             },
 
@@ -2638,6 +2687,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: MISC_ICON,
               image: MISC_ICON,
+              mobile_image: "",
               menus: {
                 CMS: {
                   label: "Cloud Managed Security",
@@ -2665,6 +2715,7 @@ export const NAVBAR_MENUS = {
               shaded: true,
               icon: POPULAR_ICON,
               image: POPULAR_ICON,
+              mobile_image: "",
               menus: {
                 // -- Cisco ASA
                 CISCO_ASA: {
@@ -2783,6 +2834,7 @@ export const NAVBAR_MENUS = {
         value: "IOT",
         menus: {
           image: SECURITY_MAIN_IMAGE,
+          mobile_image: MOBILE_SECURITY_IMAGE,
           title: "SECURITY",
           color: THEME_COLOR.security_red,
           subtitle: `Security-Implement enterprise-class connectivity for wired and wireless. Multi-vendor technology and hardware's Satellite, deployment, monitoring and support`,
@@ -2794,6 +2846,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: LAN_ICON,
               image: LAN_ICON,
+              mobile_image: "",
               menus: {
                 NETWORK_SECURITY: {
                   label: "Network Security",
@@ -2848,6 +2901,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: MISC_ICON,
               image: MISC_ICON,
+              mobile_image: "",
               menus: {
                 CSC: {
                   label: "Cybersecurity Consulting",
@@ -2888,6 +2942,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: "",
               image: "",
+              mobile_image: "",
               menus: {},
             },
 
@@ -2897,6 +2952,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: MISC_ICON,
               image: MISC_ICON,
+              mobile_image: "",
               menus: {
                 CMS: {
                   label: "Cloud Managed Security",
@@ -2924,6 +2980,7 @@ export const NAVBAR_MENUS = {
               shaded: true,
               icon: POPULAR_ICON,
               image: POPULAR_ICON,
+              mobile_image: "",
               menus: {
                 // -- Cisco ASA
                 CISCO_ASA: {
@@ -3046,6 +3103,7 @@ export const NAVBAR_MENUS = {
         value: "NETWORKING",
         menus: {
           image: NETWORK_IMAGE,
+          mobile_image: MOBILE_NETWORK,
           title: "NETWORK",
           color: THEME_COLOR.color_4,
           subtitle: `Implement enterprise-class connectivity for wired and wireless.Multi-vendor technology and hardware's Satellite, deployment, monitoring and support`,
@@ -3057,6 +3115,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: LAN_ICON,
               image: LAN_ICON,
+              mobile_image: "",
               menus: {
                 ROUTING: {
                   label: "Routing",
@@ -3097,6 +3156,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: WAN_ICON,
               image: WAN_ICON,
+              mobile_image: "",
               menus: {
                 SD_WAN: {
                   label: "SD WAN",
@@ -3128,6 +3188,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: WAM_ICON,
               image: WAM_ICON,
+              mobile_image: "",
               menus: {
                 WI_FI_6: {
                   label: "Wi-Fi-6",
@@ -3163,6 +3224,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: MISC_ICON,
               image: MISC_ICON,
+              mobile_image: "",
               menus: {
                 OOB_MANAGEMENT: {
                   label: "OOB Management",
@@ -3194,6 +3256,7 @@ export const NAVBAR_MENUS = {
               shaded: true,
               icon: POPULAR_ICON,
               image: POPULAR_ICON,
+              mobile_image: "",
               menus: {
                 // -- Cisco DNA
                 CISCO_DNA: {
@@ -3307,6 +3370,7 @@ export const NAVBAR_MENUS = {
         value: "SECURITY",
         menus: {
           image: SECURITY_MAIN_IMAGE,
+          mobile_image: MOBILE_SECURITY_IMAGE,
           title: "SECURITY",
           color: THEME_COLOR.security_red,
           subtitle: `Security-Implement enterprise-class connectivity for wired and wireless. Multi-vendor technology and hardware's Satellite, deployment, monitoring and support`,
@@ -3318,6 +3382,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: LAN_ICON,
               image: LAN_ICON,
+              mobile_image: "",
               menus: {
                 NETWORK_SECURITY: {
                   label: "Network Security",
@@ -3372,6 +3437,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: MISC_ICON,
               image: MISC_ICON,
+              mobile_image: "",
               menus: {
                 CSC: {
                   label: "Cybersecurity Consulting",
@@ -3412,6 +3478,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: "",
               image: "",
+              mobile_image: "",
               menus: {},
             },
 
@@ -3421,6 +3488,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: MISC_ICON,
               image: MISC_ICON,
+              mobile_image: "",
               menus: {
                 CMS: {
                   label: "Cloud Managed Security",
@@ -3448,6 +3516,7 @@ export const NAVBAR_MENUS = {
               shaded: true,
               icon: POPULAR_ICON,
               image: POPULAR_ICON,
+              mobile_image: "",
               menus: {
                 // -- Cisco ASA
                 CISCO_ASA: {
@@ -3567,6 +3636,7 @@ export const NAVBAR_MENUS = {
         value: "DATA_CENTER",
         menus: {
           image: DATA_CENTER_SECURITY_IMAGE,
+          mobile_image: MOBILE_DATA_SECURITY_IMAGE,
           title: "Data Center Security",
           color: THEME_COLOR.data_center_security,
           subtitle: `Data Center Security-Implement enterprise-class connectivity for wired and wireless. Multi-vendor technology and hardware's Satellite, deployment, monitoring and support`,
@@ -3578,6 +3648,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: LAN_ICON,
               image: LAN_ICON,
+              mobile_image: "",
               menus: {
                 NETWORK_SECURITY: {
                   label: "Network Security",
@@ -3633,6 +3704,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: MISC_ICON,
               image: MISC_ICON,
+              mobile_image: "",
               menus: {
                 CSC: {
                   label: "Cybersecurity Consulting",
@@ -3673,6 +3745,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: MISC_ICON,
               image: MISC_ICON,
+              mobile_image: "",
               menus: {
                 CMS: {
                   label: "Cloud Managed Security",
@@ -3700,6 +3773,7 @@ export const NAVBAR_MENUS = {
               shaded: true,
               icon: POPULAR_ICON,
               image: POPULAR_ICON,
+              mobile_image: "",
               menus: {
                 // -- Cisco ASA
                 CISCO_ASA: {
@@ -3819,6 +3893,7 @@ export const NAVBAR_MENUS = {
         value: "COLLABORATION",
         menus: {
           image: SECURITY_MAIN_IMAGE,
+          mobile_image: MOBILE_SECURITY_IMAGE,
           title: "SECURITY",
           color: THEME_COLOR.security_red,
           subtitle: `Security-Implement enterprise-class connectivity for wired and wireless. Multi-vendor technology and hardware's Satellite, deployment, monitoring and support`,
@@ -3830,6 +3905,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: LAN_ICON,
               image: LAN_ICON,
+              mobile_image: "",
               menus: {
                 NETWORK_SECURITY: {
                   label: "Network Security",
@@ -3884,6 +3960,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: MISC_ICON,
               image: MISC_ICON,
+              mobile_image: "",
               menus: {
                 CSC: {
                   label: "Cybersecurity Consulting",
@@ -3924,6 +4001,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: "",
               image: "",
+              mobile_image: "",
               menus: {},
             },
 
@@ -3933,6 +4011,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: MISC_ICON,
               image: MISC_ICON,
+              mobile_image: "",
               menus: {
                 CMS: {
                   label: "Cloud Managed Security",
@@ -3960,6 +4039,7 @@ export const NAVBAR_MENUS = {
               shaded: true,
               icon: POPULAR_ICON,
               image: POPULAR_ICON,
+              mobile_image: "",
               menus: {
                 // -- Cisco ASA
                 CISCO_ASA: {
@@ -4079,6 +4159,7 @@ export const NAVBAR_MENUS = {
         value: "SP",
         menus: {
           image: SECURITY_MAIN_IMAGE,
+          mobile_image: MOBILE_SECURITY_IMAGE,
           title: "SECURITY",
           color: THEME_COLOR.security_red,
           subtitle: `Security-Implement enterprise-class connectivity for wired and wireless. Multi-vendor technology and hardware's Satellite, deployment, monitoring and support`,
@@ -4090,6 +4171,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: LAN_ICON,
               image: LAN_ICON,
+              mobile_image: "",
               menus: {
                 NETWORK_SECURITY: {
                   label: "Network Security",
@@ -4144,6 +4226,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: MISC_ICON,
               image: MISC_ICON,
+              mobile_image: "",
               menus: {
                 CSC: {
                   label: "Cybersecurity Consulting",
@@ -4184,6 +4267,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: "",
               image: "",
+              mobile_image: "",
               menus: {},
             },
 
@@ -4193,6 +4277,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: MISC_ICON,
               image: MISC_ICON,
+              mobile_image: "",
               menus: {
                 CMS: {
                   label: "Cloud Managed Security",
@@ -4220,6 +4305,7 @@ export const NAVBAR_MENUS = {
               shaded: true,
               icon: POPULAR_ICON,
               image: POPULAR_ICON,
+              mobile_image: "",
               menus: {
                 // -- Cisco ASA
                 CISCO_ASA: {
@@ -4338,6 +4424,7 @@ export const NAVBAR_MENUS = {
         value: "CAC",
         menus: {
           image: SECURITY_MAIN_IMAGE,
+          mobile_image: MOBILE_SECURITY_IMAGE,
           title: "SECURITY",
           color: THEME_COLOR.security_red,
           subtitle: `Security-Implement enterprise-class connectivity for wired and wireless. Multi-vendor technology and hardware's Satellite, deployment, monitoring and support`,
@@ -4349,6 +4436,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: LAN_ICON,
               image: LAN_ICON,
+              mobile_image: "",
               menus: {
                 NETWORK_SECURITY: {
                   label: "Network Security",
@@ -4403,6 +4491,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: MISC_ICON,
               image: MISC_ICON,
+              mobile_image: "",
               menus: {
                 CSC: {
                   label: "Cybersecurity Consulting",
@@ -4443,6 +4532,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: "",
               image: "",
+              mobile_image: "",
               menus: {},
             },
 
@@ -4452,6 +4542,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: MISC_ICON,
               image: MISC_ICON,
+              mobile_image: "",
               menus: {
                 CMS: {
                   label: "Cloud Managed Security",
@@ -4479,6 +4570,7 @@ export const NAVBAR_MENUS = {
               shaded: true,
               icon: POPULAR_ICON,
               image: POPULAR_ICON,
+              mobile_image: "",
               menus: {
                 // -- Cisco ASA
                 CISCO_ASA: {
@@ -4597,6 +4689,7 @@ export const NAVBAR_MENUS = {
         value: "IOT",
         menus: {
           image: SECURITY_MAIN_IMAGE,
+          mobile_image: MOBILE_SECURITY_IMAGE,
           title: "SECURITY",
           color: THEME_COLOR.security_red,
           subtitle: `Security-Implement enterprise-class connectivity for wired and wireless. Multi-vendor technology and hardware's Satellite, deployment, monitoring and support`,
@@ -4608,6 +4701,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: LAN_ICON,
               image: LAN_ICON,
+              mobile_image: "",
               menus: {
                 NETWORK_SECURITY: {
                   label: "Network Security",
@@ -4662,6 +4756,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: MISC_ICON,
               image: MISC_ICON,
+              mobile_image: "",
               menus: {
                 CSC: {
                   label: "Cybersecurity Consulting",
@@ -4702,6 +4797,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: "",
               image: "",
+              mobile_image: "",
               menus: {},
             },
 
@@ -4711,6 +4807,7 @@ export const NAVBAR_MENUS = {
               shaded: false,
               icon: MISC_ICON,
               image: MISC_ICON,
+              mobile_image: "",
               menus: {
                 CMS: {
                   label: "Cloud Managed Security",
@@ -4738,6 +4835,7 @@ export const NAVBAR_MENUS = {
               shaded: true,
               icon: POPULAR_ICON,
               image: POPULAR_ICON,
+              mobile_image: "",
               menus: {
                 // -- Cisco ASA
                 CISCO_ASA: {
@@ -4894,6 +4992,7 @@ export const NAVBAR_MENUS = {
 export const ABOUT_US = {
   title: "About Us",
   image: "",
+  mobile_image: "",
   subtitle: `
         We are growing as a leading information and communication service provider and 
         we help organizations in developing next generation infrastructure which keeps them operational without any disruption.
@@ -4909,6 +5008,7 @@ export const ABOUT_US = {
 export const CONTACT_US = {
   title: "Contact Us",
   image: "",
+  mobile_image: "",
   subtitle: `
   We are growing as a leading information and communication service 
   provider and we help organizations in developing next generation infrastructure which keeps them operational without any disruption.
