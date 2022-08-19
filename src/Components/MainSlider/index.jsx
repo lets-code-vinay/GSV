@@ -1,4 +1,4 @@
-import React, { memo, useState } from "react";
+import React, { useState } from "react";
 
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -56,7 +56,7 @@ const MainSlider = () => {
           swipeScrollTolerance={10}
           useKeyboardArrows={true}
           transitionTime="1000"
-          interval="6000"
+          interval="5000"
           showStatus={false}
           showIndicators={false}
         >
@@ -140,7 +140,7 @@ const MainSlider = () => {
   );
 };
 
-export default memo(MainSlider);
+export default MainSlider;
 
 const useStyles = makeStyles((theme) => ({
   informationBar: {
