@@ -73,6 +73,20 @@ const PieChart = ({ fetchInsightDetails }) => {
   };
 
   /**
+   * @description handle Slice text mouse hover on pie chart slice Button
+   */
+  const handleTextMouseEnter = (buttonNum) => () => {
+    fetchInsightDetails(buttonNum);
+  };
+
+  /**
+   * @description handle Slice text mouse hover on pie chart slice Button
+   */
+  const handleTextMouseLeave = (buttonNum) => () => {
+    fetchInsightDetails(buttonNum);
+  };
+
+  /**
    * @description handle button mouse hover on pie chart slice Button
    */
   const handleButtonMouseEnter = (buttonNum) => () => {
@@ -152,15 +166,16 @@ const PieChart = ({ fetchInsightDetails }) => {
         {Object.values(INSIGHT_DATA).map(
           ({ button_text = "", label = "", text_color = "#000" }, index) => {
             return (
-              <>
+              <Box key={index + "-" + label}>
                 <Typography
                   className={`insight-text insight-text-${index}`}
                   style={{
                     color: slice == index ? text_color : "black",
                     transform: slice == index ? "scale(1.2)" : "scale(1)",
+                    cursor: "pointer",
                   }}
-                  onMouseEnter={handleButtonMouseEnter(index)}
-                  onMouseLeave={handleButtonMouseLeave(index)}
+                  onMouseEnter={handleTextMouseEnter(index)}
+                  onMouseLeave={handleTextMouseLeave(index)}
                 >
                   {label}
                 </Typography>
@@ -174,7 +189,7 @@ const PieChart = ({ fetchInsightDetails }) => {
                     {button_text}
                   </Button>
                 )}
-              </>
+              </Box>
             );
           }
         )}

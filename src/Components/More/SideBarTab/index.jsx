@@ -150,6 +150,7 @@ const SideBar = (props) => {
                 alt={optionType.alt}
                 listTitle={optionType.listTitle}
                 list={optionType.list}
+                isComponent={true}
               />
             )}
           </Grid>

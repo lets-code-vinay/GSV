@@ -1,13 +1,7 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { shape } from "prop-types";
-import {
-  Box,
-  Button,
-  ClickAwayListener,
-  Grid,
-  makeStyles,
-  Typography,
-} from "@material-ui/core";
+import { Box, Button, Grid, makeStyles, Typography } from "@material-ui/core";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 import "./styles.css";
@@ -16,6 +10,7 @@ import { THEME_COLOR } from "../../Configs/Theme";
 
 const NavbarMenus = ({ navMenus = {} }) => {
   const classes = useStyles();
+  const navigate = useNavigate();
 
   const [isPopularEnabled] = useState(
     Object.keys(navMenus?.menus).includes("POPULAR")
@@ -25,7 +20,7 @@ const NavbarMenus = ({ navMenus = {} }) => {
    * @description On Click Get In Touch Button
    */
   const handleGetInTouch = () => {
-    console.log("handleGetInTouch");
+    navigate("/contact-us");
   };
 
   return (
@@ -151,10 +146,16 @@ const NavbarMenus = ({ navMenus = {} }) => {
                     <Grid container>
                       {Object.values(menus).map((popMenu, index) => {
                         return (
-                          <Grid item sm={12} xs={12} md={6} lg={6}>
+                          <Grid
+                            item
+                            sm={12}
+                            xs={12}
+                            md={6}
+                            lg={6}
+                            key={`${popMenu.value}-${index}`}
+                          >
                             <a
                               href={popMenu.path}
-                              key={`${popMenu.value}-${index}`}
                               className={`${classes.popularLink} popularLink`}
                               target="_blank"
                               rel="noreferrer"

@@ -73,4 +73,4 @@ ProgressBar.defaultProps = {
   onChangeSlide: () => {},
 };
 
-export default ProgressBar;
+export default React.memo(ProgressBar);
