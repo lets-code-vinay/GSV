@@ -1,9 +1,8 @@
-import React, { memo, useCallback } from "react";
-import { func, number, oneOfType, string } from "prop-types";
-
+import React from "react";
 import { Box, makeStyles, Typography } from "@material-ui/core";
 import ProgressBar from "../../ProgressBar";
 import "./styles.css";
+import { func, number, oneOfType, string } from "prop-types";
 
 const ActiveProgress = ({
   progressName = "",
@@ -19,9 +18,9 @@ const ActiveProgress = ({
    *
    * @returns {Function} Callback function #onChangeSlide
    */
-  const handleChangeSlider = useCallback(() => {
+  const handleChangeSlider = () => {
     onChangeSlide(index);
-  }, [onChangeSlide, index]);
+  };
 
   return (
     <Box className={`${classes.progressBox} progressBox`} key={key}>
@@ -61,7 +60,7 @@ ActiveProgress.defaultProps = {
   onChangeSlide: () => {},
 };
 
-export default memo(ActiveProgress);
+export default ActiveProgress;
 
 const useStyles = makeStyles((theme) => ({
   progressBox: {

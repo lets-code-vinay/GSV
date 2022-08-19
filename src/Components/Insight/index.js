@@ -32,54 +32,52 @@ const Insight = () => {
   } = insightDetail || DEFAULT_SERVICES;
 
   return (
-    <main className="container">
-      <Paper elevation={24} className={`${classes.piePaper} piePaper`}>
-        <Grid container className={`${classes.pieGrid} pieGrid`}>
-          <Grid
-            item
-            xs={12}
-            sm={12}
-            md={7}
-            lg={6}
-            className={`${classes.pieBox} pieBox`}
-          >
-            <PieChart
-              data={INSIGHT_DATA}
-              fetchInsightDetails={getInsightDetail}
-            />
+    <Paper elevation={24} className={`${classes.piePaper} piePaper`}>
+      <Grid container className={`${classes.pieGrid} pieGrid`}>
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={7}
+          lg={6}
+          className={`${classes.pieBox} pieBox`}
+        >
+          <PieChart
+            data={INSIGHT_DATA}
+            fetchInsightDetails={getInsightDetail}
+          />
 
-          </Grid>
-
-          <Grid item xs={12} sm={12} md={5} lg={6}>
-            <Box className={`${classes.pieDetail} pieDetail`}>
-              <Typography
-                variant={"h4"}
-                className={`${classes.pieTitle} pieTitle`}
-                style={{ color: color }}
-              >
-                {label}
-              </Typography>
-              <Typography
-                variant={"body1"}
-                className={`${classes.pieInfo} pieInfo`}
-              >
-                {info}
-              </Typography>
-
-              <Button
-                variant="contained"
-                className={`${classes.pieButton} pieButton`}
-                style={{
-                  backgroundColor: color,
-                }}
-              >
-                Know More
-              </Button>
-            </Box>
-          </Grid>
         </Grid>
-      </Paper>
-    </main>
+
+        <Grid item xs={12} sm={12} md={5} lg={6}>
+          <Box className={`${classes.pieDetail} pieDetail`}>
+            <Typography
+              variant={"h4"}
+              className={`${classes.pieTitle} pieTitle`}
+              style={{ color: color }}
+            >
+              {label}
+            </Typography>
+            <Typography
+              variant={"body1"}
+              className={`${classes.pieInfo} pieInfo`}
+            >
+              {info}
+            </Typography>
+
+            <Button
+              variant="contained"
+              className={`${classes.pieButton} pieButton`}
+              style={{
+                backgroundColor: color,
+              }}
+            >
+              Know More
+            </Button>
+          </Box>
+        </Grid>
+      </Grid>
+    </Paper>
   );
 };
 
@@ -95,7 +93,7 @@ const useStyles = makeStyles((theme) => ({
 
   pieBox: {
     width: "100%",
-    margin: '1% 0 2% 0',
+    height: "600px",
   },
   pieDetail: {
     width: "80%",

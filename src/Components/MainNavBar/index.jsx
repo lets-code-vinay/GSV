@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useRef, useState } from "react";
 import { bool, func } from "prop-types";
 
 import { makeStyles } from "@material-ui/core/styles";
@@ -11,15 +10,16 @@ import {
   IconButton,
   MenuItem,
   Typography,
+  Menu,
   Box,
 } from "@material-ui/core";
 
 import Logo from "../../Assets/Images/white-logo.png";
 
 import { NAVBAR_MENUS } from "../../Configs/NavBar/navbar";
+import { THEME_COLOR } from "../../Configs/Theme";
 
 import "./style.css";
-import MobileNavBar from "../MobileNavBar";
 
 const MainNavBar = ({
   onSubNavbarOpen,
@@ -31,29 +31,30 @@ const MainNavBar = ({
   isMoreOpen,
 }) => {
   const classes = useStyles();
-  const navigate = useNavigate();
 
-  const [isMobileNavbarOpened, setMobileNavbarOpen] = useState(false);
+  const anchor = useRef(null);
 
-  /**
-   * @description: Handle mobile menus on icon click
-   *
-   * @param {Object} event
-   */
-  const handleMobileMenuOpen = (_) => {
-    setMobileNavbarOpen(true);
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
+
+  const isMenuOpen = Boolean(anchorEl);
+  const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+
+  const handleMobileMenuClose = () => {
+    setMobileMoreAnchorEl(null);
   };
 
-  /**
-   * @description: Closing mobile menus
-   */
-  const handleMobileMenuClose = () => {
-    setMobileNavbarOpen(false);
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+    handleMobileMenuClose();
+  };
+
+  const handleMobileMenuOpen = (event) => {
+    setMobileMoreAnchorEl(event.currentTarget);
   };
 
   const handleMainNavbarClick = (menu) => (event) => {
-    navigate("/");
-    onMoreOpen({ isMore: menu?.isMore });
+    onMoreOpen({ isMore: menu?.isMore, mainRef: anchor });
 
     onSubNavbarOpen({
       isOpen: true,
@@ -64,6 +65,57 @@ const MainNavBar = ({
     onNavMenus(Object.values(menu?.menus)[0]);
   };
 
+  const menuId = "primary-search-account-menu";
+  const renderMenu = (
+    <Menu
+      anchorEl={anchorEl}
+      anchorOrigin={{ vertical: "top", horizontal: "right" }}
+      id={menuId}
+      keepMounted
+      transformOrigin={{ vertical: "top", horizontal: "right" }}
+      open={isMenuOpen}
+      onClose={handleMenuClose}
+    >
+      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+    </Menu>
+  );
+
+  const mobileMenuId = "primary-search-account-menu-mobile";
+  // --- Mobile Section ---
+  const renderMobileMenu = (
+    <Box className={`${classes.mobileMenuBG} mobileMenuBG`} id="mobile-bg">
+      <Menu
+        anchorEl={mobileMoreAnchorEl}
+        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+        id={mobileMenuId}
+        keepMounted
+        transformOrigin={{ vertical: "top", horizontal: "right" }}
+        open={isMobileMenuOpen}
+        onClose={handleMobileMenuClose}
+        className={`${classes.mobileMenu} mobileMenu`}
+      >
+        {Object.values(NAVBAR_MENUS).map((menu, index) => {
+          return (
+            <MenuItem
+              key={`${menu.value}-${index}`}
+              style={{ borderBottom: `3px solid ${THEME_COLOR.color_4}` }}
+            >
+              <Typography
+                variant={"body1"}
+                className={classes.navbar_text_mobile}
+                style={{ color: "black !important" }}
+                onClick={handleMainNavbarClick(menu)}
+              >
+                {menu.label}
+              </Typography>
+            </MenuItem>
+          );
+        })}
+      </Menu>
+    </Box>
+  );
+
   // --- Desktop Section ---
   return (
     <div className={`${classes.Navbar} Navbar`} id="home">
@@ -71,6 +123,7 @@ const MainNavBar = ({
         position="static"
         className={`${classes.grow} appBar`}
         elevation={0}
+        ref={anchor}
         style={{
           backgroundColor:
             isSubSectionOpen || isMoreOpen ? "#0D274D" : "transparent",
@@ -98,7 +151,7 @@ const MainNavBar = ({
                           ? "3px solid #ffff"
                           : "3px solid transparent",
                     }}
-                    key={i + "-" + menu.value}
+                    key={i}
                     className={`${classes.sectionDesktopMenus} sectionDesktopMenus`}
                   >
                     <Typography
@@ -120,24 +173,21 @@ const MainNavBar = ({
           </Box>
 
           {/* To open icons */}
-          <>
+          <div className={`${classes.sectionMobile} sectionMobile`}>
             <IconButton
-              className={`${classes.sectionMobile} sectionMobile`}
               aria-label="show more"
+              aria-controls={mobileMenuId}
               aria-haspopup="true"
               onClick={handleMobileMenuOpen}
               color="inherit"
             >
               <MoreIcon className={`${classes.mobile3Dots} mobile3Dots`} />
             </IconButton>
-
-            <MobileNavBar
-              isMobileNavbarOpened={isMobileNavbarOpened}
-              onCloseMobileMenu={handleMobileMenuClose}
-            />
-          </>
+          </div>
         </Toolbar>
       </AppBar>
+      {renderMobileMenu}
+      {renderMenu}
     </div>
   );
 };
@@ -209,19 +259,19 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "600",
   },
 
-  // sectionDesktop: {
-  //   display: "none",
-  //   [theme.breakpoints.up("md")]: {
-  //     display: "flex",
-  //   },
-  // },
+  sectionDesktop: {
+    display: "none",
+    [theme.breakpoints.up("md")]: {
+      display: "flex",
+    },
+  },
 
-  // sectionMobile: {
-  //   display: "flex",
-  //   [theme.breakpoints.up("md")]: {
-  //     display: "none",
-  //   },
-  // },
+  sectionMobile: {
+    display: "flex",
+    [theme.breakpoints.up("md")]: {
+      display: "none",
+    },
+  },
 
   mobile3Dots: {
     color: "#ffffff",

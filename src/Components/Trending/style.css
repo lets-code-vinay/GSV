@@ -131,11 +131,11 @@
     padding: 6% 2% 0% 3%;
   }
   .trendingImage {
-    min-width: 300px !important;
-    max-width: 325px !important;
+    min-width: 150px !important;
+    max-width: 233px !important;
 
-    min-height: 325px !important;
-    max-height: 350px !important;
+    min-height: 150px !important;
+    max-height: 233px !important;
   }
   .trendingTitle {
     font-size: 1.2rem;
@@ -204,12 +204,10 @@
     padding: 5% 0% 10% 0%;
   }
   .trendingImage {
-    min-width: 300px !important;
-    max-width: 325px !important;
-
-    min-height: 325px !important;
-    max-height: 350px !important;
-
+    min-width: 200px !important;
+    min-height: 200px !important;
+    max-width: 250px !important;
+    max-height: 250px !important;
     margin-top: -15%;
   }
   .content .trendingTitle {
@@ -264,22 +262,20 @@
     padding: 0% 5% 0% 8%;
   }
   .trendingImage {
-    min-width: 100% !important;
-    max-width: 115% !important;
-    min-height: 280px !important;
-    max-height: 310px !important;
+    width: 200px !important;
+    height: 200px !important;
   }
   .content {
     width: 80%;
   }
   .content .trendingTitle {
-    font-size: 2.5rem !important;
+    font-size: 3.5rem !important;
     margin: 5px 0px 6% 0px;
     font-weight: 400 !important;
   }
   .trendingSubTitle,
   .trendingSubTitleForce {
-    font-size: 1rem !important;
+    font-size: 1.2rem !important;
     margin-top: 10px;
   }
   .learn-button {
@@ -334,11 +330,7 @@
     width: 100%;
   }
   .trendingImage {
-    min-width: 325px !important;
-    max-width: 350px !important;
-
-    min-height: 350px !important;
-    max-height: 375px !important;
+    width: 90%;
   }
 
   .content .trendingTitle {
@@ -387,11 +379,8 @@
     color: #0d274d;
   }
   .trendingImage {
-    min-width: 325px !important;
-    max-width: 350px !important;
-
-    min-height: 350px !important;
-    max-height: 375px !important;
+    width: 300px;
+    height: 300px;
   }
 
   .content .trendingTitle {

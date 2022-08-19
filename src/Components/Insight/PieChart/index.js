@@ -1,11 +1,5 @@
 import React from "react";
-// If want to use nivo chart just install and import following package
-// -----------------------------------
-// "@nivo/colors": "^0.68.0",
-// "@nivo/core": "0.68.0",
-// "@nivo/pie": "0.68.0",
-//------------------------------------
-// import { ResponsivePie } from "@nivo/pie";
+import { ResponsivePie } from "@nivo/pie";
 import "../styles.css";
 
 import { shape } from "prop-types";
